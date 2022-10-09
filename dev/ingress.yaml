@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  namespace: myapp
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: 5.161.105.8
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: myapp-service
+            port:
+              number: 9090
