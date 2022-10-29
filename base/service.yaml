@@ -6,15 +6,17 @@ spec:
   selector:
     app: myapp
   ports:
-  - port: 80
+  - name: web
+    port: 80
     protocol: TCP
     targetPort: 80
-    name: web
-  - port: 81
+
+  - name: grpc
     protocol: TCP
+    port: 81
     targetPort: 81
-    name: grpc
-  - port: 82
-    name: grpc-web
+
+  - name: grpc-web
     protocol: TCP
+    port: 82
     targetPort: 82
