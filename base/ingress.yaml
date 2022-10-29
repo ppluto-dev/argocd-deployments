@@ -14,23 +14,29 @@ spec:
     allowedRoutes:
       namespaces:
         from: All
-        
----
-
-apiVersion: gateway.networking.k8s.io/v1alpha2
-kind: Gateway
-metadata:
-  name: gateway-82
-  namespace: istio-ingress
-spec:
-  gatewayClassName: istio
-  listeners:
-  - name: default
+  - name: default2
     port: 5082
     protocol: HTTP
     allowedRoutes:
       namespaces:
         from: All
+        
+# ---
+
+# apiVersion: gateway.networking.k8s.io/v1alpha2
+# kind: Gateway
+# metadata:
+#   name: gateway-82
+#   namespace: istio-ingress
+# spec:
+#   gatewayClassName: istio
+#   listeners:
+#   - name: default
+#     port: 5082
+#     protocol: HTTP
+#     allowedRoutes:
+#       namespaces:
+#         from: All
 
 ---
 apiVersion: gateway.networking.k8s.io/v1alpha2
