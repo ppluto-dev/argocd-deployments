@@ -50,7 +50,7 @@ metadata:
   namespace: myapp
 spec:
   parentRefs:
-  - name: gateway-82
+  - name: gateway-80
     sectionName: default2
     namespace: istio-ingress
   rules:
@@ -60,4 +60,4 @@ spec:
         value: /
     backendRefs:
     - name: myapp-service
-      port: 81
+      port: 82
