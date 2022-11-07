@@ -3,16 +3,17 @@ kind: Application
 metadata:
   name: istio
 spec:
+  project: default
+  source:
+    repoURL: "https://istio-release.storage.googleapis.com/charts"
+    path: ""
+    # MANUAL_UPDATE
+    targetRevision: 1.16.0-beta.2
+    chart: base
   destination:
     name: ""
     namespace: istio-system
     server: "https://kubernetes.default.svc"
-  source:
-    path: ""
-    repoURL: "https://istio-release.storage.googleapis.com/charts"
-    targetRevision: 1.16.0-beta.2
-    chart: base
-  project: default
   syncPolicy:
     automated:
       prune: true

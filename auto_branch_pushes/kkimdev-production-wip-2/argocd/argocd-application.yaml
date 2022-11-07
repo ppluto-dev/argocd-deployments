@@ -1,23 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
-  namespace: argocd
+  name: ppluto-main
 spec:
   project: default
-
   source:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
+    # TODO: Update path automatically.
+    # path: auto_branch_pushes/BRANCH_NAME/overlays/prod_generated
     targetRevision: HEAD
-    path: overlays/prod
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
-
   syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
-
     automated:
       selfHeal: true
       prune: true
+    syncOptions:
+      - CreateNamespace=true
