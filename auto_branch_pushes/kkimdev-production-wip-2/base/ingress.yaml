@@ -26,7 +26,6 @@ apiVersion: gateway.networking.k8s.io/v1alpha2
 kind: HTTPRoute
 metadata:
   name: http-web-route
-  namespace: myapp
 spec:
   parentRefs:
     - name: ppluto-main-gateway
@@ -38,7 +37,7 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: myapp-service
+        - name: ppluto-main-service
           port: 80
 
 ---
@@ -46,7 +45,6 @@ apiVersion: gateway.networking.k8s.io/v1alpha2
 kind: HTTPRoute
 metadata:
   name: grpc-web-route
-  namespace: myapp
 spec:
   parentRefs:
     - name: ppluto-main-gateway
@@ -58,5 +56,5 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: myapp-service
+        - name: ppluto-main-service
           port: 82
