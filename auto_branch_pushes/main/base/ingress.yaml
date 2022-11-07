@@ -1,0 +1,60 @@
+# https://istio.io/latest/docs/tasks/traffic-management/ingress/gateway-api/
+
+kind: Gateway
+apiVersion: gateway.networking.k8s.io/v1alpha2
+metadata:
+  name: ppluto-main-gateway
+  namespace: istio-ingress
+spec:
+  gatewayClassName: istio
+  listeners:
+    - name: http-web
+      port: 80
+      protocol: HTTP
+      allowedRoutes:
+        namespaces:
+          from: All
+    - name: grpc-web
+      port: 5082
+      protocol: HTTP
+      allowedRoutes:
+        namespaces:
+          from: All
+
+---
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1alpha2
+metadata:
+  name: http-web-route
+spec:
+  parentRefs:
+    - name: ppluto-main-gateway
+      sectionName: http-web
+      namespace: istio-ingress
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: ppluto-main-service
+          port: 80
+
+---
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1alpha2
+metadata:
+  name: grpc-web-route
+spec:
+  parentRefs:
+    - name: ppluto-main-gateway
+      sectionName: grpc-web
+      namespace: istio-ingress
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: ppluto-main-service
+          port: 82
