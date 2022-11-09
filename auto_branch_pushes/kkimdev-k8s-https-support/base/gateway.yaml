@@ -7,7 +7,7 @@ metadata:
   name: ppluto-main-gateway
   namespace: istio-ingress
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt
+    cert-manager.io/cluster-issuer: selfsigned-cluster-issuer # letsencrypt
 spec:
   gatewayClassName: istio
   listeners:
@@ -21,12 +21,11 @@ spec:
     - name: https-web
       port: 443
       protocol: HTTPS
-      hostname: "app-test.ppluto.dev"
+      hostname: app-test.ppluto.dev
       tls:
         mode: Terminate
         certificateRefs:
           - kind: Secret
-            group: ""
             name: wildcard-ppluto-dev-cert
       allowedRoutes:
         namespaces:
@@ -97,21 +96,29 @@ spec:
           port: 82
 
 ---
-# https://cert-manager.io/docs/configuration/acme/
 kind: ClusterIssuer
 apiVersion: cert-manager.io/v1
 metadata:
-  name: letsencrypt
+  name: selfsigned-cluster-issuer
 spec:
-  acme:
-    email: info@projectpluto.co
-    server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: cluster-issuer-ref
-    solvers:
-      - http01:
-          ingress:
-            class: istio
+  selfSigned: {}
+
+# ---
+# # https://cert-manager.io/docs/configuration/acme/
+# kind: ClusterIssuer
+# apiVersion: cert-manager.io/v1
+# metadata:
+#   name: letsencrypt
+# spec:
+#   acme:
+#     email: info@projectpluto.co
+#     server: https://acme-v02.api.letsencrypt.org/directory
+#     privateKeySecretRef:
+#       name: cluster-issuer-ref
+#     solvers:
+#       - http01:
+#           ingress:
+#             class: istio
 
 # ---
 # kind: Certificate
@@ -122,7 +129,7 @@ spec:
 # spec:
 #   secretName: wildcard-ppluto-dev-cert
 #   dnsNames:
-#     - "app-test.ppluto.dev"
+#     - app-test.ppluto.dev
 #   issuerRef:
 #     name: cluster-issuer-ref
 #     kind: ClusterIssuer
