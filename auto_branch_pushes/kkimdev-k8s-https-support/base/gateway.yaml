@@ -6,6 +6,8 @@ apiVersion: gateway.networking.k8s.io/v1alpha2
 metadata:
   name: ppluto-main-gateway
   namespace: istio-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: istio
 spec:
   gatewayClassName: istio
   listeners:
