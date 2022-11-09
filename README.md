@@ -10,6 +10,8 @@ curl -sfL https://get.k3s.io | sh -
 
 # https://github.com/k3s-io/k3s/issues/1160#issuecomment-1133559423
 
+# https://argo-cd.readthedocs.io/en/stable/getting_started/
+
 ```
 
 
