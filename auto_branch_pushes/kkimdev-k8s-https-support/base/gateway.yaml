@@ -100,17 +100,16 @@ kind: ClusterIssuer
 apiVersion: cert-manager.io/v1
 metadata:
   name: letsencrypt
-  namespace: istio-system
 spec:
   acme:
     email: info@projectpluto.co
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: cluster-issuer-ref
     solvers:
       - http01:
           ingress:
-            class: nginx
+            class: istio
 
 ---
 kind: Certificate
@@ -120,7 +119,6 @@ metadata:
   namespace: istio-system
 spec:
   secretName: wildcard-ppluto-dev-cert
-  commonName: "*.ppluto.dev"
   dnsNames:
     - "*.ppluto.dev"
   issuerRef:
