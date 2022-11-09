@@ -13,3 +13,7 @@ podman run --rm -it debian:testing
 apt update && apt-get install -y openssh-client
 ssh-keygen -t ed25519 -C "Argo CD"
 cat ~/.ssh/*
+
+
+
+https://github.com/k3s-io/k3s/issues/1160#issuecomment-561572618
