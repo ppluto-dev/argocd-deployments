@@ -104,13 +104,13 @@ metadata:
 spec:
   acme:
     email: info@projectpluto.co
-    server: https://acme-v02.api.letsencrypt.org/directory
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: cluster-issuer-ref
     solvers:
       - http01:
           ingress:
-            class: istio
+            class: nginx
 
 ---
 kind: Certificate
@@ -120,6 +120,7 @@ metadata:
   namespace: istio-system
 spec:
   secretName: wildcard-ppluto-dev-cert
+  commonName: "*.ppluto.dev"
   dnsNames:
     - "*.ppluto.dev"
   issuerRef:
