@@ -113,8 +113,8 @@ spec:
   acme:
     email: info@projectpluto.co
     server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: letsencrypt-cluster-issuer-private-key-secret-ref
+    # privateKeySecretRef:
+    #   name: cluster-issuer-ref
     solvers:
       - http01:
           ingress:
