@@ -19,7 +19,7 @@ spec:
     - name: https-web
       port: 443
       protocol: HTTPS
-      hostname: "*.ppluto.dev"
+      hostname: "app-test.ppluto.dev"
       tls:
         mode: Terminate
         certificateRefs:
@@ -120,7 +120,7 @@ metadata:
 spec:
   secretName: wildcard-ppluto-dev-cert
   dnsNames:
-    - "*.ppluto.dev"
+    - "app-test.ppluto.dev"
   issuerRef:
     name: cluster-issuer-ref
     kind: ClusterIssuer
