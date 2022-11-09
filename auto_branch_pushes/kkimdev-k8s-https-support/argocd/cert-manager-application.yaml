@@ -7,19 +7,19 @@ metadata:
 spec:
   project: default
   source:
-    path: ''
-    repoURL: 'https://charts.jetstack.io/'
+    path: ""
+    repoURL: "https://charts.jetstack.io/"
     targetRevision: v1.10.0
     chart: cert-manager
     helm:
-      values: ''
+      values: ""
       parameters:
         - name: installCRDs
-          value: 'true'
+          value: "true"
   destination:
-    name: ''
+    name: ""
     namespace: cert-manager
-    server: 'https://kubernetes.default.svc'
+    server: "https://kubernetes.default.svc"
   syncPolicy:
     automated:
       prune: true

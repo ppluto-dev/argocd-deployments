@@ -10,9 +10,9 @@ spec:
     privateKeySecretRef:
       name: cluster-issuer-ref
     solvers:
-    - http01:
-        ingress:
-          class: nginx
+      - http01:
+          ingress:
+            class: nginx
 
 ---
 kind: Certificate
@@ -24,7 +24,7 @@ spec:
   secretName: ppluto-dev-cert
   commonName: "*.ppluto.dev"
   dnsNames:
-  - "*.ppluto.dev"
+    - "*.ppluto.dev"
   issuerRef:
     name: cluster-issuer-ref
     kind: ClusterIssuer
@@ -39,7 +39,6 @@ metadata:
 spec:
   gatewayClassName: istio
   listeners:
-
     - name: http-web
       port: 80
       protocol: HTTP
@@ -53,9 +52,9 @@ spec:
       hostname: "*.ppluto.dev"
       tls:
         certificateRefs:
-        - kind: Secret
-          group: ""
-          name: ppluto-dev-cert
+          - kind: Secret
+            group: ""
+            name: ppluto-dev-cert
       allowedRoutes:
         namespaces:
           from: All
