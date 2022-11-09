@@ -14,6 +14,7 @@ curl -sfL https://get.k3s.io | sh -
 
 #  https://gateway-api.sigs.k8s.io/guides/
 
+# https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-by-providing-credentials-on-the-command-line
 ```
 
 
