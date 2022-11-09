@@ -12,6 +12,8 @@ curl -sfL https://get.k3s.io | sh -
 
 # https://argo-cd.readthedocs.io/en/stable/getting_started/
 
+#  https://gateway-api.sigs.k8s.io/guides/
+
 ```
 
 
