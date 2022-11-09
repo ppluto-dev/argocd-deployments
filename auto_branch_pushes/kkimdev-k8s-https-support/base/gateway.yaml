@@ -8,7 +8,7 @@ spec:
     email: info@projectpluto.co
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
-      name: ppluto-dev-cert
+      name: cluster-issuer-ref
     solvers:
     - http01:
         ingress:
@@ -16,18 +16,18 @@ spec:
 
 ---
 kind: Certificate
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 metadata:
   name: nginx
   namespace: istio-system
 spec:
-  secretName: ppluto-dev-cert2
-  issuerRef:
-    name: ppluto-dev-cert
-    kind: ClusterIssuer
-  commonName: zzz.ppluto.dev
+  secretName: ppluto-dev-cert
+  commonName: "*.ppluto.dev"
   dnsNames:
-  - zzz.ppluto.dev
+  - "*.ppluto.dev"
+  issuerRef:
+    name: cluster-issuer-ref
+    kind: ClusterIssuer
 
 ---
 # https://istio.io/latest/docs/tasks/traffic-management/ingress/gateway-api/
@@ -55,7 +55,7 @@ spec:
         certificateRefs:
         - kind: Secret
           group: ""
-          name: ppluto-dev-cert2
+          name: ppluto-dev-cert
 
       allowedRoutes:
         namespaces:
