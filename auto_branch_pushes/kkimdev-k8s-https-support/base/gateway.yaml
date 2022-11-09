@@ -113,16 +113,16 @@ spec:
           ingress:
             class: istio
 
-# ---
-# kind: Certificate
-# apiVersion: cert-manager.io/v1
-# metadata:
-#   name: wildcard-ppluto-dev-cert
-#   namespace: istio-ingress
-# spec:
-#   secretName: wildcard-ppluto-dev-cert
-#   dnsNames:
-#     - "app-test.ppluto.dev"
-#   issuerRef:
-#     name: cluster-issuer-ref
-#     kind: ClusterIssuer
+---
+kind: Certificate
+apiVersion: cert-manager.io/v1
+metadata:
+  name: wildcard-ppluto-dev-cert
+  namespace: istio-ingress
+spec:
+  secretName: wildcard-ppluto-dev-cert
+  dnsNames:
+    - "app-test.ppluto.dev"
+  issuerRef:
+    name: cluster-issuer-ref
+    kind: ClusterIssuer
