@@ -1,33 +1,3 @@
-# https://cert-manager.io/docs/configuration/acme/
-kind: ClusterIssuer
-apiVersion: cert-manager.io/v1
-metadata:
-  name: letsencrypt
-spec:
-  acme:
-    email: info@projectpluto.co
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: cluster-issuer-ref
-    solvers:
-      - http01:
-          ingress:
-            class: nginx
-
----
-kind: Certificate
-apiVersion: cert-manager.io/v1
-metadata:
-  name: nginx
-  namespace: istio-system
-spec:
-  secretName: ppluto-dev-cert
-  commonName: "*.ppluto.dev"
-  dnsNames:
-    - "*.ppluto.dev"
-  issuerRef:
-    name: cluster-issuer-ref
-    kind: ClusterIssuer
 
 ---
 # https://istio.io/latest/docs/tasks/traffic-management/ingress/gateway-api/
@@ -103,3 +73,34 @@ spec:
       backendRefs:
         - name: ppluto-main-service
           port: 82
+
+# https://cert-manager.io/docs/configuration/acme/
+kind: ClusterIssuer
+apiVersion: cert-manager.io/v1
+metadata:
+  name: letsencrypt
+spec:
+  acme:
+    email: info@projectpluto.co
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: cluster-issuer-ref
+    solvers:
+      - http01:
+          ingress:
+            class: nginx
+
+---
+kind: Certificate
+apiVersion: cert-manager.io/v1
+metadata:
+  name: nginx
+  namespace: istio-system
+spec:
+  secretName: ppluto-dev-cert
+  commonName: "*.ppluto.dev"
+  dnsNames:
+    - "*.ppluto.dev"
+  issuerRef:
+    name: cluster-issuer-ref
+    kind: ClusterIssuer
