@@ -117,8 +117,11 @@ spec:
       name: letsencrypt-cluster-issuer-private-key-secret-ref
     solvers:
       - http01:
-          ingress:
-            class: nginx
+          gatewayHTTPRoute:
+            parentRefs:
+              - name: ppluto-main-gateway
+                namespace: istio-ingress
+                kind: Gateway
 
 # ---
 # kind: Certificate
