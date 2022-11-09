@@ -14,6 +14,8 @@ spec:
     helm:
       values: ""
       parameters:
+        - name: extraArgs
+          value: "{--feature-gates=ExperimentalGatewayAPISupport=true}"
         - name: installCRDs
           value: "true"
   destination:
