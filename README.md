@@ -5,6 +5,9 @@ Kubernetes setup
 # k3s.io
 curl -sfL https://get.k3s.io | sh - 
 
+# https://helm.sh/docs/intro/install/
+
+
 # https://github.com/k3s-io/k3s/issues/1160#issuecomment-1133559423
 
 ```
