@@ -21,10 +21,11 @@ spec:
       protocol: HTTPS
       hostname: "*.ppluto.dev"
       tls:
+        mode: Terminate
         certificateRefs:
           - kind: Secret
             group: ""
-            name: ppluto-dev-cert
+            name: wildcard-ppluto-dev-cert
       allowedRoutes:
         namespaces:
           from: All
@@ -103,23 +104,22 @@ metadata:
 spec:
   acme:
     email: info@projectpluto.co
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: cluster-issuer-ref
     solvers:
       - http01:
           ingress:
-            class: nginx
+            class: istio
 
 ---
 kind: Certificate
 apiVersion: cert-manager.io/v1
 metadata:
-  name: nginx
+  name: ppluto-dev-cert
   namespace: istio-system
 spec:
-  secretName: ppluto-dev-cert
-  commonName: "*.ppluto.dev"
+  secretName: wildcard-ppluto-dev-cert
   dnsNames:
     - "*.ppluto.dev"
   issuerRef:
