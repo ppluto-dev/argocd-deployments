@@ -1,5 +1,36 @@
-# https://istio.io/latest/docs/tasks/traffic-management/ingress/gateway-api/
+# https://cert-manager.io/docs/configuration/acme/
+kind: ClusterIssuer
+apiVersion: cert-manager.io/v1
+metadata:
+  name: letsencrypt
+spec:
+  acme:
+    email: info@projectpluto.co
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: ppluto-dev-cert
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
 
+---
+kind: Certificate
+apiVersion: cert-manager.io/v1alpha2
+metadata:
+  name: nginx
+  namespace: istio-system
+spec:
+  secretName: ppluto-dev-cert2
+  issuerRef:
+    name: ppluto-dev-cert
+    kind: ClusterIssuer
+  commonName: zzz.ppluto.dev
+  dnsNames:
+  - zzz.ppluto.dev
+
+---
+# https://istio.io/latest/docs/tasks/traffic-management/ingress/gateway-api/
 kind: Gateway
 apiVersion: gateway.networking.k8s.io/v1alpha2
 metadata:
@@ -24,7 +55,7 @@ spec:
         certificateRefs:
         - kind: Secret
           group: ""
-          name: ppluto-dev-cert
+          name: ppluto-dev-cert2
 
       allowedRoutes:
         namespaces:
