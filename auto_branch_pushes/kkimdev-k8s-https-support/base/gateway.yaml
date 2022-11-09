@@ -59,6 +59,25 @@ spec:
 kind: HTTPRoute
 apiVersion: gateway.networking.k8s.io/v1alpha2
 metadata:
+  name: https-web-route
+spec:
+  parentRefs:
+    - name: ppluto-main-gateway
+      sectionName: https-web
+      namespace: istio-ingress
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: ppluto-main-service
+          port: 80
+
+---
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1alpha2
+metadata:
   name: grpc-web-route
 spec:
   parentRefs:
