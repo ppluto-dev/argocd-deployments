@@ -22,9 +22,9 @@ metadata:
   namespace: istio-system
 spec:
   secretName: ppluto-dev-cert
-  commonName: zzz.ppluto.dev
+  commonName: "*.ppluto.dev"
   dnsNames:
-  - zzz.ppluto.dev
+  - "*.ppluto.dev"
   issuerRef:
     name: cluster-issuer-ref
     kind: ClusterIssuer
@@ -56,7 +56,6 @@ spec:
         - kind: Secret
           group: ""
           name: ppluto-dev-cert
-
       allowedRoutes:
         namespaces:
           from: All
