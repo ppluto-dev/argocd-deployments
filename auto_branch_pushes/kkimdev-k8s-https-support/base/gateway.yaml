@@ -7,7 +7,7 @@ metadata:
   name: ppluto-main-gateway
   namespace: istio-ingress
   annotations:
-    cert-manager.io/cluster-issuer: istio
+    cert-manager.io/cluster-issuer: letsencrypt
 spec:
   gatewayClassName: istio
   listeners:
