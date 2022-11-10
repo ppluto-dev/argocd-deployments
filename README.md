@@ -1,6 +1,12 @@
 # ArgoCD Setup
 
 ```bash
+# Setup linux
+apt update && apt upgrade -y
+
+## https://github.com/rancher/k3os/issues/702#issuecomment-850246749
+apt install apparmor apparmor-utils
+
 # Install k3s
 # https://k3s.io/
 curl -sfL https://get.k3s.io | sh - 
@@ -17,6 +23,9 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 # https://gateway-api.sigs.k8s.io/guides/
+# Create namespaces
+kubectl create namespace ppluto-main
+kubectl create namespace istio-ingress
 
 # Provide Gitlab container registry secret credentials.
 # https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-by-providing-credentials-on-the-command-line
