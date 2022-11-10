@@ -3,7 +3,7 @@ kind: Gateway
 apiVersion: gateway.networking.k8s.io/v1alpha2
 metadata:
   name: ppluto-main-gateway
-  namespace: istio-ingress
+  # namespace: istio-ingress
   annotations:
     cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
     # TODO: Use let's encrypt once it works with self signing.
@@ -50,7 +50,7 @@ spec:
   parentRefs:
     - name: ppluto-main-gateway
       sectionName: http-web
-      namespace: istio-ingress
+      # namespace: istio-ingress
   rules:
     - matches:
         - path:
@@ -69,7 +69,7 @@ spec:
   parentRefs:
     - name: ppluto-main-gateway
       sectionName: https-web
-      namespace: istio-ingress
+      # namespace: istio-ingress
   rules:
     - matches:
         - path:
@@ -88,7 +88,7 @@ spec:
   parentRefs:
     - name: ppluto-main-gateway
       sectionName: grpc-web
-      namespace: istio-ingress
+      # namespace: istio-ingress
   rules:
     - matches:
         - path:
@@ -125,5 +125,5 @@ spec:
           gatewayHTTPRoute:
             parentRefs:
               - name: ppluto-main-gateway
-                namespace: istio-ingress
+                # namespace: istio-ingress
                 kind: Gateway
