@@ -1,6 +1,6 @@
 # ArgoCD Setup
 
-```
+```bash
 # Install k3s
 # https://k3s.io/
 curl -sfL https://get.k3s.io | sh - 
