@@ -1,5 +1,3 @@
-
----
 # https://istio.io/latest/docs/tasks/traffic-management/ingress/gateway-api/
 kind: Gateway
 apiVersion: gateway.networking.k8s.io/v1alpha2
@@ -8,6 +6,7 @@ metadata:
   namespace: istio-ingress
   annotations:
     cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
+    # TODO: Use let's encrypt once it works with self signing.
     # cert-manager.io/cluster-issuer: letsencrypt
 spec:
   gatewayClassName: istio
@@ -19,6 +18,7 @@ spec:
         namespaces:
           from: All
 
+    # TODO: This doesn't work and don't know why :/.
     - name: https-web
       port: 443
       protocol: HTTPS
@@ -27,12 +27,13 @@ spec:
         mode: Terminate
         certificateRefs:
           - kind: Secret
-            name: wildcard-ppluto-dev-cert-7
+            name: app-test-ppluto-dev-cert
             group: core
       allowedRoutes:
         namespaces:
           from: All
 
+    # TODO: HTTPS support.
     - name: grpc-web
       port: 5082
       protocol: HTTP
