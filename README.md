@@ -17,6 +17,10 @@ kubectl -n kube-system delete helmchart traefik traefik-crd
 touch /var/lib/rancher/k3s/server/manifests/traefik.yaml.skip
 systemctl restart k3s
 
+# Install Kubernetes Gateway CRD
+# https://gateway-api.sigs.k8s.io/guides/#install-standard-channel
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v0.5.1/standard-install.yaml
+
 # Install ArgoCD
 # https://argo-cd.readthedocs.io/en/stable/getting_started/
 kubectl create namespace argocd
