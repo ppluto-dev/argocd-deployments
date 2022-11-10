@@ -43,8 +43,8 @@ kubectl create secret docker-registry regcred \
 # Print ArgoCD password
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 # Port-forward ArgoCD UI
-kubectl port-forward svc/argocd-server -n argocd 8081:443 --address='0.0.0.0'
 echo https://$(curl ifconfig.me -s):8081
+kubectl port-forward svc/argocd-server -n argocd 8081:443 --address='0.0.0.0'
 ```
 
 ## Creating ssh keys
