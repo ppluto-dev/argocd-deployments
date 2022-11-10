@@ -11,12 +11,12 @@ metadata:
 spec:
   gatewayClassName: istio
   listeners:
-    # - name: http-web
-    #   port: 80
-    #   protocol: HTTP
-    #   allowedRoutes:
-    #     namespaces:
-    #       from: All
+    - name: http-web
+      port: 80
+      protocol: HTTP
+      allowedRoutes:
+        namespaces:
+          from: All
 
     - name: https-web
       port: 444
@@ -39,24 +39,24 @@ spec:
     #     namespaces:
     #       from: All
 
-# ---
-# kind: HTTPRoute
-# apiVersion: gateway.networking.k8s.io/v1alpha2
-# metadata:
-#   name: http-web-route
-# spec:
-#   parentRefs:
-#     - name: ppluto-main-gateway
-#       sectionName: http-web
-#       namespace: istio-ingress
-#   rules:
-#     - matches:
-#         - path:
-#             type: PathPrefix
-#             value: /
-#       backendRefs:
-#         - name: ppluto-main-service
-#           port: 80
+---
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1alpha2
+metadata:
+  name: http-web-route
+spec:
+  parentRefs:
+    - name: ppluto-main-gateway
+      sectionName: http-web
+      namespace: istio-ingress
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: ppluto-main-service
+          port: 80
 
 ---
 kind: HTTPRoute
@@ -123,17 +123,3 @@ spec:
               - name: ppluto-main-gateway
                 namespace: istio-ingress
                 kind: Gateway
-
-# ---
-# kind: Certificate
-# apiVersion: cert-manager.io/v1
-# metadata:
-#   name: wildcard-ppluto-dev-cert
-#   namespace: istio-ingress
-# spec:
-#   secretName: wildcard-ppluto-dev-cert
-#   dnsNames:
-#     - app-test.ppluto.dev
-#   issuerRef:
-#     name: cluster-issuer-ref
-#     kind: ClusterIssuer
