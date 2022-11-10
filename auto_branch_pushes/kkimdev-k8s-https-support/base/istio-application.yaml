@@ -12,9 +12,14 @@ spec:
     # MANUAL_UPDATE: https://artifacthub.io/packages/search?org=istio
     targetRevision: 1.16.0-beta.2
     chart: base
+    helm:
+      values: ""
+      parameters:
+        - name: defaultRevision
+          value: canary
   destination:
     name: ""
-    namespace: argocd
+    namespace: istio-system
     server: "https://kubernetes.default.svc"
   syncPolicy:
     automated:
