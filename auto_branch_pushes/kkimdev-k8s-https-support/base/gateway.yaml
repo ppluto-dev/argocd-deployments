@@ -20,7 +20,7 @@ spec:
           from: All
 
     - name: https-web
-      port: 444
+      port: 443
       protocol: HTTPS
       hostname: app-test.ppluto.dev
       tls:
@@ -33,12 +33,12 @@ spec:
         namespaces:
           from: All
 
-    # - name: grpc-web
-    #   port: 5082
-    #   protocol: HTTP
-    #   allowedRoutes:
-    #     namespaces:
-    #       from: All
+    - name: grpc-web
+      port: 5082
+      protocol: HTTP
+      allowedRoutes:
+        namespaces:
+          from: All
 
 ---
 kind: HTTPRoute
@@ -78,24 +78,24 @@ spec:
         - name: ppluto-main-service
           port: 80
 
-# ---
-# kind: HTTPRoute
-# apiVersion: gateway.networking.k8s.io/v1alpha2
-# metadata:
-#   name: grpc-web-route
-# spec:
-#   parentRefs:
-#     - name: ppluto-main-gateway
-#       sectionName: grpc-web
-#       namespace: istio-ingress
-#   rules:
-#     - matches:
-#         - path:
-#             type: PathPrefix
-#             value: /
-#       backendRefs:
-#         - name: ppluto-main-service
-#           port: 82
+---
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1alpha2
+metadata:
+  name: grpc-web-route
+spec:
+  parentRefs:
+    - name: ppluto-main-gateway
+      sectionName: grpc-web
+      namespace: istio-ingress
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: ppluto-main-service
+          port: 82
 
 ---
 kind: ClusterIssuer
