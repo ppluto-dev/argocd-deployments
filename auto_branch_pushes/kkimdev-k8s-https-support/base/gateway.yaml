@@ -20,14 +20,15 @@ spec:
 
     - name: https-web
       port: 444
-      protocol: HTTPS
-      hostname: app-test.ppluto.dev
-      tls:
-        mode: Terminate
-        certificateRefs:
-          - kind: Secret
-            name: wildcard-ppluto-dev-cert-6
-            # group: core
+      protocol: HTTP
+      # protocol: HTTPS
+      # hostname: app-test.ppluto.dev
+      # tls:
+      #   mode: Terminate
+      #   certificateRefs:
+      #     - kind: Secret
+      #       name: wildcard-ppluto-dev-cert-6
+      #       # group: core
       allowedRoutes:
         namespaces:
           from: All
