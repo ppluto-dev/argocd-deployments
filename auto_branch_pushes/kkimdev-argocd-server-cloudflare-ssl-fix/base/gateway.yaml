@@ -2,7 +2,7 @@
 kind: Gateway
 apiVersion: gateway.networking.k8s.io/v1alpha2
 metadata:
-  name: ppluto-main-gateway
+  name: ppluto-main-gateway-2
   annotations:
     cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
     # TODO: Use let's encrypt once it works with self signing.
@@ -47,7 +47,7 @@ metadata:
   name: http-web-route
 spec:
   parentRefs:
-    - name: ppluto-main-gateway
+    - name: ppluto-main-gateway-2
       sectionName: http-web
   rules:
     - matches:
@@ -65,7 +65,7 @@ metadata:
   name: https-web-route
 spec:
   parentRefs:
-    - name: ppluto-main-gateway
+    - name: ppluto-main-gateway-2
       sectionName: https-web
   rules:
     - matches:
@@ -83,7 +83,7 @@ metadata:
   name: grpc-web-route
 spec:
   parentRefs:
-    - name: ppluto-main-gateway
+    - name: ppluto-main-gateway-2
       sectionName: grpc-web
   rules:
     - matches:
@@ -120,5 +120,5 @@ spec:
       - http01:
           gatewayHTTPRoute:
             parentRefs:
-              - name: ppluto-main-gateway
+              - name: ppluto-main-gateway-2
                 kind: Gateway
