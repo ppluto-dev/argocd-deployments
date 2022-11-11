@@ -17,20 +17,20 @@ spec:
         namespaces:
           from: All
 
-    # TODO: This doesn't work and don't know why :/.
-    - name: https-web
-      port: 443
-      protocol: HTTPS
-      hostname: app-test.ppluto.dev
-      tls:
-        mode: Terminate
-        certificateRefs:
-          - kind: Secret
-            name: app-test-ppluto-dev-cert
-            group: core
-      allowedRoutes:
-        namespaces:
-          from: All
+    # # TODO: This doesn't work and don't know why :/.
+    # - name: https-web
+    #   port: 443
+    #   protocol: HTTPS
+    #   hostname: app-test.ppluto.dev
+    #   tls:
+    #     mode: Terminate
+    #     certificateRefs:
+    #       - kind: Secret
+    #         name: app-test-ppluto-dev-cert
+    #         group: core
+    #   allowedRoutes:
+    #     namespaces:
+    #       from: All
 
     # TODO: HTTPS support.
     - name: grpc-web
