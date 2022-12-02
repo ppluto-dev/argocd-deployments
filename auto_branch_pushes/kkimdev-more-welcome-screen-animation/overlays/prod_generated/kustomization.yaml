@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base
+images:
+- name: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client
+  newTag: e46c76921e1cf25d604511a0d6e114af0a2254c5995a80ee6b6ababa3a424c50
+- name: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server
+  newTag: f022cad84b711cde580b132b857d49fb8346234771123ed6b44d17936dd0c1cb
