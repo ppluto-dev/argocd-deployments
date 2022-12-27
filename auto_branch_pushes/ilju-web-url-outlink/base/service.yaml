@@ -1,0 +1,22 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ppluto-main-service
+spec:
+  selector:
+    app: ppluto-main
+  ports:
+    - name: web
+      port: 80
+      protocol: TCP
+      targetPort: 80
+
+    - name: grpc
+      protocol: TCP
+      port: 81
+      targetPort: 81
+
+    - name: grpc-web
+      protocol: TCP
+      port: 82
+      targetPort: 82
