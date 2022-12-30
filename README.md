@@ -5,7 +5,7 @@
 apt update && apt upgrade -y
 
 ## https://github.com/rancher/k3os/issues/702#issuecomment-850246749
-apt install apparmor apparmor-utils
+apt install apparmor apparmor-utils -y
 
 # Install k3s
 # https://k3s.io/
