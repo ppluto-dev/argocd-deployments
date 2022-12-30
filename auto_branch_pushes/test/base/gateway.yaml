@@ -94,31 +94,31 @@ spec:
         - name: ppluto-main-service
           port: 82
 
----
-# TODO: Migrate to letsencrypt and remove.
-# https://cert-manager.io/docs/configuration/selfsigned/
-kind: ClusterIssuer
-apiVersion: cert-manager.io/v1
-metadata:
-  name: selfsigned-cluster-issuer
-spec:
-  selfSigned: {}
+# ---
+# # TODO: Migrate to letsencrypt and remove.
+# # https://cert-manager.io/docs/configuration/selfsigned/
+# kind: ClusterIssuer
+# apiVersion: cert-manager.io/v1
+# metadata:
+#   name: selfsigned-cluster-issuer
+# spec:
+#   selfSigned: {}
 
----
-# https://cert-manager.io/docs/configuration/acme/
-kind: ClusterIssuer
-apiVersion: cert-manager.io/v1
-metadata:
-  name: letsencrypt
-spec:
-  acme:
-    email: info@projectpluto.co
-    server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: letsencrypt-cluster-issuer-private-key-secret-ref
-    solvers:
-      - http01:
-          gatewayHTTPRoute:
-            parentRefs:
-              - name: ppluto-main-gateway
-                kind: Gateway
+# ---
+# # https://cert-manager.io/docs/configuration/acme/
+# kind: ClusterIssuer
+# apiVersion: cert-manager.io/v1
+# metadata:
+#   name: letsencrypt
+# spec:
+#   acme:
+#     email: info@projectpluto.co
+#     server: https://acme-v02.api.letsencrypt.org/directory
+#     privateKeySecretRef:
+#       name: letsencrypt-cluster-issuer-private-key-secret-ref
+#     solvers:
+#       - http01:
+#           gatewayHTTPRoute:
+#             parentRefs:
+#               - name: ppluto-main-gateway
+#                 kind: Gateway
