@@ -1,0 +1,26 @@
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: traefik
+spec:
+  project: default
+  source:
+    repoURL: "https://helm.traefik.io/traefik"
+    path: ""
+    # MANUAL_UPDATE: https://artifacthub.io/packages/search?org=istio
+    chart: traefik
+    helm:
+      values: ""
+      parameters:
+        - name: experimental.kubernetesGateway.enabled
+          value: true
+  destination:
+    name: ""
+    namespace: traefik
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
