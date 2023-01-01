@@ -26,11 +26,6 @@ kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/downloa
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-# https://gateway-api.sigs.k8s.io/guides/
-# Create namespaces
-kubectl create namespace ppluto-main
-kubectl create namespace istio-ingress
-
 # Provide Gitlab container registry secret credentials.
 # https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-by-providing-credentials-on-the-command-line
 kubectl create secret docker-registry regcred \
