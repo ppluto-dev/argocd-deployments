@@ -19,7 +19,7 @@ systemctl restart k3s
 
 # Install Kubernetes Gateway CRD
 # https://gateway-api.sigs.k8s.io/guides/#install-standard-channel
-kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v0.5.1/standard-install.yaml
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v0.6.0/standard-install.yaml
 
 # Install ArgoCD
 # https://argo-cd.readthedocs.io/en/stable/getting_started/
