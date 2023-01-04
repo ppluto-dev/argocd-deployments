@@ -1,6 +1,13 @@
-# https://istio.io/latest/docs/tasks/traffic-management/ingress/gateway-api/
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: GatewayClass
+metadata:
+  name: eg
+spec:
+  controllerName: gateway.envoyproxy.io/gatewayclass-controller
+
+---
 kind: Gateway
-apiVersion: gateway.networking.k8s.io/v1alpha2
+apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
   name: ppluto-main-gateway
   annotations:
@@ -8,7 +15,7 @@ metadata:
     # TODO: Use let's encrypt once it works with self signing.
     # cert-manager.io/cluster-issuer: letsencrypt
 spec:
-  gatewayClassName: istio
+  gatewayClassName: eg
   listeners:
     - name: http-web
       port: 80
@@ -42,7 +49,7 @@ spec:
 
 ---
 kind: HTTPRoute
-apiVersion: gateway.networking.k8s.io/v1alpha2
+apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
   name: http-web-route
 spec:
@@ -60,7 +67,7 @@ spec:
 
 ---
 kind: HTTPRoute
-apiVersion: gateway.networking.k8s.io/v1alpha2
+apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
   name: https-web-route
 spec:
@@ -78,7 +85,7 @@ spec:
 
 ---
 kind: HTTPRoute
-apiVersion: gateway.networking.k8s.io/v1alpha2
+apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
   name: grpc-web-route
 spec:
