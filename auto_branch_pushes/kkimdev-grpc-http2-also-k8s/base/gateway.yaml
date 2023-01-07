@@ -129,3 +129,21 @@ spec:
             parentRefs:
               - name: ppluto-main-gateway
                 kind: Gateway
+
+---
+kind: Certificate
+apiVersion: cert-manager.io/v1
+metadata:
+  name: my-selfsigned-ca
+  namespace: sandbox
+spec:
+  isCA: true
+  commonName: my-selfsigned-ca
+  secretName: root-secret
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: selfsigned-cluster-issuer
+    kind: ClusterIssuer
+    group: cert-manager.io
