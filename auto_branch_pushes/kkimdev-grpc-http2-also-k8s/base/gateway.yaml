@@ -111,24 +111,24 @@ metadata:
 spec:
   selfSigned: {}
 
----
-# https://cert-manager.io/docs/configuration/acme/
-kind: ClusterIssuer
-apiVersion: cert-manager.io/v1
-metadata:
-  name: letsencrypt
-spec:
-  acme:
-    email: info@projectpluto.co
-    server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: letsencrypt-cluster-issuer-private-key-secret-ref
-    solvers:
-      - http01:
-          gatewayHTTPRoute:
-            parentRefs:
-              - name: ppluto-main-gateway
-                kind: Gateway
+# ---
+# # https://cert-manager.io/docs/configuration/acme/
+# kind: ClusterIssuer
+# apiVersion: cert-manager.io/v1
+# metadata:
+#   name: letsencrypt
+# spec:
+#   acme:
+#     email: info@projectpluto.co
+#     server: https://acme-v02.api.letsencrypt.org/directory
+#     privateKeySecretRef:
+#       name: letsencrypt-cluster-issuer-private-key-secret-ref
+#     solvers:
+#       - http01:
+#           gatewayHTTPRoute:
+#             parentRefs:
+#               - name: ppluto-main-gateway
+#                 kind: Gateway
 
 ---
 kind: Certificate
