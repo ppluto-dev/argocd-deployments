@@ -28,7 +28,7 @@ spec:
     - name: https-web
       port: 443
       protocol: HTTPS
-      hostname: app-test.ppluto.dev
+      hostname: *
       tls:
         mode: Terminate
         certificateRefs:
