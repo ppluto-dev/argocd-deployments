@@ -31,10 +31,10 @@ spec:
       hostname: app-test.ppluto.dev
       tls:
         mode: Terminate
-        certificateRefs:
-          - kind: Secret
-            name: app-test-ppluto-dev-cert
-            group: core
+#         certificateRefs:
+#           - kind: Secret
+#             name: app-test-ppluto-dev-cert
+#             group: core
       allowedRoutes:
         namespaces:
           from: All
