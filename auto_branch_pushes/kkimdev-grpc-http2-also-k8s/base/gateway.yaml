@@ -16,6 +16,22 @@ spec:
 kind: Gateway
 apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
+  name: contour
+  namespace: projectcontour
+spec:
+  gatewayClassName: contour
+  listeners:
+    - name: http
+      protocol: HTTP
+      port: 80
+      allowedRoutes:
+        namespaces:
+          from: All
+
+---
+kind: Gateway
+apiVersion: gateway.networking.k8s.io/v1beta1
+metadata:
   name: ppluto-main-gateway
 #   annotations:
 #     cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
