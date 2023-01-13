@@ -52,7 +52,7 @@ spec:
     - name: https-web
       port: 83
       protocol: TLS
-      hostname: app-test.ppluto.dev
+#       hostname: app-test.ppluto.dev
       tls:
         mode: Terminate
         certificateRefs:
@@ -96,12 +96,12 @@ metadata:
   name: https-web-route
 spec:
   parentRefs:
-    - name: ppluto-main-gateway
-      sectionName: https-web
+  - name: ppluto-main-gateway
+    sectionName: https-web
   rules:
-    - backendRefs:
-        - name: ppluto-main-service
-          port: 80
+  - backendRefs:
+    - name: ppluto-main-service
+      port: 80
 
 ---
 kind: HTTPRoute
