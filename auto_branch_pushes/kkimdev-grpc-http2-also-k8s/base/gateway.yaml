@@ -51,7 +51,7 @@ spec:
     # TODO: This doesn't work and don't know why :/.
     - name: https-web
       port: 83
-      protocol: TLS
+      protocol: HTTPS
 #       hostname: app-test.ppluto.dev
       tls:
         mode: Terminate
@@ -90,7 +90,7 @@ spec:
           port: 80
 
 ---
-kind: TCPRoute
+kind: HTTPRoute
 apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
   name: https-web-route
@@ -99,9 +99,13 @@ spec:
   - name: ppluto-main-gateway
     sectionName: https-web
   rules:
-  - backendRefs:
-    - name: ppluto-main-service
-      port: 80
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: ppluto-main-service
+          port: 80
 
 ---
 kind: HTTPRoute
