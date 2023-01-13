@@ -1,16 +1,16 @@
-apiVersion: gateway.networking.k8s.io/v1beta1
-kind: GatewayClass
-metadata:
-  name: eg
-spec:
-  controllerName: gateway.envoyproxy.io/gatewayclass-controller
-
-# kind: GatewayClass
 # apiVersion: gateway.networking.k8s.io/v1beta1
+# kind: GatewayClass
 # metadata:
-#   name: contour
+#   name: eg
 # spec:
-#   controllerName: projectcontour.io/gateway-controller
+#   controllerName: gateway.envoyproxy.io/gatewayclass-controller
+
+kind: GatewayClass
+apiVersion: gateway.networking.k8s.io/v1beta1
+metadata:
+  name: contour
+spec:
+  controllerName: projectcontour.io/gateway-controller
 
 ---
 kind: Gateway
@@ -23,8 +23,8 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
 #   gatewayClassName: eg
-  gatewayClassName: istio
-#   gatewayClassName: contour
+#   gatewayClassName: istio
+  gatewayClassName: contour
   listeners:
     - name: http-web
       port: 80
