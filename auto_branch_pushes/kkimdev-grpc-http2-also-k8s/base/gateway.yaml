@@ -18,13 +18,13 @@ apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
   name: ppluto-main-gateway
   annotations:
-#     cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
-#     TODO: Use let's encrypt once it works with self signing.
+    # cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
+    # TODO: Use let's encrypt once it works with self signing.
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
 #   gatewayClassName: eg
   gatewayClassName: istio
-#   gatewayClassName: contour
+  # gatewayClassName: contour
   listeners:
     - name: http-web
       port: 80
@@ -33,24 +33,9 @@ spec:
         namespaces:
           from: All
 
-#     # TODO: This doesn't work and don't know why :/.
-#     - name: https-web
-#       port: 443
-#       protocol: HTTPS
-#       hostname: app-test.ppluto.dev
-#       tls:
-#         mode: Terminate
-#         certificateRefs:
-#           - kind: Secret
-#             name: app-test-ppluto-dev-cert
-#             group: core
-#       allowedRoutes:
-#         namespaces:
-#           from: All
-
     # TODO: This doesn't work and don't know why :/.
     - name: https-web
-      port: 84
+      port: 443
       protocol: HTTPS
       hostname: app-test.ppluto.dev
       tls:
@@ -98,8 +83,8 @@ spec:
   hostnames:
     - app-test.ppluto.dev
   parentRefs:
-  - name: ppluto-main-gateway
-    sectionName: https-web
+    - name: ppluto-main-gateway
+      sectionName: https-web
   rules:
     - matches:
         - path:
