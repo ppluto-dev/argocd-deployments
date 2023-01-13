@@ -77,6 +77,8 @@ apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
   name: http-web-route
 spec:
+  hostnames:
+    - app-test.ppluto.dev
   parentRefs:
     - name: ppluto-main-gateway
       sectionName: http-web
