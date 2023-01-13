@@ -53,12 +53,12 @@ spec:
       port: 82
       protocol: HTTP
       hostname: app-test.ppluto.dev
-      tls:
-        mode: Terminate
-        certificateRefs:
-          - kind: Secret
-            name: app-test-ppluto-dev-cert
-            group: core
+#       tls:
+#         mode: Terminate
+#         certificateRefs:
+#           - kind: Secret
+#             name: app-test-ppluto-dev-cert
+#             group: core
       allowedRoutes:
         namespaces:
           from: All
