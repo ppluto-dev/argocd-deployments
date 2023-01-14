@@ -22,7 +22,7 @@ spec:
       protocol: HTTPS
       hostname: app-test.ppluto.dev
       tls:
-        mode: SIMPLE
+        mode: Terminate
         certificateRefs:
           - kind: Secret
             name: app-test-ppluto-dev-cert
