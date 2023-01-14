@@ -1,4 +1,4 @@
-# ArgoCD Setup
+## ArgoCD Setup
 
 ```bash
 # Setup linux
@@ -40,6 +40,20 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 # Port-forward ArgoCD UI
 echo https://$(curl ifconfig.me -s):8081
 kubectl port-forward svc/argocd-server -n argocd 8081:443 --address='0.0.0.0'
+```
+
+## Running kubernetes dashboard
+```bash
+# After installing kubernetes-dashboard
+
+# Print a login token
+# https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md#getting-a-bearer-token
+kubectl -n kubernetes-dashboard create token admin-user
+
+# Port forward kubernetes-dashboard UI
+# https://github.com/kubernetes/dashboard/blob/master/docs/user/accessing-dashboard/README.md#kubectl-port-forward
+kubectl -n kubernetes-dashboard get service kubernetes-dashboard --address='0.0.0.0'
+
 ```
 
 ## Creating ssh keys
