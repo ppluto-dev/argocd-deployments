@@ -18,7 +18,7 @@ spec:
 
     # TODO: This doesn't work and don't know why :/.
     - name: https-web
-      port: 444
+      port: 443
       protocol: HTTPS
       hostname: app-test.ppluto.dev
       tls:
@@ -140,4 +140,3 @@ spec:
     name: selfsigned-cluster-issuer
     kind: ClusterIssuer
     group: cert-manager.io
-    
