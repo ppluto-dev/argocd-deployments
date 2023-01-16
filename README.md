@@ -52,7 +52,7 @@ kubectl -n kubernetes-dashboard create token admin-user
 
 # Port forward kubernetes-dashboard UI
 # https://github.com/kubernetes/dashboard/blob/master/docs/user/accessing-dashboard/README.md#kubectl-port-forward
-kubectl -n kubernetes-dashboard get service kubernetes-dashboard --address='0.0.0.0'
+kubectl port-forward -n kubernetes-dashboard service/kubernetes-dashboard 8080:443 --address='0.0.0.0'
 
 ```
 
