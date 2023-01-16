@@ -1,0 +1,24 @@
+# Kong install instruction https://github.com/Kong/charts
+
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: kong
+spec:
+  project: default
+  source:
+    repoURL: "https://charts.konghq.com"
+    path: ""
+    # MANUAL_UPDATE: https://artifacthub.io/packages/search?org=istio
+    targetRevision: 2.14.0
+    chart: kong
+  destination:
+    name: ""
+    namespace: kong
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
