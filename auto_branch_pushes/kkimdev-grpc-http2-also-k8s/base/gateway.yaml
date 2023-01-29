@@ -12,7 +12,7 @@ spec:
   listeners:
     - name: http-web
       port: 80
-      hostname: "*.example.com"
+      hostname: "*.ppluto.dev"
       protocol: HTTP
       allowedRoutes:
         namespaces:
@@ -50,7 +50,7 @@ spec:
   parentRefs:
     - name: ppluto-main-gateway
       sectionName: http-web
-  hostnames: 
+  hostnames:
   rules:
     - matches:
         - path:
@@ -67,11 +67,10 @@ metadata:
   name: https-web-route
 spec:
   hostnames:
-    - app-test.ppluto.dev
+    - grab-test.ppluto.dev
   parentRefs:
     - name: ppluto-main-gateway
       sectionName: https-web
-  hostnames: ["httpbin.example.com"]
   rules:
     - matches:
         - path:
