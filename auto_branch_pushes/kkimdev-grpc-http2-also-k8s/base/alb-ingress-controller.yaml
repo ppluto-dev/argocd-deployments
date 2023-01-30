@@ -1,0 +1,22 @@
+# alb install instruction: https://cert-manager.io/docs/installation/helm/
+
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: alb-ingress-controller
+spec:
+  project: default
+  source:
+    path: "aws-alb-ingress-controller"
+    repoURL: "https://github.com/kubernetes-sigs/aws-alb-ingress-controller.git"
+    targetRevision: HEAD
+  destination:
+    name: ""
+    namespace: alb-ingress-controller
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
