@@ -1,5 +1,3 @@
-# alb install instruction: https://cert-manager.io/docs/installation/helm/
-
 kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
@@ -7,7 +5,7 @@ metadata:
 spec:
   project: default
   source:
-    path: "aws-alb-ingress-controller"
+    path: "helm/aws-load-balancer-controller"
     repoURL: "https://github.com/kubernetes-sigs/aws-alb-ingress-controller.git"
     targetRevision: HEAD
   destination:
