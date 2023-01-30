@@ -27,6 +27,8 @@ spec:
         mode: Terminate
         certificateRefs:
           - name: my-selfsigned-ca
+            kind: Secret
+            group: core
       allowedRoutes:
         namespaces:
           from: All
@@ -50,6 +52,7 @@ spec:
     - name: ppluto-main-gateway
       sectionName: http-web
   hostnames:
+    - web.ppluto.dev
   rules:
     - matches:
         - path:
@@ -66,7 +69,7 @@ metadata:
   name: https-web-route
 spec:
   hostnames:
-    - web.ppluto.dev
+    - app-test.ppluto.dev
   parentRefs:
     - name: ppluto-main-gateway
       sectionName: https-web
