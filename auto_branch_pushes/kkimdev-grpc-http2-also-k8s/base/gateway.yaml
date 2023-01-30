@@ -78,10 +78,6 @@ spec:
           requestRedirect:
             scheme: https
             statusCode: 301
-      matches:
-        - path:
-            type: PathPrefix
-            value: /
       backendRefs:
         - name: ppluto-main-service
           port: 80
