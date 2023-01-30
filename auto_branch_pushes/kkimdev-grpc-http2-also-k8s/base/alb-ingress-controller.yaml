@@ -40,12 +40,12 @@ spec:
 
             # AWS VPC ID this ingress controller will use to create AWS resources.
             # If unspecified, it will be discovered from ec2metadata.
-            # - --aws-vpc-id=vpc-xxxxxx
+            - --aws-vpc-id=vpc-07fd537437bf7fcc7
 
             # AWS region this ingress controller will operate in.
             # If unspecified, it will be discovered from ec2metadata.
             # List of regions: http://docs.aws.amazon.com/general/latest/gr/rande.html#vpc_region
-            # - --aws-region=us-west-1
+            - --aws-region=us-east-2
 
             # Enables logging on all outbound requests sent to the AWS API.
             # If logging is desired, set to true.
