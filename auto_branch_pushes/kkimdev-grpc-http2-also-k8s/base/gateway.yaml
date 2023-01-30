@@ -26,9 +26,7 @@ spec:
       tls:
         mode: Terminate
         certificateRefs:
-          - kind: Secret
-            name: app-test-ppluto-dev-cert
-            group: core
+          - name: my-selfsigned-ca
       allowedRoutes:
         namespaces:
           from: All
@@ -138,7 +136,9 @@ metadata:
 spec:
   isCA: true
   commonName: my-selfsigned-ca
-  secretName: root-secret
+  secretName: my-selfsigned-ca
+  dnsNames:
+    - app-test.ppluto.dev
   privateKey:
     algorithm: ECDSA
     size: 256
