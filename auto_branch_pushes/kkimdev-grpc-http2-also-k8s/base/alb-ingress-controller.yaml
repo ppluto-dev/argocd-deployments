@@ -1,19 +1,25 @@
-kind: Application
 apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
   name: alb-ingress-controller
+  namespace: argocd
 spec:
   project: default
   source:
-    repoURL: "https://github.com/kubernetes-sigs/aws-alb-ingress-controller.git"
-    targetRevision: HEAD
+    repoURL: "ttps://aws.github.io/eks-charts"
+    path: "stable/aws-load-balancer-controller"
+
+    # MANUAL_UPDATE: https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard
   destination:
-    name: ""
+    server: https://kubernetes.default.svc
     namespace: alb-ingress-controller
-    server: "https://kubernetes.default.svc"
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+  values:
+    clusterName: argocd
+    autoDiscoverAwsRegion: true
+    autoDiscoverAwsVpcID: true
