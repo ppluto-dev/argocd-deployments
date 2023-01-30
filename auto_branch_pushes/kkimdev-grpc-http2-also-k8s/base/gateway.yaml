@@ -17,8 +17,6 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
-      tls:
-        httpsRedirect: true
     # TODO: This doesn't work and don't know why :/.
     - name: https-web
       port: 443
@@ -70,12 +68,17 @@ metadata:
   name: https-web-route
 spec:
   hostnames:
-    - app-test.ppluto.dev
+    - web.ppluto.dev
   parentRefs:
     - name: ppluto-main-gateway
       sectionName: https-web
   rules:
-    - matches:
+    - filters:
+        - type: RequestRedirect
+          requestRedirect:
+            scheme: https
+            statusCode: 301
+      matches:
         - path:
             type: PathPrefix
             value: /
