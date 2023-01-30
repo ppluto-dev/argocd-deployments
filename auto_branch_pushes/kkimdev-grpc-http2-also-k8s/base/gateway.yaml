@@ -12,7 +12,7 @@ spec:
   listeners:
     - name: http-web
       port: 80
-      hostname: "*.ppluto.dev"
+      hostname: "web.ppluto.dev"
       protocol: HTTP
       allowedRoutes:
         namespaces:
@@ -37,6 +37,7 @@ spec:
     - name: grpc-web
       port: 5082
       protocol: HTTP
+      hostname: "api.ppluto.dev"
       allowedRoutes:
         namespaces:
           from: All
