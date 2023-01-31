@@ -1,23 +1,6 @@
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 resources:
-  - gateway.yaml
-  - service.yaml
-  - deployment.yaml
-  - cert-manager-application.yaml
-  - kubernetes-dashboard-application.yaml
-  - kubernetes-dashboard.yaml
-  - istio-application.yaml
-  - istiod-application.yaml
-  # Backup gateway configuration https://gateway.envoyproxy.io/latest/index.html
-  #
-  # - envoy-gateway.yaml
-  #
-  #  Also need to create a gateway.  Example from https://github.com/envoyproxy/gateway/releases/download/latest/quickstart.yaml
-  #
-  # apiVersion: gateway.networking.k8s.io/v1beta1
-  # kind: GatewayClass
-  # metadata:
-  #   name: eg
-  # spec:
-  #   controllerName: gateway.envoyproxy.io/gatewayclass-controller
+  - components/ppluto-main/
+  - components/kubernetes-dashboard/
+  - components/aws-alb-controller/
