@@ -7,7 +7,8 @@ spec:
   template:
     spec:
       containers:
-        - args:
+        - name: controller
+          args:
             - --cluster-name=ppluto-production
             - --ingress-class=alb
             - --aws-vpc-id=vpc-07fd537437bf7fcc7
