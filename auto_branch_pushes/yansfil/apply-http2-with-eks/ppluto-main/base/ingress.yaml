@@ -17,6 +17,13 @@ spec:
     - host: web.ppluto-main.ppluto.dev
       http:
         paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service
+                port:
+                  number: 82
           - path: /
             pathType: Prefix
             backend:
@@ -24,13 +31,3 @@ spec:
                 name: ppluto-main-service
                 port:
                   number: 80
-    - host: api.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service
-                port:
-                  number: 82
