@@ -4,6 +4,8 @@ kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: cert-manager
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
