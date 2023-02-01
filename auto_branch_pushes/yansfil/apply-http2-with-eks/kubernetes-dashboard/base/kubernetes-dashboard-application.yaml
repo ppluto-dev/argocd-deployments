@@ -4,6 +4,8 @@ kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: kubernetes-dashboard-app
+  # Note: It must needs `finalize` metadata in argo app of apps.
+  # https://argo-cd.readthedocs.io/en/stable/user-guide/app_deletion/#about-the-deletion-finalizer
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:

@@ -2,14 +2,12 @@ kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: kubernetes-dashboard
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     # TODO: Update path automatically.
-    path: auto_branch_pushes/yansfil/apply-http2-with-eks/kubernetes-dashboard/overlays/prod/
+    path: auto_branch_pushes/$GIT_BRANCH_NAME/kubernetes-dashboard/overlays/prod/
     targetRevision: HEAD
   destination:
     # TODO: This has to be `argocd` for ArgoCD's app of apps to work, which is
