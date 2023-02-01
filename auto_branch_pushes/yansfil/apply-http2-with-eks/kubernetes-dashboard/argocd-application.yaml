@@ -1,19 +1,19 @@
 kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: ppluto-main
+  name: kubernetes-dashboard
 spec:
   project: default
   source:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     # TODO: Update path automatically.
-    path: auto_branch_pushes/yansfil/apply-http2-with-eks/overlays/prod/
+    path: auto_branch_pushes/yansfil/apply-http2-with-eks/kubernetes-dashboard/overlays/prod/
     targetRevision: HEAD
   destination:
     # TODO: This has to be `argocd` for ArgoCD's app of apps to work, which is
     #       not ideal.
     #       https://github.com/argoproj/argo-cd/issues/3181#issuecomment-626901858
-    namespace: argocd
+    namespace: kubernetes-dashboard
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
