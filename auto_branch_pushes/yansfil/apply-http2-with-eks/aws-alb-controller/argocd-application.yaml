@@ -13,7 +13,7 @@ spec:
     # TODO: This has to be `argocd` for ArgoCD's app of apps to work, which is
     #       not ideal.
     #       https://github.com/argoproj/argo-cd/issues/3181#issuecomment-626901858
-    namespace: kube-system
+    namespace: argocd
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
