@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aws-load-balancer-controller
+  namespace: kube-system
+spec:
+  template:
+    spec:
+      containers:
+        - name: controller
+          args:
+            - --cluster-name=ppluto-production
+            - --ingress-class=alb
+            - --aws-vpc-id=vpc-07fd537437bf7fcc7
+            - --aws-region=us-east-2
