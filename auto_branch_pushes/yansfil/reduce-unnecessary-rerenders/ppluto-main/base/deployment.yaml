@@ -1,16 +1,16 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: ppluto-main
+  name: ppluto-main2
 spec:
   selector:
     matchLabels:
-      app: ppluto-main
+      app: ppluto-main2
   replicas: 1
   template:
     metadata:
       labels:
-        app: ppluto-main
+        app: ppluto-main2
     spec:
       containers:
         - name: ppluto-main--prod-client
