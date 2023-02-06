@@ -3,7 +3,6 @@ from dataclasses import asdict, dataclass
 
 import oyaml as yaml  # use `oyaml` for preserve the order in original YAML
 
-
 @dataclass
 class Application:
     name: str

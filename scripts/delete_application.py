@@ -2,10 +2,10 @@ import argparse
 
 import oyaml as yaml  # use `oyaml` for preserve the order in original YAML
 
-CHART_PATH="../apps"
+CHART_PATH="../apps/values.yaml"
 
 def deleteApplication(name: str):
-    with open(f"{CHART_PATH}/values.yaml", "r") as f:
+    with open(CHART_PATH, "r") as f:
         data = yaml.safe_load(f)
     
     if "spec" in data and "applications" in data["spec"] :
@@ -17,7 +17,7 @@ def deleteApplication(name: str):
         
     print("############# RESULT ############## ")
     print(data)
-    with open("file.yaml", "w") as f:
+    with open(CHART_PATH, "w") as f:
         yaml.safe_dump(data, f, sort_keys=False) 
 
 if __name__ == "__main__":
