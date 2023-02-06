@@ -5,5 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-    - path: auto_branch_pushes/yansfil/update-usestockinfos/ppluto-main/overlays/prod/
+    - name: yansfil-update-usestockinfos
+      path: auto_branch_pushes/yansfil/update-usestockinfos/ppluto-main/overlays/prod/
       namespace: yansfil-update-usestockinfos

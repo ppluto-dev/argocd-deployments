@@ -4,8 +4,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-branch # To be fixed
-  namespace: argocd
+  name: {{ $application.name }} # To be fixed
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
