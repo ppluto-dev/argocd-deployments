@@ -7,10 +7,10 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: { { .Values.spec.destination.namespace } }
-    server: { { .Values.spec.destination.server } }
+    namespace: {{ .Values.spec.destination.namespace }}
+    server: {{ .Values.spec.destination.server }}
   project: default
   source:
     path: auto_branch_pushes/yansfil/update-usestockinfos/ppluto-main/overlays/prod/
-    repoURL: { { .Values.spec.source.repoURL } }
-    targetRevision: { { .Values.spec.source.targetRevision } }
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
