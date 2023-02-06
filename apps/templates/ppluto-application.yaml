@@ -1,0 +1,30 @@
+{{- if .Values.spec.applications }}
+{{- range $application := .Values.spec.applications }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-branch # To be fixed
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: {{ $application.namespace }} # To be fixed
+    server: {{ $.Values.spec.destination.server }}
+  project: default
+  source:
+    path: {{ $application.path }} # To be fixed
+    repoURL: {{ $.Values.spec.source.repoURL }}
+    targetRevision: {{ $.Values.spec.source.targetRevision }}
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+{{- end }}
+{{- end }}
+
+
+
