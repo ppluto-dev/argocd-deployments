@@ -2,7 +2,7 @@ import argparse
 
 import oyaml as yaml  # use `oyaml` for preserve the order in original YAML
 
-CHART_PATH="../apps/values.yaml"
+CHART_PATH="../apps-dev/chart/values.yaml"
 
 def deleteApplication(name: str):
     with open(CHART_PATH, "r") as f:

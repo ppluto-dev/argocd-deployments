@@ -3,13 +3,14 @@ from dataclasses import asdict, dataclass
 
 import oyaml as yaml  # use `oyaml` for preserve the order in original YAML
 
+
 @dataclass
 class Application:
     name: str
     path: str
     namespace: str
 
-CHART_PATH="../apps/values.yaml"
+CHART_PATH="../apps-dev/chart/values.yaml"
 
 def addApplication(app: Application):
     with open(CHART_PATH, "r") as f:
