@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 
 import oyaml as yaml  # use `oyaml` for preserve the order in original YAML
