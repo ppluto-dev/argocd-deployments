@@ -7,7 +7,7 @@ spec:
   source:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     # TODO: Update path automatically.
-    path: auto_branch_pushes/main/aws-alb-controller/overlays/prod/
+    path: auto_branch_pushes/$GIT_BRANCH_NAME/aws-alb-controller/overlays/prod/
     targetRevision: HEAD
   destination:
     # TODO: This has to be `argocd` for ArgoCD's app of apps to work, which is
