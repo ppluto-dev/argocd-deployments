@@ -5,3 +5,6 @@ resources:
 patches:
   - path: patches/deployment.yaml
   - path: patches/ingress.yaml
+    target:
+      kind: Ingress
+      name: ingress
