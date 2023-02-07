@@ -17,7 +17,9 @@ def addApplication(app: Application):
         data = yaml.safe_load(f)
     
     if "spec" in data and "applications" in data["spec"] :
-        data["spec"]["applications"].append(asdict(app))
+        apps =[_app for _app in data["spec"]["applications"] if _app.get('name') != app.name]
+        apps.append(asdict(app))
+        data["spec"]["applications"] = apps
     else:
         print("No `.Values.spec.applications` field")
         exit(1)
