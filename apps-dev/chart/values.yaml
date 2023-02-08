@@ -4,4 +4,7 @@ spec:
   source:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
-  applications: []
+  applications:
+  - name: yansfil--change-ingress-url-
+    path: auto_branch_pushes/yansfil/change-ingress-url-/ppluto-main/overlays/prod/
+    namespace: yansfil--change-ingress-url-
