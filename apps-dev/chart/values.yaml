@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-    - name: main
-      path: auto_branch_pushes/main/ppluto-main/overlays/prod/
-      namespace: main
+  - name: main
+    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
+    namespace: main
+  - name: ilju--drag-ui-issues
+    path: auto_branch_pushes/ilju/drag-ui-issues/ppluto-main/overlays/prod/
+    namespace: ilju--drag-ui-issues
