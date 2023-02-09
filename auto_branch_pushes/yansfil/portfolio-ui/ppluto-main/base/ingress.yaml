@@ -10,7 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: "443" # http 80 port redirects to https 443
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:912892869657:certificate/b044577b-7aca-4d06-b607-98ac05b4db1f # it needs a certificate in ACM for https
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:912892869657:certificate/294944b0-380a-4329-9a14-9d276a34701e # it needs a certificate in ACM for https
 spec:
   rules:
     - host: web.ppluto-main.ppluto.dev
