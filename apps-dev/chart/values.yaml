@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: ilju--drag-ui-issues
-    path: auto_branch_pushes/ilju/drag-ui-issues/ppluto-main/overlays/prod/
-    namespace: ilju--drag-ui-issues
   - name: yansfil--fix-ingress-certificate
     path: auto_branch_pushes/yansfil/fix-ingress-certificate/ppluto-main/overlays/prod/
     namespace: yansfil--fix-ingress-certificate
@@ -17,3 +14,6 @@ spec:
   - name: kkimdev--k3s-argocd
     path: auto_branch_pushes/kkimdev/k3s-argocd/ppluto-main/overlays/prod/
     namespace: kkimdev--k3s-argocd
+  - name: ilju--drag-ui-issues
+    path: auto_branch_pushes/ilju/drag-ui-issues/ppluto-main/overlays/prod/
+    namespace: ilju--drag-ui-issues
