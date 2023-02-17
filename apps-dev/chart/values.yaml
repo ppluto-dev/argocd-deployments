@@ -5,93 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--fix-ingress-certificate
-    path: auto_branch_pushes/yansfil/fix-ingress-certificate/ppluto-main/overlays/prod/
-    namespace: yansfil--fix-ingress-certificate
-  - name: ilju--sort-by-#75
-    path: auto_branch_pushes/ilju/sort-by-#75/ppluto-main/overlays/prod/
-    namespace: ilju--sort-by-#75
-  - name: yansfil--add-asset-return
-    path: auto_branch_pushes/yansfil/add-asset-return/ppluto-main/overlays/prod/
-    namespace: yansfil--add-asset-return
-  - name: sg--add-price-summary
-    path: auto_branch_pushes/sg/add-price-summary/ppluto-main/overlays/prod/
-    namespace: sg--add-price-summary
-  - name: ilju--drag-ui-issues
-    path: auto_branch_pushes/ilju/drag-ui-issues/ppluto-main/overlays/prod/
-    namespace: ilju--drag-ui-issues
-  - name: sg--add-market-time-symbol-summary
-    path: auto_branch_pushes/sg/add-market-time-symbol-summary/ppluto-main/overlays/prod/
-    namespace: sg--add-market-time-symbol-summary
-  - name: sg--fix-bug-nasdaq-com
-    path: auto_branch_pushes/sg/fix-bug-nasdaq-com/ppluto-main/overlays/prod/
-    namespace: sg--fix-bug-nasdaq-com
-  - name: sg--fix-price-chart
-    path: auto_branch_pushes/sg/fix-price-chart/ppluto-main/overlays/prod/
-    namespace: sg--fix-price-chart
-  - name: ilju--alert-issues
-    path: auto_branch_pushes/ilju/alert-issues/ppluto-main/overlays/prod/
-    namespace: ilju--alert-issues
-  - name: kkimdev--k3s-argocd
-    path: auto_branch_pushes/kkimdev/k3s-argocd/ppluto-main/overlays/prod/
-    namespace: kkimdev--k3s-argocd
-  - name: ilju--chart-resize
-    path: auto_branch_pushes/ilju/chart-resize/ppluto-main/overlays/prod/
-    namespace: ilju--chart-resize
-  - name: ilju--fix-portfolio-ui
-    path: auto_branch_pushes/ilju/fix-portfolio-ui/ppluto-main/overlays/prod/
-    namespace: ilju--fix-portfolio-ui
-  - name: ilju--header-size-bug
-    path: auto_branch_pushes/ilju/header-size-bug/ppluto-main/overlays/prod/
-    namespace: ilju--header-size-bug
-  - name: ilju--chart-board
-    path: auto_branch_pushes/ilju/chart-board/ppluto-main/overlays/prod/
-    namespace: ilju--chart-board
-  - name: yansfil--feature-portfolio
-    path: auto_branch_pushes/yansfil/feature-portfolio/ppluto-main/overlays/prod/
-    namespace: yansfil--feature-portfolio
-  - name: ilju--watchlist-delete
-    path: auto_branch_pushes/ilju/watchlist-delete/ppluto-main/overlays/prod/
-    namespace: ilju--watchlist-delete
-  - name: sg--first-loading
-    path: auto_branch_pushes/sg/first-loading/ppluto-main/overlays/prod/
-    namespace: sg--first-loading
-  - name: yansfil--apply-pricesummary-and-new-change-calculation
-    path: auto_branch_pushes/yansfil/apply-pricesummary-and-new-change-calculation/ppluto-main/overlays/prod/
-    namespace: yansfil--apply-pricesummary-and-new-change-calculation
-  - name: sg--remove-discover-community
-    path: auto_branch_pushes/sg/remove-discover-community/ppluto-main/overlays/prod/
-    namespace: sg--remove-discover-community
-  - name: ilju--recent-search-click
-    path: auto_branch_pushes/ilju/recent-search-click/ppluto-main/overlays/prod/
-    namespace: ilju--recent-search-click
-  - name: ilju--rename-design
-    path: auto_branch_pushes/ilju/rename-design/ppluto-main/overlays/prod/
-    namespace: ilju--rename-design
-  - name: ilju--chart-resize-issue
-    path: auto_branch_pushes/ilju/chart-resize-issue/ppluto-main/overlays/prod/
-    namespace: ilju--chart-resize-issue
-  - name: yansfil--fix-compare-price-incorrect
-    path: auto_branch_pushes/yansfil/fix-compare-price-incorrect/ppluto-main/overlays/prod/
-    namespace: yansfil--fix-compare-price-incorrect
-  - name: ilju--swiper-height
-    path: auto_branch_pushes/ilju/swiper-height/ppluto-main/overlays/prod/
-    namespace: ilju--swiper-height
-  - name: ilju--chart-min-max
-    path: auto_branch_pushes/ilju/chart-min-max/ppluto-main/overlays/prod/
-    namespace: ilju--chart-min-max
-  - name: sg--portfolio-values
-    path: auto_branch_pushes/sg/portfolio-values/ppluto-main/overlays/prod/
-    namespace: sg--portfolio-values
-  - name: sg--increase-connections
-    path: auto_branch_pushes/sg/increase-connections/ppluto-main/overlays/prod/
-    namespace: sg--increase-connections
-  - name: main
-    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
-    namespace: main
-  - name: yansfil--add-watchitem-loading
-    path: auto_branch_pushes/yansfil/add-watchitem-loading/ppluto-main/overlays/prod/
-    namespace: yansfil--add-watchitem-loading
-  - name: yansfil--fix-get-symbol-pricechart
-    path: auto_branch_pushes/yansfil/fix-get-symbol-pricechart/ppluto-main/overlays/prod/
-    namespace: yansfil--fix-get-symbol-pricechart
+    - name: sg--remove-discover-community
+      path: auto_branch_pushes/sg/remove-discover-community/ppluto-main/overlays/prod/
+      namespace: sg--remove-discover-community
+    - name: ilju--chart-min-max
+      path: auto_branch_pushes/ilju/chart-min-max/ppluto-main/overlays/prod/
+      namespace: ilju--chart-min-max
+    - name: main
+      path: auto_branch_pushes/main/ppluto-main/overlays/prod/
+      namespace: main
+    - name: yansfil--add-watchitem-loading
+      path: auto_branch_pushes/yansfil/add-watchitem-loading/ppluto-main/overlays/prod/
+      namespace: yansfil--add-watchitem-loading
+    - name: yansfil--fix-get-symbol-pricechart
+      path: auto_branch_pushes/yansfil/fix-get-symbol-pricechart/ppluto-main/overlays/prod/
+      namespace: yansfil--fix-get-symbol-pricechart
