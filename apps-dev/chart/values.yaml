@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sg--remove-discover-community
-    path: auto_branch_pushes/sg/remove-discover-community/ppluto-main/overlays/prod/
-    namespace: sg--remove-discover-community
   - name: ilju--chart-min-max
     path: auto_branch_pushes/ilju/chart-min-max/ppluto-main/overlays/prod/
     namespace: ilju--chart-min-max
@@ -23,3 +20,6 @@ spec:
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
+  - name: sg--remove-discover-community
+    path: auto_branch_pushes/sg/remove-discover-community/ppluto-main/overlays/prod/
+    namespace: sg--remove-discover-community
