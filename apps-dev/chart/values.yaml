@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: ilju--chart-aftermarket
-    path: auto_branch_pushes/ilju/chart-aftermarket/ppluto-main/overlays/prod/
-    namespace: ilju--chart-aftermarket
   - name: sg--remove-discover-community
     path: auto_branch_pushes/sg/remove-discover-community/ppluto-main/overlays/prod/
     namespace: sg--remove-discover-community
@@ -65,3 +62,6 @@ spec:
   - name: yansfil--search-fix
     path: auto_branch_pushes/yansfil/search-fix/ppluto-main/overlays/prod/
     namespace: yansfil--search-fix
+  - name: ilju--chart-aftermarket
+    path: auto_branch_pushes/ilju/chart-aftermarket/ppluto-main/overlays/prod/
+    namespace: ilju--chart-aftermarket
