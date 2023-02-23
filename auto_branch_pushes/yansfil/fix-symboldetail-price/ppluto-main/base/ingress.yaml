@@ -6,6 +6,7 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/group.name: ppluto-main # the same group belongs to the same ALB (https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/annotations/#group.name)
+    alb.ingress.kubernetes.io/load-balancer-attributes: deletion_protection.enabled=true # this protects ALB deletetion
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: "443" # http 80 port redirects to https 443
