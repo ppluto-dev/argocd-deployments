@@ -5,12 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: ilju--xAxis-range
-    path: auto_branch_pushes/ilju/xAxis-range/ppluto-main/overlays/prod/
-    namespace: ilju--xAxis-range
-  - name: kkimdev--grid-symbol-id
-    path: auto_branch_pushes/kkimdev/grid-symbol-id/ppluto-main/overlays/prod/
-    namespace: kkimdev--grid-symbol-id
-  - name: main
-    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
-    namespace: main
+    - name: main
+      path: auto_branch_pushes/main/ppluto-main/overlays/prod/
+      namespace: main
