@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--add-ci-garbage-collect
-    path: auto_branch_pushes/yansfil/add-ci-garbage-collect/ppluto-main/overlays/prod/
-    namespace: yansfil--add-ci-garbage-collect
   - name: yansfil--fix-portfolio-price
     path: auto_branch_pushes/yansfil/fix-portfolio-price/ppluto-main/overlays/prod/
     namespace: yansfil--fix-portfolio-price
@@ -20,6 +17,3 @@ spec:
   - name: sg--fix-latest-price-bug
     path: auto_branch_pushes/sg/fix-latest-price-bug/ppluto-main/overlays/prod/
     namespace: sg--fix-latest-price-bug
-  - name: ilju--xAxis-range
-    path: auto_branch_pushes/ilju/xAxis-range/ppluto-main/overlays/prod/
-    namespace: ilju--xAxis-range
