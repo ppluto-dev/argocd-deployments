@@ -1,0 +1,23 @@
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: ppluto-main
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    # TODO: Update path automatically.
+    path: auto_branch_pushes/sg/add-1d-regular-chart-api/ppluto-main/overlays/prod/
+    targetRevision: HEAD
+  destination:
+    # TODO: This has to be `argocd` for ArgoCD's app of apps to work, which is
+    #       not ideal.
+    #       https://github.com/argoproj/argo-cd/issues/3181#issuecomment-626901858
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
