@@ -5,27 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: ilju--y-Axis-crop
-    path: auto_branch_pushes/ilju/y-Axis-crop/ppluto-main/overlays/prod/
-    namespace: ilju--y-Axis-crop
-  - name: ilju--chart-vertical-line
-    path: auto_branch_pushes/ilju/chart-vertical-line/ppluto-main/overlays/prod/
-    namespace: ilju--chart-vertical-line
-  - name: main
-    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
-    namespace: main
-  - name: sg--user-my-portfolio
-    path: auto_branch_pushes/sg/user-my-portfolio/ppluto-main/overlays/prod/
-    namespace: sg--user-my-portfolio
-  - name: yansfil--fix-portfolio-price
-    path: auto_branch_pushes/yansfil/fix-portfolio-price/ppluto-main/overlays/prod/
-    namespace: yansfil--fix-portfolio-price
   - name: yansfil--fix-portfolio-card-height
     path: auto_branch_pushes/yansfil/fix-portfolio-card-height/ppluto-main/overlays/prod/
     namespace: yansfil--fix-portfolio-card-height
+  - name: yansfil--fix-portfolio-price
+    path: auto_branch_pushes/yansfil/fix-portfolio-price/ppluto-main/overlays/prod/
+    namespace: yansfil--fix-portfolio-price
+  - name: ilju--y-Axis-crop
+    path: auto_branch_pushes/ilju/y-Axis-crop/ppluto-main/overlays/prod/
+    namespace: ilju--y-Axis-crop
   - name: sg--fix-latest-price-bug
     path: auto_branch_pushes/sg/fix-latest-price-bug/ppluto-main/overlays/prod/
     namespace: sg--fix-latest-price-bug
-  - name: ilju--xAxis-range
-    path: auto_branch_pushes/ilju/xAxis-range/ppluto-main/overlays/prod/
-    namespace: ilju--xAxis-range
