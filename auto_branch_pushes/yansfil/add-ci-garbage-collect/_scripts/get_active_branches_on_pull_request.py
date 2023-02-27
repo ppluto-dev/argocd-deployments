@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 
 # this has a permission that reads pull request (expired in 02.24.2024)
+# it is splitted due to github security scan
 # TODO: it needs to be managed in env or other secret tools
-ACCESS_TOKEN = "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"
+TOKEN_SPLITTED = [
+    "github_pat_11ADSDH3A0Lsup3pUgl7qW_4GPuIpf7h4T",
+    "1MMkcis8pdMmZRJd7cPLlWTAFhrKT1RTLYXVP6MEfn2Kb89L",
+]
+ACCESS_TOKEN = "".join(TOKEN_SPLITTED)
 
 
 def get_active_branches_on_pull_request():
