@@ -5,21 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--fix-portfolio-card-height
-    path: auto_branch_pushes/yansfil/fix-portfolio-card-height/ppluto-main/overlays/prod/
-    namespace: yansfil--fix-portfolio-card-height
+  - name: yansfil--add-ci-garbage-collect
+    path: auto_branch_pushes/yansfil/add-ci-garbage-collect/ppluto-main/overlays/prod/
+    namespace: yansfil--add-ci-garbage-collect
   - name: yansfil--fix-portfolio-price
     path: auto_branch_pushes/yansfil/fix-portfolio-price/ppluto-main/overlays/prod/
     namespace: yansfil--fix-portfolio-price
   - name: ilju--y-Axis-crop
     path: auto_branch_pushes/ilju/y-Axis-crop/ppluto-main/overlays/prod/
     namespace: ilju--y-Axis-crop
-  - name: sg--fix-latest-price-bug
-    path: auto_branch_pushes/sg/fix-latest-price-bug/ppluto-main/overlays/prod/
-    namespace: sg--fix-latest-price-bug
   - name: sg--user-my-portfolio
     path: auto_branch_pushes/sg/user-my-portfolio/ppluto-main/overlays/prod/
     namespace: sg--user-my-portfolio
-  - name: main
-    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
-    namespace: main
+  - name: sg--fix-latest-price-bug
+    path: auto_branch_pushes/sg/fix-latest-price-bug/ppluto-main/overlays/prod/
+    namespace: sg--fix-latest-price-bug
