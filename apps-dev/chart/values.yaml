@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-comparison
+    path: auto_branch_pushes/yansfil/fix-comparison/ppluto-main/overlays/prod/
+    namespace: yansfil--fix-comparison
   - name: ilju--market-type-none
     path: auto_branch_pushes/ilju/market-type-none/ppluto-main/overlays/prod/
     namespace: ilju--market-type-none
@@ -20,6 +23,9 @@ spec:
   - name: sg--fix-latest-price-bug
     path: auto_branch_pushes/sg/fix-latest-price-bug/ppluto-main/overlays/prod/
     namespace: sg--fix-latest-price-bug
+  - name: ilju--xAxis-range
+    path: auto_branch_pushes/ilju/xAxis-range/ppluto-main/overlays/prod/
+    namespace: ilju--xAxis-range
   - name: ilju--portfolio-description
     path: auto_branch_pushes/ilju/portfolio-description/ppluto-main/overlays/prod/
     namespace: ilju--portfolio-description
