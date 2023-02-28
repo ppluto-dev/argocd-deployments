@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ilju--market-type-none
+    path: auto_branch_pushes/ilju/market-type-none/ppluto-main/overlays/prod/
+    namespace: ilju--market-type-none
   - name: ilju--mini-chart
     path: auto_branch_pushes/ilju/mini-chart/ppluto-main/overlays/prod/
     namespace: ilju--mini-chart
