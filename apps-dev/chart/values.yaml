@@ -5,15 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ilju--mini-chart
+    path: auto_branch_pushes/ilju/mini-chart/ppluto-main/overlays/prod/
+    namespace: ilju--mini-chart
   - name: yansfil--fix-portfolio-price
     path: auto_branch_pushes/yansfil/fix-portfolio-price/ppluto-main/overlays/prod/
     namespace: yansfil--fix-portfolio-price
-  - name: ilju--y-Axis-crop
-    path: auto_branch_pushes/ilju/y-Axis-crop/ppluto-main/overlays/prod/
-    namespace: ilju--y-Axis-crop
   - name: sg--user-my-portfolio
     path: auto_branch_pushes/sg/user-my-portfolio/ppluto-main/overlays/prod/
     namespace: sg--user-my-portfolio
   - name: sg--fix-latest-price-bug
     path: auto_branch_pushes/sg/fix-latest-price-bug/ppluto-main/overlays/prod/
     namespace: sg--fix-latest-price-bug
+  - name: ilju--portfolio-description
+    path: auto_branch_pushes/ilju/portfolio-description/ppluto-main/overlays/prod/
+    namespace: ilju--portfolio-description
