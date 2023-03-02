@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--eslint-sort-imports
+    path: auto_branch_pushes/kkimdev/eslint-sort-imports/ppluto-main/overlays/prod/
+    namespace: kkimdev--eslint-sort-imports
   - name: kkimdev--double-negation
     path: auto_branch_pushes/kkimdev/double-negation/ppluto-main/overlays/prod/
     namespace: kkimdev--double-negation
