@@ -8,7 +8,8 @@ from dataclasses import asdict, dataclass
 from typing import List
 
 import oyaml as yaml  # use `oyaml` for preserve the order in original YAML
-from get_active_branches_on_pull_request import get_active_branches_on_pull_request
+from get_active_branches_on_pull_request import \
+    get_active_branches_on_pull_request
 
 ORIGINAL_VALUES_YAML = """
 spec:
@@ -69,13 +70,14 @@ if __name__ == "__main__":
 
     all_branches = get_active_branches_on_pull_request()
     print("active branches on opened pull requests : \n", all_branches)
+    
     apps = [
         Application(
             name=get_subdomain_from_branch_name(branch),
             path=f"auto_branch_pushes/{branch}/ppluto-main/overlays/prod/",
             namespace=get_subdomain_from_branch_name(branch),
         )
-        for branch in all_branches
+        for branch in all_branches + ["main"] # add the main branch always working 
     ]
 
     add_all_applications(apps=apps, target=args.target)
