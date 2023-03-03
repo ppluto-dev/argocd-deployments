@@ -5,15 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--apply-dataloader
-    path: auto_branch_pushes/yansfil/apply-dataloader/ppluto-main/overlays/prod/
-    namespace: yansfil--apply-dataloader
   - name: ilju--linechart-base-line
     path: auto_branch_pushes/ilju/linechart-base-line/ppluto-main/overlays/prod/
     namespace: ilju--linechart-base-line
   - name: yansfil--my-chart-add-feature
     path: auto_branch_pushes/yansfil/my-chart-add-feature/ppluto-main/overlays/prod/
     namespace: yansfil--my-chart-add-feature
-  - name: main
-    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
-    namespace: main
