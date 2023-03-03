@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--compare-chart-hover
+    path: auto_branch_pushes/yansfil/compare-chart-hover/ppluto-main/overlays/prod/
+    namespace: yansfil--compare-chart-hover
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
