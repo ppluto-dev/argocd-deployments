@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--asset-hash-cache
+    path: auto_branch_pushes/kkimdev/asset-hash-cache/ppluto-main/overlays/prod/
+    namespace: kkimdev--asset-hash-cache
   - name: kkimdev--no-default-export
     path: auto_branch_pushes/kkimdev/no-default-export/ppluto-main/overlays/prod/
     namespace: kkimdev--no-default-export
-  - name: kkimdev--make-upgrade-depencencies
-    path: auto_branch_pushes/kkimdev/make-upgrade-depencencies/ppluto-main/overlays/prod/
-    namespace: kkimdev--make-upgrade-depencencies
   - name: sg--onboarding-button
     path: auto_branch_pushes/sg/onboarding-button/ppluto-main/overlays/prod/
     namespace: sg--onboarding-button
