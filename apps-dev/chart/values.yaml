@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--no-lodash-underscore-eslint
+    path: auto_branch_pushes/kkimdev/no-lodash-underscore-eslint/ppluto-main/overlays/prod/
+    namespace: kkimdev--no-lodash-underscore-eslint
   - name: yansfil--fix-compare-mousemove
     path: auto_branch_pushes/yansfil/fix-compare-mousemove/ppluto-main/overlays/prod/
     namespace: yansfil--fix-compare-mousemove
