@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--zustand-rehydration-marking
+    path: auto_branch_pushes/kkimdev/zustand-rehydration-marking/ppluto-main/overlays/prod/
+    namespace: kkimdev--zustand-rehydration-marking
   - name: yansfil--add-pr-comment
     path: auto_branch_pushes/yansfil/add-pr-comment/ppluto-main/overlays/prod/
     namespace: yansfil--add-pr-comment
