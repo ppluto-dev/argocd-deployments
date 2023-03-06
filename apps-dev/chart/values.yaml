@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-compare-mousemove
+    path: auto_branch_pushes/yansfil/fix-compare-mousemove/ppluto-main/overlays/prod/
+    namespace: yansfil--fix-compare-mousemove
   - name: sg--onboarding-button
     path: auto_branch_pushes/sg/onboarding-button/ppluto-main/overlays/prod/
     namespace: sg--onboarding-button
