@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--main-comparison-chart
+    path: auto_branch_pushes/yansfil/main-comparison-chart/ppluto-main/overlays/prod/
+    namespace: yansfil--main-comparison-chart
   - name: ilju--hide-y-axis
     path: auto_branch_pushes/ilju/hide-y-axis/ppluto-main/overlays/prod/
     namespace: ilju--hide-y-axis
