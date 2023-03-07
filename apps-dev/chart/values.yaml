@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--git-fetch-remove-branch
+    path: auto_branch_pushes/kkimdev/git-fetch-remove-branch/ppluto-main/overlays/prod/
+    namespace: kkimdev--git-fetch-remove-branch
   - name: sg--portfolio-rebalancing
     path: auto_branch_pushes/sg/portfolio-rebalancing/ppluto-main/overlays/prod/
     namespace: sg--portfolio-rebalancing
