@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--main-portfolio-ui
+    path: auto_branch_pushes/yansfil/main-portfolio-ui/ppluto-main/overlays/prod/
+    namespace: yansfil--main-portfolio-ui
+  - name: yansfil--trending-portfolio-refactor
+    path: auto_branch_pushes/yansfil/trending-portfolio-refactor/ppluto-main/overlays/prod/
+    namespace: yansfil--trending-portfolio-refactor
   - name: kkimdev--small-screen-scaling
     path: auto_branch_pushes/kkimdev/small-screen-scaling/ppluto-main/overlays/prod/
     namespace: kkimdev--small-screen-scaling
