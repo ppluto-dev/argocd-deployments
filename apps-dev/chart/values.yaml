@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--small-screen-scaling
+    path: auto_branch_pushes/kkimdev/small-screen-scaling/ppluto-main/overlays/prod/
+    namespace: kkimdev--small-screen-scaling
   - name: kkimdev--cleanup-console-warnings
     path: auto_branch_pushes/kkimdev/cleanup-console-warnings/ppluto-main/overlays/prod/
     namespace: kkimdev--cleanup-console-warnings
   - name: sg--fix-trending-group
     path: auto_branch_pushes/sg/fix-trending-group/ppluto-main/overlays/prod/
     namespace: sg--fix-trending-group
-  - name: sg--portfolio-rebalancing
-    path: auto_branch_pushes/sg/portfolio-rebalancing/ppluto-main/overlays/prod/
-    namespace: sg--portfolio-rebalancing
   - name: kkimdev--cleanup-console-warnings-2
     path: auto_branch_pushes/kkimdev/cleanup-console-warnings-2/ppluto-main/overlays/prod/
     namespace: kkimdev--cleanup-console-warnings-2
