@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-portfolio-color-code
+    path: auto_branch_pushes/sg/add-portfolio-color-code/ppluto-main/overlays/prod/
+    namespace: sg--add-portfolio-color-code
   - name: kkimdev--small-screen-scaling
     path: auto_branch_pushes/kkimdev/small-screen-scaling/ppluto-main/overlays/prod/
     namespace: kkimdev--small-screen-scaling
