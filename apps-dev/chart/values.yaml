@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--delete-price-simple-price-chartdatas
+    path: auto_branch_pushes/sg/delete-price-simple-price-chartdatas/ppluto-main/overlays/prod/
+    namespace: sg--delete-price-simple-price-chartdatas
   - name: yansfil--add-portfolio-email
     path: auto_branch_pushes/yansfil/add-portfolio-email/ppluto-main/overlays/prod/
     namespace: yansfil--add-portfolio-email
