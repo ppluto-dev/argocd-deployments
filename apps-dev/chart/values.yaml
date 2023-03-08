@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-ui-bugs
+    path: auto_branch_pushes/yansfil/fix-ui-bugs/ppluto-main/overlays/prod/
+    namespace: yansfil--fix-ui-bugs
   - name: yansfil--add-portfolio-email
     path: auto_branch_pushes/yansfil/add-portfolio-email/ppluto-main/overlays/prod/
     namespace: yansfil--add-portfolio-email
