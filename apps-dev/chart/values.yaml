@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--modfiy-portfolio-allocation
+    path: auto_branch_pushes/yansfil/modfiy-portfolio-allocation/ppluto-main/overlays/prod/
+    namespace: yansfil--modfiy-portfolio-allocation
   - name: kkimdev--onboarding-ui
     path: auto_branch_pushes/kkimdev/onboarding-ui/ppluto-main/overlays/prod/
     namespace: kkimdev--onboarding-ui
   - name: sg--fix-1y-days
     path: auto_branch_pushes/sg/fix-1y-days/ppluto-main/overlays/prod/
     namespace: sg--fix-1y-days
-  - name: kkimdev--reset-app-rename
-    path: auto_branch_pushes/kkimdev/reset-app-rename/ppluto-main/overlays/prod/
-    namespace: kkimdev--reset-app-rename
   - name: sg--fix-dis-headlines
     path: auto_branch_pushes/sg/fix-dis-headlines/ppluto-main/overlays/prod/
     namespace: sg--fix-dis-headlines
