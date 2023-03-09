@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-1y-days
+    path: auto_branch_pushes/sg/fix-1y-days/ppluto-main/overlays/prod/
+    namespace: sg--fix-1y-days
   - name: kkimdev--reset-app-rename
     path: auto_branch_pushes/kkimdev/reset-app-rename/ppluto-main/overlays/prod/
     namespace: kkimdev--reset-app-rename
