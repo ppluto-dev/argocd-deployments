@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-dis-headlines
+    path: auto_branch_pushes/sg/fix-dis-headlines/ppluto-main/overlays/prod/
+    namespace: sg--fix-dis-headlines
   - name: kkimdev--exclude-portfolios
     path: auto_branch_pushes/kkimdev/exclude-portfolios/ppluto-main/overlays/prod/
     namespace: kkimdev--exclude-portfolios
