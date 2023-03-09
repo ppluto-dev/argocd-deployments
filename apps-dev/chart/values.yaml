@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-notion-analysis-type
+    path: auto_branch_pushes/sg/add-notion-analysis-type/ppluto-main/overlays/prod/
+    namespace: sg--add-notion-analysis-type
   - name: yansfil--modfiy-portfolio-allocation
     path: auto_branch_pushes/yansfil/modfiy-portfolio-allocation/ppluto-main/overlays/prod/
     namespace: yansfil--modfiy-portfolio-allocation
