@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yasnfil--hotfix-regex-bug
+    path: auto_branch_pushes/yasnfil/hotfix-regex-bug/ppluto-main/overlays/prod/
+    namespace: yasnfil--hotfix-regex-bug
   - name: yansfil--fix-portfolio-symbol-hook-rerendering
     path: auto_branch_pushes/yansfil/fix-portfolio-symbol-hook-rerendering/ppluto-main/overlays/prod/
     namespace: yansfil--fix-portfolio-symbol-hook-rerendering
