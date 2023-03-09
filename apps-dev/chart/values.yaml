@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-quarterly-bug
+    path: auto_branch_pushes/sg/fix-quarterly-bug/ppluto-main/overlays/prod/
+    namespace: sg--fix-quarterly-bug
   - name: sg--fix-dis-headlines
     path: auto_branch_pushes/sg/fix-dis-headlines/ppluto-main/overlays/prod/
     namespace: sg--fix-dis-headlines
