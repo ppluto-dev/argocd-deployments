@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--refactor-components
+    path: auto_branch_pushes/yansfil/refactor-components/ppluto-main/overlays/prod/
+    namespace: yansfil--refactor-components
   - name: yansfil--modfiy-portfolio-allocation
     path: auto_branch_pushes/yansfil/modfiy-portfolio-allocation/ppluto-main/overlays/prod/
     namespace: yansfil--modfiy-portfolio-allocation
