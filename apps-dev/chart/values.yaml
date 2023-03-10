@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ilju--display-min-max-NaN
+    path: auto_branch_pushes/ilju/display-min-max-NaN/ppluto-main/overlays/prod/
+    namespace: ilju--display-min-max-NaN
+  - name: ilju--yaxis-min-max
+    path: auto_branch_pushes/ilju/yaxis-min-max/ppluto-main/overlays/prod/
+    namespace: ilju--yaxis-min-max
   - name: yansfil--refactor-components
     path: auto_branch_pushes/yansfil/refactor-components/ppluto-main/overlays/prod/
     namespace: yansfil--refactor-components
