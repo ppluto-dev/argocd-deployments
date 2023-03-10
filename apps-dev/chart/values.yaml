@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--portfolio-bug-fix
+    path: auto_branch_pushes/sg/portfolio-bug-fix/ppluto-main/overlays/prod/
+    namespace: sg--portfolio-bug-fix
   - name: kkimdev--readme-screenshot
     path: auto_branch_pushes/kkimdev/readme-screenshot/ppluto-main/overlays/prod/
     namespace: kkimdev--readme-screenshot
