@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--change-data-type
+    path: auto_branch_pushes/sg/change-data-type/ppluto-main/overlays/prod/
+    namespace: sg--change-data-type
   - name: ilju--display-min-max-NaN
     path: auto_branch_pushes/ilju/display-min-max-NaN/ppluto-main/overlays/prod/
     namespace: ilju--display-min-max-NaN
