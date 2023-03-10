@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--watchitem-refactor
+    path: auto_branch_pushes/yansfil/watchitem-refactor/ppluto-main/overlays/prod/
+    namespace: yansfil--watchitem-refactor
   - name: ilju--display-min-max-NaN
     path: auto_branch_pushes/ilju/display-min-max-NaN/ppluto-main/overlays/prod/
     namespace: ilju--display-min-max-NaN
