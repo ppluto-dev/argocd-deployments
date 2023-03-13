@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--eslint-interactive
+    path: auto_branch_pushes/kkimdev/eslint-interactive/ppluto-main/overlays/prod/
+    namespace: kkimdev--eslint-interactive
   - name: kkimdev--split-vendor-chunk
     path: auto_branch_pushes/kkimdev/split-vendor-chunk/ppluto-main/overlays/prod/
     namespace: kkimdev--split-vendor-chunk
