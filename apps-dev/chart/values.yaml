@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--fuse-overlayfs
+    path: auto_branch_pushes/kkimdev/fuse-overlayfs/ppluto-main/overlays/prod/
+    namespace: kkimdev--fuse-overlayfs
   - name: yansfil--boost-build-time
     path: auto_branch_pushes/yansfil/boost-build-time/ppluto-main/overlays/prod/
     namespace: yansfil--boost-build-time
