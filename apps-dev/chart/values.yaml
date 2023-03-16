@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ilju--analysis-section-design
+    path: auto_branch_pushes/ilju/analysis-section-design/ppluto-main/overlays/prod/
+    namespace: ilju--analysis-section-design
   - name: kkimdev--fuse-overlayfs
     path: auto_branch_pushes/kkimdev/fuse-overlayfs/ppluto-main/overlays/prod/
     namespace: kkimdev--fuse-overlayfs
