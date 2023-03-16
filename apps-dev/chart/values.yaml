@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--react-router
+    path: auto_branch_pushes/yansfil/react-router/ppluto-main/overlays/prod/
+    namespace: yansfil--react-router
   - name: ilju--dissmiss-bottomsheet
     path: auto_branch_pushes/ilju/dissmiss-bottomsheet/ppluto-main/overlays/prod/
     namespace: ilju--dissmiss-bottomsheet
