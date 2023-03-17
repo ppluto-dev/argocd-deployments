@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ci-pnpm-install-cache
+    path: auto_branch_pushes/kkimdev/ci-pnpm-install-cache/ppluto-main/overlays/prod/
+    namespace: kkimdev--ci-pnpm-install-cache
   - name: ilju--dissmiss-bottomsheet
     path: auto_branch_pushes/ilju/dissmiss-bottomsheet/ppluto-main/overlays/prod/
     namespace: ilju--dissmiss-bottomsheet
