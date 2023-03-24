@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--change-db-host
+    path: auto_branch_pushes/sg/change-db-host/ppluto-main/overlays/prod/
+    namespace: sg--change-db-host
   - name: yansfil--kubernetes-cluster-change
     path: auto_branch_pushes/yansfil/kubernetes-cluster-change/ppluto-main/overlays/prod/
     namespace: yansfil--kubernetes-cluster-change
