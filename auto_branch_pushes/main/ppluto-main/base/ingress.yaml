@@ -9,10 +9,10 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: "443" # http 80 port redirects to https 443
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:912892869657:certificate/7cad03f5-41d0-41a7-9a3a-f77e58b77de0 # it needs a certificate in ACM for https
-    alb.ingress.kubernetes.io/subnets: subnet-0e702042fef1214b0,subnet-0e2d06adbcc8e5ea0,subnet-0b5971ee8ec80ecd7
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:912892869657:certificate/7cad03f5-41d0-41a7-9a3a-f77e58b77de0 # certificate arn for https allow
+    alb.ingress.kubernetes.io/subnets: subnet-0e702042fef1214b0,subnet-0e2d06adbcc8e5ea0,subnet-0b5971ee8ec80ecd7 # same vpc subnetes in the k8s cluster
 spec:
-  rules:
+  rules: # it would be chaned
     - host: web.ppluto-main.ppluto.dev
       http:
         paths:
