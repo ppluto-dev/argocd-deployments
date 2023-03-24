@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--kubernetes-cluster-change
+    path: auto_branch_pushes/yansfil/kubernetes-cluster-change/ppluto-main/overlays/prod/
+    namespace: yansfil--kubernetes-cluster-change
   - name: kkimdev--fuse-overlayfs
     path: auto_branch_pushes/kkimdev/fuse-overlayfs/ppluto-main/overlays/prod/
     namespace: kkimdev--fuse-overlayfs
