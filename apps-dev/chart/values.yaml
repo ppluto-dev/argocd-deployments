@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--bullshit-mvp-chatgpt
+    path: auto_branch_pushes/yansfil/bullshit-mvp-chatgpt/ppluto-main/overlays/prod/
+    namespace: yansfil--bullshit-mvp-chatgpt
   - name: kkimdev--python-proto-test
     path: auto_branch_pushes/kkimdev/python-proto-test/ppluto-main/overlays/prod/
     namespace: kkimdev--python-proto-test
