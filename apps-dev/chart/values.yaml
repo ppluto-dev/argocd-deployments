@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--chatgpt-api-pipeline
+    path: auto_branch_pushes/yansfil/chatgpt-api-pipeline/ppluto-main/overlays/prod/
+    namespace: yansfil--chatgpt-api-pipeline
   - name: kkimdev--make-upgrade-dependencies
     path: auto_branch_pushes/kkimdev/make-upgrade-dependencies/ppluto-main/overlays/prod/
     namespace: kkimdev--make-upgrade-dependencies
