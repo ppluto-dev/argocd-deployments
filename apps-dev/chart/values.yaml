@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--implements-cache
+    path: auto_branch_pushes/sg/implements-cache/ppluto-main/overlays/prod/
+    namespace: sg--implements-cache
   - name: yansfil--chatgpt-api-pipeline
     path: auto_branch_pushes/yansfil/chatgpt-api-pipeline/ppluto-main/overlays/prod/
     namespace: yansfil--chatgpt-api-pipeline
