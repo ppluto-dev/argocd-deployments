@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--ready-gpt
+    path: auto_branch_pushes/sg/ready-gpt/ppluto-main/overlays/prod/
+    namespace: sg--ready-gpt
   - name: kkimdev--python-proto-test
     path: auto_branch_pushes/kkimdev/python-proto-test/ppluto-main/overlays/prod/
     namespace: kkimdev--python-proto-test
