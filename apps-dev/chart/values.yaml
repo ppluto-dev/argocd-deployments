@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--add-client-uuid
-    path: auto_branch_pushes/yansfil/add-client-uuid/ppluto-main/overlays/prod/
-    namespace: yansfil--add-client-uuid
+  - name: sg--bloomberg-api
+    path: auto_branch_pushes/sg/bloomberg-api/ppluto-main/overlays/prod/
+    namespace: sg--bloomberg-api
+  - name: kkimdev--log-api
+    path: auto_branch_pushes/kkimdev/log-api/ppluto-main/overlays/prod/
+    namespace: kkimdev--log-api
   - name: kkimdev--google-analytics
     path: auto_branch_pushes/kkimdev/google-analytics/ppluto-main/overlays/prod/
     namespace: kkimdev--google-analytics
