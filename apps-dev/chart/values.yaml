@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-kakao-auth
+    path: auto_branch_pushes/yansfil/add-kakao-auth/ppluto-main/overlays/prod/
+    namespace: yansfil--add-kakao-auth
   - name: sg--test-bloomberg-api
     path: auto_branch_pushes/sg/test-bloomberg-api/ppluto-main/overlays/prod/
     namespace: sg--test-bloomberg-api
