@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--envoy-to-nginx
+    path: auto_branch_pushes/kkimdev/envoy-to-nginx/ppluto-main/overlays/prod/
+    namespace: kkimdev--envoy-to-nginx
   - name: yansfil--add-referrer
     path: auto_branch_pushes/yansfil/add-referrer/ppluto-main/overlays/prod/
     namespace: yansfil--add-referrer
