@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--bloomberg-news-detail
+    path: auto_branch_pushes/sg/bloomberg-news-detail/ppluto-main/overlays/prod/
+    namespace: sg--bloomberg-news-detail
   - name: kkimdev--server-compile
     path: auto_branch_pushes/kkimdev/server-compile/ppluto-main/overlays/prod/
     namespace: kkimdev--server-compile
