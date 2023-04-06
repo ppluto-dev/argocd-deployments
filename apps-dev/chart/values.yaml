@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--ci-retry
-    path: auto_branch_pushes/kkimdev/ci-retry/ppluto-main/overlays/prod/
-    namespace: kkimdev--ci-retry
   - name: kkimdev--server-compile
     path: auto_branch_pushes/kkimdev/server-compile/ppluto-main/overlays/prod/
     namespace: kkimdev--server-compile
