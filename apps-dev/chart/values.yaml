@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-referrer
+    path: auto_branch_pushes/yansfil/add-referrer/ppluto-main/overlays/prod/
+    namespace: yansfil--add-referrer
   - name: sg--bloomberg-markets
     path: auto_branch_pushes/sg/bloomberg-markets/ppluto-main/overlays/prod/
     namespace: sg--bloomberg-markets
