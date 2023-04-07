@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--improve-classification-prompt-template
+    path: auto_branch_pushes/kkimdev/improve-classification-prompt-template/ppluto-main/overlays/prod/
+    namespace: kkimdev--improve-classification-prompt-template
+  - name: sg--add-error-checking
+    path: auto_branch_pushes/sg/add-error-checking/ppluto-main/overlays/prod/
+    namespace: sg--add-error-checking
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
