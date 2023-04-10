@@ -5,6 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-gpt-cache
+    path: auto_branch_pushes/sg/fix-gpt-cache/ppluto-main/overlays/prod/
+    namespace: sg--fix-gpt-cache
+  - name: kkimdev--readme-path
+    path: auto_branch_pushes/kkimdev/readme-path/ppluto-main/overlays/prod/
+    namespace: kkimdev--readme-path
+  - name: kkimdev--chat-api-fix
+    path: auto_branch_pushes/kkimdev/chat-api-fix/ppluto-main/overlays/prod/
+    namespace: kkimdev--chat-api-fix
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
