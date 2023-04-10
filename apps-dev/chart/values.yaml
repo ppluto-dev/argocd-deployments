@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sg--bloomberg-cron-cache
-    path: auto_branch_pushes/sg/bloomberg-cron-cache/ppluto-main/overlays/prod/
-    namespace: sg--bloomberg-cron-cache
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
