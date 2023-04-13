@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sg--add-cnbc-cron-job
-    path: auto_branch_pushes/sg/add-cnbc-cron-job/ppluto-main/overlays/prod/
-    namespace: sg--add-cnbc-cron-job
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
