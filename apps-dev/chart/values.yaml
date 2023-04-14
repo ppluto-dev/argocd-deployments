@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--disable-scale
+    path: auto_branch_pushes/kkimdev/disable-scale/ppluto-main/overlays/prod/
+    namespace: kkimdev--disable-scale
   - name: yansfil--add-tranlsate-category-prompt
     path: auto_branch_pushes/yansfil/add-tranlsate-category-prompt/ppluto-main/overlays/prod/
     namespace: yansfil--add-tranlsate-category-prompt
