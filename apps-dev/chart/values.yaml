@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-gpt-call-history
+    path: auto_branch_pushes/yansfil/add-gpt-call-history/ppluto-main/overlays/prod/
+    namespace: yansfil--add-gpt-call-history
   - name: sg--cnbc-cron-bug-fix
     path: auto_branch_pushes/sg/cnbc-cron-bug-fix/ppluto-main/overlays/prod/
     namespace: sg--cnbc-cron-bug-fix
-  - name: kkimdev--disable-scale
-    path: auto_branch_pushes/kkimdev/disable-scale/ppluto-main/overlays/prod/
-    namespace: kkimdev--disable-scale
   - name: yansfil--add-tranlsate-category-prompt
     path: auto_branch_pushes/yansfil/add-tranlsate-category-prompt/ppluto-main/overlays/prod/
     namespace: yansfil--add-tranlsate-category-prompt
