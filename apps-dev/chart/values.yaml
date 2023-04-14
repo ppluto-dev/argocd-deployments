@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--for-hyun
+    path: auto_branch_pushes/yansfil/for-hyun/ppluto-main/overlays/prod/
+    namespace: yansfil--for-hyun
   - name: kkimdev--fix-share-url
     path: auto_branch_pushes/kkimdev/fix-share-url/ppluto-main/overlays/prod/
     namespace: kkimdev--fix-share-url
