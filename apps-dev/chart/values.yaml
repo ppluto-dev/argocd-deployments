@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--upgrade-prompt-3.9v
+    path: auto_branch_pushes/yansfil/upgrade-prompt-3.9v/ppluto-main/overlays/prod/
+    namespace: yansfil--upgrade-prompt-3.9v
   - name: yansfil--for-hyun
     path: auto_branch_pushes/yansfil/for-hyun/ppluto-main/overlays/prod/
     namespace: yansfil--for-hyun
