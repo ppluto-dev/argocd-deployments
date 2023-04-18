@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--realtime-board
+    path: auto_branch_pushes/sg/realtime-board/ppluto-main/overlays/prod/
+    namespace: sg--realtime-board
   - name: kkimdev--line-height
     path: auto_branch_pushes/kkimdev/line-height/ppluto-main/overlays/prod/
     namespace: kkimdev--line-height
