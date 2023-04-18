@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--monigpt-dot-com
+    path: auto_branch_pushes/kkimdev/monigpt-dot-com/ppluto-main/overlays/prod/
+    namespace: kkimdev--monigpt-dot-com
   - name: kkimdev--monigpt.com
     path: auto_branch_pushes/kkimdev/monigpt.com/ppluto-main/overlays/prod/
     namespace: kkimdev--monigpt.com
