@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--save-prompt-to-db
+    path: auto_branch_pushes/yansfil/save-prompt-to-db/ppluto-main/overlays/prod/
+    namespace: yansfil--save-prompt-to-db
   - name: yansfil--update-cronjob-published_at
     path: auto_branch_pushes/yansfil/update-cronjob-published_at/ppluto-main/overlays/prod/
     namespace: yansfil--update-cronjob-published_at
