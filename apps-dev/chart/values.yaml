@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--random-profile-name-image
+    path: auto_branch_pushes/kkimdev/random-profile-name-image/ppluto-main/overlays/prod/
+    namespace: kkimdev--random-profile-name-image
   - name: yansfil--for-hyun2
     path: auto_branch_pushes/yansfil/for-hyun2/ppluto-main/overlays/prod/
     namespace: yansfil--for-hyun2
-  - name: kkimdev--markdown
-    path: auto_branch_pushes/kkimdev/markdown/ppluto-main/overlays/prod/
-    namespace: kkimdev--markdown
   - name: yansfil--for-hyun
     path: auto_branch_pushes/yansfil/for-hyun/ppluto-main/overlays/prod/
     namespace: yansfil--for-hyun
