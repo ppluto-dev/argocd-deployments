@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--realtime-upvote
+    path: auto_branch_pushes/sg/realtime-upvote/ppluto-main/overlays/prod/
+    namespace: sg--realtime-upvote
   - name: kkimdev--random-profile-name-image
     path: auto_branch_pushes/kkimdev/random-profile-name-image/ppluto-main/overlays/prod/
     namespace: kkimdev--random-profile-name-image
