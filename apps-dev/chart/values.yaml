@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--reconnect-stream
+    path: auto_branch_pushes/sg/reconnect-stream/ppluto-main/overlays/prod/
+    namespace: sg--reconnect-stream
   - name: yansfil--for-hyun2
     path: auto_branch_pushes/yansfil/for-hyun2/ppluto-main/overlays/prod/
     namespace: yansfil--for-hyun2
