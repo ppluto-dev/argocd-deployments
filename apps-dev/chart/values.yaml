@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-realtime-bug
+    path: auto_branch_pushes/sg/fix-realtime-bug/ppluto-main/overlays/prod/
+    namespace: sg--fix-realtime-bug
   - name: kkimdev--answer_id_quick_fix
     path: auto_branch_pushes/kkimdev/answer_id_quick_fix/ppluto-main/overlays/prod/
     namespace: kkimdev--answer_id_quick_fix
