@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-lazy-loading
+    path: auto_branch_pushes/sg/add-lazy-loading/ppluto-main/overlays/prod/
+    namespace: sg--add-lazy-loading
   - name: yansfil--for-hyun2
     path: auto_branch_pushes/yansfil/for-hyun2/ppluto-main/overlays/prod/
     namespace: yansfil--for-hyun2
