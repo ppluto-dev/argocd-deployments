@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-go-to-bottom
+    path: auto_branch_pushes/sg/fix-go-to-bottom/ppluto-main/overlays/prod/
+    namespace: sg--fix-go-to-bottom
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
