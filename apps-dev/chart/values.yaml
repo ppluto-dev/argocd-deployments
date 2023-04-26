@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--no-service-worker-test
+    path: auto_branch_pushes/kkimdev/no-service-worker-test/ppluto-main/overlays/prod/
+    namespace: kkimdev--no-service-worker-test
+  - name: sg--cronjob-3
+    path: auto_branch_pushes/sg/cronjob-3/ppluto-main/overlays/prod/
+    namespace: sg--cronjob-3
   - name: sg--fix-bug-mychat
     path: auto_branch_pushes/sg/fix-bug-mychat/ppluto-main/overlays/prod/
     namespace: sg--fix-bug-mychat
