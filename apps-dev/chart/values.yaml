@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--delete-chat-history
+    path: auto_branch_pushes/yansfil/delete-chat-history/ppluto-main/overlays/prod/
+    namespace: yansfil--delete-chat-history
   - name: sg--input-validation
     path: auto_branch_pushes/sg/input-validation/ppluto-main/overlays/prod/
     namespace: sg--input-validation
