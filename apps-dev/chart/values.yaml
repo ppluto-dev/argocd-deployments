@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--format-vectordb-articles
+    path: auto_branch_pushes/yansfil/format-vectordb-articles/ppluto-main/overlays/prod/
+    namespace: yansfil--format-vectordb-articles
   - name: sg--fix-go-to-bottom
     path: auto_branch_pushes/sg/fix-go-to-bottom/ppluto-main/overlays/prod/
     namespace: sg--fix-go-to-bottom
