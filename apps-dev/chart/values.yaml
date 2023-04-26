@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--fix-openai-setting
-    path: auto_branch_pushes/yansfil/fix-openai-setting/ppluto-main/overlays/prod/
-    namespace: yansfil--fix-openai-setting
+  - name: sg--input-validation
+    path: auto_branch_pushes/sg/input-validation/ppluto-main/overlays/prod/
+    namespace: sg--input-validation
+  - name: kkimdev--header-redesign-2-pp179
+    path: auto_branch_pushes/kkimdev/header-redesign-2-pp179/ppluto-main/overlays/prod/
+    namespace: kkimdev--header-redesign-2-pp179
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
