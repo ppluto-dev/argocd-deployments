@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-unnecc-call
+    path: auto_branch_pushes/sg/fix-unnecc-call/ppluto-main/overlays/prod/
+    namespace: sg--fix-unnecc-call
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
