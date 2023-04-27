@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--share-modal
+    path: auto_branch_pushes/kkimdev/share-modal/ppluto-main/overlays/prod/
+    namespace: kkimdev--share-modal
   - name: sg--add-upgrade-waitlist-feature
     path: auto_branch_pushes/sg/add-upgrade-waitlist-feature/ppluto-main/overlays/prod/
     namespace: sg--add-upgrade-waitlist-feature
