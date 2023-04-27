@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--remove-leading-stream
+    path: auto_branch_pushes/kkimdev/remove-leading-stream/ppluto-main/overlays/prod/
+    namespace: kkimdev--remove-leading-stream
+  - name: kkimdev--tab-switch-persistent
+    path: auto_branch_pushes/kkimdev/tab-switch-persistent/ppluto-main/overlays/prod/
+    namespace: kkimdev--tab-switch-persistent
   - name: kkimdev--input-box-gradient
     path: auto_branch_pushes/kkimdev/input-box-gradient/ppluto-main/overlays/prod/
     namespace: kkimdev--input-box-gradient
