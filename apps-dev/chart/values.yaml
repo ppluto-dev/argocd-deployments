@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--mychat-scroll-down-bug-fix
+    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
+    namespace: kkimdev--mychat-scroll-down-bug-fix
   - name: kkimdev--avatar-change
     path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
     namespace: kkimdev--avatar-change
