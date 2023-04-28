@@ -6,16 +6,16 @@ spec:
     targetRevision: HEAD
   applications:
   - name: kkimdev--readme-branch
-    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
+    path: auto_branch_pushes/kkimdev/readme-branch/ppluto-main/overlays/prod/
     namespace: kkimdev--readme-branch
   - name: kkimdev--dev-prod-kube-config
-    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
+    path: auto_branch_pushes/kkimdev/dev-prod-kube-config/ppluto-main/overlays/prod/
     namespace: kkimdev--dev-prod-kube-config
   - name: kkimdev--increase-db-connection-limit
-    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
+    path: auto_branch_pushes/kkimdev/increase-db-connection-limit/ppluto-main/overlays/prod/
     namespace: kkimdev--increase-db-connection-limit
   - name: main
-    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
+    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main
   - name: main---monigpt
     path: auto_branch_pushes/main/ppluto-main/overlays/prod_monigpt/
