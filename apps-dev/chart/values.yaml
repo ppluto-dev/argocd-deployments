@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--dev-prod-kube-config
+    path: auto_branch_pushes/kkimdev/dev-prod-kube-config/ppluto-main/overlays/prod/
+    namespace: kkimdev--dev-prod-kube-config
   - name: kkimdev--increase-db-connection-limit
     path: auto_branch_pushes/kkimdev/increase-db-connection-limit/ppluto-main/overlays/prod/
     namespace: kkimdev--increase-db-connection-limit
