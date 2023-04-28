@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-symbol-url-cronjob
+    path: auto_branch_pushes/sg/add-symbol-url-cronjob/ppluto-main/overlays/prod/
+    namespace: sg--add-symbol-url-cronjob
   - name: kkimdev--dev-prod-kube-config
     path: auto_branch_pushes/kkimdev/dev-prod-kube-config/ppluto-main/overlays/prod/
     namespace: kkimdev--dev-prod-kube-config
