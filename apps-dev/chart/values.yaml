@@ -6,13 +6,10 @@ spec:
     targetRevision: HEAD
   applications:
   - name: sg--add-git-clean-in-makefile
-    path: auto_branch_pushes/sg/add-git-clean-in-makefile/ppluto-main/overlays/prod/
+    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
     namespace: sg--add-git-clean-in-makefile
-  - name: kkimdev--dev-prod-kube-config
-    path: auto_branch_pushes/kkimdev/dev-prod-kube-config/ppluto-main/overlays/prod/
-    namespace: kkimdev--dev-prod-kube-config
   - name: main
-    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
+    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
     namespace: main
   - name: main---monigpt
     path: auto_branch_pushes/main/ppluto-main/overlays/prod_monigpt/
