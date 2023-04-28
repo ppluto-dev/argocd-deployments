@@ -6,10 +6,10 @@ spec:
     targetRevision: HEAD
   applications:
   - name: sg--top-down-realtime-board
-    path: auto_branch_pushes/sg/top-down-realtime-board/ppluto-main/overlays/prod/
+    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
     namespace: sg--top-down-realtime-board
   - name: main
-    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
+    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
     namespace: main
   - name: main---monigpt
     path: auto_branch_pushes/main/ppluto-main/overlays/prod_monigpt/
