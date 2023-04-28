@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--new-button-flash
+    path: auto_branch_pushes/sg/new-button-flash/ppluto-main/overlays/prod/
+    namespace: sg--new-button-flash
   - name: kkimdev--readme-branch
     path: auto_branch_pushes/kkimdev/readme-branch/ppluto-main/overlays/prod/
     namespace: kkimdev--readme-branch
