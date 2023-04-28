@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--avatar-change
+    path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
+    namespace: kkimdev--avatar-change
   - name: main
     path: auto_branch_pushes/{branch}/ppluto-main/overlays/dev/
     namespace: main
