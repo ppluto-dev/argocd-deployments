@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--guide-release-note
+    path: auto_branch_pushes/kkimdev/guide-release-note/ppluto-main/overlays/dev/
+    namespace: kkimdev--guide-release-note
+  - name: sg--fix-bloomberg-change
+    path: auto_branch_pushes/sg/fix-bloomberg-change/ppluto-main/overlays/dev/
+    namespace: sg--fix-bloomberg-change
   - name: yansfil--add-fundamental
     path: auto_branch_pushes/yansfil/add-fundamental/ppluto-main/overlays/dev/
     namespace: yansfil--add-fundamental
