@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--0-quota-msg
+    path: auto_branch_pushes/kkimdev/0-quota-msg/ppluto-main/overlays/dev/
+    namespace: kkimdev--0-quota-msg
+  - name: sg--add-user-quota
+    path: auto_branch_pushes/sg/add-user-quota/ppluto-main/overlays/dev/
+    namespace: sg--add-user-quota
   - name: kkimdev--typo
     path: auto_branch_pushes/kkimdev/typo/ppluto-main/overlays/dev/
     namespace: kkimdev--typo
