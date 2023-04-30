@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--summarize-fix
+    path: auto_branch_pushes/yansfil/summarize-fix/ppluto-main/overlays/dev/
+    namespace: yansfil--summarize-fix
   - name: sg--add-auto-refresh
     path: auto_branch_pushes/sg/add-auto-refresh/ppluto-main/overlays/dev/
     namespace: sg--add-auto-refresh
