@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--login-page-release-notes
+    path: auto_branch_pushes/kkimdev/login-page-release-notes/ppluto-main/overlays/dev/
+    namespace: kkimdev--login-page-release-notes
   - name: sg--add-auto-refresh
     path: auto_branch_pushes/sg/add-auto-refresh/ppluto-main/overlays/dev/
     namespace: sg--add-auto-refresh
