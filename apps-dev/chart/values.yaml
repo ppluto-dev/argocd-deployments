@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--prepopulated-question-hard-coded
+    path: auto_branch_pushes/kkimdev/prepopulated-question-hard-coded/ppluto-main/overlays/dev/
+    namespace: kkimdev--prepopulated-question-hard-coded
   - name: kkimdev--avatar-change
     path: auto_branch_pushes/kkimdev/avatar-change/ppluto-main/overlays/dev/
     namespace: kkimdev--avatar-change
