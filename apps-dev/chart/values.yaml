@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--input-box-fix
+    path: auto_branch_pushes/kkimdev/input-box-fix/ppluto-main/overlays/dev/
+    namespace: kkimdev--input-box-fix
   - name: yansfil--ga4-setting
     path: auto_branch_pushes/yansfil/ga4-setting/ppluto-main/overlays/dev/
     namespace: yansfil--ga4-setting
