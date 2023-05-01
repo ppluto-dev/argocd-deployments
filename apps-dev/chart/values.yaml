@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--change-feedback-url
+    path: auto_branch_pushes/sg/change-feedback-url/ppluto-main/overlays/dev/
+    namespace: sg--change-feedback-url
   - name: kkimdev--home-clickable
     path: auto_branch_pushes/kkimdev/home-clickable/ppluto-main/overlays/dev/
     namespace: kkimdev--home-clickable
