@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--cronjob-fix
+    path: auto_branch_pushes/sg/cronjob-fix/ppluto-main/overlays/dev/
+    namespace: sg--cronjob-fix
   - name: kkimdev--id-generator-v3
     path: auto_branch_pushes/kkimdev/id-generator-v3/ppluto-main/overlays/dev/
     namespace: kkimdev--id-generator-v3
