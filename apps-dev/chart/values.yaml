@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--split-cronjob-step-1
+    path: auto_branch_pushes/sg/split-cronjob-step-1/ppluto-main/overlays/dev/
+    namespace: sg--split-cronjob-step-1
+  - name: kkimdev--user-question-csv-export
+    path: auto_branch_pushes/kkimdev/user-question-csv-export/ppluto-main/overlays/dev/
+    namespace: kkimdev--user-question-csv-export
   - name: kkimdev--instruction-revise
     path: auto_branch_pushes/kkimdev/instruction-revise/ppluto-main/overlays/dev/
     namespace: kkimdev--instruction-revise
