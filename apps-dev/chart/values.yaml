@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--admin-history-input-toggle
+    path: auto_branch_pushes/kkimdev/admin-history-input-toggle/ppluto-main/overlays/dev/
+    namespace: kkimdev--admin-history-input-toggle
   - name: yansfil--auth-admin
     path: auto_branch_pushes/yansfil/auth-admin/ppluto-main/overlays/dev/
     namespace: yansfil--auth-admin
