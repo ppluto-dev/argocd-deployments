@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--add-admin-score
+    path: auto_branch_pushes/kkimdev/add-admin-score/ppluto-main/overlays/dev/
+    namespace: kkimdev--add-admin-score
   - name: kkimdev--dayjs-readme
     path: auto_branch_pushes/kkimdev/dayjs-readme/ppluto-main/overlays/dev/
     namespace: kkimdev--dayjs-readme
