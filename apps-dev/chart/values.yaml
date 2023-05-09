@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-news-published-at
+    path: auto_branch_pushes/sg/fix-news-published-at/ppluto-main/overlays/dev/
+    namespace: sg--fix-news-published-at
   - name: kkimdev--new-admin-vdb
     path: auto_branch_pushes/kkimdev/new-admin-vdb/ppluto-main/overlays/dev/
     namespace: kkimdev--new-admin-vdb
