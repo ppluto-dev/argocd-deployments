@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--question-service-refactor
+    path: auto_branch_pushes/kkimdev/question-service-refactor/ppluto-main/overlays/dev/
+    namespace: kkimdev--question-service-refactor
   - name: sg--update-news-origin
     path: auto_branch_pushes/sg/update-news-origin/ppluto-main/overlays/dev/
     namespace: sg--update-news-origin
