@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--vdb-migration
+    path: auto_branch_pushes/sg/vdb-migration/ppluto-main/overlays/dev/
+    namespace: sg--vdb-migration
   - name: yansfil--auth-admin
     path: auto_branch_pushes/yansfil/auth-admin/ppluto-main/overlays/dev/
     namespace: yansfil--auth-admin
