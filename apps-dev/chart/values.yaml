@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--admin-vector-query
+    path: auto_branch_pushes/sg/admin-vector-query/ppluto-main/overlays/dev/
+    namespace: sg--admin-vector-query
   - name: yansfil--auth-admin
     path: auto_branch_pushes/yansfil/auth-admin/ppluto-main/overlays/dev/
     namespace: yansfil--auth-admin
