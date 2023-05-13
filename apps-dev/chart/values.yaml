@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-ticker-tipranks
+    path: auto_branch_pushes/sg/add-ticker-tipranks/ppluto-main/overlays/dev/
+    namespace: sg--add-ticker-tipranks
+  - name: sg--admin-compare-vectordbs
+    path: auto_branch_pushes/sg/admin-compare-vectordbs/ppluto-main/overlays/dev/
+    namespace: sg--admin-compare-vectordbs
   - name: kkimdev--avatar-change
     path: auto_branch_pushes/kkimdev/avatar-change/ppluto-main/overlays/dev/
     namespace: kkimdev--avatar-change
