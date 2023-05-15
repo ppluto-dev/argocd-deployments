@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fingerprint-news
+    path: auto_branch_pushes/sg/fingerprint-news/ppluto-main/overlays/dev/
+    namespace: sg--fingerprint-news
   - name: yansfil--refactor-langchain
     path: auto_branch_pushes/yansfil/refactor-langchain/ppluto-main/overlays/dev/
     namespace: yansfil--refactor-langchain
