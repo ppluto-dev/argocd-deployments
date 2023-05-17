@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--refactor-admin
+    path: auto_branch_pushes/yansfil/refactor-admin/ppluto-main/overlays/dev/
+    namespace: yansfil--refactor-admin
   - name: sg--add-vdb-index
     path: auto_branch_pushes/sg/add-vdb-index/ppluto-main/overlays/dev/
     namespace: sg--add-vdb-index
