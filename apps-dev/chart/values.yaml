@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--remove-display-name
+    path: auto_branch_pushes/sg/remove-display-name/ppluto-main/overlays/dev/
+    namespace: sg--remove-display-name
   - name: yansfil--refactor-admin
     path: auto_branch_pushes/yansfil/refactor-admin/ppluto-main/overlays/dev/
     namespace: yansfil--refactor-admin
