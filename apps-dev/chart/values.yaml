@@ -5,12 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--open-beta-ui-revision-1
+    path: auto_branch_pushes/kkimdev/open-beta-ui-revision-1/ppluto-main/overlays/dev/
+    namespace: kkimdev--open-beta-ui-revision-1
+  - name: sg--remove-preview
+    path: auto_branch_pushes/sg/remove-preview/ppluto-main/overlays/dev/
+    namespace: sg--remove-preview
   - name: sg--remove-display-name
     path: auto_branch_pushes/sg/remove-display-name/ppluto-main/overlays/dev/
     namespace: sg--remove-display-name
-  - name: yansfil--refactor-admin
-    path: auto_branch_pushes/yansfil/refactor-admin/ppluto-main/overlays/dev/
-    namespace: yansfil--refactor-admin
   - name: kkimdev--avatar-change
     path: auto_branch_pushes/kkimdev/avatar-change/ppluto-main/overlays/dev/
     namespace: kkimdev--avatar-change
