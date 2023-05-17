@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-env
+    path: auto_branch_pushes/sg/fix-env/ppluto-main/overlays/dev/
+    namespace: sg--fix-env
   - name: kkimdev--open-beta-ui-revision-1
     path: auto_branch_pushes/kkimdev/open-beta-ui-revision-1/ppluto-main/overlays/dev/
     namespace: kkimdev--open-beta-ui-revision-1
