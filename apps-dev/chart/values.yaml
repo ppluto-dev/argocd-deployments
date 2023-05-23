@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-compare-vdbs-bug
+    path: auto_branch_pushes/sg/fix-compare-vdbs-bug/ppluto-main/overlays/dev/
+    namespace: sg--fix-compare-vdbs-bug
   - name: kkimdev--avatar-change
     path: auto_branch_pushes/kkimdev/avatar-change/ppluto-main/overlays/dev/
     namespace: kkimdev--avatar-change
