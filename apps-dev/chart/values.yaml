@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--change-bloomberg
+    path: auto_branch_pushes/sg/change-bloomberg/ppluto-main/overlays/dev/
+    namespace: sg--change-bloomberg
   - name: sg--vector-db-chain
     path: auto_branch_pushes/sg/vector-db-chain/ppluto-main/overlays/dev/
     namespace: sg--vector-db-chain
