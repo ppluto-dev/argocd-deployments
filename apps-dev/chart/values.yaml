@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-realtimeboard
+    path: auto_branch_pushes/sg/fix-realtimeboard/ppluto-main/overlays/dev/
+    namespace: sg--fix-realtimeboard
+  - name: sg--fix-bloomberg
+    path: auto_branch_pushes/sg/fix-bloomberg/ppluto-main/overlays/dev/
+    namespace: sg--fix-bloomberg
   - name: kkimdev--prepopulated-qa-update
     path: auto_branch_pushes/kkimdev/prepopulated-qa-update/ppluto-main/overlays/dev/
     namespace: kkimdev--prepopulated-qa-update
