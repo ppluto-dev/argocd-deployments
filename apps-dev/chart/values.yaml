@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--reverse-hyde
+    path: auto_branch_pushes/sg/reverse-hyde/ppluto-main/overlays/dev/
+    namespace: sg--reverse-hyde
   - name: yansfil--fix-dynamic-textarea-initial-height
     path: auto_branch_pushes/yansfil/fix-dynamic-textarea-initial-height/ppluto-main/overlays/dev/
     namespace: yansfil--fix-dynamic-textarea-initial-height
