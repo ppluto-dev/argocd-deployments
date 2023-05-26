@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--try-bloom
+    path: auto_branch_pushes/sg/try-bloom/ppluto-main/overlays/dev/
+    namespace: sg--try-bloom
   - name: kkimdev--prepopulated-qa-update
     path: auto_branch_pushes/kkimdev/prepopulated-qa-update/ppluto-main/overlays/dev/
     namespace: kkimdev--prepopulated-qa-update
