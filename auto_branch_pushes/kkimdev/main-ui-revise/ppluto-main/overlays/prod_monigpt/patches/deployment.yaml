@@ -1,0 +1,13 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: ppluto-main--prod-client
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:0b5df1c3422150253762f4cc46ef23a087778b66ffced5dceb90d2f6f36f174b
+        - name: ppluto-main--prod-server
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e85c5d6f75b51a3047f5e8263ebff1ff0d7a85a306f5d34cdeff9d607fb1b2ea
