@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--compare-vdb-delete-history
+    path: auto_branch_pushes/sg/compare-vdb-delete-history/ppluto-main/overlays/dev/
+    namespace: sg--compare-vdb-delete-history
   - name: sg--add-source
     path: auto_branch_pushes/sg/add-source/ppluto-main/overlays/dev/
     namespace: sg--add-source
