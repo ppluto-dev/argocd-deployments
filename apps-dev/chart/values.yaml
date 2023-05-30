@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-vdb
+    path: auto_branch_pushes/sg/add-vdb/ppluto-main/overlays/dev/
+    namespace: sg--add-vdb
+  - name: yansfil--fix-admin-input-hegiht
+    path: auto_branch_pushes/yansfil/fix-admin-input-hegiht/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-admin-input-hegiht
   - name: kkimdev--avatar-change
     path: auto_branch_pushes/kkimdev/avatar-change/ppluto-main/overlays/dev/
     namespace: kkimdev--avatar-change
