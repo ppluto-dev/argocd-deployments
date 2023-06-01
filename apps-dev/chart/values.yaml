@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-auth
+    path: auto_branch_pushes/yansfil/add-auth/ppluto-main/overlays/dev/
+    namespace: yansfil--add-auth
   - name: kkimdev--tab-ui-redesign
     path: auto_branch_pushes/kkimdev/tab-ui-redesign/ppluto-main/overlays/dev/
     namespace: kkimdev--tab-ui-redesign
