@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--parallel-presubmit-check
-    path: auto_branch_pushes/kkimdev/parallel-presubmit-check/ppluto-main/overlays/dev/
-    namespace: kkimdev--parallel-presubmit-check
+  - name: kkimdev--tab-ui-redesign
+    path: auto_branch_pushes/kkimdev/tab-ui-redesign/ppluto-main/overlays/dev/
+    namespace: kkimdev--tab-ui-redesign
+  - name: sg--fix-marketwatch
+    path: auto_branch_pushes/sg/fix-marketwatch/ppluto-main/overlays/dev/
+    namespace: sg--fix-marketwatch
   - name: kkimdev--remove-top-bar
     path: auto_branch_pushes/kkimdev/remove-top-bar/ppluto-main/overlays/dev/
     namespace: kkimdev--remove-top-bar
