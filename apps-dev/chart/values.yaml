@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-deployment-pipeline
+    path: auto_branch_pushes/yansfil/fix-deployment-pipeline/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-deployment-pipeline
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
