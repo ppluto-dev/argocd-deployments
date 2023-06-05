@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ask-ui-update
+    path: auto_branch_pushes/kkimdev/ask-ui-update/ppluto-main/overlays/dev/
+    namespace: kkimdev--ask-ui-update
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
