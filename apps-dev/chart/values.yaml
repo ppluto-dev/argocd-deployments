@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--429-retry
+    path: auto_branch_pushes/kkimdev/429-retry/ppluto-main/overlays/dev/
+    namespace: kkimdev--429-retry
   - name: yansfil--add-v2-without-evaluation-pipeline
     path: auto_branch_pushes/yansfil/add-v2-without-evaluation-pipeline/ppluto-main/overlays/dev/
     namespace: yansfil--add-v2-without-evaluation-pipeline
