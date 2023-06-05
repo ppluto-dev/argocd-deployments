@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ask-tab-misc-fixes
+    path: auto_branch_pushes/kkimdev/ask-tab-misc-fixes/ppluto-main/overlays/dev/
+    namespace: kkimdev--ask-tab-misc-fixes
   - name: kkimdev--429-retry
     path: auto_branch_pushes/kkimdev/429-retry/ppluto-main/overlays/dev/
     namespace: kkimdev--429-retry
