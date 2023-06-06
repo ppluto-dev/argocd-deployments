@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-bug-cron-vector
+    path: auto_branch_pushes/sg/fix-bug-cron-vector/ppluto-main/overlays/dev/
+    namespace: sg--fix-bug-cron-vector
   - name: yansfil--timestamp-prompt-updates
     path: auto_branch_pushes/yansfil/timestamp-prompt-updates/ppluto-main/overlays/dev/
     namespace: yansfil--timestamp-prompt-updates
