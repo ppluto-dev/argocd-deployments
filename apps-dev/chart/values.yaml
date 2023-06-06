@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--PageTabSwitcherRefactor
+    path: auto_branch_pushes/kkimdev/PageTabSwitcherRefactor/ppluto-main/overlays/dev/
+    namespace: kkimdev--PageTabSwitcherRefactor
   - name: kkimdev--docker-build-test
     path: auto_branch_pushes/kkimdev/docker-build-test/ppluto-main/overlays/dev/
     namespace: kkimdev--docker-build-test
