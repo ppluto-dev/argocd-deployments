@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ui-more
+    path: auto_branch_pushes/kkimdev/ui-more/ppluto-main/overlays/dev/
+    namespace: kkimdev--ui-more
   - name: yansfil--fix-chatview-count
     path: auto_branch_pushes/yansfil/fix-chatview-count/ppluto-main/overlays/dev/
     namespace: yansfil--fix-chatview-count
