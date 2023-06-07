@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-vdb-method
+    path: auto_branch_pushes/sg/add-vdb-method/ppluto-main/overlays/dev/
+    namespace: sg--add-vdb-method
   - name: yansfil--popular-tab-ui-change
     path: auto_branch_pushes/yansfil/popular-tab-ui-change/ppluto-main/overlays/dev/
     namespace: yansfil--popular-tab-ui-change
