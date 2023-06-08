@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-pipeline
+    path: auto_branch_pushes/sg/add-pipeline/ppluto-main/overlays/dev/
+    namespace: sg--add-pipeline
   - name: kkimdev--ui-fix
     path: auto_branch_pushes/kkimdev/ui-fix/ppluto-main/overlays/dev/
     namespace: kkimdev--ui-fix
