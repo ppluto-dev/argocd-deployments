@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--change-pipeline-history
+    path: auto_branch_pushes/yansfil/change-pipeline-history/ppluto-main/overlays/dev/
+    namespace: yansfil--change-pipeline-history
   - name: yansfil--fix-chatview-count
     path: auto_branch_pushes/yansfil/fix-chatview-count/ppluto-main/overlays/dev/
     namespace: yansfil--fix-chatview-count
