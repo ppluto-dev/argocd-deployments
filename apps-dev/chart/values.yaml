@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--popular-tab-ui
+    path: auto_branch_pushes/kkimdev/popular-tab-ui/ppluto-main/overlays/dev/
+    namespace: kkimdev--popular-tab-ui
   - name: yansfil--fix-chatview-count
     path: auto_branch_pushes/yansfil/fix-chatview-count/ppluto-main/overlays/dev/
     namespace: yansfil--fix-chatview-count
