@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--adjust-retry
+    path: auto_branch_pushes/kkimdev/adjust-retry/ppluto-main/overlays/dev/
+    namespace: kkimdev--adjust-retry
   - name: sg--add-pipeline
     path: auto_branch_pushes/sg/add-pipeline/ppluto-main/overlays/dev/
     namespace: sg--add-pipeline
