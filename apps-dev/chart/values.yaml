@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--openai_api_random
+    path: auto_branch_pushes/yansfil/openai_api_random/ppluto-main/overlays/dev/
+    namespace: yansfil--openai_api_random
   - name: sg--remove-bracket
     path: auto_branch_pushes/sg/remove-bracket/ppluto-main/overlays/dev/
     namespace: sg--remove-bracket
