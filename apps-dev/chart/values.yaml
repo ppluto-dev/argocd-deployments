@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-investopedia
+    path: auto_branch_pushes/sg/add-investopedia/ppluto-main/overlays/dev/
+    namespace: sg--add-investopedia
+  - name: yansifl--apploy-cut-off-to-all-pipelines
+    path: auto_branch_pushes/yansifl/apploy-cut-off-to-all-pipelines/ppluto-main/overlays/dev/
+    namespace: yansifl--apploy-cut-off-to-all-pipelines
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
