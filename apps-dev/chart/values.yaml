@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--add-markdown
-    path: auto_branch_pushes/yansfil/add-markdown/ppluto-main/overlays/dev/
-    namespace: yansfil--add-markdown
+  - name: kkimdev--logo-update
+    path: auto_branch_pushes/kkimdev/logo-update/ppluto-main/overlays/dev/
+    namespace: kkimdev--logo-update
+  - name: yansfil--add-history-link-sharable
+    path: auto_branch_pushes/yansfil/add-history-link-sharable/ppluto-main/overlays/dev/
+    namespace: yansfil--add-history-link-sharable
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
