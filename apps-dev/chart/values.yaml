@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--answer-font-size-adj
+    path: auto_branch_pushes/kkimdev/answer-font-size-adj/ppluto-main/overlays/dev/
+    namespace: kkimdev--answer-font-size-adj
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
