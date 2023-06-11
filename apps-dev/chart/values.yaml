@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ui-remove-hot
+    path: auto_branch_pushes/kkimdev/ui-remove-hot/ppluto-main/overlays/dev/
+    namespace: kkimdev--ui-remove-hot
   - name: sg--fix-investopedia
     path: auto_branch_pushes/sg/fix-investopedia/ppluto-main/overlays/dev/
     namespace: sg--fix-investopedia
