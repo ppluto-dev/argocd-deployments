@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--font-size
+    path: auto_branch_pushes/kkimdev/font-size/ppluto-main/overlays/dev/
+    namespace: kkimdev--font-size
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
