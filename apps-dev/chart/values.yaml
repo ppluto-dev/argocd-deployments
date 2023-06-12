@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--ui-update
-    path: auto_branch_pushes/kkimdev/ui-update/ppluto-main/overlays/dev/
-    namespace: kkimdev--ui-update
+  - name: kkimdev--suggested-question-admin
+    path: auto_branch_pushes/kkimdev/suggested-question-admin/ppluto-main/overlays/dev/
+    namespace: kkimdev--suggested-question-admin
+  - name: yansfil--fix-pipeline-history
+    path: auto_branch_pushes/yansfil/fix-pipeline-history/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-pipeline-history
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
