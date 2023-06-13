@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--chat-reloading-hotfix
+    path: auto_branch_pushes/kkimdev/chat-reloading-hotfix/ppluto-main/overlays/dev/
+    namespace: kkimdev--chat-reloading-hotfix
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
