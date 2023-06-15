@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--admin-reverse
+    path: auto_branch_pushes/kkimdev/admin-reverse/ppluto-main/overlays/dev/
+    namespace: kkimdev--admin-reverse
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
