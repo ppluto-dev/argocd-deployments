@@ -5,6 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ticker-tab
+    path: auto_branch_pushes/kkimdev/ticker-tab/ppluto-main/overlays/dev/
+    namespace: kkimdev--ticker-tab
+  - name: sg--fix-cnbc
+    path: auto_branch_pushes/sg/fix-cnbc/ppluto-main/overlays/dev/
+    namespace: sg--fix-cnbc
+  - name: yansfil--add-first-touch-latencyms
+    path: auto_branch_pushes/yansfil/add-first-touch-latencyms/ppluto-main/overlays/dev/
+    namespace: yansfil--add-first-touch-latencyms
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
