@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-user-question-tickers
+    path: auto_branch_pushes/sg/add-user-question-tickers/ppluto-main/overlays/dev/
+    namespace: sg--add-user-question-tickers
   - name: yansfil--add-first-touch-latencyms
     path: auto_branch_pushes/yansfil/add-first-touch-latencyms/ppluto-main/overlays/dev/
     namespace: yansfil--add-first-touch-latencyms
