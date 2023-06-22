@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--implement-feed-api
+    path: auto_branch_pushes/sg/implement-feed-api/ppluto-main/overlays/dev/
+    namespace: sg--implement-feed-api
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
