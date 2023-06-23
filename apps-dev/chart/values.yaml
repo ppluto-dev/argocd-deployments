@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-deleting-preset
+    path: auto_branch_pushes/sg/add-deleting-preset/ppluto-main/overlays/dev/
+    namespace: sg--add-deleting-preset
   - name: kkimdev--remove-single-qa-modal
     path: auto_branch_pushes/kkimdev/remove-single-qa-modal/ppluto-main/overlays/dev/
     namespace: kkimdev--remove-single-qa-modal
