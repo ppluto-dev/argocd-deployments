@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--monitor-vectordb-research
+    path: auto_branch_pushes/yansfil/monitor-vectordb-research/ppluto-main/overlays/dev/
+    namespace: yansfil--monitor-vectordb-research
   - name: kkimdev--remove-single-qa-modal
     path: auto_branch_pushes/kkimdev/remove-single-qa-modal/ppluto-main/overlays/dev/
     namespace: kkimdev--remove-single-qa-modal
