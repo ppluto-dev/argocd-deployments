@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-classification
+    path: auto_branch_pushes/sg/add-classification/ppluto-main/overlays/dev/
+    namespace: sg--add-classification
   - name: sg--add-suggested-qa-api
     path: auto_branch_pushes/sg/add-suggested-qa-api/ppluto-main/overlays/dev/
     namespace: sg--add-suggested-qa-api
