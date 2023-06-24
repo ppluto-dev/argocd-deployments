@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--dev-tab-ui-polish
+    path: auto_branch_pushes/kkimdev/dev-tab-ui-polish/ppluto-main/overlays/dev/
+    namespace: kkimdev--dev-tab-ui-polish
   - name: kkimdev--reference-fix
     path: auto_branch_pushes/kkimdev/reference-fix/ppluto-main/overlays/dev/
     namespace: kkimdev--reference-fix
