@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--suggest-api-followup-fix
+    path: auto_branch_pushes/sg/suggest-api-followup-fix/ppluto-main/overlays/dev/
+    namespace: sg--suggest-api-followup-fix
   - name: kkimdev--dev-tab-ui-polish
     path: auto_branch_pushes/kkimdev/dev-tab-ui-polish/ppluto-main/overlays/dev/
     namespace: kkimdev--dev-tab-ui-polish
   - name: sg--add-classification
     path: auto_branch_pushes/sg/add-classification/ppluto-main/overlays/dev/
     namespace: sg--add-classification
-  - name: sg--add-suggested-qa-api
-    path: auto_branch_pushes/sg/add-suggested-qa-api/ppluto-main/overlays/dev/
-    namespace: sg--add-suggested-qa-api
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
