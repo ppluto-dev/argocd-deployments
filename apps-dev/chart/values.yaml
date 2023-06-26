@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-tab-name
+    path: auto_branch_pushes/sg/fix-tab-name/ppluto-main/overlays/dev/
+    namespace: sg--fix-tab-name
   - name: yansfil--test-google-pipeline
     path: auto_branch_pushes/yansfil/test-google-pipeline/ppluto-main/overlays/dev/
     namespace: yansfil--test-google-pipeline
