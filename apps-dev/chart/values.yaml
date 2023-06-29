@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--embedding-new
+    path: auto_branch_pushes/yansfil/embedding-new/ppluto-main/overlays/dev/
+    namespace: yansfil--embedding-new
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
