@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-news-transaction
+    path: auto_branch_pushes/sg/add-news-transaction/ppluto-main/overlays/dev/
+    namespace: sg--add-news-transaction
+  - name: yansfil--add-premium
+    path: auto_branch_pushes/yansfil/add-premium/ppluto-main/overlays/dev/
+    namespace: yansfil--add-premium
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
