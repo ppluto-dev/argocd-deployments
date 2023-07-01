@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-bloom-with-cache
+    path: auto_branch_pushes/sg/fix-bloom-with-cache/ppluto-main/overlays/dev/
+    namespace: sg--fix-bloom-with-cache
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
