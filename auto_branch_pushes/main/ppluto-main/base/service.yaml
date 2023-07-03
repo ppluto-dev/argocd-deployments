@@ -6,10 +6,15 @@ spec:
   selector:
     app: ppluto-main
   ports:
-    - name: web # Client
+    - name: web-monigpt # Client -- monigpt.com
       port: 80
       protocol: TCP
       targetPort: 80
+
+    - name: web-deadrabbit # Client -- deadrabb.it
+      port: 8002
+      protocol: TCP
+      targetPort: 8002
 
     - name: grpc # Node gRpc
       protocol: TCP

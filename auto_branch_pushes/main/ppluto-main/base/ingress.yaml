@@ -13,7 +13,7 @@ metadata:
     alb.ingress.kubernetes.io/subnets: subnet-0e702042fef1214b0,subnet-0e2d06adbcc8e5ea0,subnet-0b5971ee8ec80ecd7 # same vpc subnetes in the k8s cluster
 spec:
   rules:
-    - host: HOST_NAME_PLACEHOLDER
+    - host: HOST_NAME_PLACEHOLDER_0
       http:
         paths:
           - path: /api
@@ -37,3 +37,13 @@ spec:
                 name: ppluto-main-service
                 port:
                   number: 80
+    - host: HOST_NAME_PLACEHOLDER_1
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service
+                port:
+                  number: 8002
