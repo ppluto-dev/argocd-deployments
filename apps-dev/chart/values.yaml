@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-bloom-forever
+    path: auto_branch_pushes/sg/fix-bloom-forever/ppluto-main/overlays/dev/
+    namespace: sg--fix-bloom-forever
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
