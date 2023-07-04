@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sg--fix-preset-crawling
-    path: auto_branch_pushes/sg/fix-preset-crawling/ppluto-main/overlays/dev/
-    namespace: sg--fix-preset-crawling
+  - name: kkimdev--make-prod-fix
+    path: auto_branch_pushes/kkimdev/make-prod-fix/ppluto-main/overlays/dev/
+    namespace: kkimdev--make-prod-fix
+  - name: sg--add-sentry
+    path: auto_branch_pushes/sg/add-sentry/ppluto-main/overlays/dev/
+    namespace: sg--add-sentry
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
