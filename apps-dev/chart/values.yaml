@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-safari-bug-2
+    path: auto_branch_pushes/sg/fix-safari-bug-2/ppluto-main/overlays/dev/
+    namespace: sg--fix-safari-bug-2
   - name: kkimdev--deadrabbit
     path: auto_branch_pushes/kkimdev/deadrabbit/ppluto-main/overlays/dev/
     namespace: kkimdev--deadrabbit
