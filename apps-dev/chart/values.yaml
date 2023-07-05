@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--google-search-pdf
+    path: auto_branch_pushes/yansfil/google-search-pdf/ppluto-main/overlays/dev/
+    namespace: yansfil--google-search-pdf
   - name: kkimdev--deadrabbit
     path: auto_branch_pushes/kkimdev/deadrabbit/ppluto-main/overlays/dev/
     namespace: kkimdev--deadrabbit
