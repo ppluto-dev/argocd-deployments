@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-ticker-detail
+    path: auto_branch_pushes/sg/add-ticker-detail/ppluto-main/overlays/dev/
+    namespace: sg--add-ticker-detail
   - name: yansfil--add-mypage
     path: auto_branch_pushes/yansfil/add-mypage/ppluto-main/overlays/dev/
     namespace: yansfil--add-mypage
