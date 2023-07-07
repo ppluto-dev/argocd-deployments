@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-feed
+    path: auto_branch_pushes/sg/fix-feed/ppluto-main/overlays/dev/
+    namespace: sg--fix-feed
   - name: kkimdev--deadrabbit-test-server
     path: auto_branch_pushes/kkimdev/deadrabbit-test-server/ppluto-main/overlays/dev/
     namespace: kkimdev--deadrabbit-test-server
