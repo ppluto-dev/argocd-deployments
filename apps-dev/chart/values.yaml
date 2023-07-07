@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--cron-slack-remove-null
+    path: auto_branch_pushes/sg/cron-slack-remove-null/ppluto-main/overlays/dev/
+    namespace: sg--cron-slack-remove-null
   - name: yansfil--update-analytics-event
     path: auto_branch_pushes/yansfil/update-analytics-event/ppluto-main/overlays/dev/
     namespace: yansfil--update-analytics-event
