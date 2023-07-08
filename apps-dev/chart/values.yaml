@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin38--rename-slack-channel
+    path: auto_branch_pushes/sungbin38/rename-slack-channel/ppluto-main/overlays/dev/
+    namespace: sungbin38--rename-slack-channel
   - name: sungbin38--migrate-momentjs-dayjs
     path: auto_branch_pushes/sungbin38/migrate-momentjs-dayjs/ppluto-main/overlays/dev/
     namespace: sungbin38--migrate-momentjs-dayjs
