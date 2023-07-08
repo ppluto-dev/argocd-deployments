@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--deadrabbit-up-update
+    path: auto_branch_pushes/kkimdev/deadrabbit-up-update/ppluto-main/overlays/dev/
+    namespace: kkimdev--deadrabbit-up-update
   - name: kkimdev--deadrabbit-test-server
     path: auto_branch_pushes/kkimdev/deadrabbit-test-server/ppluto-main/overlays/dev/
     namespace: kkimdev--deadrabbit-test-server
