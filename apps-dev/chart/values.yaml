@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-cron
+    path: auto_branch_pushes/sg/fix-cron/ppluto-main/overlays/dev/
+    namespace: sg--fix-cron
   - name: sg--add-search
     path: auto_branch_pushes/sg/add-search/ppluto-main/overlays/dev/
     namespace: sg--add-search
