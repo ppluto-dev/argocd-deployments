@@ -5,12 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--deadrabbit-test-server
-    path: auto_branch_pushes/kkimdev/deadrabbit-test-server/ppluto-main/overlays/dev/
-    namespace: kkimdev--deadrabbit-test-server
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
-  - name: main---monigpt
+  - name: main---tickerbell
     path: auto_branch_pushes/main/ppluto-main/overlays/prod_monigpt/
-    namespace: main---monigpt
+    namespace: main---tickerbell
