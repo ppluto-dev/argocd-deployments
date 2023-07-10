@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-scroll-depth-event
+    path: auto_branch_pushes/yansfil/add-scroll-depth-event/ppluto-main/overlays/dev/
+    namespace: yansfil--add-scroll-depth-event
   - name: yansfil--rename-set-to-toggle
     path: auto_branch_pushes/yansfil/rename-set-to-toggle/ppluto-main/overlays/dev/
     namespace: yansfil--rename-set-to-toggle
