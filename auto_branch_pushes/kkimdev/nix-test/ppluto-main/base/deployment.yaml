@@ -19,10 +19,14 @@ spec:
             - containerPort: 80
             - containerPort: 8002
           readinessProbe:
-            tcpSocket:
+            httpGet:
               port: 80
-            initialDelaySeconds: 4
-            periodSeconds: 10
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 80
+              path: /
+
         - name: ppluto-main--prod-server
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           ports:
@@ -31,8 +35,6 @@ spec:
           readinessProbe:
             tcpSocket:
               port: 82
-            initialDelaySeconds: 5
-            periodSeconds: 10
 
       imagePullSecrets:
         - name: gitlab-container-registry
