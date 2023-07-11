@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--question-comment
+    path: auto_branch_pushes/yansfil/question-comment/ppluto-main/overlays/dev/
+    namespace: yansfil--question-comment
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
-  - name: main---tickerbell
+  - name: main---monigpt
     path: auto_branch_pushes/main/ppluto-main/overlays/prod_monigpt/
-    namespace: main---tickerbell
+    namespace: main---monigpt
