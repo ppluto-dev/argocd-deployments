@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ci-nix-cache
+    path: auto_branch_pushes/kkimdev/ci-nix-cache/ppluto-main/overlays/dev/
+    namespace: kkimdev--ci-nix-cache
   - name: Banggre--deleteprofileOfComment
     path: auto_branch_pushes/Banggre/deleteprofileOfComment/ppluto-main/overlays/dev/
     namespace: Banggre--deleteprofileOfComment
