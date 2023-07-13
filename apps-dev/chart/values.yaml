@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--overflow-fix
+    path: auto_branch_pushes/kkimdev/overflow-fix/ppluto-main/overlays/dev/
+    namespace: kkimdev--overflow-fix
   - name: Banggre--deleteprofileOfComment
     path: auto_branch_pushes/Banggre/deleteprofileOfComment/ppluto-main/overlays/dev/
     namespace: Banggre--deleteprofileOfComment
