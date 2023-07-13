@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-chatstreamitem-ui
+    path: auto_branch_pushes/yansfil/fix-chatstreamitem-ui/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-chatstreamitem-ui
   - name: sg--add-sentry-source-map
     path: auto_branch_pushes/sg/add-sentry-source-map/ppluto-main/overlays/dev/
     namespace: sg--add-sentry-source-map
