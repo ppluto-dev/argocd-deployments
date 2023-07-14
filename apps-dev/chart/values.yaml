@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--admin-me
+    path: auto_branch_pushes/luan/admin-me/ppluto-main/overlays/dev/
+    namespace: luan--admin-me
   - name: luaneyed--nproc-stderr
     path: auto_branch_pushes/luaneyed/nproc-stderr/ppluto-main/overlays/dev/
     namespace: luaneyed--nproc-stderr
