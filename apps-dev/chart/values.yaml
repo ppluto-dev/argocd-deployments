@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--comment-analytics
+    path: auto_branch_pushes/luan/comment-analytics/ppluto-main/overlays/dev/
+    namespace: luan--comment-analytics
   - name: sg--fix-bloom
     path: auto_branch_pushes/sg/fix-bloom/ppluto-main/overlays/dev/
     namespace: sg--fix-bloom
