@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--bug-fix-see-new-button
+    path: auto_branch_pushes/sungbin/bug-fix-see-new-button/ppluto-main/overlays/dev/
+    namespace: sungbin--bug-fix-see-new-button
   - name: luan--admin-me
     path: auto_branch_pushes/luan/admin-me/ppluto-main/overlays/dev/
     namespace: luan--admin-me
