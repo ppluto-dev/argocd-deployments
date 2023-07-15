@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--bug-fix-comment-text-area
+    path: auto_branch_pushes/sungbin/bug-fix-comment-text-area/ppluto-main/overlays/dev/
+    namespace: sungbin--bug-fix-comment-text-area
   - name: luan--comment-analytics
     path: auto_branch_pushes/luan/comment-analytics/ppluto-main/overlays/dev/
     namespace: luan--comment-analytics
