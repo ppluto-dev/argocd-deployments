@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--playwright-test
+    path: auto_branch_pushes/sungbin/playwright-test/ppluto-main/overlays/dev/
+    namespace: sungbin--playwright-test
   - name: sungbin--comment-send-button
     path: auto_branch_pushes/sungbin/comment-send-button/ppluto-main/overlays/dev/
     namespace: sungbin--comment-send-button
-  - name: luan--comment-analytics
-    path: auto_branch_pushes/luan/comment-analytics/ppluto-main/overlays/dev/
-    namespace: luan--comment-analytics
   - name: sg--fix-bloom
     path: auto_branch_pushes/sg/fix-bloom/ppluto-main/overlays/dev/
     namespace: sg--fix-bloom
