@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--enhance-google-search-timeout
+    path: auto_branch_pushes/yansfil/enhance-google-search-timeout/ppluto-main/overlays/dev/
+    namespace: yansfil--enhance-google-search-timeout
   - name: sungbin--playwright-test
     path: auto_branch_pushes/sungbin/playwright-test/ppluto-main/overlays/dev/
     namespace: sungbin--playwright-test
