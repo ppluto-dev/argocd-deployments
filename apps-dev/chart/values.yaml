@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-dselected-prompt
+    path: auto_branch_pushes/sg/fix-dselected-prompt/ppluto-main/overlays/dev/
+    namespace: sg--fix-dselected-prompt
   - name: sungbin--playwright-test
     path: auto_branch_pushes/sungbin/playwright-test/ppluto-main/overlays/dev/
     namespace: sungbin--playwright-test
