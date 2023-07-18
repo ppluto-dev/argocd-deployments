@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-prompt-timeout-and-openai-key
+    path: auto_branch_pushes/sg/fix-prompt-timeout-and-openai-key/ppluto-main/overlays/dev/
+    namespace: sg--fix-prompt-timeout-and-openai-key
   - name: Banggre--SetProfileOfCommentPageToWritter
     path: auto_branch_pushes/Banggre/SetProfileOfCommentPageToWritter/ppluto-main/overlays/dev/
     namespace: Banggre--SetProfileOfCommentPageToWritter
