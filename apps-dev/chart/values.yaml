@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-4k
+    path: auto_branch_pushes/sg/fix-4k/ppluto-main/overlays/dev/
+    namespace: sg--fix-4k
   - name: yansfil--refactor-chat-item
     path: auto_branch_pushes/yansfil/refactor-chat-item/ppluto-main/overlays/dev/
     namespace: yansfil--refactor-chat-item
