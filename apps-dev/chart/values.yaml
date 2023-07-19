@@ -5,15 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-crawling
+    path: auto_branch_pushes/sg/fix-crawling/ppluto-main/overlays/dev/
+    namespace: sg--fix-crawling
+  - name: yansfil--add-ticker-extraction
+    path: auto_branch_pushes/yansfil/add-ticker-extraction/ppluto-main/overlays/dev/
+    namespace: yansfil--add-ticker-extraction
   - name: kkimdev--cleanup-install-script
     path: auto_branch_pushes/kkimdev/cleanup-install-script/ppluto-main/overlays/dev/
     namespace: kkimdev--cleanup-install-script
   - name: sg--retrieval-4k
     path: auto_branch_pushes/sg/retrieval-4k/ppluto-main/overlays/dev/
     namespace: sg--retrieval-4k
-  - name: sg--fix-prompt-timeout-and-openai-key
-    path: auto_branch_pushes/sg/fix-prompt-timeout-and-openai-key/ppluto-main/overlays/dev/
-    namespace: sg--fix-prompt-timeout-and-openai-key
   - name: Banggre--SetProfileOfCommentPageToWritter
     path: auto_branch_pushes/Banggre/SetProfileOfCommentPageToWritter/ppluto-main/overlays/dev/
     namespace: Banggre--SetProfileOfCommentPageToWritter
