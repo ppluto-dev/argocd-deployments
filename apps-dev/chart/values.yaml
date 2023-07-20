@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-symbol-in-question
+    path: auto_branch_pushes/yansfil/add-symbol-in-question/ppluto-main/overlays/dev/
+    namespace: yansfil--add-symbol-in-question
   - name: yansfil--test-envoy
     path: auto_branch_pushes/yansfil/test-envoy/ppluto-main/overlays/dev/
     namespace: yansfil--test-envoy
