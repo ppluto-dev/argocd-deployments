@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--memory-type
+    path: auto_branch_pushes/luan/memory-type/ppluto-main/overlays/dev/
+    namespace: luan--memory-type
   - name: luan--retry-multi
     path: auto_branch_pushes/luan/retry-multi/ppluto-main/overlays/dev/
     namespace: luan--retry-multi
