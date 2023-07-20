@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--test-envoy
+    path: auto_branch_pushes/yansfil/test-envoy/ppluto-main/overlays/dev/
+    namespace: yansfil--test-envoy
   - name: Banggre--ChangeExclusiveButtonPosition
     path: auto_branch_pushes/Banggre/ChangeExclusiveButtonPosition/ppluto-main/overlays/dev/
     namespace: Banggre--ChangeExclusiveButtonPosition
-  - name: sg--fix-4k
-    path: auto_branch_pushes/sg/fix-4k/ppluto-main/overlays/dev/
-    namespace: sg--fix-4k
   - name: luan--remove-async-await
     path: auto_branch_pushes/luan/remove-async-await/ppluto-main/overlays/dev/
     namespace: luan--remove-async-await
