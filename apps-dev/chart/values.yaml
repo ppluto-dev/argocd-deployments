@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--retry-utils
+    path: auto_branch_pushes/luan/retry-utils/ppluto-main/overlays/dev/
+    namespace: luan--retry-utils
   - name: sg--add-user-in-tickers
     path: auto_branch_pushes/sg/add-user-in-tickers/ppluto-main/overlays/dev/
     namespace: sg--add-user-in-tickers
