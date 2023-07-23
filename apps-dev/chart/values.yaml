@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--adj-input-length
+    path: auto_branch_pushes/kkimdev/adj-input-length/ppluto-main/overlays/dev/
+    namespace: kkimdev--adj-input-length
   - name: luan--log-chain-latency
     path: auto_branch_pushes/luan/log-chain-latency/ppluto-main/overlays/dev/
     namespace: luan--log-chain-latency
