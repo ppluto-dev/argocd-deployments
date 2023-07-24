@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-tipranks
+    path: auto_branch_pushes/sg/fix-tipranks/ppluto-main/overlays/dev/
+    namespace: sg--fix-tipranks
+  - name: kkimdev--add-gihwan-admin
+    path: auto_branch_pushes/kkimdev/add-gihwan-admin/ppluto-main/overlays/dev/
+    namespace: kkimdev--add-gihwan-admin
   - name: luan--log-chain-latency
     path: auto_branch_pushes/luan/log-chain-latency/ppluto-main/overlays/dev/
     namespace: luan--log-chain-latency
