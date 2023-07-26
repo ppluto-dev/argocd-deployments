@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--argocd-repo
+    path: auto_branch_pushes/luan/argocd-repo/ppluto-main/overlays/dev/
+    namespace: luan--argocd-repo
   - name: yansfil--add-model-select-in-admin
     path: auto_branch_pushes/yansfil/add-model-select-in-admin/ppluto-main/overlays/dev/
     namespace: yansfil--add-model-select-in-admin
