@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-random-apikey
+    path: auto_branch_pushes/yansfil/fix-random-apikey/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-random-apikey
   - name: yansfil--test-envoy
     path: auto_branch_pushes/yansfil/test-envoy/ppluto-main/overlays/dev/
     namespace: yansfil--test-envoy
