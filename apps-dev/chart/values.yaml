@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--eslint-cache
+    path: auto_branch_pushes/kkimdev/eslint-cache/ppluto-main/overlays/dev/
+    namespace: kkimdev--eslint-cache
   - name: kkimdev--client-folder-renaming
     path: auto_branch_pushes/kkimdev/client-folder-renaming/ppluto-main/overlays/dev/
     namespace: kkimdev--client-folder-renaming
