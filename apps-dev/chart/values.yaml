@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--delete-comment
+    path: auto_branch_pushes/luan/delete-comment/ppluto-main/overlays/dev/
+    namespace: luan--delete-comment
+  - name: luan--move-share
+    path: auto_branch_pushes/luan/move-share/ppluto-main/overlays/dev/
+    namespace: luan--move-share
   - name: sungbin--playwright-test
     path: auto_branch_pushes/sungbin/playwright-test/ppluto-main/overlays/dev/
     namespace: sungbin--playwright-test
