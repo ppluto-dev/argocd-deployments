@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--pre-populated-question-on-trending-434
+    path: auto_branch_pushes/sungbin/pre-populated-question-on-trending-434/ppluto-main/overlays/dev/
+    namespace: sungbin--pre-populated-question-on-trending-434
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
