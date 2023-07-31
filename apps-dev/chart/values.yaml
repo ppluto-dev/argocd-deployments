@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--proto-format
+    path: auto_branch_pushes/kkimdev/proto-format/ppluto-main/overlays/dev/
+    namespace: kkimdev--proto-format
   - name: kkimdev--fix-grpc-ui
     path: auto_branch_pushes/kkimdev/fix-grpc-ui/ppluto-main/overlays/dev/
     namespace: kkimdev--fix-grpc-ui
