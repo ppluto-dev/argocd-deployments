@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--init-project-gaia
+    path: auto_branch_pushes/yansfil/init-project-gaia/ppluto-main/overlays/dev/
+    namespace: yansfil--init-project-gaia
+  - name: kkimdev--gaia-client
+    path: auto_branch_pushes/kkimdev/gaia-client/ppluto-main/overlays/dev/
+    namespace: kkimdev--gaia-client
   - name: sungbin--pre-populated-question-on-trending-434
     path: auto_branch_pushes/sungbin/pre-populated-question-on-trending-434/ppluto-main/overlays/dev/
     namespace: sungbin--pre-populated-question-on-trending-434
