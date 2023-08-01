@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-git-clean-make
+    path: auto_branch_pushes/sg/add-git-clean-make/ppluto-main/overlays/dev/
+    namespace: sg--add-git-clean-make
   - name: kkimdev--gaia-client
     path: auto_branch_pushes/kkimdev/gaia-client/ppluto-main/overlays/dev/
     namespace: kkimdev--gaia-client
