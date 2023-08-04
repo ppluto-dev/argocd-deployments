@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--client-reorg
+    path: auto_branch_pushes/kkimdev/client-reorg/ppluto-main/overlays/dev/
+    namespace: kkimdev--client-reorg
   - name: kkimdev--git-checkout-main-clean
     path: auto_branch_pushes/kkimdev/git-checkout-main-clean/ppluto-main/overlays/dev/
     namespace: kkimdev--git-checkout-main-clean
