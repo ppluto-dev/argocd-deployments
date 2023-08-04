@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--git-checkout-main-clean
+    path: auto_branch_pushes/kkimdev/git-checkout-main-clean/ppluto-main/overlays/dev/
+    namespace: kkimdev--git-checkout-main-clean
   - name: yansfil--add-conditional-node
     path: auto_branch_pushes/yansfil/add-conditional-node/ppluto-main/overlays/dev/
     namespace: yansfil--add-conditional-node
