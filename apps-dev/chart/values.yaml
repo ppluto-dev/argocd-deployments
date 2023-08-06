@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--client-reorg
-    path: auto_branch_pushes/kkimdev/client-reorg/ppluto-main/overlays/dev/
-    namespace: kkimdev--client-reorg
-  - name: kkimdev--git-checkout-main-clean
-    path: auto_branch_pushes/kkimdev/git-checkout-main-clean/ppluto-main/overlays/dev/
-    namespace: kkimdev--git-checkout-main-clean
+  - name: kkimdev--monaco
+    path: auto_branch_pushes/kkimdev/monaco/ppluto-main/overlays/dev/
+    namespace: kkimdev--monaco
+  - name: kkimdev--fix-envoy-install
+    path: auto_branch_pushes/kkimdev/fix-envoy-install/ppluto-main/overlays/dev/
+    namespace: kkimdev--fix-envoy-install
   - name: yansfil--add-conditional-node
     path: auto_branch_pushes/yansfil/add-conditional-node/ppluto-main/overlays/dev/
     namespace: yansfil--add-conditional-node
@@ -20,9 +20,6 @@ spec:
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
-  - name: sungbin--playwright-test
-    path: auto_branch_pushes/sungbin/playwright-test/ppluto-main/overlays/dev/
-    namespace: sungbin--playwright-test
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
