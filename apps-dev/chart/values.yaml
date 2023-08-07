@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--seo
+    path: auto_branch_pushes/luan/seo/ppluto-main/overlays/dev/
+    namespace: luan--seo
   - name: kkimdev--fix-envoy-install
     path: auto_branch_pushes/kkimdev/fix-envoy-install/ppluto-main/overlays/dev/
     namespace: kkimdev--fix-envoy-install
