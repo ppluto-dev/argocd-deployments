@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-custom-code-function
+    path: auto_branch_pushes/yansfil/update-custom-code-function/ppluto-main/overlays/dev/
+    namespace: yansfil--update-custom-code-function
   - name: luan--seo
     path: auto_branch_pushes/luan/seo/ppluto-main/overlays/dev/
     namespace: luan--seo
