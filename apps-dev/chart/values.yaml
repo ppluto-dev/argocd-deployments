@@ -5,15 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--monaco
-    path: auto_branch_pushes/kkimdev/monaco/ppluto-main/overlays/dev/
-    namespace: kkimdev--monaco
+  - name: sg--add-bloom-exclude
+    path: auto_branch_pushes/sg/add-bloom-exclude/ppluto-main/overlays/dev/
+    namespace: sg--add-bloom-exclude
+  - name: banggre--landing-page-ticker-version
+    path: auto_branch_pushes/banggre/landing-page-ticker-version/ppluto-main/overlays/dev/
+    namespace: banggre--landing-page-ticker-version
+  - name: kkimdev--server-image-nix-migration
+    path: auto_branch_pushes/kkimdev/server-image-nix-migration/ppluto-main/overlays/dev/
+    namespace: kkimdev--server-image-nix-migration
   - name: kkimdev--fix-envoy-install
     path: auto_branch_pushes/kkimdev/fix-envoy-install/ppluto-main/overlays/dev/
     namespace: kkimdev--fix-envoy-install
-  - name: yansfil--add-conditional-node
-    path: auto_branch_pushes/yansfil/add-conditional-node/ppluto-main/overlays/dev/
-    namespace: yansfil--add-conditional-node
   - name: sungbin--pre-populated-question-on-trending-434
     path: auto_branch_pushes/sungbin/pre-populated-question-on-trending-434/ppluto-main/overlays/dev/
     namespace: sungbin--pre-populated-question-on-trending-434
