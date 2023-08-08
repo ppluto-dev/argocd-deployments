@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--podman-build-squash
+    path: auto_branch_pushes/kkimdev/podman-build-squash/ppluto-main/overlays/dev/
+    namespace: kkimdev--podman-build-squash
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
