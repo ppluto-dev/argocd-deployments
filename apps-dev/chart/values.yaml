@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--prepopulated-qa-1
+    path: auto_branch_pushes/sungbin/prepopulated-qa-1/ppluto-main/overlays/dev/
+    namespace: sungbin--prepopulated-qa-1
   - name: Branch name banggre/crawling_for_summarize_market contains unsupported characters,
       only [a-z], [0-9], /, - are allowed
     path: auto_branch_pushes/banggre/crawling_for_summarize_market/ppluto-main/overlays/dev/
