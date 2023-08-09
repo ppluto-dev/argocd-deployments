@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-admin-user
+    path: auto_branch_pushes/sg/add-admin-user/ppluto-main/overlays/dev/
+    namespace: sg--add-admin-user
   - name: kkimdev--podman-build-squash
     path: auto_branch_pushes/kkimdev/podman-build-squash/ppluto-main/overlays/dev/
     namespace: kkimdev--podman-build-squash
