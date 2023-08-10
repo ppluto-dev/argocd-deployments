@@ -5,11 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: Branch name banggre/crawling_for_summarize_market contains unsupported characters,
-      only [a-z], [0-9], /, - are allowed
-    path: auto_branch_pushes/banggre/crawling_for_summarize_market/ppluto-main/overlays/dev/
-    namespace: Branch name banggre/crawling_for_summarize_market contains unsupported
-      characters, only [a-z], [0-9], /, - are allowed
+  - name: banggre--crawling-for-summarize-market
+    path: auto_branch_pushes/banggre/crawling-for-summarize-market/ppluto-main/overlays/dev/
+    namespace: banggre--crawling-for-summarize-market
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
