@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ppluto-main-service
+spec:
+  selector:
+    app: ppluto-main
+  ports:
+    - name: web-tickerbell # Client -- tickerbell.ai
+      protocol: TCP
+      port: 80
+      targetPort: 80
+
+    - name: web-deadrabbit # Client -- deadrabb.it
+      protocol: TCP
+      port: 8002
+      targetPort: 8002
+
+    - name: web-gaia # Client -- openembedding.com (Project Gaia)
+      protocol: TCP
+      port: 8003
+      targetPort: 8003
+
+    - name: grpc # Node gRpc
+      protocol: TCP
+      port: 81
+      targetPort: 81
+
+    - name: grpc-web # Envoy for gRpc
+      protocol: TCP
+      port: 82
+      targetPort: 82
+
+    - name: auth # Auth (REST API)
+      protocol: TCP
+      port: 83
+      targetPort: 83
