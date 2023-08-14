@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--landing-page-add-link-to-source
+    path: auto_branch_pushes/banggre/landing-page-add-link-to-source/ppluto-main/overlays/dev/
+    namespace: banggre--landing-page-add-link-to-source
+  - name: kkimdev--eslint-fix
+    path: auto_branch_pushes/kkimdev/eslint-fix/ppluto-main/overlays/dev/
+    namespace: kkimdev--eslint-fix
   - name: sungbin--cronjob-pdf-to-custom-db
     path: auto_branch_pushes/sungbin/cronjob-pdf-to-custom-db/ppluto-main/overlays/dev/
     namespace: sungbin--cronjob-pdf-to-custom-db
