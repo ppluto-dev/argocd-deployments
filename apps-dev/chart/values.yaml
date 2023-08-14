@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-lading-design
+    path: auto_branch_pushes/sungbin/fix-lading-design/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-lading-design
   - name: banggre--change-summarize-schedule-time
     path: auto_branch_pushes/banggre/change-summarize-schedule-time/ppluto-main/overlays/dev/
     namespace: banggre--change-summarize-schedule-time
