@@ -1,0 +1,28 @@
+# Kubernetes dashboard install instruction https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard
+
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: kubernetes-dashboard-app
+  # Note: It must needs `finalize` metadata in argo app of apps.
+  # https://argo-cd.readthedocs.io/en/stable/user-guide/app_deletion/#about-the-deletion-finalizer
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: "https://kubernetes.github.io/dashboard/"
+    path: ""
+    # MANUAL_UPDATE: https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard
+    targetRevision: 6.0.0
+    chart: kubernetes-dashboard
+  destination:
+    name: ""
+    namespace: kubernetes-dashboard
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
