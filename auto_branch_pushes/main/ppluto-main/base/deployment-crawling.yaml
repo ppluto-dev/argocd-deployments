@@ -55,12 +55,26 @@ spec:
               value: "true"
             - name: IS_FINANCIAL_TIMES
               value: "true"
+        - name: ppluto-main--prod-server-crawling-barrons
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_BRRONS
+              value: "true"
         - name: ppluto-main--prod-server-crawling-preset
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
             - name: IS_LOCAL_CRONJOB
               value: "true"
             - name: IS_PRESET_QNA
+              value: "true"
+        - name: ppluto-main--prod-server-create-custom-data-document
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_DOCUMENT_TO_CUSTOM_DATA_DOCUMENT
               value: "true"
 
       imagePullSecrets:
