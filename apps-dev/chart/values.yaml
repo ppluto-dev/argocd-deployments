@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-cron-slack
+    path: auto_branch_pushes/sg/fix-cron-slack/ppluto-main/overlays/dev/
+    namespace: sg--fix-cron-slack
   - name: sungbin--create-news-content-from-document
     path: auto_branch_pushes/sungbin/create-news-content-from-document/ppluto-main/overlays/dev/
     namespace: sungbin--create-news-content-from-document
