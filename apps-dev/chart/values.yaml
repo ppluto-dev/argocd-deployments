@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--change-wsj-proxy
+    path: auto_branch_pushes/sg/change-wsj-proxy/ppluto-main/overlays/dev/
+    namespace: sg--change-wsj-proxy
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
