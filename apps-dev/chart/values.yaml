@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--qa-pipeline-complete
+    path: auto_branch_pushes/yansfil/qa-pipeline-complete/ppluto-main/overlays/dev/
+    namespace: yansfil--qa-pipeline-complete
+  - name: kkimdev--gaia-prisma
+    path: auto_branch_pushes/kkimdev/gaia-prisma/ppluto-main/overlays/dev/
+    namespace: kkimdev--gaia-prisma
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
