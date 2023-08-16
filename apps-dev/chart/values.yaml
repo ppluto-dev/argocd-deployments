@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--create-news-content-from-document
+    path: auto_branch_pushes/sungbin/create-news-content-from-document/ppluto-main/overlays/dev/
+    namespace: sungbin--create-news-content-from-document
   - name: kkimdev--podman-login-retry
     path: auto_branch_pushes/kkimdev/podman-login-retry/ppluto-main/overlays/dev/
     namespace: kkimdev--podman-login-retry
