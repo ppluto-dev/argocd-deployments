@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-market-wrap-contents
+    path: auto_branch_pushes/banggre/update-market-wrap-contents/ppluto-main/overlays/dev/
+    namespace: banggre--update-market-wrap-contents
   - name: luan--mysql-url-env
     path: auto_branch_pushes/luan/mysql-url-env/ppluto-main/overlays/dev/
     namespace: luan--mysql-url-env
