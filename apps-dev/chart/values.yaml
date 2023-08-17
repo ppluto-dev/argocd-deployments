@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--pdf
+    path: auto_branch_pushes/luan/pdf/ppluto-main/overlays/dev/
+    namespace: luan--pdf
   - name: banggre--update-market-wrap-contents
     path: auto_branch_pushes/banggre/update-market-wrap-contents/ppluto-main/overlays/dev/
     namespace: banggre--update-market-wrap-contents
