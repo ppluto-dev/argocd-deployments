@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-google-credentials
+    path: auto_branch_pushes/sungbin/hotfix-google-credentials/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-google-credentials
   - name: sungbin--update-news-content
     path: auto_branch_pushes/sungbin/update-news-content/ppluto-main/overlays/dev/
     namespace: sungbin--update-news-content
