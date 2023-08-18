@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--upgrade-summarize-pipeline
+    path: auto_branch_pushes/banggre/upgrade-summarize-pipeline/ppluto-main/overlays/dev/
+    namespace: banggre--upgrade-summarize-pipeline
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
