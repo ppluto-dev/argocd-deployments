@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: luan--editorconfig
-    path: auto_branch_pushes/luan/editorconfig/ppluto-main/overlays/dev/
-    namespace: luan--editorconfig
+  - name: sg--fix-barrons-news-time
+    path: auto_branch_pushes/sg/fix-barrons-news-time/ppluto-main/overlays/dev/
+    namespace: sg--fix-barrons-news-time
+  - name: sg--fix-wsj
+    path: auto_branch_pushes/sg/fix-wsj/ppluto-main/overlays/dev/
+    namespace: sg--fix-wsj
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
