@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--imp-newsletter
+    path: auto_branch_pushes/sg/imp-newsletter/ppluto-main/overlays/dev/
+    namespace: sg--imp-newsletter
   - name: sungbin--google-docs-to-custom-data
     path: auto_branch_pushes/sungbin/google-docs-to-custom-data/ppluto-main/overlays/dev/
     namespace: sungbin--google-docs-to-custom-data
