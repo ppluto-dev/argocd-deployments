@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--refactor-execute-engine
+    path: auto_branch_pushes/yansfil/refactor-execute-engine/ppluto-main/overlays/dev/
+    namespace: yansfil--refactor-execute-engine
+  - name: kkimdev--prisma-schema-fix
+    path: auto_branch_pushes/kkimdev/prisma-schema-fix/ppluto-main/overlays/dev/
+    namespace: kkimdev--prisma-schema-fix
   - name: yansfil--add-pipeline-save
     path: auto_branch_pushes/yansfil/add-pipeline-save/ppluto-main/overlays/dev/
     namespace: yansfil--add-pipeline-save
