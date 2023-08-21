@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--eslint-eqeqeq
+    path: auto_branch_pushes/kkimdev/eslint-eqeqeq/ppluto-main/overlays/dev/
+    namespace: kkimdev--eslint-eqeqeq
   - name: banggre--update-filter-news
     path: auto_branch_pushes/banggre/update-filter-news/ppluto-main/overlays/dev/
     namespace: banggre--update-filter-news
