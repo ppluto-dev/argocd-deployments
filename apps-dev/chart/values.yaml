@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--upsert-custom-data-document
+    path: auto_branch_pushes/sungbin/upsert-custom-data-document/ppluto-main/overlays/dev/
+    namespace: sungbin--upsert-custom-data-document
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
