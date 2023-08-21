@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--generate-proto-bg
+    path: auto_branch_pushes/kkimdev/generate-proto-bg/ppluto-main/overlays/dev/
+    namespace: kkimdev--generate-proto-bg
+  - name: luan--fix-typo
+    path: auto_branch_pushes/luan/fix-typo/ppluto-main/overlays/dev/
+    namespace: luan--fix-typo
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
