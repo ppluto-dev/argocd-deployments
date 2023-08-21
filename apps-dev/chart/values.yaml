@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--bugfix-update-vector-status-outdated
+    path: auto_branch_pushes/sungbin/bugfix-update-vector-status-outdated/ppluto-main/overlays/dev/
+    namespace: sungbin--bugfix-update-vector-status-outdated
   - name: yansfil--refactor-execute-engine
     path: auto_branch_pushes/yansfil/refactor-execute-engine/ppluto-main/overlays/dev/
     namespace: yansfil--refactor-execute-engine
