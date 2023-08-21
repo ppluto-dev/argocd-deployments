@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--bugfix-vector-insert-timeout
+    path: auto_branch_pushes/sungbin/bugfix-vector-insert-timeout/ppluto-main/overlays/dev/
+    namespace: sungbin--bugfix-vector-insert-timeout
   - name: kkimdev--generate-proto-bg
     path: auto_branch_pushes/kkimdev/generate-proto-bg/ppluto-main/overlays/dev/
     namespace: kkimdev--generate-proto-bg
