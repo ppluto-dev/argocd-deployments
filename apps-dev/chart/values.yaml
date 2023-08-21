@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--add-prepopulated-admin-instruction
+    path: auto_branch_pushes/sungbin/add-prepopulated-admin-instruction/ppluto-main/overlays/dev/
+    namespace: sungbin--add-prepopulated-admin-instruction
   - name: sg--fix-wsj
     path: auto_branch_pushes/sg/fix-wsj/ppluto-main/overlays/dev/
     namespace: sg--fix-wsj
