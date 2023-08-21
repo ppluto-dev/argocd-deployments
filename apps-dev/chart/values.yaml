@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--new-classification
+    path: auto_branch_pushes/luan/new-classification/ppluto-main/overlays/dev/
+    namespace: luan--new-classification
   - name: banggre--update-filter-news
     path: auto_branch_pushes/banggre/update-filter-news/ppluto-main/overlays/dev/
     namespace: banggre--update-filter-news
