@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--vs-ts-formatter
+    path: auto_branch_pushes/kkimdev/vs-ts-formatter/ppluto-main/overlays/dev/
+    namespace: kkimdev--vs-ts-formatter
   - name: banggre--add-crawling-thestreet
     path: auto_branch_pushes/banggre/add-crawling-thestreet/ppluto-main/overlays/dev/
     namespace: banggre--add-crawling-thestreet
