@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--clear-indices
+    path: auto_branch_pushes/luan/clear-indices/ppluto-main/overlays/dev/
+    namespace: luan--clear-indices
   - name: sungbin--fix-news-content-origin-name
     path: auto_branch_pushes/sungbin/fix-news-content-origin-name/ppluto-main/overlays/dev/
     namespace: sungbin--fix-news-content-origin-name
