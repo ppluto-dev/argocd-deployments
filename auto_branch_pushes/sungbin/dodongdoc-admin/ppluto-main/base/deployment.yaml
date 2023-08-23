@@ -36,6 +36,9 @@ spec:
           readinessProbe:
             tcpSocket:
               port: 82
+          livenessProbe:
+            tcpSocket:
+              port: 82
 
       imagePullSecrets:
         - name: gitlab-container-registry
