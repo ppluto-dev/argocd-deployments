@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-trending-cate
+    path: auto_branch_pushes/sg/fix-trending-cate/ppluto-main/overlays/dev/
+    namespace: sg--fix-trending-cate
   - name: sungbin--remove-community-tab
     path: auto_branch_pushes/sungbin/remove-community-tab/ppluto-main/overlays/dev/
     namespace: sungbin--remove-community-tab
