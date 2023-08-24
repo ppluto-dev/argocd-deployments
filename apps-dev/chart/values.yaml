@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--readme-comment
+    path: auto_branch_pushes/kkimdev/readme-comment/ppluto-main/overlays/dev/
+    namespace: kkimdev--readme-comment
   - name: sungbin--dodongdoc-admin
     path: auto_branch_pushes/sungbin/dodongdoc-admin/ppluto-main/overlays/dev/
     namespace: sungbin--dodongdoc-admin
