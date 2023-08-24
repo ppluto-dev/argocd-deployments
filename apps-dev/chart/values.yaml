@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--admin-prompt-max-token
+    path: auto_branch_pushes/banggre/admin-prompt-max-token/ppluto-main/overlays/dev/
+    namespace: banggre--admin-prompt-max-token
   - name: luan--clear-indices
     path: auto_branch_pushes/luan/clear-indices/ppluto-main/overlays/dev/
     namespace: luan--clear-indices
