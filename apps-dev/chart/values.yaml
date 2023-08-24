@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-wsj
+    path: auto_branch_pushes/sg/fix-wsj/ppluto-main/overlays/dev/
+    namespace: sg--fix-wsj
   - name: luan--clear-indices
     path: auto_branch_pushes/luan/clear-indices/ppluto-main/overlays/dev/
     namespace: luan--clear-indices
