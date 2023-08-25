@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--scripts
+    path: auto_branch_pushes/luan/scripts/ppluto-main/overlays/dev/
+    namespace: luan--scripts
   - name: yansfil--add-pipeline-execution
     path: auto_branch_pushes/yansfil/add-pipeline-execution/ppluto-main/overlays/dev/
     namespace: yansfil--add-pipeline-execution
