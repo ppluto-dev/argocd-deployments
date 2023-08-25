@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--bugfix-update-news-content-updated-at
+    path: auto_branch_pushes/sungbin/bugfix-update-news-content-updated-at/ppluto-main/overlays/dev/
+    namespace: sungbin--bugfix-update-news-content-updated-at
   - name: luan--scripts
     path: auto_branch_pushes/luan/scripts/ppluto-main/overlays/dev/
     namespace: luan--scripts
