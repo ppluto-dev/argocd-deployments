@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-multi-prompt-node
+    path: auto_branch_pushes/yansfil/add-multi-prompt-node/ppluto-main/overlays/dev/
+    namespace: yansfil--add-multi-prompt-node
   - name: banggre--update-summarize
     path: auto_branch_pushes/banggre/update-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-summarize
