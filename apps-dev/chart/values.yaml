@@ -5,6 +5,11 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: Branch name yansfil/fix-mismatched_url contains unsupported characters,
+      only [a-z], [0-9], /, - are allowed
+    path: auto_branch_pushes/yansfil/fix-mismatched_url/ppluto-main/overlays/dev/
+    namespace: Branch name yansfil/fix-mismatched_url contains unsupported characters,
+      only [a-z], [0-9], /, - are allowed
   - name: banggre--update-summarize
     path: auto_branch_pushes/banggre/update-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-summarize
