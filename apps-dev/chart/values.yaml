@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--delete-custom-data-document
+    path: auto_branch_pushes/sungbin/delete-custom-data-document/ppluto-main/overlays/dev/
+    namespace: sungbin--delete-custom-data-document
   - name: banggre--update-summarize
     path: auto_branch_pushes/banggre/update-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-summarize
