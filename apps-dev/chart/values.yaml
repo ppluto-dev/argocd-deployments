@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--landingpage-ui
+    path: auto_branch_pushes/banggre/landingpage-ui/ppluto-main/overlays/dev/
+    namespace: banggre--landingpage-ui
   - name: sungbin--gaia-custom-data-page
     path: auto_branch_pushes/sungbin/gaia-custom-data-page/ppluto-main/overlays/dev/
     namespace: sungbin--gaia-custom-data-page
