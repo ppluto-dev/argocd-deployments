@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-customcode-import-dbwrapper
+    path: auto_branch_pushes/yansfil/add-customcode-import-dbwrapper/ppluto-main/overlays/dev/
+    namespace: yansfil--add-customcode-import-dbwrapper
   - name: sungbin--bugfix-delete-vector-error
     path: auto_branch_pushes/sungbin/bugfix-delete-vector-error/ppluto-main/overlays/dev/
     namespace: sungbin--bugfix-delete-vector-error
-  - name: yansfil--update-codeowners
-    path: auto_branch_pushes/yansfil/update-codeowners/ppluto-main/overlays/dev/
-    namespace: yansfil--update-codeowners
   - name: banggre--update-summarize
     path: auto_branch_pushes/banggre/update-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-summarize
