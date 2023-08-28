@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-codeowners
+    path: auto_branch_pushes/yansfil/update-codeowners/ppluto-main/overlays/dev/
+    namespace: yansfil--update-codeowners
   - name: banggre--update-summarize
     path: auto_branch_pushes/banggre/update-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-summarize
   - name: sungbin--bugfix-update-news-content-updated-at
     path: auto_branch_pushes/sungbin/bugfix-update-news-content-updated-at/ppluto-main/overlays/dev/
     namespace: sungbin--bugfix-update-news-content-updated-at
-  - name: luan--scripts
-    path: auto_branch_pushes/luan/scripts/ppluto-main/overlays/dev/
-    namespace: luan--scripts
   - name: sungbin--fix-news-content-origin-name
     path: auto_branch_pushes/sungbin/fix-news-content-origin-name/ppluto-main/overlays/dev/
     namespace: sungbin--fix-news-content-origin-name
