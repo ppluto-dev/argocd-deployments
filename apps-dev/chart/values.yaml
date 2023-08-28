@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--expect
+    path: auto_branch_pushes/luan/expect/ppluto-main/overlays/dev/
+    namespace: luan--expect
   - name: yansfil--update-codeowners
     path: auto_branch_pushes/yansfil/update-codeowners/ppluto-main/overlays/dev/
     namespace: yansfil--update-codeowners
