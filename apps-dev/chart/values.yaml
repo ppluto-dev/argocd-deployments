@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--bugfix-delete-vector-error
+    path: auto_branch_pushes/sungbin/bugfix-delete-vector-error/ppluto-main/overlays/dev/
+    namespace: sungbin--bugfix-delete-vector-error
   - name: yansfil--update-codeowners
     path: auto_branch_pushes/yansfil/update-codeowners/ppluto-main/overlays/dev/
     namespace: yansfil--update-codeowners
