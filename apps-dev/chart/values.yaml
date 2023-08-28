@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--fix-getting-key
+    path: auto_branch_pushes/luan/fix-getting-key/ppluto-main/overlays/dev/
+    namespace: luan--fix-getting-key
   - name: luan--expect
     path: auto_branch_pushes/luan/expect/ppluto-main/overlays/dev/
     namespace: luan--expect
