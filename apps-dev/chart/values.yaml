@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-translate
+    path: auto_branch_pushes/banggre/add-translate/ppluto-main/overlays/dev/
+    namespace: banggre--add-translate
   - name: yansfil--fix-edge-issues
     path: auto_branch_pushes/yansfil/fix-edge-issues/ppluto-main/overlays/dev/
     namespace: yansfil--fix-edge-issues
