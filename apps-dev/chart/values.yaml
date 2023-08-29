@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--open-api-dev-key
+    path: auto_branch_pushes/luan/open-api-dev-key/ppluto-main/overlays/dev/
+    namespace: luan--open-api-dev-key
   - name: luan--est
     path: auto_branch_pushes/luan/est/ppluto-main/overlays/dev/
     namespace: luan--est
