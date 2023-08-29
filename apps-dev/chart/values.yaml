@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-edge-issues
+    path: auto_branch_pushes/yansfil/fix-edge-issues/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-edge-issues
   - name: sungbin--fix-tab-url
     path: auto_branch_pushes/sungbin/fix-tab-url/ppluto-main/overlays/dev/
     namespace: sungbin--fix-tab-url
