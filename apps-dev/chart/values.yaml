@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--edt
+    path: auto_branch_pushes/luan/edt/ppluto-main/overlays/dev/
+    namespace: luan--edt
   - name: banggre--translate-ui
     path: auto_branch_pushes/banggre/translate-ui/ppluto-main/overlays/dev/
     namespace: banggre--translate-ui
