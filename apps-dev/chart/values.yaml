@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--enable-delete-external-input
+    path: auto_branch_pushes/yansfil/enable-delete-external-input/ppluto-main/overlays/dev/
+    namespace: yansfil--enable-delete-external-input
   - name: sungbin--tickerbell-design-fix
     path: auto_branch_pushes/sungbin/tickerbell-design-fix/ppluto-main/overlays/dev/
     namespace: sungbin--tickerbell-design-fix
