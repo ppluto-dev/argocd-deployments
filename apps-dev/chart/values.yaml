@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-tab-url
+    path: auto_branch_pushes/sungbin/fix-tab-url/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-tab-url
   - name: luan--open-api-dev-key
     path: auto_branch_pushes/luan/open-api-dev-key/ppluto-main/overlays/dev/
     namespace: luan--open-api-dev-key
