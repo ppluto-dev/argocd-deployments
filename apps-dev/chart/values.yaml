@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--apply-gaia-to-summary
+    path: auto_branch_pushes/banggre/apply-gaia-to-summary/ppluto-main/overlays/dev/
+    namespace: banggre--apply-gaia-to-summary
   - name: yansfil--udpate-resizable
     path: auto_branch_pushes/yansfil/udpate-resizable/ppluto-main/overlays/dev/
     namespace: yansfil--udpate-resizable
