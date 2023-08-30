@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-node-toolbar
+    path: auto_branch_pushes/yansfil/add-node-toolbar/ppluto-main/overlays/dev/
+    namespace: yansfil--add-node-toolbar
   - name: kkimdev--revert-key
     path: auto_branch_pushes/kkimdev/revert-key/ppluto-main/overlays/dev/
     namespace: kkimdev--revert-key
