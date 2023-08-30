@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--make-upgrade-dependencies
+    path: auto_branch_pushes/kkimdev/make-upgrade-dependencies/ppluto-main/overlays/dev/
+    namespace: kkimdev--make-upgrade-dependencies
   - name: sungbin--admin-pdf-to-texts
     path: auto_branch_pushes/sungbin/admin-pdf-to-texts/ppluto-main/overlays/dev/
     namespace: sungbin--admin-pdf-to-texts
-  - name: yansfil--handle-incorrect-edges
-    path: auto_branch_pushes/yansfil/handle-incorrect-edges/ppluto-main/overlays/dev/
-    namespace: yansfil--handle-incorrect-edges
   - name: luan--open-api-dev-key
     path: auto_branch_pushes/luan/open-api-dev-key/ppluto-main/overlays/dev/
     namespace: luan--open-api-dev-key
