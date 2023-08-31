@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--set-language
+    path: auto_branch_pushes/banggre/set-language/ppluto-main/overlays/dev/
+    namespace: banggre--set-language
   - name: luan--update-scripts
     path: auto_branch_pushes/luan/update-scripts/ppluto-main/overlays/dev/
     namespace: luan--update-scripts
