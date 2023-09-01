@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-dodongdoc-feature
+    path: auto_branch_pushes/sungbin/fix-dodongdoc-feature/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-dodongdoc-feature
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
