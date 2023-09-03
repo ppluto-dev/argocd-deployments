@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--p-limit-exclude-update
+    path: auto_branch_pushes/kkimdev/p-limit-exclude-update/ppluto-main/overlays/dev/
+    namespace: kkimdev--p-limit-exclude-update
   - name: sungbin--fix-dodongdoc-feature
     path: auto_branch_pushes/sungbin/fix-dodongdoc-feature/ppluto-main/overlays/dev/
     namespace: sungbin--fix-dodongdoc-feature
