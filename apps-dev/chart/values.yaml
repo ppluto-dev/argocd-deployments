@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--block-korean
+    path: auto_branch_pushes/banggre/block-korean/ppluto-main/overlays/dev/
+    namespace: banggre--block-korean
   - name: sungbin--fix-dodongdoc-feature
     path: auto_branch_pushes/sungbin/fix-dodongdoc-feature/ppluto-main/overlays/dev/
     namespace: sungbin--fix-dodongdoc-feature
