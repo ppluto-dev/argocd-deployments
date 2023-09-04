@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-layout-horizontal
+    path: auto_branch_pushes/yansfil/add-layout-horizontal/ppluto-main/overlays/dev/
+    namespace: yansfil--add-layout-horizontal
+  - name: kkimdev--dododoc-quickfix
+    path: auto_branch_pushes/kkimdev/dododoc-quickfix/ppluto-main/overlays/dev/
+    namespace: kkimdev--dododoc-quickfix
   - name: sungbin--bugfix-pdftotext-timeout
     path: auto_branch_pushes/sungbin/bugfix-pdftotext-timeout/ppluto-main/overlays/dev/
     namespace: sungbin--bugfix-pdftotext-timeout
