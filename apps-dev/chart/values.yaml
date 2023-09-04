@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-missing-edges
+    path: auto_branch_pushes/yansfil/fix-missing-edges/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-missing-edges
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
