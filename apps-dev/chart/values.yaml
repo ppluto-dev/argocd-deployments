@@ -5,12 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--crawling-update
+    path: auto_branch_pushes/banggre/crawling-update/ppluto-main/overlays/dev/
+    namespace: banggre--crawling-update
+  - name: kkimdev--eslint-vscode
+    path: auto_branch_pushes/kkimdev/eslint-vscode/ppluto-main/overlays/dev/
+    namespace: kkimdev--eslint-vscode
   - name: yansfil--jest-access-env
     path: auto_branch_pushes/yansfil/jest-access-env/ppluto-main/overlays/dev/
     namespace: yansfil--jest-access-env
-  - name: sg--add-crawling-status
-    path: auto_branch_pushes/sg/add-crawling-status/ppluto-main/overlays/dev/
-    namespace: sg--add-crawling-status
   - name: kkimdev--nix-unstable
     path: auto_branch_pushes/kkimdev/nix-unstable/ppluto-main/overlays/dev/
     namespace: kkimdev--nix-unstable
