@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-codeowners
+    path: auto_branch_pushes/yansfil/fix-codeowners/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-codeowners
+  - name: yansfil--fix-external-output-reset-variable
+    path: auto_branch_pushes/yansfil/fix-external-output-reset-variable/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-external-output-reset-variable
   - name: yansfil--fix-missing-edges
     path: auto_branch_pushes/yansfil/fix-missing-edges/ppluto-main/overlays/dev/
     namespace: yansfil--fix-missing-edges
