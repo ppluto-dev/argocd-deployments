@@ -5,15 +5,11 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--fix-codeowners
-    path: auto_branch_pushes/yansfil/fix-codeowners/ppluto-main/overlays/dev/
-    namespace: yansfil--fix-codeowners
-  - name: yansfil--fix-external-output-reset-variable
-    path: auto_branch_pushes/yansfil/fix-external-output-reset-variable/ppluto-main/overlays/dev/
-    namespace: yansfil--fix-external-output-reset-variable
-  - name: yansfil--fix-missing-edges
-    path: auto_branch_pushes/yansfil/fix-missing-edges/ppluto-main/overlays/dev/
-    namespace: yansfil--fix-missing-edges
+  - name: Branch name banggre/crawling-udpate-CNBC contains unsupported characters,
+      only [a-z], [0-9], /, - are allowed
+    path: auto_branch_pushes/banggre/crawling-udpate-CNBC/ppluto-main/overlays/dev/
+    namespace: Branch name banggre/crawling-udpate-CNBC contains unsupported characters,
+      only [a-z], [0-9], /, - are allowed
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
