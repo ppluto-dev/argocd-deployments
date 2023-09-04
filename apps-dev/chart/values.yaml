@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-translate
+    path: auto_branch_pushes/banggre/update-translate/ppluto-main/overlays/dev/
+    namespace: banggre--update-translate
   - name: kkimdev--nix-unstable
     path: auto_branch_pushes/kkimdev/nix-unstable/ppluto-main/overlays/dev/
     namespace: kkimdev--nix-unstable
