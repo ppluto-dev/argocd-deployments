@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-deadrabbit-design
+    path: auto_branch_pushes/sungbin/fix-deadrabbit-design/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-deadrabbit-design
   - name: sungbin--exclusive-tab-design
     path: auto_branch_pushes/sungbin/exclusive-tab-design/ppluto-main/overlays/dev/
     namespace: sungbin--exclusive-tab-design
