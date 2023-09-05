@@ -27,6 +27,9 @@ spec:
             httpGet:
               port: 80
               path: /
+          resources:
+            limits:
+              ephemeral-storage: "4Gi"
 
         - name: ppluto-main--prod-server
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
@@ -39,6 +42,9 @@ spec:
           livenessProbe:
             tcpSocket:
               port: 82
+          resources:
+            limits:
+              ephemeral-storage: "4Gi"
 
       imagePullSecrets:
         - name: gitlab-container-registry
