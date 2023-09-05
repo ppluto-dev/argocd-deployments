@@ -5,6 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-error-message-with-line
+    path: auto_branch_pushes/yansfil/add-error-message-with-line/ppluto-main/overlays/dev/
+    namespace: yansfil--add-error-message-with-line
+  - name: sungbin--fix-deadrabbit-design
+    path: auto_branch_pushes/sungbin/fix-deadrabbit-design/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-deadrabbit-design
+  - name: yansifl--add-selected-connection
+    path: auto_branch_pushes/yansifl/add-selected-connection/ppluto-main/overlays/dev/
+    namespace: yansifl--add-selected-connection
+  - name: sg--remove-preset-v2
+    path: auto_branch_pushes/sg/remove-preset-v2/ppluto-main/overlays/dev/
+    namespace: sg--remove-preset-v2
   - name: luan--remove-replace
     path: auto_branch_pushes/luan/remove-replace/ppluto-main/overlays/dev/
     namespace: luan--remove-replace
