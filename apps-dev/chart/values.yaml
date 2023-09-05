@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-dodongdoc-feature
+    path: auto_branch_pushes/sungbin/fix-dodongdoc-feature/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-dodongdoc-feature
   - name: banggre--update-landingpage
     path: auto_branch_pushes/banggre/update-landingpage/ppluto-main/overlays/dev/
     namespace: banggre--update-landingpage
