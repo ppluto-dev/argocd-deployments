@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--global-variables
+    path: auto_branch_pushes/luan/global-variables/ppluto-main/overlays/dev/
+    namespace: luan--global-variables
   - name: sungbin--exclusive-tab-design
     path: auto_branch_pushes/sungbin/exclusive-tab-design/ppluto-main/overlays/dev/
     namespace: sungbin--exclusive-tab-design
   - name: kkimdev--fix-test
     path: auto_branch_pushes/kkimdev/fix-test/ppluto-main/overlays/dev/
     namespace: kkimdev--fix-test
-  - name: luan--input-hover
-    path: auto_branch_pushes/luan/input-hover/ppluto-main/overlays/dev/
-    namespace: luan--input-hover
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
