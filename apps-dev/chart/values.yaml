@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--test
+    path: auto_branch_pushes/luan/test/ppluto-main/overlays/dev/
+    namespace: luan--test
   - name: banggre--update-landingpage
     path: auto_branch_pushes/banggre/update-landingpage/ppluto-main/overlays/dev/
     namespace: banggre--update-landingpage
