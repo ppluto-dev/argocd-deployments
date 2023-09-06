@@ -20,6 +20,12 @@ spec:
               value: "true"
             - name: IS_LOCAL_MARKETWATCH
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-summarize
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -27,6 +33,12 @@ spec:
               value: "true"
             - name: IS_LOCAL_SUMMARIZE
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-thestreet
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -34,6 +46,12 @@ spec:
               value: "true"
             - name: IS_LOCAL_THESTREET
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-tipranks
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -41,6 +59,12 @@ spec:
               value: "true"
             - name: IS_LOCAL_TIPRANKS
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-vectorizer
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -48,6 +72,12 @@ spec:
               value: "true"
             - name: IS_LOCAL_VECTORIZER
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-bloomberg
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -55,6 +85,12 @@ spec:
               value: "true"
             - name: IS_LOCAL_BLOOMBERG
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-cnbc
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -62,6 +98,12 @@ spec:
               value: "true"
             - name: IS_LOCAL_CNBC
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-financial-times
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -69,6 +111,12 @@ spec:
               value: "true"
             - name: IS_FINANCIAL_TIMES
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-barrons
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -76,6 +124,12 @@ spec:
               value: "true"
             - name: IS_BRRONS
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-wsj
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -83,6 +137,12 @@ spec:
               value: "true"
             - name: IS_WSJ
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-newsletter
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -90,6 +150,12 @@ spec:
               value: "true"
             - name: IS_NEWSLETTER
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-crawling-preset
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -97,6 +163,12 @@ spec:
               value: "true"
             - name: IS_PRESET_QNA
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-create-custom-data-document
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -104,6 +176,12 @@ spec:
               value: "true"
             - name: IS_DOCUMENT_TO_CUSTOM_DATA_DOCUMENT
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-create-news-contents
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -111,6 +189,12 @@ spec:
               value: "true"
             - name: IS_CREATE_NEWS_CONTENTS_FROM_CUSTOM_DATA_DOCUMENT
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
         - name: ppluto-main--prod-server-update-vector-status-outdated
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -118,5 +202,11 @@ spec:
               value: "true"
             - name: IS_UPDATE_VECTOR_STATUS_OUTDATED
               value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "2Gi"
+
       imagePullSecrets:
         - name: gitlab-container-registry
