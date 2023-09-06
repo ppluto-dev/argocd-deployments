@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--gpt-service
+    path: auto_branch_pushes/banggre/gpt-service/ppluto-main/overlays/dev/
+    namespace: banggre--gpt-service
   - name: kkimdev--use-larger-logo
     path: auto_branch_pushes/kkimdev/use-larger-logo/ppluto-main/overlays/dev/
     namespace: kkimdev--use-larger-logo
