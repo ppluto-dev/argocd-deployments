@@ -29,7 +29,7 @@ spec:
               path: /
           resources:
             limits:
-              ephemeral-storage: "4Gi"
+              ephemeral-storage: "1Gi"
 
         - name: ppluto-main--prod-server
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
@@ -44,7 +44,7 @@ spec:
               port: 82
           resources:
             limits:
-              ephemeral-storage: "4Gi"
+              ephemeral-storage: "2Gi"
 
       imagePullSecrets:
         - name: gitlab-container-registry
