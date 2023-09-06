@@ -5,15 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--muiltiple-external-output
-    path: auto_branch_pushes/yansfil/muiltiple-external-output/ppluto-main/overlays/dev/
-    namespace: yansfil--muiltiple-external-output
-  - name: luan--export-default
-    path: auto_branch_pushes/luan/export-default/ppluto-main/overlays/dev/
-    namespace: luan--export-default
-  - name: sungbin--fix-tab-title
-    path: auto_branch_pushes/sungbin/fix-tab-title/ppluto-main/overlays/dev/
-    namespace: sungbin--fix-tab-title
+  - name: luan--input-hover
+    path: auto_branch_pushes/luan/input-hover/ppluto-main/overlays/dev/
+    namespace: luan--input-hover
+  - name: sungbin--remove-disclamier
+    path: auto_branch_pushes/sungbin/remove-disclamier/ppluto-main/overlays/dev/
+    namespace: sungbin--remove-disclamier
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
