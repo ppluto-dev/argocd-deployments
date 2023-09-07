@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-pipeline-run-result-ui
+    path: auto_branch_pushes/yansfil/update-pipeline-run-result-ui/ppluto-main/overlays/dev/
+    namespace: yansfil--update-pipeline-run-result-ui
   - name: sungbin--exclusive-tab-design
     path: auto_branch_pushes/sungbin/exclusive-tab-design/ppluto-main/overlays/dev/
     namespace: sungbin--exclusive-tab-design
