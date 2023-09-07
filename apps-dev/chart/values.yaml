@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-runboard-ui
+    path: auto_branch_pushes/yansfil/fix-runboard-ui/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-runboard-ui
+  - name: sungbin--add-dodongdoc-feature
+    path: auto_branch_pushes/sungbin/add-dodongdoc-feature/ppluto-main/overlays/dev/
+    namespace: sungbin--add-dodongdoc-feature
   - name: banggre--gaia-prompt
     path: auto_branch_pushes/banggre/gaia-prompt/ppluto-main/overlays/dev/
     namespace: banggre--gaia-prompt
