@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--translate-exclusive
+    path: auto_branch_pushes/banggre/translate-exclusive/ppluto-main/overlays/dev/
+    namespace: banggre--translate-exclusive
+  - name: sungbin--exclusive-tab-design
+    path: auto_branch_pushes/sungbin/exclusive-tab-design/ppluto-main/overlays/dev/
+    namespace: sungbin--exclusive-tab-design
   - name: luan--global-variables
     path: auto_branch_pushes/luan/global-variables/ppluto-main/overlays/dev/
     namespace: luan--global-variables
