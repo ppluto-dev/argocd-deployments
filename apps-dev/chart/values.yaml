@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--gaia-username
+    path: auto_branch_pushes/luan/gaia-username/ppluto-main/overlays/dev/
+    namespace: luan--gaia-username
   - name: luan--csv
     path: auto_branch_pushes/luan/csv/ppluto-main/overlays/dev/
     namespace: luan--csv
