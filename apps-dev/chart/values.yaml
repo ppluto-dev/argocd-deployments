@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--csv
+    path: auto_branch_pushes/luan/csv/ppluto-main/overlays/dev/
+    namespace: luan--csv
   - name: sg--add-referral
     path: auto_branch_pushes/sg/add-referral/ppluto-main/overlays/dev/
     namespace: sg--add-referral
