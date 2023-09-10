@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--eslint-no-restricted-imports
+    path: auto_branch_pushes/kkimdev/eslint-no-restricted-imports/ppluto-main/overlays/dev/
+    namespace: kkimdev--eslint-no-restricted-imports
   - name: luan--clean-code
     path: auto_branch_pushes/luan/clean-code/ppluto-main/overlays/dev/
     namespace: luan--clean-code
