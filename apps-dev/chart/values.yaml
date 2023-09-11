@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-preset
+    path: auto_branch_pushes/sg/fix-preset/ppluto-main/overlays/dev/
+    namespace: sg--fix-preset
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
