@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--fix-snapshot
+    path: auto_branch_pushes/luan/fix-snapshot/ppluto-main/overlays/dev/
+    namespace: luan--fix-snapshot
+  - name: luan--omit
+    path: auto_branch_pushes/luan/omit/ppluto-main/overlays/dev/
+    namespace: luan--omit
   - name: kkimdev--moment-eslint
     path: auto_branch_pushes/kkimdev/moment-eslint/ppluto-main/overlays/dev/
     namespace: kkimdev--moment-eslint
