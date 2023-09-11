@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--fix-toolbar-node-id
+    path: auto_branch_pushes/luan/fix-toolbar-node-id/ppluto-main/overlays/dev/
+    namespace: luan--fix-toolbar-node-id
   - name: yansfil--tickerbell-admin-save-history
     path: auto_branch_pushes/yansfil/tickerbell-admin-save-history/ppluto-main/overlays/dev/
     namespace: yansfil--tickerbell-admin-save-history
