@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-prompt-label-bug
+    path: auto_branch_pushes/yansfil/fix-prompt-label-bug/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-prompt-label-bug
   - name: yansfil--fix-toolbar-inout-tab-bug
     path: auto_branch_pushes/yansfil/fix-toolbar-inout-tab-bug/ppluto-main/overlays/dev/
     namespace: yansfil--fix-toolbar-inout-tab-bug
