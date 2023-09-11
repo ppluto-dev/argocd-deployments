@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--tickerbell-admin-save-history
+    path: auto_branch_pushes/yansfil/tickerbell-admin-save-history/ppluto-main/overlays/dev/
+    namespace: yansfil--tickerbell-admin-save-history
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
