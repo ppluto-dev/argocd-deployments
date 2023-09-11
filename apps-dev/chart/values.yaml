@@ -5,12 +5,17 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-editor-pipeline-load-bug
+    path: auto_branch_pushes/yansfil/fix-editor-pipeline-load-bug/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-editor-pipeline-load-bug
+  - name: Branch name kkimdev/eslint-ignoreRestSiblings contains unsupported characters,
+      only [a-z], [0-9], /, - are allowed
+    path: auto_branch_pushes/kkimdev/eslint-ignoreRestSiblings/ppluto-main/overlays/dev/
+    namespace: Branch name kkimdev/eslint-ignoreRestSiblings contains unsupported
+      characters, only [a-z], [0-9], /, - are allowed
   - name: sungbin--deadrabbit-subscribe
     path: auto_branch_pushes/sungbin/deadrabbit-subscribe/ppluto-main/overlays/dev/
     namespace: sungbin--deadrabbit-subscribe
-  - name: luan--omit
-    path: auto_branch_pushes/luan/omit/ppluto-main/overlays/dev/
-    namespace: luan--omit
   - name: kkimdev--moment-eslint
     path: auto_branch_pushes/kkimdev/moment-eslint/ppluto-main/overlays/dev/
     namespace: kkimdev--moment-eslint
