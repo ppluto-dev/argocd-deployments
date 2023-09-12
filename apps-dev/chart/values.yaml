@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-reset-run-data-when-save
+    path: auto_branch_pushes/yansfil/fix-reset-run-data-when-save/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-reset-run-data-when-save
   - name: sg--add-preset-outdated
     path: auto_branch_pushes/sg/add-preset-outdated/ppluto-main/overlays/dev/
     namespace: sg--add-preset-outdated
