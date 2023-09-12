@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--x64
+    path: auto_branch_pushes/kkimdev/x64/ppluto-main/overlays/dev/
+    namespace: kkimdev--x64
   - name: kkimdev--install-rosetta-mac
     path: auto_branch_pushes/kkimdev/install-rosetta-mac/ppluto-main/overlays/dev/
     namespace: kkimdev--install-rosetta-mac
