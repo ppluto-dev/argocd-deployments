@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--preset-filter-subcate
+    path: auto_branch_pushes/sg/preset-filter-subcate/ppluto-main/overlays/dev/
+    namespace: sg--preset-filter-subcate
   - name: luan--husky
     path: auto_branch_pushes/luan/husky/ppluto-main/overlays/dev/
     namespace: luan--husky
