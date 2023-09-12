@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--deadrabbit-landing-ui
+    path: auto_branch_pushes/sungbin/deadrabbit-landing-ui/ppluto-main/overlays/dev/
+    namespace: sungbin--deadrabbit-landing-ui
   - name: yansfil--remove-config-in-node-input
     path: auto_branch_pushes/yansfil/remove-config-in-node-input/ppluto-main/overlays/dev/
     namespace: yansfil--remove-config-in-node-input
