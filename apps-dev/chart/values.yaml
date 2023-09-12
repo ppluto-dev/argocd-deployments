@@ -5,21 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--x64
-    path: auto_branch_pushes/kkimdev/x64/ppluto-main/overlays/dev/
-    namespace: kkimdev--x64
-  - name: kkimdev--install-rosetta-mac
-    path: auto_branch_pushes/kkimdev/install-rosetta-mac/ppluto-main/overlays/dev/
-    namespace: kkimdev--install-rosetta-mac
   - name: sg--fix-newsletter-empty
     path: auto_branch_pushes/sg/fix-newsletter-empty/ppluto-main/overlays/dev/
     namespace: sg--fix-newsletter-empty
   - name: luan--husky
     path: auto_branch_pushes/luan/husky/ppluto-main/overlays/dev/
     namespace: luan--husky
-  - name: kkimdev--readme-1
-    path: auto_branch_pushes/kkimdev/readme-1/ppluto-main/overlays/dev/
-    namespace: kkimdev--readme-1
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
