@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--readme-1
+    path: auto_branch_pushes/kkimdev/readme-1/ppluto-main/overlays/dev/
+    namespace: kkimdev--readme-1
   - name: sg--fix-preset
     path: auto_branch_pushes/sg/fix-preset/ppluto-main/overlays/dev/
     namespace: sg--fix-preset
