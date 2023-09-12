@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-newsletter-empty
+    path: auto_branch_pushes/sg/fix-newsletter-empty/ppluto-main/overlays/dev/
+    namespace: sg--fix-newsletter-empty
+  - name: banggre--fix-timezone-error
+    path: auto_branch_pushes/banggre/fix-timezone-error/ppluto-main/overlays/dev/
+    namespace: banggre--fix-timezone-error
   - name: luan--husky
     path: auto_branch_pushes/luan/husky/ppluto-main/overlays/dev/
     namespace: luan--husky
