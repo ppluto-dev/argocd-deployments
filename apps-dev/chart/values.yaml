@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--install-rosetta-mac
+    path: auto_branch_pushes/kkimdev/install-rosetta-mac/ppluto-main/overlays/dev/
+    namespace: kkimdev--install-rosetta-mac
   - name: sg--fix-newsletter-empty
     path: auto_branch_pushes/sg/fix-newsletter-empty/ppluto-main/overlays/dev/
     namespace: sg--fix-newsletter-empty
