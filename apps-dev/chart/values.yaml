@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--doodongdoc
+    path: auto_branch_pushes/sungbin/doodongdoc/ppluto-main/overlays/dev/
+    namespace: sungbin--doodongdoc
   - name: yansfil--add-copy-node
     path: auto_branch_pushes/yansfil/add-copy-node/ppluto-main/overlays/dev/
     namespace: yansfil--add-copy-node
