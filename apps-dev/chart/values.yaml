@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-full-mode
+    path: auto_branch_pushes/yansfil/update-full-mode/ppluto-main/overlays/dev/
+    namespace: yansfil--update-full-mode
   - name: sungbin--doodongdoc
     path: auto_branch_pushes/sungbin/doodongdoc/ppluto-main/overlays/dev/
     namespace: sungbin--doodongdoc
