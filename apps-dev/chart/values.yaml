@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--deadrabbit-select-language
+    path: auto_branch_pushes/sungbin/deadrabbit-select-language/ppluto-main/overlays/dev/
+    namespace: sungbin--deadrabbit-select-language
   - name: banggre--summary-history
     path: auto_branch_pushes/banggre/summary-history/ppluto-main/overlays/dev/
     namespace: banggre--summary-history
