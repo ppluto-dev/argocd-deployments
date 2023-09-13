@@ -5,12 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: luan--undo-redo
-    path: auto_branch_pushes/luan/undo-redo/ppluto-main/overlays/dev/
-    namespace: luan--undo-redo
-  - name: yansfil--add-dataset
-    path: auto_branch_pushes/yansfil/add-dataset/ppluto-main/overlays/dev/
-    namespace: yansfil--add-dataset
+  - name: sg--fix-update-bug
+    path: auto_branch_pushes/sg/fix-update-bug/ppluto-main/overlays/dev/
+    namespace: sg--fix-update-bug
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
