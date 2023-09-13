@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--deadrabbit-main-design-fix
+    path: auto_branch_pushes/sungbin/deadrabbit-main-design-fix/ppluto-main/overlays/dev/
+    namespace: sungbin--deadrabbit-main-design-fix
   - name: yansfil--add-pdf-upload-feature
     path: auto_branch_pushes/yansfil/add-pdf-upload-feature/ppluto-main/overlays/dev/
     namespace: yansfil--add-pdf-upload-feature
