@@ -5,9 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--landing-chart-rerender
+    path: auto_branch_pushes/kkimdev/landing-chart-rerender/ppluto-main/overlays/dev/
+    namespace: kkimdev--landing-chart-rerender
   - name: sungbin--fix-deadrabbit-image-convert
     path: auto_branch_pushes/sungbin/fix-deadrabbit-image-convert/ppluto-main/overlays/dev/
     namespace: sungbin--fix-deadrabbit-image-convert
+  - name: sungbin--doodongdoc
+    path: auto_branch_pushes/sungbin/doodongdoc/ppluto-main/overlays/dev/
+    namespace: sungbin--doodongdoc
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
