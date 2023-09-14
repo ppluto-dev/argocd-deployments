@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--firefox-drag
+    path: auto_branch_pushes/luan/firefox-drag/ppluto-main/overlays/dev/
+    namespace: luan--firefox-drag
   - name: sungbin--fix-exclusive-image-loaded
     path: auto_branch_pushes/sungbin/fix-exclusive-image-loaded/ppluto-main/overlays/dev/
     namespace: sungbin--fix-exclusive-image-loaded
