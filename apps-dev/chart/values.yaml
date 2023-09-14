@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--trending-exclusive
+    path: auto_branch_pushes/sg/trending-exclusive/ppluto-main/overlays/dev/
+    namespace: sg--trending-exclusive
   - name: yansfil--add-copy-node
     path: auto_branch_pushes/yansfil/add-copy-node/ppluto-main/overlays/dev/
     namespace: yansfil--add-copy-node
