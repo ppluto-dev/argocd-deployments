@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--deadrabbit-design
+    path: auto_branch_pushes/sungbin/deadrabbit-design/ppluto-main/overlays/dev/
+    namespace: sungbin--deadrabbit-design
   - name: banggre--ticker-stream
     path: auto_branch_pushes/banggre/ticker-stream/ppluto-main/overlays/dev/
     namespace: banggre--ticker-stream
