@@ -5,18 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: luan--fix-gaia-history
-    path: auto_branch_pushes/luan/fix-gaia-history/ppluto-main/overlays/dev/
-    namespace: luan--fix-gaia-history
+  - name: sungbin--fix-exclusive-image-loaded
+    path: auto_branch_pushes/sungbin/fix-exclusive-image-loaded/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-exclusive-image-loaded
   - name: sungbin--fix-deadrabbit-image-convert
     path: auto_branch_pushes/sungbin/fix-deadrabbit-image-convert/ppluto-main/overlays/dev/
     namespace: sungbin--fix-deadrabbit-image-convert
   - name: sungbin--hotfix-exclusive-go-back
     path: auto_branch_pushes/sungbin/hotfix-exclusive-go-back/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-exclusive-go-back
-  - name: yansfil--add-copy-node
-    path: auto_branch_pushes/yansfil/add-copy-node/ppluto-main/overlays/dev/
-    namespace: yansfil--add-copy-node
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
