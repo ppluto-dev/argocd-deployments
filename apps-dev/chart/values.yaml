@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--gcp-images-to-text
+    path: auto_branch_pushes/sungbin/gcp-images-to-text/ppluto-main/overlays/dev/
+    namespace: sungbin--gcp-images-to-text
+  - name: banggre--update-summary
+    path: auto_branch_pushes/banggre/update-summary/ppluto-main/overlays/dev/
+    namespace: banggre--update-summary
   - name: yansfil--fix-prompt-cursor-bug
     path: auto_branch_pushes/yansfil/fix-prompt-cursor-bug/ppluto-main/overlays/dev/
     namespace: yansfil--fix-prompt-cursor-bug
