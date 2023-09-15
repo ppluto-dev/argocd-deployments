@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--add-gcp-vision-credentials
+    path: auto_branch_pushes/sungbin/add-gcp-vision-credentials/ppluto-main/overlays/dev/
+    namespace: sungbin--add-gcp-vision-credentials
   - name: yansfil--fix-pipeline-early-return
     path: auto_branch_pushes/yansfil/fix-pipeline-early-return/ppluto-main/overlays/dev/
     namespace: yansfil--fix-pipeline-early-return
