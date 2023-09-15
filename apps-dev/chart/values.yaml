@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-prompt-cursor-bug
+    path: auto_branch_pushes/yansfil/fix-prompt-cursor-bug/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-prompt-cursor-bug
   - name: sungbin--exclusive-login-displayed-event
     path: auto_branch_pushes/sungbin/exclusive-login-displayed-event/ppluto-main/overlays/dev/
     namespace: sungbin--exclusive-login-displayed-event
