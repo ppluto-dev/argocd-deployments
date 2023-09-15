@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-trending-bug
+    path: auto_branch_pushes/sg/fix-trending-bug/ppluto-main/overlays/dev/
+    namespace: sg--fix-trending-bug
   - name: sungbin--gcp-images-to-text
     path: auto_branch_pushes/sungbin/gcp-images-to-text/ppluto-main/overlays/dev/
     namespace: sungbin--gcp-images-to-text
@@ -14,9 +17,6 @@ spec:
   - name: yansfil--fix-prompt-cursor-bug
     path: auto_branch_pushes/yansfil/fix-prompt-cursor-bug/ppluto-main/overlays/dev/
     namespace: yansfil--fix-prompt-cursor-bug
-  - name: sungbin--exclusive-login-displayed-event
-    path: auto_branch_pushes/sungbin/exclusive-login-displayed-event/ppluto-main/overlays/dev/
-    namespace: sungbin--exclusive-login-displayed-event
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
