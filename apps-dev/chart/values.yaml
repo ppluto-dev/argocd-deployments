@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-signin-event
+    path: auto_branch_pushes/yansfil/add-signin-event/ppluto-main/overlays/dev/
+    namespace: yansfil--add-signin-event
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
