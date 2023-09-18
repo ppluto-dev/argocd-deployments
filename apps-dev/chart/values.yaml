@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--symbol-api
+    path: auto_branch_pushes/banggre/symbol-api/ppluto-main/overlays/dev/
+    namespace: banggre--symbol-api
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
