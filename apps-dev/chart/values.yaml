@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-seekingalpha
+    path: auto_branch_pushes/sg/add-seekingalpha/ppluto-main/overlays/dev/
+    namespace: sg--add-seekingalpha
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
