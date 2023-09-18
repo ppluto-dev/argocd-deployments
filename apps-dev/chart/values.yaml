@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-summary-history
+    path: auto_branch_pushes/banggre/update-summary-history/ppluto-main/overlays/dev/
+    namespace: banggre--update-summary-history
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
