@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--add-chunking-node
-    path: auto_branch_pushes/yansfil/add-chunking-node/ppluto-main/overlays/dev/
-    namespace: yansfil--add-chunking-node
+  - name: kkimdev--port-check
+    path: auto_branch_pushes/kkimdev/port-check/ppluto-main/overlays/dev/
+    namespace: kkimdev--port-check
+  - name: luan--pipeline-node
+    path: auto_branch_pushes/luan/pipeline-node/ppluto-main/overlays/dev/
+    namespace: luan--pipeline-node
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
