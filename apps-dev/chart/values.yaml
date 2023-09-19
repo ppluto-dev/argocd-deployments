@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sungbin--deadrabbit
-    path: auto_branch_pushes/sungbin/deadrabbit/ppluto-main/overlays/dev/
-    namespace: sungbin--deadrabbit
   - name: sungbin--split-html-translate
     path: auto_branch_pushes/sungbin/split-html-translate/ppluto-main/overlays/dev/
     namespace: sungbin--split-html-translate
   - name: luan--pipeline-node
     path: auto_branch_pushes/luan/pipeline-node/ppluto-main/overlays/dev/
     namespace: luan--pipeline-node
+  - name: yansfil--improve-pipeline-result-show
+    path: auto_branch_pushes/yansfil/improve-pipeline-result-show/ppluto-main/overlays/dev/
+    namespace: yansfil--improve-pipeline-result-show
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
