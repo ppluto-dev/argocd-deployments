@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-landingpage-ui
+    path: auto_branch_pushes/banggre/update-landingpage-ui/ppluto-main/overlays/dev/
+    namespace: banggre--update-landingpage-ui
   - name: sungbin--split-html-translate
     path: auto_branch_pushes/sungbin/split-html-translate/ppluto-main/overlays/dev/
     namespace: sungbin--split-html-translate
