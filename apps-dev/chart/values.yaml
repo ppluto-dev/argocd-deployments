@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--dearabbit-email-auto-signup
+    path: auto_branch_pushes/sungbin/dearabbit-email-auto-signup/ppluto-main/overlays/dev/
+    namespace: sungbin--dearabbit-email-auto-signup
   - name: banggre--update-landingpage-ui
     path: auto_branch_pushes/banggre/update-landingpage-ui/ppluto-main/overlays/dev/
     namespace: banggre--update-landingpage-ui
