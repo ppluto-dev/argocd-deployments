@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--eslint-no-restricted-imports-generated
+    path: auto_branch_pushes/kkimdev/eslint-no-restricted-imports-generated/ppluto-main/overlays/dev/
+    namespace: kkimdev--eslint-no-restricted-imports-generated
+  - name: yansfil--pdf-loader-cache
+    path: auto_branch_pushes/yansfil/pdf-loader-cache/ppluto-main/overlays/dev/
+    namespace: yansfil--pdf-loader-cache
   - name: yansfil--improve-pipeline-result-show
     path: auto_branch_pushes/yansfil/improve-pipeline-result-show/ppluto-main/overlays/dev/
     namespace: yansfil--improve-pipeline-result-show
