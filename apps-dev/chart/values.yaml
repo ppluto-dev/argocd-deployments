@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--eslint-check-full-fixes
+    path: auto_branch_pushes/kkimdev/eslint-check-full-fixes/ppluto-main/overlays/dev/
+    namespace: kkimdev--eslint-check-full-fixes
   - name: luan--validate-on-save
     path: auto_branch_pushes/luan/validate-on-save/ppluto-main/overlays/dev/
     namespace: luan--validate-on-save
