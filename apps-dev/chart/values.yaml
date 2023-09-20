@@ -5,6 +5,14 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--tableofcontents-dodoongdoc
+    path: auto_branch_pushes/sungbin/tableofcontents-dodoongdoc/ppluto-main/overlays/dev/
+    namespace: sungbin--tableofcontents-dodoongdoc
+  - name: Branch name kkimdev/getVariableName contains unsupported characters, only
+      [a-z], [0-9], /, - are allowed
+    path: auto_branch_pushes/kkimdev/getVariableName/ppluto-main/overlays/dev/
+    namespace: Branch name kkimdev/getVariableName contains unsupported characters,
+      only [a-z], [0-9], /, - are allowed
   - name: luan--validate-on-save
     path: auto_branch_pushes/luan/validate-on-save/ppluto-main/overlays/dev/
     namespace: luan--validate-on-save
