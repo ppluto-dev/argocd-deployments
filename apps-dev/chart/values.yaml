@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--exclusive-show-splitted-answer
+    path: auto_branch_pushes/sungbin/exclusive-show-splitted-answer/ppluto-main/overlays/dev/
+    namespace: sungbin--exclusive-show-splitted-answer
   - name: yansfil--improve-pipeline-result-show
     path: auto_branch_pushes/yansfil/improve-pipeline-result-show/ppluto-main/overlays/dev/
     namespace: yansfil--improve-pipeline-result-show
