@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-markdown-bug
+    path: auto_branch_pushes/yansfil/fix-markdown-bug/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-markdown-bug
   - name: sungbin--admin-prompt-input-ui
     path: auto_branch_pushes/sungbin/admin-prompt-input-ui/ppluto-main/overlays/dev/
     namespace: sungbin--admin-prompt-input-ui
-  - name: banggre--ui-update-3
-    path: auto_branch_pushes/banggre/ui-update-3/ppluto-main/overlays/dev/
-    namespace: banggre--ui-update-3
   - name: sg--fix-preset-pipeline
     path: auto_branch_pushes/sg/fix-preset-pipeline/ppluto-main/overlays/dev/
     namespace: sg--fix-preset-pipeline
