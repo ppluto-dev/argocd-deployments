@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-runboard-issues-2
+    path: auto_branch_pushes/yansfil/fix-runboard-issues-2/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-runboard-issues-2
+  - name: yansfil--fix-run-board-view-format
+    path: auto_branch_pushes/yansfil/fix-run-board-view-format/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-run-board-view-format
   - name: sungbin--image-crop-dodoongdoc
     path: auto_branch_pushes/sungbin/image-crop-dodoongdoc/ppluto-main/overlays/dev/
     namespace: sungbin--image-crop-dodoongdoc
