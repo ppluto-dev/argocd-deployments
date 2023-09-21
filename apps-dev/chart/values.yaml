@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-preset-image-client
+    path: auto_branch_pushes/sg/add-preset-image-client/ppluto-main/overlays/dev/
+    namespace: sg--add-preset-image-client
   - name: sungbin--image-crop-dodoongdoc
     path: auto_branch_pushes/sungbin/image-crop-dodoongdoc/ppluto-main/overlays/dev/
     namespace: sungbin--image-crop-dodoongdoc
