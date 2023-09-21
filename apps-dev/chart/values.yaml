@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-preset-pipeline
+    path: auto_branch_pushes/sg/fix-preset-pipeline/ppluto-main/overlays/dev/
+    namespace: sg--fix-preset-pipeline
+  - name: sungbin--image-crop-dodoongdoc
+    path: auto_branch_pushes/sungbin/image-crop-dodoongdoc/ppluto-main/overlays/dev/
+    namespace: sungbin--image-crop-dodoongdoc
   - name: Branch name kkimdev/getVariableName contains unsupported characters, only
       [a-z], [0-9], /, - are allowed
     path: auto_branch_pushes/kkimdev/getVariableName/ppluto-main/overlays/dev/
