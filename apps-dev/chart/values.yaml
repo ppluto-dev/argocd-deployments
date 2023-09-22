@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-typo-main
+    path: auto_branch_pushes/sg/fix-typo-main/ppluto-main/overlays/dev/
+    namespace: sg--fix-typo-main
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
