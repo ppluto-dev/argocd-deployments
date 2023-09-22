@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-cell-renderer
+    path: auto_branch_pushes/yansfil/update-cell-renderer/ppluto-main/overlays/dev/
+    namespace: yansfil--update-cell-renderer
+  - name: yansfil--fix-output-input-sync-runboard
+    path: auto_branch_pushes/yansfil/fix-output-input-sync-runboard/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-output-input-sync-runboard
   - name: yansfil--fix-reset-width-when-add-row
     path: auto_branch_pushes/yansfil/fix-reset-width-when-add-row/ppluto-main/overlays/dev/
     namespace: yansfil--fix-reset-width-when-add-row
