@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-trending-ui
+    path: auto_branch_pushes/sg/fix-trending-ui/ppluto-main/overlays/dev/
+    namespace: sg--fix-trending-ui
   - name: yansfil--update-cell-renderer
     path: auto_branch_pushes/yansfil/update-cell-renderer/ppluto-main/overlays/dev/
     namespace: yansfil--update-cell-renderer
