@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--ui-summary-change
+    path: auto_branch_pushes/banggre/ui-summary-change/ppluto-main/overlays/dev/
+    namespace: banggre--ui-summary-change
   - name: yansfil--add-runboard-col-hide
     path: auto_branch_pushes/yansfil/add-runboard-col-hide/ppluto-main/overlays/dev/
     namespace: yansfil--add-runboard-col-hide
