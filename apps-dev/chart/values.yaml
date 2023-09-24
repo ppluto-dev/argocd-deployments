@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-column-view-propagation
+    path: auto_branch_pushes/yansfil/fix-column-view-propagation/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-column-view-propagation
   - name: luan--deployment
     path: auto_branch_pushes/luan/deployment/ppluto-main/overlays/dev/
     namespace: luan--deployment
