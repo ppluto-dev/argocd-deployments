@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--fix-delete-pipeline-group
+    path: auto_branch_pushes/luan/fix-delete-pipeline-group/ppluto-main/overlays/dev/
+    namespace: luan--fix-delete-pipeline-group
   - name: luan--clean-graph-error
     path: auto_branch_pushes/luan/clean-graph-error/ppluto-main/overlays/dev/
     namespace: luan--clean-graph-error
   - name: yansfil--enhance-gpt-concurrency
     path: auto_branch_pushes/yansfil/enhance-gpt-concurrency/ppluto-main/overlays/dev/
     namespace: yansfil--enhance-gpt-concurrency
-  - name: luan--solid-unary
-    path: auto_branch_pushes/luan/solid-unary/ppluto-main/overlays/dev/
-    namespace: luan--solid-unary
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
