@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--multiple-external-input-node
+    path: auto_branch_pushes/luan/multiple-external-input-node/ppluto-main/overlays/dev/
+    namespace: luan--multiple-external-input-node
   - name: luan--empty-toast
     path: auto_branch_pushes/luan/empty-toast/ppluto-main/overlays/dev/
     namespace: luan--empty-toast
