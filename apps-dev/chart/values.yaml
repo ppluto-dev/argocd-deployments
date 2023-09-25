@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--block-multiple-external-input-node
+    path: auto_branch_pushes/luan/block-multiple-external-input-node/ppluto-main/overlays/dev/
+    namespace: luan--block-multiple-external-input-node
   - name: luan--solid-unary
     path: auto_branch_pushes/luan/solid-unary/ppluto-main/overlays/dev/
     namespace: luan--solid-unary
