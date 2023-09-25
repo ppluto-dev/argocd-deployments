@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-deadrabbit-header-description
+    path: auto_branch_pushes/sungbin/fix-deadrabbit-header-description/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-deadrabbit-header-description
   - name: luan--fix-delete-pipeline-group
     path: auto_branch_pushes/luan/fix-delete-pipeline-group/ppluto-main/overlays/dev/
     namespace: luan--fix-delete-pipeline-group
