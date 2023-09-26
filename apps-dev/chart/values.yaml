@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-claude
+    path: auto_branch_pushes/yansfil/add-claude/ppluto-main/overlays/dev/
+    namespace: yansfil--add-claude
   - name: luan--sync-external-output-nodes
     path: auto_branch_pushes/luan/sync-external-output-nodes/ppluto-main/overlays/dev/
     namespace: luan--sync-external-output-nodes
