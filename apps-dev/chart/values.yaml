@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--divbox-typing
+    path: auto_branch_pushes/kkimdev/divbox-typing/ppluto-main/overlays/dev/
+    namespace: kkimdev--divbox-typing
+  - name: luan--deployment-interface
+    path: auto_branch_pushes/luan/deployment-interface/ppluto-main/overlays/dev/
+    namespace: luan--deployment-interface
   - name: yansfil--fix-pipeline-bugs
     path: auto_branch_pushes/yansfil/fix-pipeline-bugs/ppluto-main/overlays/dev/
     namespace: yansfil--fix-pipeline-bugs
