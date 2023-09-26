@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--deploy-modal-link
+    path: auto_branch_pushes/luan/deploy-modal-link/ppluto-main/overlays/dev/
+    namespace: luan--deploy-modal-link
   - name: yansfil--add-claude
     path: auto_branch_pushes/yansfil/add-claude/ppluto-main/overlays/dev/
     namespace: yansfil--add-claude
   - name: luan--sync-external-output-nodes
     path: auto_branch_pushes/luan/sync-external-output-nodes/ppluto-main/overlays/dev/
     namespace: luan--sync-external-output-nodes
-  - name: luan--update-node-input
-    path: auto_branch_pushes/luan/update-node-input/ppluto-main/overlays/dev/
-    namespace: luan--update-node-input
   - name: luan--clean-graph-error
     path: auto_branch_pushes/luan/clean-graph-error/ppluto-main/overlays/dev/
     namespace: luan--clean-graph-error
