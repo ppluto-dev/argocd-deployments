@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-preset-pipeline
+    path: auto_branch_pushes/sg/fix-preset-pipeline/ppluto-main/overlays/dev/
+    namespace: sg--fix-preset-pipeline
+  - name: luan--sync-external-output-nodes
+    path: auto_branch_pushes/luan/sync-external-output-nodes/ppluto-main/overlays/dev/
+    namespace: luan--sync-external-output-nodes
   - name: luan--update-node-input
     path: auto_branch_pushes/luan/update-node-input/ppluto-main/overlays/dev/
     namespace: luan--update-node-input
