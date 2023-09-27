@@ -5,12 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--dodoongdoc-fixed-by-image-overlay
+    path: auto_branch_pushes/sungbin/dodoongdoc-fixed-by-image-overlay/ppluto-main/overlays/dev/
+    namespace: sungbin--dodoongdoc-fixed-by-image-overlay
+  - name: luan--fix-token-size
+    path: auto_branch_pushes/luan/fix-token-size/ppluto-main/overlays/dev/
+    namespace: luan--fix-token-size
   - name: luan--deployment-interface
     path: auto_branch_pushes/luan/deployment-interface/ppluto-main/overlays/dev/
     namespace: luan--deployment-interface
-  - name: yansfil--fix-pipeline-bugs
-    path: auto_branch_pushes/yansfil/fix-pipeline-bugs/ppluto-main/overlays/dev/
-    namespace: yansfil--fix-pipeline-bugs
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
