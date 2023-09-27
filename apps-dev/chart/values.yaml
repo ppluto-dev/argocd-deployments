@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ps-cmd
+    path: auto_branch_pushes/kkimdev/ps-cmd/ppluto-main/overlays/dev/
+    namespace: kkimdev--ps-cmd
   - name: luan--graph-validation
     path: auto_branch_pushes/luan/graph-validation/ppluto-main/overlays/dev/
     namespace: luan--graph-validation
