@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-dodongdoc
+    path: auto_branch_pushes/sungbin/hotfix-dodongdoc/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-dodongdoc
   - name: luan--deployment-interface
     path: auto_branch_pushes/luan/deployment-interface/ppluto-main/overlays/dev/
     namespace: luan--deployment-interface
