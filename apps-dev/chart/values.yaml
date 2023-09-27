@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--branch-test
+    path: auto_branch_pushes/kkimdev/branch-test/ppluto-main/overlays/dev/
+    namespace: kkimdev--branch-test
   - name: luan--log-idb
     path: auto_branch_pushes/luan/log-idb/ppluto-main/overlays/dev/
     namespace: luan--log-idb
