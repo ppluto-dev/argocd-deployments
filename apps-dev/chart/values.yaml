@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--deadrabbit-optimized-image
+    path: auto_branch_pushes/kkimdev/deadrabbit-optimized-image/ppluto-main/overlays/dev/
+    namespace: kkimdev--deadrabbit-optimized-image
   - name: yansfil--fix-node-select-bug
     path: auto_branch_pushes/yansfil/fix-node-select-bug/ppluto-main/overlays/dev/
     namespace: yansfil--fix-node-select-bug
