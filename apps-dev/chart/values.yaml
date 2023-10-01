@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--deadrabbit-main-page
+    path: auto_branch_pushes/sungbin/deadrabbit-main-page/ppluto-main/overlays/dev/
+    namespace: sungbin--deadrabbit-main-page
   - name: yansfil--prompt-db-schema
     path: auto_branch_pushes/yansfil/prompt-db-schema/ppluto-main/overlays/dev/
     namespace: yansfil--prompt-db-schema
