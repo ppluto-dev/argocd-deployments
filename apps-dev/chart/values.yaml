@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: renovate--pypi-urllib3-vulnerability
+    path: auto_branch_pushes/renovate/pypi-urllib3-vulnerability/ppluto-main/overlays/dev/
+    namespace: renovate--pypi-urllib3-vulnerability
   - name: kkimdev--line-height-fix
     path: auto_branch_pushes/kkimdev/line-height-fix/ppluto-main/overlays/dev/
     namespace: kkimdev--line-height-fix
