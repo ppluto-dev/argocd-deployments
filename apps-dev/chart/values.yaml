@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--deadrabbit-subscribe
+    path: auto_branch_pushes/sungbin/deadrabbit-subscribe/ppluto-main/overlays/dev/
+    namespace: sungbin--deadrabbit-subscribe
   - name: luan--deployment-node
     path: auto_branch_pushes/luan/deployment-node/ppluto-main/overlays/dev/
     namespace: luan--deployment-node
