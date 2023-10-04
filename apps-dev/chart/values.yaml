@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ddd-line-height-fix-3
+    path: auto_branch_pushes/kkimdev/ddd-line-height-fix-3/ppluto-main/overlays/dev/
+    namespace: kkimdev--ddd-line-height-fix-3
   - name: luan--deployment-node
     path: auto_branch_pushes/luan/deployment-node/ppluto-main/overlays/dev/
     namespace: luan--deployment-node
