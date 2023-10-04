@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--dodoongdoc-table-center
+    path: auto_branch_pushes/sungbin/dodoongdoc-table-center/ppluto-main/overlays/dev/
+    namespace: sungbin--dodoongdoc-table-center
   - name: luan--deployment-node
     path: auto_branch_pushes/luan/deployment-node/ppluto-main/overlays/dev/
     namespace: luan--deployment-node
