@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-image-to-summary
+    path: auto_branch_pushes/banggre/add-image-to-summary/ppluto-main/overlays/dev/
+    namespace: banggre--add-image-to-summary
   - name: sungbin--deadrabbit-subscribe
     path: auto_branch_pushes/sungbin/deadrabbit-subscribe/ppluto-main/overlays/dev/
     namespace: sungbin--deadrabbit-subscribe
