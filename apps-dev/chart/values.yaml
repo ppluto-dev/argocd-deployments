@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--1px-line-fix
+    path: auto_branch_pushes/kkimdev/1px-line-fix/ppluto-main/overlays/dev/
+    namespace: kkimdev--1px-line-fix
   - name: luan--fix-lint-errors
     path: auto_branch_pushes/luan/fix-lint-errors/ppluto-main/overlays/dev/
     namespace: luan--fix-lint-errors
@@ -17,9 +20,6 @@ spec:
   - name: luan--pdf-processor
     path: auto_branch_pushes/luan/pdf-processor/ppluto-main/overlays/dev/
     namespace: luan--pdf-processor
-  - name: yansfil--prompt-db-schema
-    path: auto_branch_pushes/yansfil/prompt-db-schema/ppluto-main/overlays/dev/
-    namespace: yansfil--prompt-db-schema
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
