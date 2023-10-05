@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--pdf-processor
+    path: auto_branch_pushes/luan/pdf-processor/ppluto-main/overlays/dev/
+    namespace: luan--pdf-processor
   - name: sungbin--dodoongdoc-table-center
     path: auto_branch_pushes/sungbin/dodoongdoc-table-center/ppluto-main/overlays/dev/
     namespace: sungbin--dodoongdoc-table-center
