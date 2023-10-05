@@ -5,15 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--1px-line-fix
-    path: auto_branch_pushes/kkimdev/1px-line-fix/ppluto-main/overlays/dev/
-    namespace: kkimdev--1px-line-fix
+  - name: sg--fix-main-ui
+    path: auto_branch_pushes/sg/fix-main-ui/ppluto-main/overlays/dev/
+    namespace: sg--fix-main-ui
   - name: luan--fix-lint-errors
     path: auto_branch_pushes/luan/fix-lint-errors/ppluto-main/overlays/dev/
     namespace: luan--fix-lint-errors
-  - name: kkimdev--ddd-refactor
-    path: auto_branch_pushes/kkimdev/ddd-refactor/ppluto-main/overlays/dev/
-    namespace: kkimdev--ddd-refactor
   - name: luan--pdf-processor
     path: auto_branch_pushes/luan/pdf-processor/ppluto-main/overlays/dev/
     namespace: luan--pdf-processor
