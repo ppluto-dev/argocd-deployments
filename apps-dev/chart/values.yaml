@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: luan--post-run
+    path: auto_branch_pushes/luan/post-run/ppluto-main/overlays/dev/
+    namespace: luan--post-run
   - name: yansfil--show-label-in-run-table
     path: auto_branch_pushes/yansfil/show-label-in-run-table/ppluto-main/overlays/dev/
     namespace: yansfil--show-label-in-run-table
