@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-exclusive-login
+    path: auto_branch_pushes/sg/fix-exclusive-login/ppluto-main/overlays/dev/
+    namespace: sg--fix-exclusive-login
   - name: luan--post-run
     path: auto_branch_pushes/luan/post-run/ppluto-main/overlays/dev/
     namespace: luan--post-run
