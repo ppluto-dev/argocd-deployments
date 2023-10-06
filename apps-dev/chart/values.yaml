@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-prompt-saver
+    path: auto_branch_pushes/yansfil/add-prompt-saver/ppluto-main/overlays/dev/
+    namespace: yansfil--add-prompt-saver
   - name: sg--fix-link
     path: auto_branch_pushes/sg/fix-link/ppluto-main/overlays/dev/
     namespace: sg--fix-link
