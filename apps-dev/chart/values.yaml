@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-summarize-article-sendslack
+    path: auto_branch_pushes/banggre/fix-summarize-article-sendslack/ppluto-main/overlays/dev/
+    namespace: banggre--fix-summarize-article-sendslack
   - name: luan--fix-lint-errors
     path: auto_branch_pushes/luan/fix-lint-errors/ppluto-main/overlays/dev/
     namespace: luan--fix-lint-errors
