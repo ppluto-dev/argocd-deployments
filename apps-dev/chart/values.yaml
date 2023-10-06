@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--add-dodoongdoc-readme
+    path: auto_branch_pushes/sungbin/add-dodoongdoc-readme/ppluto-main/overlays/dev/
+    namespace: sungbin--add-dodoongdoc-readme
   - name: sungbin--dodoongdoc-mobile-text-bugfix
     path: auto_branch_pushes/sungbin/dodoongdoc-mobile-text-bugfix/ppluto-main/overlays/dev/
     namespace: sungbin--dodoongdoc-mobile-text-bugfix
