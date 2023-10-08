@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ddd-font-height
+    path: auto_branch_pushes/kkimdev/ddd-font-height/ppluto-main/overlays/dev/
+    namespace: kkimdev--ddd-font-height
   - name: banggre--update-article-summarize
     path: auto_branch_pushes/banggre/update-article-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-article-summarize
