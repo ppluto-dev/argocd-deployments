@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--dodoongdoc-watermark
+    path: auto_branch_pushes/sungbin/dodoongdoc-watermark/ppluto-main/overlays/dev/
+    namespace: sungbin--dodoongdoc-watermark
   - name: banggre--update-article-summarize
     path: auto_branch_pushes/banggre/update-article-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-article-summarize
