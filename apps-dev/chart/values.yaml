@@ -5,18 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sg--fix-barrons
-    path: auto_branch_pushes/sg/fix-barrons/ppluto-main/overlays/dev/
-    namespace: sg--fix-barrons
+  - name: yansfil--add-pipeline-update
+    path: auto_branch_pushes/yansfil/add-pipeline-update/ppluto-main/overlays/dev/
+    namespace: yansfil--add-pipeline-update
   - name: yansfil--edit-delete-prompt
     path: auto_branch_pushes/yansfil/edit-delete-prompt/ppluto-main/overlays/dev/
     namespace: yansfil--edit-delete-prompt
-  - name: sg--fix-bloom-crawling
-    path: auto_branch_pushes/sg/fix-bloom-crawling/ppluto-main/overlays/dev/
-    namespace: sg--fix-bloom-crawling
-  - name: sg--fitting-mobile
-    path: auto_branch_pushes/sg/fitting-mobile/ppluto-main/overlays/dev/
-    namespace: sg--fitting-mobile
   - name: banggre--update-article-summarize
     path: auto_branch_pushes/banggre/update-article-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-article-summarize
