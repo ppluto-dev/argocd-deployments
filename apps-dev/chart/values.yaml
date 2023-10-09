@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-bloom-crawling
+    path: auto_branch_pushes/sg/fix-bloom-crawling/ppluto-main/overlays/dev/
+    namespace: sg--fix-bloom-crawling
   - name: sg--fitting-mobile
     path: auto_branch_pushes/sg/fitting-mobile/ppluto-main/overlays/dev/
     namespace: sg--fitting-mobile
