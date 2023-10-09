@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--dodoongdoc-design
+    path: auto_branch_pushes/sungbin/dodoongdoc-design/ppluto-main/overlays/dev/
+    namespace: sungbin--dodoongdoc-design
   - name: yansfil--add-pipeline-update
     path: auto_branch_pushes/yansfil/add-pipeline-update/ppluto-main/overlays/dev/
     namespace: yansfil--add-pipeline-update
