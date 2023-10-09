@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-promptgroup-rename
+    path: auto_branch_pushes/yansfil/fix-promptgroup-rename/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-promptgroup-rename
   - name: yansfil--edit-delete-prompt
     path: auto_branch_pushes/yansfil/edit-delete-prompt/ppluto-main/overlays/dev/
     namespace: yansfil--edit-delete-prompt
