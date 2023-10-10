@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--remove-market-live
+    path: auto_branch_pushes/sungbin/remove-market-live/ppluto-main/overlays/dev/
+    namespace: sungbin--remove-market-live
   - name: kkimdev--ppluto-company-homepage
     path: auto_branch_pushes/kkimdev/ppluto-company-homepage/ppluto-main/overlays/dev/
     namespace: kkimdev--ppluto-company-homepage
