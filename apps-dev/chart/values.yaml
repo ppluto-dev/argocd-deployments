@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--deadrabbit-in-tickerbell
+    path: auto_branch_pushes/sungbin/deadrabbit-in-tickerbell/ppluto-main/overlays/dev/
+    namespace: sungbin--deadrabbit-in-tickerbell
   - name: banggre--update-article-summarize
     path: auto_branch_pushes/banggre/update-article-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-article-summarize
