@@ -21,6 +21,11 @@ spec:
       port: 8003
       targetPort: 8003
 
+    - name: web-projectpluto # Client -- projectpluto.co (Company website)
+      protocol: TCP
+      port: 8004
+      targetPort: 8004
+
     - name: grpc # Node gRpc
       protocol: TCP
       port: 81
