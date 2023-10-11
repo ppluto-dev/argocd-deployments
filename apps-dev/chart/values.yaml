@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-text
+    path: auto_branch_pushes/sg/fix-text/ppluto-main/overlays/dev/
+    namespace: sg--fix-text
   - name: banggre--update-article-summarize
     path: auto_branch_pushes/banggre/update-article-summarize/ppluto-main/overlays/dev/
     namespace: banggre--update-article-summarize
