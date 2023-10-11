@@ -156,19 +156,6 @@ spec:
             limits:
               ephemeral-storage: "3Gi"
 
-        - name: ppluto-main--prod-server-crawling-preset
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
-          env:
-            - name: IS_LOCAL_CRONJOB
-              value: "true"
-            - name: IS_PRESET_QNA
-              value: "true"
-          resources:
-            requests:
-              ephemeral-storage: "1Gi"
-            limits:
-              ephemeral-storage: "3Gi"
-
         - name: ppluto-main--prod-server-create-custom-data-document
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
