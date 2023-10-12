@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: banggre--add-validate-when-save-pipeline
-    path: auto_branch_pushes/banggre/add-validate-when-save-pipeline/ppluto-main/overlays/dev/
-    namespace: banggre--add-validate-when-save-pipeline
+  - name: sungbin--bugfix-newsletter
+    path: auto_branch_pushes/sungbin/bugfix-newsletter/ppluto-main/overlays/dev/
+    namespace: sungbin--bugfix-newsletter
+  - name: banggre--fix-node-label
+    path: auto_branch_pushes/banggre/fix-node-label/ppluto-main/overlays/dev/
+    namespace: banggre--fix-node-label
   - name: kkimdev--ppluto-homepage-career-post
     path: auto_branch_pushes/kkimdev/ppluto-homepage-career-post/ppluto-main/overlays/dev/
     namespace: kkimdev--ppluto-homepage-career-post
