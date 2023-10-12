@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ppluto-homepage-career-post
+    path: auto_branch_pushes/kkimdev/ppluto-homepage-career-post/ppluto-main/overlays/dev/
+    namespace: kkimdev--ppluto-homepage-career-post
+  - name: banggre--add-article-type
+    path: auto_branch_pushes/banggre/add-article-type/ppluto-main/overlays/dev/
+    namespace: banggre--add-article-type
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
