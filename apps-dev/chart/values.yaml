@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--company-website-renew-1
+    path: auto_branch_pushes/kkimdev/company-website-renew-1/ppluto-main/overlays/dev/
+    namespace: kkimdev--company-website-renew-1
   - name: banggre--fix-article-summary2
     path: auto_branch_pushes/banggre/fix-article-summary2/ppluto-main/overlays/dev/
     namespace: banggre--fix-article-summary2
