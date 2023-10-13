@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-category-filter
+    path: auto_branch_pushes/banggre/add-category-filter/ppluto-main/overlays/dev/
+    namespace: banggre--add-category-filter
   - name: banggre--set-deploy-list-reverse
     path: auto_branch_pushes/banggre/set-deploy-list-reverse/ppluto-main/overlays/dev/
     namespace: banggre--set-deploy-list-reverse
