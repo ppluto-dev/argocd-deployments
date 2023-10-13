@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-ui
+    path: auto_branch_pushes/sg/fix-ui/ppluto-main/overlays/dev/
+    namespace: sg--fix-ui
   - name: banggre--add-article-summary-source
     path: auto_branch_pushes/banggre/add-article-summary-source/ppluto-main/overlays/dev/
     namespace: banggre--add-article-summary-source
