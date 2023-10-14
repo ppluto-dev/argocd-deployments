@@ -143,6 +143,19 @@ spec:
             limits:
               ephemeral-storage: "3Gi"
 
+        - name: ppluto-main--prod-server-crawling-benzinga
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_BENZINGA
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
         - name: ppluto-main--prod-server-crawling-newsletter
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
