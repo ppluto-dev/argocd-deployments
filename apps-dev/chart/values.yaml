@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-metadata
+    path: auto_branch_pushes/banggre/add-metadata/ppluto-main/overlays/dev/
+    namespace: banggre--add-metadata
   - name: yansfil--pdf-node-aws
     path: auto_branch_pushes/yansfil/pdf-node-aws/ppluto-main/overlays/dev/
     namespace: yansfil--pdf-node-aws
