@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--codeowners
+    path: auto_branch_pushes/kkimdev/codeowners/ppluto-main/overlays/dev/
+    namespace: kkimdev--codeowners
   - name: yansfil--fix-connection-lost-issue-when-handle-change
     path: auto_branch_pushes/yansfil/fix-connection-lost-issue-when-handle-change/ppluto-main/overlays/dev/
     namespace: yansfil--fix-connection-lost-issue-when-handle-change
