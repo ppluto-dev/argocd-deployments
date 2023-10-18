@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-market-summary
+    path: auto_branch_pushes/banggre/fix-market-summary/ppluto-main/overlays/dev/
+    namespace: banggre--fix-market-summary
   - name: sg--fix-summary-ui
     path: auto_branch_pushes/sg/fix-summary-ui/ppluto-main/overlays/dev/
     namespace: sg--fix-summary-ui
