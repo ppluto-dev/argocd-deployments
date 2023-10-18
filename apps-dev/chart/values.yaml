@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--improve-pipeline-run-save-ui
+    path: auto_branch_pushes/banggre/improve-pipeline-run-save-ui/ppluto-main/overlays/dev/
+    namespace: banggre--improve-pipeline-run-save-ui
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
