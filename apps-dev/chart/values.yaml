@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-summary-ui
+    path: auto_branch_pushes/sg/fix-summary-ui/ppluto-main/overlays/dev/
+    namespace: sg--fix-summary-ui
   - name: yansfil--fix-connection-lost-issue-when-handle-change
     path: auto_branch_pushes/yansfil/fix-connection-lost-issue-when-handle-change/ppluto-main/overlays/dev/
     namespace: yansfil--fix-connection-lost-issue-when-handle-change
