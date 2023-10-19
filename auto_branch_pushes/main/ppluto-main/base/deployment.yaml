@@ -40,9 +40,9 @@ spec:
           readinessProbe:
             tcpSocket:
               port: 82
-          livenessProbe:
-            tcpSocket:
-              port: 82
+          # livenessProbe:
+          #   tcpSocket:
+          #     port: 82
           resources:
             limits:
               ephemeral-storage: "2Gi"
