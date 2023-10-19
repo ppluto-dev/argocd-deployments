@@ -40,6 +40,7 @@ spec:
           readinessProbe:
             tcpSocket:
               port: 82
+          # TODO: Enable `livenessProbe`.  Temporarily disabled to debug container crash issue.
           # livenessProbe:
           #   tcpSocket:
           #     port: 82
