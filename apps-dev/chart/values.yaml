@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-article-summary-update
+    path: auto_branch_pushes/banggre/fix-article-summary-update/ppluto-main/overlays/dev/
+    namespace: banggre--fix-article-summary-update
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
-  - name: main----production
+  - name: main---tickerbell
     path: auto_branch_pushes/main/ppluto-main/overlays/prod_monigpt/
-    namespace: main----production
+    namespace: main---tickerbell
