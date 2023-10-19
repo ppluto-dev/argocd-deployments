@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-get-bloomberg-newsletter-five-things-toknow
+    path: auto_branch_pushes/banggre/add-get-bloomberg-newsletter-five-things-toknow/ppluto-main/overlays/dev/
+    namespace: banggre--add-get-bloomberg-newsletter-five-things-toknow
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
