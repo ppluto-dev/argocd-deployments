@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--monigpt-rename
-    path: auto_branch_pushes/kkimdev/monigpt-rename/ppluto-main/overlays/dev/
-    namespace: kkimdev--monigpt-rename
   - name: sungbin--hotfix-exclusive
     path: auto_branch_pushes/sungbin/hotfix-exclusive/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-exclusive
@@ -15,5 +12,5 @@ spec:
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
   - name: main----production
-    path: auto_branch_pushes/main/ppluto-main/overlays/prod_monigpt/
+    path: auto_branch_pushes/main/ppluto-main/overlays/prod/
     namespace: main----production
