@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--assert-not-nil
+    path: auto_branch_pushes/kkimdev/assert-not-nil/ppluto-main/overlays/dev/
+    namespace: kkimdev--assert-not-nil
   - name: yansfil--fix-view-icon-in-node
     path: auto_branch_pushes/yansfil/fix-view-icon-in-node/ppluto-main/overlays/dev/
     namespace: yansfil--fix-view-icon-in-node
