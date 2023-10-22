@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--design-fix-tickerbell-marketslive
+    path: auto_branch_pushes/sungbin/design-fix-tickerbell-marketslive/ppluto-main/overlays/dev/
+    namespace: sungbin--design-fix-tickerbell-marketslive
   - name: sungbin--ticerbell-exclusive
     path: auto_branch_pushes/sungbin/ticerbell-exclusive/ppluto-main/overlays/dev/
     namespace: sungbin--ticerbell-exclusive
