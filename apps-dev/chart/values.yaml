@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-main-contents-count
+    path: auto_branch_pushes/sg/fix-main-contents-count/ppluto-main/overlays/dev/
+    namespace: sg--fix-main-contents-count
   - name: fix--crawling-image
     path: auto_branch_pushes/fix/crawling-image/ppluto-main/overlays/dev/
     namespace: fix--crawling-image
