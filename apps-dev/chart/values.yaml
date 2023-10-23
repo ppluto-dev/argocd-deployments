@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-background-color-when-error
+    path: auto_branch_pushes/yansfil/fix-background-color-when-error/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-background-color-when-error
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
