@@ -31,6 +31,11 @@ spec:
           resources:
             limits:
               ephemeral-storage: "1Gi"
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 30"]
+          terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
 
         - name: ppluto-main--prod-server
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
@@ -38,6 +43,7 @@ spec:
             - containerPort: 81
             - containerPort: 82
           readinessProbe:
+            # TODO: Implement gRPC health check instead. https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#probe-check-methods
             tcpSocket:
               port: 82
           # TODO: Enable `livenessProbe`.  Temporarily disabled to debug container crash issue.
@@ -47,6 +53,11 @@ spec:
           resources:
             limits:
               ephemeral-storage: "2Gi"
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 30"]
+          terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
 
       imagePullSecrets:
         - name: gitlab-container-registry
