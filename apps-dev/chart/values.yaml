@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-snapshot-id-when-running-pipeline
+    path: auto_branch_pushes/yansfil/fix-snapshot-id-when-running-pipeline/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-snapshot-id-when-running-pipeline
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
