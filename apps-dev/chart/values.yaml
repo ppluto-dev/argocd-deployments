@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-landing-ui-2
+    path: auto_branch_pushes/sg/fix-landing-ui-2/ppluto-main/overlays/dev/
+    namespace: sg--fix-landing-ui-2
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
