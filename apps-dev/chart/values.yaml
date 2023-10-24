@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-some-bugs-in-pipeline
+    path: auto_branch_pushes/yansfil/fix-some-bugs-in-pipeline/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-some-bugs-in-pipeline
   - name: sg--fix-landing-ui-2
     path: auto_branch_pushes/sg/fix-landing-ui-2/ppluto-main/overlays/dev/
     namespace: sg--fix-landing-ui-2
