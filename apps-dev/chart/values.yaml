@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--tickerbell-design-fix
+    path: auto_branch_pushes/sungbin/tickerbell-design-fix/ppluto-main/overlays/dev/
+    namespace: sungbin--tickerbell-design-fix
   - name: kkimdev--add-gpt-ask-bar-to-pages
     path: auto_branch_pushes/kkimdev/add-gpt-ask-bar-to-pages/ppluto-main/overlays/dev/
     namespace: kkimdev--add-gpt-ask-bar-to-pages
