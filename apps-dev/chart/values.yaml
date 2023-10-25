@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--marketlive-renaming
+    path: auto_branch_pushes/kkimdev/marketlive-renaming/ppluto-main/overlays/dev/
+    namespace: kkimdev--marketlive-renaming
+  - name: kkimdev--move-search-bar
+    path: auto_branch_pushes/kkimdev/move-search-bar/ppluto-main/overlays/dev/
+    namespace: kkimdev--move-search-bar
   - name: banggre--folder-system-for-list
     path: auto_branch_pushes/banggre/folder-system-for-list/ppluto-main/overlays/dev/
     namespace: banggre--folder-system-for-list
