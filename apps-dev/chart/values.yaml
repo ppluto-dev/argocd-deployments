@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--tickerbell-logo-update
+    path: auto_branch_pushes/kkimdev/tickerbell-logo-update/ppluto-main/overlays/dev/
+    namespace: kkimdev--tickerbell-logo-update
+  - name: sungbin--hotfix-tickerbell-exclsuive
+    path: auto_branch_pushes/sungbin/hotfix-tickerbell-exclsuive/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-tickerbell-exclsuive
   - name: banggre--folder-system-for-list
     path: auto_branch_pushes/banggre/folder-system-for-list/ppluto-main/overlays/dev/
     namespace: banggre--folder-system-for-list
