@@ -40,25 +40,6 @@ spec:
                 port:
                   number: 80
 
-    # deadrabb.it
-    - host: HOST_NAME_PLACEHOLDER_1
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service
-                port:
-                  number: 8002
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service
-                port:
-                  number: 82
-
     # openembedding.com (Project Gaia)
     - host: HOST_NAME_PLACEHOLDER_2
       http:
