@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--add-gpt-ask-bar-to-pages
+    path: auto_branch_pushes/kkimdev/add-gpt-ask-bar-to-pages/ppluto-main/overlays/dev/
+    namespace: kkimdev--add-gpt-ask-bar-to-pages
   - name: kkimdev--marketlive-renaming
     path: auto_branch_pushes/kkimdev/marketlive-renaming/ppluto-main/overlays/dev/
     namespace: kkimdev--marketlive-renaming
