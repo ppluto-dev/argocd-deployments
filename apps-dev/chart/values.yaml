@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-tickerbell-design
+    path: auto_branch_pushes/sungbin/fix-tickerbell-design/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-tickerbell-design
   - name: banggre--folder-system-for-list
     path: auto_branch_pushes/banggre/folder-system-for-list/ppluto-main/overlays/dev/
     namespace: banggre--folder-system-for-list
