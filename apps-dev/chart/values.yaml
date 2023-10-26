@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--buf-warning
+    path: auto_branch_pushes/kkimdev/buf-warning/ppluto-main/overlays/dev/
+    namespace: kkimdev--buf-warning
   - name: banggre--folder-system-for-list
     path: auto_branch_pushes/banggre/folder-system-for-list/ppluto-main/overlays/dev/
     namespace: banggre--folder-system-for-list
