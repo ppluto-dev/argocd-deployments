@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-pdf-node-interface
+    path: auto_branch_pushes/yansfil/update-pdf-node-interface/ppluto-main/overlays/dev/
+    namespace: yansfil--update-pdf-node-interface
   - name: banggre--folder-system-for-list
     path: auto_branch_pushes/banggre/folder-system-for-list/ppluto-main/overlays/dev/
     namespace: banggre--folder-system-for-list
