@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: renovate--material-ui-monorepo
+    path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
+    namespace: renovate--material-ui-monorepo
+  - name: sungbin--tickerbell-subscribe-to-db
+    path: auto_branch_pushes/sungbin/tickerbell-subscribe-to-db/ppluto-main/overlays/dev/
+    namespace: sungbin--tickerbell-subscribe-to-db
   - name: yansfil--update-pipeline-node-latest
     path: auto_branch_pushes/yansfil/update-pipeline-node-latest/ppluto-main/overlays/dev/
     namespace: yansfil--update-pipeline-node-latest
