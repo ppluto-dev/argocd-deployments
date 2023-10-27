@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--change-error-schema
+    path: auto_branch_pushes/yansfil/change-error-schema/ppluto-main/overlays/dev/
+    namespace: yansfil--change-error-schema
   - name: sungbin--deadrabbit-add-stibee-users-db-2
     path: auto_branch_pushes/sungbin/deadrabbit-add-stibee-users-db-2/ppluto-main/overlays/dev/
     namespace: sungbin--deadrabbit-add-stibee-users-db-2
