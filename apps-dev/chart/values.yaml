@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--always-show-runboard
+    path: auto_branch_pushes/yansfil/always-show-runboard/ppluto-main/overlays/dev/
+    namespace: yansfil--always-show-runboard
   - name: yansfil--fix-unnecessary-pipeline-change-modal
     path: auto_branch_pushes/yansfil/fix-unnecessary-pipeline-change-modal/ppluto-main/overlays/dev/
     namespace: yansfil--fix-unnecessary-pipeline-change-modal
