@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-market-live-and-gaia
+    path: auto_branch_pushes/banggre/fix-market-live-and-gaia/ppluto-main/overlays/dev/
+    namespace: banggre--fix-market-live-and-gaia
   - name: yansfil--always-show-runboard
     path: auto_branch_pushes/yansfil/always-show-runboard/ppluto-main/overlays/dev/
     namespace: yansfil--always-show-runboard
-  - name: yansfil--fix-unnecessary-pipeline-change-modal
-    path: auto_branch_pushes/yansfil/fix-unnecessary-pipeline-change-modal/ppluto-main/overlays/dev/
-    namespace: yansfil--fix-unnecessary-pipeline-change-modal
   - name: yansfil--change-error-schema
     path: auto_branch_pushes/yansfil/change-error-schema/ppluto-main/overlays/dev/
     namespace: yansfil--change-error-schema
