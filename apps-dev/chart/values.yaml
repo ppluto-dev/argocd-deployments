@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-pipelinelist-scroll
+    path: auto_branch_pushes/banggre/fix-pipelinelist-scroll/ppluto-main/overlays/dev/
+    namespace: banggre--fix-pipelinelist-scroll
   - name: yansfil--always-show-runboard
     path: auto_branch_pushes/yansfil/always-show-runboard/ppluto-main/overlays/dev/
     namespace: yansfil--always-show-runboard
