@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-pipeline-node-latest
+    path: auto_branch_pushes/yansfil/update-pipeline-node-latest/ppluto-main/overlays/dev/
+    namespace: yansfil--update-pipeline-node-latest
   - name: yansfil--always-show-runboard
     path: auto_branch_pushes/yansfil/always-show-runboard/ppluto-main/overlays/dev/
     namespace: yansfil--always-show-runboard
