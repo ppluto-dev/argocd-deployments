@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-market-live-aggregate
+    path: auto_branch_pushes/banggre/add-market-live-aggregate/ppluto-main/overlays/dev/
+    namespace: banggre--add-market-live-aggregate
+  - name: sungbin--sync-with-substack
+    path: auto_branch_pushes/sungbin/sync-with-substack/ppluto-main/overlays/dev/
+    namespace: sungbin--sync-with-substack
   - name: sungbin--hotfix-card-design
     path: auto_branch_pushes/sungbin/hotfix-card-design/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-card-design
