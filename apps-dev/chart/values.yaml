@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-search-ticker
+    path: auto_branch_pushes/sg/fix-search-ticker/ppluto-main/overlays/dev/
+    namespace: sg--fix-search-ticker
   - name: renovate--material-ui-monorepo
     path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--material-ui-monorepo
