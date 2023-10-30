@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-card-design
+    path: auto_branch_pushes/sungbin/hotfix-card-design/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-card-design
   - name: renovate--material-ui-monorepo
     path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--material-ui-monorepo
