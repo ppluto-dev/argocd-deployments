@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: banggre--aggregate-summarize-market-live
-    path: auto_branch_pushes/banggre/aggregate-summarize-market-live/ppluto-main/overlays/dev/
-    namespace: banggre--aggregate-summarize-market-live
   - name: sungbin--sync-with-substack
     path: auto_branch_pushes/sungbin/sync-with-substack/ppluto-main/overlays/dev/
     namespace: sungbin--sync-with-substack
   - name: renovate--material-ui-monorepo
     path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--material-ui-monorepo
+  - name: yansfil--add-node-table
+    path: auto_branch_pushes/yansfil/add-node-table/ppluto-main/overlays/dev/
+    namespace: yansfil--add-node-table
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
