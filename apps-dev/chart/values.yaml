@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-same-tab-size
+    path: auto_branch_pushes/sg/fix-same-tab-size/ppluto-main/overlays/dev/
+    namespace: sg--fix-same-tab-size
   - name: sungbin--sync-with-substack
     path: auto_branch_pushes/sungbin/sync-with-substack/ppluto-main/overlays/dev/
     namespace: sungbin--sync-with-substack
