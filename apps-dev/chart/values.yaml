@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-skeleton
+    path: auto_branch_pushes/sg/fix-skeleton/ppluto-main/overlays/dev/
+    namespace: sg--fix-skeleton
   - name: sungbin--sync-with-substack
     path: auto_branch_pushes/sungbin/sync-with-substack/ppluto-main/overlays/dev/
     namespace: sungbin--sync-with-substack
