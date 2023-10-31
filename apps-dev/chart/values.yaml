@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--aggregate-summarize-market-live
+    path: auto_branch_pushes/banggre/aggregate-summarize-market-live/ppluto-main/overlays/dev/
+    namespace: banggre--aggregate-summarize-market-live
   - name: sungbin--sync-with-substack
     path: auto_branch_pushes/sungbin/sync-with-substack/ppluto-main/overlays/dev/
     namespace: sungbin--sync-with-substack
