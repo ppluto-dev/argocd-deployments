@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-last-run-pipeline-snapshot-issue
+    path: auto_branch_pushes/yansfil/fix-last-run-pipeline-snapshot-issue/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-last-run-pipeline-snapshot-issue
   - name: sungbin--sync-with-substack
     path: auto_branch_pushes/sungbin/sync-with-substack/ppluto-main/overlays/dev/
     namespace: sungbin--sync-with-substack
