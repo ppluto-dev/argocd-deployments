@@ -5,15 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sg--fix-skeleton
-    path: auto_branch_pushes/sg/fix-skeleton/ppluto-main/overlays/dev/
-    namespace: sg--fix-skeleton
   - name: sungbin--sync-with-substack
     path: auto_branch_pushes/sungbin/sync-with-substack/ppluto-main/overlays/dev/
     namespace: sungbin--sync-with-substack
-  - name: yansfil--validate-invalid-edges-exist
-    path: auto_branch_pushes/yansfil/validate-invalid-edges-exist/ppluto-main/overlays/dev/
-    namespace: yansfil--validate-invalid-edges-exist
   - name: renovate--material-ui-monorepo
     path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--material-ui-monorepo
