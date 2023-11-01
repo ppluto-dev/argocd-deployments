@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--tickerbell-weekly-ahead
+    path: auto_branch_pushes/sungbin/tickerbell-weekly-ahead/ppluto-main/overlays/dev/
+    namespace: sungbin--tickerbell-weekly-ahead
   - name: yansfil--add-viewer-toolbar-move-latest
     path: auto_branch_pushes/yansfil/add-viewer-toolbar-move-latest/ppluto-main/overlays/dev/
     namespace: yansfil--add-viewer-toolbar-move-latest
