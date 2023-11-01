@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--improve-search
+    path: auto_branch_pushes/sg/improve-search/ppluto-main/overlays/dev/
+    namespace: sg--improve-search
   - name: yansfil--disabled-runboard-buttons-in-viewonly
     path: auto_branch_pushes/yansfil/disabled-runboard-buttons-in-viewonly/ppluto-main/overlays/dev/
     namespace: yansfil--disabled-runboard-buttons-in-viewonly
