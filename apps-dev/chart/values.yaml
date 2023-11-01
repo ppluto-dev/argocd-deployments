@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-contents-width
+    path: auto_branch_pushes/sg/add-contents-width/ppluto-main/overlays/dev/
+    namespace: sg--add-contents-width
   - name: yansfil--wrap-react-memo
     path: auto_branch_pushes/yansfil/wrap-react-memo/ppluto-main/overlays/dev/
     namespace: yansfil--wrap-react-memo
