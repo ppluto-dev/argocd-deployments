@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-ifcondition-infinite-rerender
+    path: auto_branch_pushes/yansfil/fix-ifcondition-infinite-rerender/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-ifcondition-infinite-rerender
   - name: yansfil--add-viewer-toolbar-move-latest
     path: auto_branch_pushes/yansfil/add-viewer-toolbar-move-latest/ppluto-main/overlays/dev/
     namespace: yansfil--add-viewer-toolbar-move-latest
