@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--market-live-aggregate
+    path: auto_branch_pushes/banggre/market-live-aggregate/ppluto-main/overlays/dev/
+    namespace: banggre--market-live-aggregate
   - name: renovate--material-ui-monorepo
     path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--material-ui-monorepo
