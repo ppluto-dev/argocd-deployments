@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-ag-grid-bug
+    path: auto_branch_pushes/sungbin/fix-ag-grid-bug/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-ag-grid-bug
   - name: banggre--gaia-landing-page
     path: auto_branch_pushes/banggre/gaia-landing-page/ppluto-main/overlays/dev/
     namespace: banggre--gaia-landing-page
