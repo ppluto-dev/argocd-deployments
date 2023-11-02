@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-cronjob
+    path: auto_branch_pushes/sg/fix-cronjob/ppluto-main/overlays/dev/
+    namespace: sg--fix-cronjob
   - name: yansfil--fix-deployment-bug
     path: auto_branch_pushes/yansfil/fix-deployment-bug/ppluto-main/overlays/dev/
     namespace: yansfil--fix-deployment-bug
