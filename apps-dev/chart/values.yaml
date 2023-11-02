@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-aggregate
+    path: auto_branch_pushes/banggre/fix-aggregate/ppluto-main/overlays/dev/
+    namespace: banggre--fix-aggregate
+  - name: sungbin--newsletter-stats
+    path: auto_branch_pushes/sungbin/newsletter-stats/ppluto-main/overlays/dev/
+    namespace: sungbin--newsletter-stats
   - name: yansfil--fix-deployment-bug
     path: auto_branch_pushes/yansfil/fix-deployment-bug/ppluto-main/overlays/dev/
     namespace: yansfil--fix-deployment-bug
