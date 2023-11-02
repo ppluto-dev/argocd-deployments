@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-symbol-search-ui
+    path: auto_branch_pushes/sg/add-symbol-search-ui/ppluto-main/overlays/dev/
+    namespace: sg--add-symbol-search-ui
   - name: yansfil--add-metdata-prompt-token
     path: auto_branch_pushes/yansfil/add-metdata-prompt-token/ppluto-main/overlays/dev/
     namespace: yansfil--add-metdata-prompt-token
