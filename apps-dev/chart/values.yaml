@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--refactor-async-local-storage
+    path: auto_branch_pushes/yansfil/refactor-async-local-storage/ppluto-main/overlays/dev/
+    namespace: yansfil--refactor-async-local-storage
+  - name: banggre--improve-landing-page
+    path: auto_branch_pushes/banggre/improve-landing-page/ppluto-main/overlays/dev/
+    namespace: banggre--improve-landing-page
   - name: yansfil--add-metdata-prompt-token
     path: auto_branch_pushes/yansfil/add-metdata-prompt-token/ppluto-main/overlays/dev/
     namespace: yansfil--add-metdata-prompt-token
