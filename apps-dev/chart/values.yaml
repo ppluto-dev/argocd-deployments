@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--deadrabbit-stats
+    path: auto_branch_pushes/sungbin/deadrabbit-stats/ppluto-main/overlays/dev/
+    namespace: sungbin--deadrabbit-stats
   - name: banggre--momo-node
     path: auto_branch_pushes/banggre/momo-node/ppluto-main/overlays/dev/
     namespace: banggre--momo-node
