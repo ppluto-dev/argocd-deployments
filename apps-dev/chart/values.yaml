@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-pipeline-node-interface
+    path: auto_branch_pushes/yansfil/fix-pipeline-node-interface/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-pipeline-node-interface
   - name: renovate--kotlin-monorepo
     path: auto_branch_pushes/renovate/kotlin-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--kotlin-monorepo
