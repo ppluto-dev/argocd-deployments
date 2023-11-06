@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-font-size
+    path: auto_branch_pushes/sg/fix-font-size/ppluto-main/overlays/dev/
+    namespace: sg--fix-font-size
   - name: yansfil--fix-pipeline-node-interface
     path: auto_branch_pushes/yansfil/fix-pipeline-node-interface/ppluto-main/overlays/dev/
     namespace: yansfil--fix-pipeline-node-interface
