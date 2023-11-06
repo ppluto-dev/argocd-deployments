@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--import-fix
+    path: auto_branch_pushes/kkimdev/import-fix/ppluto-main/overlays/dev/
+    namespace: kkimdev--import-fix
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
