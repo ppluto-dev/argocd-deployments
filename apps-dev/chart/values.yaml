@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--table-of-contents
+    path: auto_branch_pushes/sungbin/table-of-contents/ppluto-main/overlays/dev/
+    namespace: sungbin--table-of-contents
   - name: sg--fix-font-size
     path: auto_branch_pushes/sg/fix-font-size/ppluto-main/overlays/dev/
     namespace: sg--fix-font-size
