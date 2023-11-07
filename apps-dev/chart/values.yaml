@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--script-for-pinecone
+    path: auto_branch_pushes/banggre/script-for-pinecone/ppluto-main/overlays/dev/
+    namespace: banggre--script-for-pinecone
   - name: sg--remove-unnes
     path: auto_branch_pushes/sg/remove-unnes/ppluto-main/overlays/dev/
     namespace: sg--remove-unnes
