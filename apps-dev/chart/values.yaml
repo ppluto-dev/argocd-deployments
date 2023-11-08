@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-web-tokenizer
+    path: auto_branch_pushes/yansfil/fix-web-tokenizer/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-web-tokenizer
   - name: kkimdev--sd-install
     path: auto_branch_pushes/kkimdev/sd-install/ppluto-main/overlays/dev/
     namespace: kkimdev--sd-install
