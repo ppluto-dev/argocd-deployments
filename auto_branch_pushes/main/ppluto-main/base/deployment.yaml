@@ -34,7 +34,7 @@ spec:
           lifecycle:
             preStop:
               exec:
-                command: ["/bin/sh", "-c", "sleep 30"]
+                command: ["/bin/sh", "-c", "sleep 60"]
 
         - name: ppluto-main--prod-server
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
@@ -55,7 +55,7 @@ spec:
           lifecycle:
             preStop:
               exec:
-                command: ["/bin/sh", "-c", "sleep 30"]
+                command: ["/bin/sh", "-c", "sleep 60"]
 
       imagePullSecrets:
         - name: gitlab-container-registry
