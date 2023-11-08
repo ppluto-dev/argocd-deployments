@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--sd-install
+    path: auto_branch_pushes/kkimdev/sd-install/ppluto-main/overlays/dev/
+    namespace: kkimdev--sd-install
+  - name: banggre--add-article-summary-query
+    path: auto_branch_pushes/banggre/add-article-summary-query/ppluto-main/overlays/dev/
+    namespace: banggre--add-article-summary-query
   - name: kkimdev--k8s-timeout
     path: auto_branch_pushes/kkimdev/k8s-timeout/ppluto-main/overlays/dev/
     namespace: kkimdev--k8s-timeout
