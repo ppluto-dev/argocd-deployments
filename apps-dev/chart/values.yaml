@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--delete-all-category
+    path: auto_branch_pushes/banggre/delete-all-category/ppluto-main/overlays/dev/
+    namespace: banggre--delete-all-category
+  - name: yansfil--migrate-financegpt
+    path: auto_branch_pushes/yansfil/migrate-financegpt/ppluto-main/overlays/dev/
+    namespace: yansfil--migrate-financegpt
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
