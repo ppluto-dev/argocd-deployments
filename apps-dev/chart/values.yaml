@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--arrange-unused-tickerbell-logic
+    path: auto_branch_pushes/yansfil/arrange-unused-tickerbell-logic/ppluto-main/overlays/dev/
+    namespace: yansfil--arrange-unused-tickerbell-logic
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
