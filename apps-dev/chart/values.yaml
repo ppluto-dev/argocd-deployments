@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--for-ab-test
+    path: auto_branch_pushes/banggre/for-ab-test/ppluto-main/overlays/dev/
+    namespace: banggre--for-ab-test
   - name: kkimdev--image-opt-load
     path: auto_branch_pushes/kkimdev/image-opt-load/ppluto-main/overlays/dev/
     namespace: kkimdev--image-opt-load
