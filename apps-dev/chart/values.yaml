@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--deadrabbit-admin
+    path: auto_branch_pushes/sungbin/deadrabbit-admin/ppluto-main/overlays/dev/
+    namespace: sungbin--deadrabbit-admin
   - name: sungbin--pipeline-ab-test
     path: auto_branch_pushes/sungbin/pipeline-ab-test/ppluto-main/overlays/dev/
     namespace: sungbin--pipeline-ab-test
