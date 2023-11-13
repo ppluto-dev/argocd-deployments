@@ -143,12 +143,12 @@ spec:
             limits:
               ephemeral-storage: "3Gi"
 
-        - name: ppluto-main--prod-server-crawling-newsletter
+        - name: ppluto-main--prod-server-crawling-benzinga
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
             - name: IS_LOCAL_CRONJOB
               value: "true"
-            - name: IS_NEWSLETTER
+            - name: IS_BENZINGA
               value: "true"
           resources:
             requests:
@@ -156,12 +156,12 @@ spec:
             limits:
               ephemeral-storage: "3Gi"
 
-        - name: ppluto-main--prod-server-crawling-preset
+        - name: ppluto-main--prod-server-crawling-newsletter
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
             - name: IS_LOCAL_CRONJOB
               value: "true"
-            - name: IS_PRESET_QNA
+            - name: IS_NEWSLETTER
               value: "true"
           resources:
             requests:
@@ -201,6 +201,19 @@ spec:
             - name: IS_LOCAL_CRONJOB
               value: "true"
             - name: IS_UPDATE_VECTOR_STATUS_OUTDATED
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+        - name: ppluto-main--prod-server-create-article-summary
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_ARTICLE_SUMMARIZE
               value: "true"
           resources:
             requests:
