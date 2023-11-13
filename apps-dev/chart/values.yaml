@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-batchprompt-input-type
+    path: auto_branch_pushes/yansfil/fix-batchprompt-input-type/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-batchprompt-input-type
   - name: sg--add-skeleton-landing
     path: auto_branch_pushes/sg/add-skeleton-landing/ppluto-main/overlays/dev/
     namespace: sg--add-skeleton-landing
