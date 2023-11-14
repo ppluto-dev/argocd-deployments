@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--improve-five-things
+    path: auto_branch_pushes/banggre/improve-five-things/ppluto-main/overlays/dev/
+    namespace: banggre--improve-five-things
   - name: yansfil--fix-node-handle-from-variables
     path: auto_branch_pushes/yansfil/fix-node-handle-from-variables/ppluto-main/overlays/dev/
     namespace: yansfil--fix-node-handle-from-variables
