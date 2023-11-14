@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--improve-oneminute-brief
+    path: auto_branch_pushes/banggre/improve-oneminute-brief/ppluto-main/overlays/dev/
+    namespace: banggre--improve-oneminute-brief
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
