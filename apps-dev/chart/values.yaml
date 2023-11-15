@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--disable-renovate-automerge
+    path: auto_branch_pushes/kkimdev/disable-renovate-automerge/ppluto-main/overlays/dev/
+    namespace: kkimdev--disable-renovate-automerge
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
