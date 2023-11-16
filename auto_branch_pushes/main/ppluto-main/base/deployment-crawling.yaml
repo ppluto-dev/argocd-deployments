@@ -117,6 +117,19 @@ spec:
             limits:
               ephemeral-storage: "3Gi"
 
+        - name: ppluto-main--prod-server-crawling-trading-view
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_TRADINGVIEW
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
         - name: ppluto-main--prod-server-crawling-barrons
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
