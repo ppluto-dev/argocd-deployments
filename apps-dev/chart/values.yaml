@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-breaking-news
+    path: auto_branch_pushes/sungbin/hotfix-breaking-news/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-breaking-news
   - name: yansfil--fix-deployment-scrollable
     path: auto_branch_pushes/yansfil/fix-deployment-scrollable/ppluto-main/overlays/dev/
     namespace: yansfil--fix-deployment-scrollable
