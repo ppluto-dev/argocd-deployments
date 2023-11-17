@@ -5,15 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--fix-deployment-scrollable
-    path: auto_branch_pushes/yansfil/fix-deployment-scrollable/ppluto-main/overlays/dev/
-    namespace: yansfil--fix-deployment-scrollable
   - name: yansfil--fix-llm-stringify-circular
     path: auto_branch_pushes/yansfil/fix-llm-stringify-circular/ppluto-main/overlays/dev/
     namespace: yansfil--fix-llm-stringify-circular
-  - name: sg--fix-crawling-time-duration
-    path: auto_branch_pushes/sg/fix-crawling-time-duration/ppluto-main/overlays/dev/
-    namespace: sg--fix-crawling-time-duration
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
