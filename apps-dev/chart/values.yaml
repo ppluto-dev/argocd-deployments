@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-parsing-fail-log
+    path: auto_branch_pushes/sg/fix-parsing-fail-log/ppluto-main/overlays/dev/
+    namespace: sg--fix-parsing-fail-log
   - name: sg--fix-benzinga-times
     path: auto_branch_pushes/sg/fix-benzinga-times/ppluto-main/overlays/dev/
     namespace: sg--fix-benzinga-times
