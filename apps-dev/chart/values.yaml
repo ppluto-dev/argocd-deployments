@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-1-min-brief-weekends
+    path: auto_branch_pushes/banggre/add-1-min-brief-weekends/ppluto-main/overlays/dev/
+    namespace: banggre--add-1-min-brief-weekends
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
