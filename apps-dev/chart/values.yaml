@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-bloomberg-crwaling
+    path: auto_branch_pushes/sg/fix-bloomberg-crwaling/ppluto-main/overlays/dev/
+    namespace: sg--fix-bloomberg-crwaling
   - name: banggre--wip-event-monitoring
     path: auto_branch_pushes/banggre/wip-event-monitoring/ppluto-main/overlays/dev/
     namespace: banggre--wip-event-monitoring
