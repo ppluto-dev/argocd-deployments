@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-cnbc-crawling
+    path: auto_branch_pushes/sg/fix-cnbc-crawling/ppluto-main/overlays/dev/
+    namespace: sg--fix-cnbc-crawling
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
