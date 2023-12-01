@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: renovate--material-ui-monorepo
+    path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
+    namespace: renovate--material-ui-monorepo
+  - name: renovate--swc-monorepo
+    path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
+    namespace: renovate--swc-monorepo
   - name: minwook--add-pipeline-batch-run-to-user-id-idx
     path: auto_branch_pushes/minwook/add-pipeline-batch-run-to-user-id-idx/ppluto-main/overlays/dev/
     namespace: minwook--add-pipeline-batch-run-to-user-id-idx
