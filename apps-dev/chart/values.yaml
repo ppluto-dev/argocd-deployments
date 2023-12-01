@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: minwook-pluto--add-admin-minwook
+    path: auto_branch_pushes/minwook-pluto/add-admin-minwook/ppluto-main/overlays/dev/
+    namespace: minwook-pluto--add-admin-minwook
   - name: minwook-pluto--expand-panel-area
     path: auto_branch_pushes/minwook-pluto/expand-panel-area/ppluto-main/overlays/dev/
     namespace: minwook-pluto--expand-panel-area
