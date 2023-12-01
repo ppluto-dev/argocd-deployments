@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: minwook-pluto--expand-panel-area
+    path: auto_branch_pushes/minwook-pluto/expand-panel-area/ppluto-main/overlays/dev/
+    namespace: minwook-pluto--expand-panel-area
   - name: sungbin--gaia-add-csv-copy-column-feature
     path: auto_branch_pushes/sungbin/gaia-add-csv-copy-column-feature/ppluto-main/overlays/dev/
     namespace: sungbin--gaia-add-csv-copy-column-feature
