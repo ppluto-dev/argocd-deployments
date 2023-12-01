@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: minwook--add-pipeline-batch-run-to-user-id-idx
+    path: auto_branch_pushes/minwook/add-pipeline-batch-run-to-user-id-idx/ppluto-main/overlays/dev/
+    namespace: minwook--add-pipeline-batch-run-to-user-id-idx
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
