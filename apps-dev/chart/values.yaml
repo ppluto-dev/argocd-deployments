@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--toggl-language
+    path: auto_branch_pushes/mk/toggl-language/ppluto-main/overlays/dev/
+    namespace: mk--toggl-language
   - name: yansfil--prompt-node-maxtoken-dynamic
     path: auto_branch_pushes/yansfil/prompt-node-maxtoken-dynamic/ppluto-main/overlays/dev/
     namespace: yansfil--prompt-node-maxtoken-dynamic
