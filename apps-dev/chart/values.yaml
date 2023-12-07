@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--vendor-hash-test
+    path: auto_branch_pushes/kkimdev/vendor-hash-test/ppluto-main/overlays/dev/
+    namespace: kkimdev--vendor-hash-test
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
