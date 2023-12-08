@@ -19,7 +19,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-marketwatch
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -52,7 +52,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-summarize
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -85,7 +85,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-thestreet
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -118,7 +118,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-tipranks
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -151,7 +151,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-vectorizer
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -184,7 +184,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-bloomberg
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -217,7 +217,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-cnbc
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -250,7 +250,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-financial-times
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -283,7 +283,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-trading-view
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -316,7 +316,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-barrons
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -349,7 +349,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-wsj
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -382,7 +382,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-benzinga
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -415,7 +415,7 @@ spec:
         - name: ppluto-main--prod-server-crawling-newsletter
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -448,7 +448,7 @@ spec:
         - name: ppluto-main--prod-server-create-custom-data-document
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -481,7 +481,7 @@ spec:
         - name: ppluto-main--prod-server-create-news-contents
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -514,7 +514,7 @@ spec:
         - name: ppluto-main--prod-server-update-vector-status-outdated
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
@@ -547,7 +547,7 @@ spec:
         - name: ppluto-main--prod-server-create-article-summary
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
-            - name: PPLUTO_SERVER
+            - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
