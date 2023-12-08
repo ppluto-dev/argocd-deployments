@@ -32,6 +32,14 @@ spec:
                 name: ppluto-main-service
                 port:
                   number: 83
+          # prerender.io service
+          - path: /https://
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-prerender-service
+                port:
+                  number: 5088
           - path: /
             pathType: Prefix
             backend:
