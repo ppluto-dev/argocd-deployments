@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-barrons
+    path: auto_branch_pushes/sg/fix-barrons/ppluto-main/overlays/dev/
+    namespace: sg--fix-barrons
   - name: yansfil--add-promptsnapshot-metadata
     path: auto_branch_pushes/yansfil/add-promptsnapshot-metadata/ppluto-main/overlays/dev/
     namespace: yansfil--add-promptsnapshot-metadata
