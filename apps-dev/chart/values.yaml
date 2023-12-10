@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-qa-func
+    path: auto_branch_pushes/sg/add-qa-func/ppluto-main/overlays/dev/
+    namespace: sg--add-qa-func
   - name: mk--tickerbell-main-v2
     path: auto_branch_pushes/mk/tickerbell-main-v2/ppluto-main/overlays/dev/
     namespace: mk--tickerbell-main-v2
