@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--k8s-aws
+    path: auto_branch_pushes/kkimdev/k8s-aws/ppluto-main/overlays/dev/
+    namespace: kkimdev--k8s-aws
   - name: mk--tickerbell-main-v2
     path: auto_branch_pushes/mk/tickerbell-main-v2/ppluto-main/overlays/dev/
     namespace: mk--tickerbell-main-v2
