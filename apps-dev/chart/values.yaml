@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-debounce-after-loading
+    path: auto_branch_pushes/yansfil/fix-debounce-after-loading/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-debounce-after-loading
   - name: mk--tickerbell-main-v2
     path: auto_branch_pushes/mk/tickerbell-main-v2/ppluto-main/overlays/dev/
     namespace: mk--tickerbell-main-v2
