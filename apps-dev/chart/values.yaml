@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--fix-duplicate-report
+    path: auto_branch_pushes/mk/fix-duplicate-report/ppluto-main/overlays/dev/
+    namespace: mk--fix-duplicate-report
   - name: kkimdev--prerender-on
     path: auto_branch_pushes/kkimdev/prerender-on/ppluto-main/overlays/dev/
     namespace: kkimdev--prerender-on
