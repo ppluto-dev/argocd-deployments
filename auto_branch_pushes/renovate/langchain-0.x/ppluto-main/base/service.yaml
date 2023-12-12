@@ -35,3 +35,17 @@ spec:
       protocol: TCP
       port: 83
       targetPort: 83
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ppluto-main-prerender-service
+spec:
+  selector:
+    app: ppluto-main-prerender
+  ports:
+    - name: prerender
+      protocol: TCP
+      port: 5088
+      targetPort: 5088
