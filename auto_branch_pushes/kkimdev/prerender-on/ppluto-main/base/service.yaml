@@ -45,7 +45,7 @@ spec:
   selector:
     app: ppluto-main-prerender
   ports:
-    - name: grpc-web # Envoy
+    - name: prerender # Envoy
       protocol: TCP
-      port: 82
-      targetPort: 82
+      port: 5088
+      targetPort: 5088

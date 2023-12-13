@@ -34,13 +34,13 @@ spec:
                 port:
                   number: 83
           # prerender.io service
-          - path: /http
+          - path: /prerender
             pathType: Prefix
             backend:
               service:
                 name: ppluto-main-prerender-service
                 port:
-                  number: 82
+                  number: 5088
           - path: /
             pathType: Prefix
             backend:
