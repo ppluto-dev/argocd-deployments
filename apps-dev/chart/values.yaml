@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--add-hide-content
+    path: auto_branch_pushes/sungbin/add-hide-content/ppluto-main/overlays/dev/
+    namespace: sungbin--add-hide-content
   - name: kkimdev--ddd-format
     path: auto_branch_pushes/kkimdev/ddd-format/ppluto-main/overlays/dev/
     namespace: kkimdev--ddd-format
