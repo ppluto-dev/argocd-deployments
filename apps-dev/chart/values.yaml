@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ddd-format
+    path: auto_branch_pushes/kkimdev/ddd-format/ppluto-main/overlays/dev/
+    namespace: kkimdev--ddd-format
+  - name: yansfil--update-event-schema
+    path: auto_branch_pushes/yansfil/update-event-schema/ppluto-main/overlays/dev/
+    namespace: yansfil--update-event-schema
   - name: kkimdev--prerender-on
     path: auto_branch_pushes/kkimdev/prerender-on/ppluto-main/overlays/dev/
     namespace: kkimdev--prerender-on
