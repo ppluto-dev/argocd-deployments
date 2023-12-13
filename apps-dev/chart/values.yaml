@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--fix-tickerbell-clear-page
+    path: auto_branch_pushes/mk/fix-tickerbell-clear-page/ppluto-main/overlays/dev/
+    namespace: mk--fix-tickerbell-clear-page
   - name: banggre--for-pipleline-classify-logic
     path: auto_branch_pushes/banggre/for-pipleline-classify-logic/ppluto-main/overlays/dev/
     namespace: banggre--for-pipleline-classify-logic
