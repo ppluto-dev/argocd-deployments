@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--for-pipleline-classify-logic
+    path: auto_branch_pushes/banggre/for-pipleline-classify-logic/ppluto-main/overlays/dev/
+    namespace: banggre--for-pipleline-classify-logic
   - name: mk--delete-origin-referral
     path: auto_branch_pushes/mk/delete-origin-referral/ppluto-main/overlays/dev/
     namespace: mk--delete-origin-referral
