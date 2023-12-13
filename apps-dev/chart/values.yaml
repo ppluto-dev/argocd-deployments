@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--fix-navbar-bottomline
+    path: auto_branch_pushes/mk/fix-navbar-bottomline/ppluto-main/overlays/dev/
+    namespace: mk--fix-navbar-bottomline
   - name: banggre--fix-pipeline-version-name
     path: auto_branch_pushes/banggre/fix-pipeline-version-name/ppluto-main/overlays/dev/
     namespace: banggre--fix-pipeline-version-name
   - name: sungbin--add-hide-content
     path: auto_branch_pushes/sungbin/add-hide-content/ppluto-main/overlays/dev/
     namespace: sungbin--add-hide-content
-  - name: kkimdev--ddd-format
-    path: auto_branch_pushes/kkimdev/ddd-format/ppluto-main/overlays/dev/
-    namespace: kkimdev--ddd-format
   - name: kkimdev--prerender-on
     path: auto_branch_pushes/kkimdev/prerender-on/ppluto-main/overlays/dev/
     namespace: kkimdev--prerender-on
