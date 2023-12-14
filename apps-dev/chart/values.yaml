@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--change-weekends-topic-gen
+    path: auto_branch_pushes/banggre/change-weekends-topic-gen/ppluto-main/overlays/dev/
+    namespace: banggre--change-weekends-topic-gen
   - name: mk--update-ui-feedback
     path: auto_branch_pushes/mk/update-ui-feedback/ppluto-main/overlays/dev/
     namespace: mk--update-ui-feedback
