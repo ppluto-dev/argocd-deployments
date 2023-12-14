@@ -1,0 +1,560 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-marketwatch
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-marketwatch
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-marketwatch
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-marketwatch
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_MARKETWATCH
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-summarize
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-summarize
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-summarize
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-summarize
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_SUMMARIZE
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-thestreet
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-thestreet
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-thestreet
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-thestreet
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_THESTREET
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-tipranks
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-tipranks
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-tipranks
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-tipranks
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_TIPRANKS
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-vectorizer
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-vectorizer
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-vectorizer
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-vectorizer
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_VECTORIZER
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-bloomberg
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-bloomberg
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-bloomberg
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-bloomberg
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_BLOOMBERG
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-cnbc
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-cnbc
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-cnbc
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-cnbc
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_CNBC
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-financial-times
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-financial-times
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-financial-times
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-financial-times
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_FINANCIAL_TIMES
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-trading-view
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-trading-view
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-trading-view
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-trading-view
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_TRADINGVIEW
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-barrons
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-barrons
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-barrons
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-barrons
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_BRRONS
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-wsj
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-wsj
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-wsj
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-wsj
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_WSJ
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-benzinga
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-benzinga
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-benzinga
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-benzinga
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_BENZINGA
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-newsletter
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-newsletter
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-newsletter
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-newsletter
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_NEWSLETTER
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-create-custom-data-document
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-create-custom-data-document
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-create-custom-data-document
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-create-custom-data-document
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_DOCUMENT_TO_CUSTOM_DATA_DOCUMENT
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-create-news-contents
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-create-news-contents
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-create-news-contents
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-create-news-contents
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_CREATE_NEWS_CONTENTS_FROM_CUSTOM_DATA_DOCUMENT
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-update-vector-status-outdated
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-update-vector-status-outdated
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-update-vector-status-outdated
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-update-vector-status-outdated
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_UPDATE_VECTOR_STATUS_OUTDATED
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-create-article-summary
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-create-article-summary
+  replicas: 0 # To be replaced
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-create-article-summary
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-create-article-summary
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_ARTICLE_SUMMARIZE
+              value: "true"
+          resources:
+            requests:
+              ephemeral-storage: "1Gi"
+            limits:
+              ephemeral-storage: "3Gi"
