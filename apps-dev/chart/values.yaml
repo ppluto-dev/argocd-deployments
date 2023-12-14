@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-unchanged-language
+    path: auto_branch_pushes/sungbin/fix-unchanged-language/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-unchanged-language
   - name: mk--update-ui-feedback
     path: auto_branch_pushes/mk/update-ui-feedback/ppluto-main/overlays/dev/
     namespace: mk--update-ui-feedback
