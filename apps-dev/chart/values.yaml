@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: mk--update-ui-feedback
-    path: auto_branch_pushes/mk/update-ui-feedback/ppluto-main/overlays/dev/
-    namespace: mk--update-ui-feedback
+  - name: kkimdev--graceful-proto-api
+    path: auto_branch_pushes/kkimdev/graceful-proto-api/ppluto-main/overlays/dev/
+    namespace: kkimdev--graceful-proto-api
+  - name: sg--fix-images-order
+    path: auto_branch_pushes/sg/fix-images-order/ppluto-main/overlays/dev/
+    namespace: sg--fix-images-order
   - name: banggre--fix-pipeline-version-name
     path: auto_branch_pushes/banggre/fix-pipeline-version-name/ppluto-main/overlays/dev/
     namespace: banggre--fix-pipeline-version-name
