@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--serif-markdown
+    path: auto_branch_pushes/kkimdev/serif-markdown/ppluto-main/overlays/dev/
+    namespace: kkimdev--serif-markdown
   - name: mk--update-ui-feedback
     path: auto_branch_pushes/mk/update-ui-feedback/ppluto-main/overlays/dev/
     namespace: mk--update-ui-feedback
