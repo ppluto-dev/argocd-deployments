@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--font-kr
+    path: auto_branch_pushes/kkimdev/font-kr/ppluto-main/overlays/dev/
+    namespace: kkimdev--font-kr
   - name: mk--fix-article-summary-detail-index
     path: auto_branch_pushes/mk/fix-article-summary-detail-index/ppluto-main/overlays/dev/
     namespace: mk--fix-article-summary-detail-index
