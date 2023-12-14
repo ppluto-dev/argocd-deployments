@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--fix-build-fail
+    path: auto_branch_pushes/mk/fix-build-fail/ppluto-main/overlays/dev/
+    namespace: mk--fix-build-fail
   - name: banggre--fix-pipeline-version-name
     path: auto_branch_pushes/banggre/fix-pipeline-version-name/ppluto-main/overlays/dev/
     namespace: banggre--fix-pipeline-version-name
