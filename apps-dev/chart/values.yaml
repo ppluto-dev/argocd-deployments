@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-reporter-language
+    path: auto_branch_pushes/sungbin/fix-reporter-language/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-reporter-language
   - name: mk--fix-build-fail
     path: auto_branch_pushes/mk/fix-build-fail/ppluto-main/overlays/dev/
     namespace: mk--fix-build-fail
