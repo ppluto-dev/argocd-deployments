@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-og-image
+    path: auto_branch_pushes/sg/fix-og-image/ppluto-main/overlays/dev/
+    namespace: sg--fix-og-image
   - name: banggre--fix-pipeline-version-name
     path: auto_branch_pushes/banggre/fix-pipeline-version-name/ppluto-main/overlays/dev/
     namespace: banggre--fix-pipeline-version-name
