@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-live-update-crawling
+    path: auto_branch_pushes/sg/fix-live-update-crawling/ppluto-main/overlays/dev/
+    namespace: sg--fix-live-update-crawling
   - name: sungbn--fix-hidefullcontent-html
     path: auto_branch_pushes/sungbn/fix-hidefullcontent-html/ppluto-main/overlays/dev/
     namespace: sungbn--fix-hidefullcontent-html
