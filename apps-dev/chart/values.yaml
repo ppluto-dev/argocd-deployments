@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--projectpluto-text-update
+    path: auto_branch_pushes/kkimdev/projectpluto-text-update/ppluto-main/overlays/dev/
+    namespace: kkimdev--projectpluto-text-update
   - name: mk--update-ui-feedback2
     path: auto_branch_pushes/mk/update-ui-feedback2/ppluto-main/overlays/dev/
     namespace: mk--update-ui-feedback2
