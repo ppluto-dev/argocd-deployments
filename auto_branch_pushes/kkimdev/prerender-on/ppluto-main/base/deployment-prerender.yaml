@@ -21,6 +21,7 @@ spec:
               value: prerender
           ports:
             - containerPort: 5088
+            - containerPort: 5089
           readinessProbe:
             # TODO: We should also check the status code
             tcpSocket:
