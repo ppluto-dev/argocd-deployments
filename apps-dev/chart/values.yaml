@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--og-nginx
+    path: auto_branch_pushes/kkimdev/og-nginx/ppluto-main/overlays/dev/
+    namespace: kkimdev--og-nginx
   - name: sg--remove-dsclaimer-newsletter
     path: auto_branch_pushes/sg/remove-dsclaimer-newsletter/ppluto-main/overlays/dev/
     namespace: sg--remove-dsclaimer-newsletter
