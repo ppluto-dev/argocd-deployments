@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-article-image-body
+    path: auto_branch_pushes/sungbin/fix-article-image-body/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-article-image-body
   - name: sg--remove-dsclaimer-newsletter
     path: auto_branch_pushes/sg/remove-dsclaimer-newsletter/ppluto-main/overlays/dev/
     namespace: sg--remove-dsclaimer-newsletter
