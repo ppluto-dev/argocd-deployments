@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--seo-register-sitemap
+    path: auto_branch_pushes/mk/seo-register-sitemap/ppluto-main/overlays/dev/
+    namespace: mk--seo-register-sitemap
   - name: yansfil--add-target-prop-to-viewpage
     path: auto_branch_pushes/yansfil/add-target-prop-to-viewpage/ppluto-main/overlays/dev/
     namespace: yansfil--add-target-prop-to-viewpage
