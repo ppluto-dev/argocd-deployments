@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-telegram-send-titles
+    path: auto_branch_pushes/banggre/add-telegram-send-titles/ppluto-main/overlays/dev/
+    namespace: banggre--add-telegram-send-titles
   - name: mk--change-market-wrap-datasource
     path: auto_branch_pushes/mk/change-market-wrap-datasource/ppluto-main/overlays/dev/
     namespace: mk--change-market-wrap-datasource
