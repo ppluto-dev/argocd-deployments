@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-cnbc-temp-2
+    path: auto_branch_pushes/sg/fix-cnbc-temp-2/ppluto-main/overlays/dev/
+    namespace: sg--fix-cnbc-temp-2
   - name: yansfil--add-target-prop-to-viewpage
     path: auto_branch_pushes/yansfil/add-target-prop-to-viewpage/ppluto-main/overlays/dev/
     namespace: yansfil--add-target-prop-to-viewpage
