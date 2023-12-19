@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--upgrade-og-seo
+    path: auto_branch_pushes/mk/upgrade-og-seo/ppluto-main/overlays/dev/
+    namespace: mk--upgrade-og-seo
   - name: yansfil--add-target-prop-to-viewpage
     path: auto_branch_pushes/yansfil/add-target-prop-to-viewpage/ppluto-main/overlays/dev/
     namespace: yansfil--add-target-prop-to-viewpage
-  - name: yansfil--add-prompt-async-run
-    path: auto_branch_pushes/yansfil/add-prompt-async-run/ppluto-main/overlays/dev/
-    namespace: yansfil--add-prompt-async-run
   - name: kkimdev--projectpluto-text-update
     path: auto_branch_pushes/kkimdev/projectpluto-text-update/ppluto-main/overlays/dev/
     namespace: kkimdev--projectpluto-text-update
