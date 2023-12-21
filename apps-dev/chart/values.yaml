@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-telegram
+    path: auto_branch_pushes/banggre/update-telegram/ppluto-main/overlays/dev/
+    namespace: banggre--update-telegram
   - name: mk--seo
     path: auto_branch_pushes/mk/seo/ppluto-main/overlays/dev/
     namespace: mk--seo
