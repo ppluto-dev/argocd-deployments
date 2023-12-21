@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--nginx-prerender-specialcase
+    path: auto_branch_pushes/kkimdev/nginx-prerender-specialcase/ppluto-main/overlays/dev/
+    namespace: kkimdev--nginx-prerender-specialcase
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
