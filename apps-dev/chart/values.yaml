@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-headlines-list
+    path: auto_branch_pushes/banggre/update-headlines-list/ppluto-main/overlays/dev/
+    namespace: banggre--update-headlines-list
   - name: kkimdev--nginx-prerender-specialcase
     path: auto_branch_pushes/kkimdev/nginx-prerender-specialcase/ppluto-main/overlays/dev/
     namespace: kkimdev--nginx-prerender-specialcase
