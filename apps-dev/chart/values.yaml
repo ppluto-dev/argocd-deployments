@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-logging-in-code
+    path: auto_branch_pushes/yansfil/update-logging-in-code/ppluto-main/overlays/dev/
+    namespace: yansfil--update-logging-in-code
   - name: sg--fix-alert-body
     path: auto_branch_pushes/sg/fix-alert-body/ppluto-main/overlays/dev/
     namespace: sg--fix-alert-body
