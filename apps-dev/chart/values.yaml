@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-code-node-types
+    path: auto_branch_pushes/yansfil/fix-code-node-types/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-code-node-types
   - name: kkimdev--root-prerender-skip
     path: auto_branch_pushes/kkimdev/root-prerender-skip/ppluto-main/overlays/dev/
     namespace: kkimdev--root-prerender-skip
