@@ -15,7 +15,7 @@ metadata:
     alb.ingress.kubernetes.io/idle-timeout: "300" # idle timeout for ALB (TODO: reset to 60 and handle the long latency connection in the other way)
 spec:
   rules:
-    # tickerbell.com
+    # tickerbell.ai
     - host: HOST_NAME_PLACEHOLDER_0
       http:
         paths:
@@ -34,13 +34,20 @@ spec:
                 port:
                   number: 83
           # prerender.io service
-          - path: /http
+          - path: /prerender
             pathType: Prefix
             backend:
               service:
                 name: ppluto-main-prerender-service
                 port:
                   number: 5088
+          - path: /rss
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service
+                port:
+                  number: 83
           - path: /sitemap
             pathType: Prefix
             backend:
@@ -75,7 +82,7 @@ spec:
                 port:
                   number: 82
 
-    # www.projectpluto.co (Company website)
+    # projectpluto.co (Company website)
     - host: HOST_NAME_PLACEHOLDER_3
       http:
         paths:
