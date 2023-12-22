@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: renovate--swc-monorepo
+    path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
+    namespace: renovate--swc-monorepo
   - name: sungbin--market-summary-thumbnail
     path: auto_branch_pushes/sungbin/market-summary-thumbnail/ppluto-main/overlays/dev/
     namespace: sungbin--market-summary-thumbnail
