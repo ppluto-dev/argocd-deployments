@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--update-marketwrap-image-picker
+    path: auto_branch_pushes/mk/update-marketwrap-image-picker/ppluto-main/overlays/dev/
+    namespace: mk--update-marketwrap-image-picker
   - name: banggre--update-telegram-live-channel
     path: auto_branch_pushes/banggre/update-telegram-live-channel/ppluto-main/overlays/dev/
     namespace: banggre--update-telegram-live-channel
