@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--disable-cache
+    path: auto_branch_pushes/mk/disable-cache/ppluto-main/overlays/dev/
+    namespace: mk--disable-cache
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
