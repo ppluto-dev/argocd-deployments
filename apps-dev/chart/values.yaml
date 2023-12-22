@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--og-proxy-test
+    path: auto_branch_pushes/kkimdev/og-proxy-test/ppluto-main/overlays/dev/
+    namespace: kkimdev--og-proxy-test
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
