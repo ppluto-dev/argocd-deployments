@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-telegram-live-channel
+    path: auto_branch_pushes/banggre/update-telegram-live-channel/ppluto-main/overlays/dev/
+    namespace: banggre--update-telegram-live-channel
+  - name: sungbin--edit-market-summary
+    path: auto_branch_pushes/sungbin/edit-market-summary/ppluto-main/overlays/dev/
+    namespace: sungbin--edit-market-summary
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
