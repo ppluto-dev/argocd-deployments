@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-telegram-contents
+    path: auto_branch_pushes/banggre/update-telegram-contents/ppluto-main/overlays/dev/
+    namespace: banggre--update-telegram-contents
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
