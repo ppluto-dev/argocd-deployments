@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-custom-translation-list
+    path: auto_branch_pushes/sungbin/fix-custom-translation-list/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-custom-translation-list
   - name: mk--fix-marketwrap-unique-url-not-null
     path: auto_branch_pushes/mk/fix-marketwrap-unique-url-not-null/ppluto-main/overlays/dev/
     namespace: mk--fix-marketwrap-unique-url-not-null
