@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--og-memory-cache
+    path: auto_branch_pushes/kkimdev/og-memory-cache/ppluto-main/overlays/dev/
+    namespace: kkimdev--og-memory-cache
   - name: kkimdev--og-redirect-fix
     path: auto_branch_pushes/kkimdev/og-redirect-fix/ppluto-main/overlays/dev/
     namespace: kkimdev--og-redirect-fix
