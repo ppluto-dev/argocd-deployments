@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--delete-category-text-telegram
+    path: auto_branch_pushes/banggre/delete-category-text-telegram/ppluto-main/overlays/dev/
+    namespace: banggre--delete-category-text-telegram
   - name: mk--fix-marketwrap-unique-url-not-null
     path: auto_branch_pushes/mk/fix-marketwrap-unique-url-not-null/ppluto-main/overlays/dev/
     namespace: mk--fix-marketwrap-unique-url-not-null
