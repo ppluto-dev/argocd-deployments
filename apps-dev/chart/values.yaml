@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--fix-twitter-og-image
+    path: auto_branch_pushes/mk/fix-twitter-og-image/ppluto-main/overlays/dev/
+    namespace: mk--fix-twitter-og-image
+  - name: kkimdev--og-redirect-fix-2
+    path: auto_branch_pushes/kkimdev/og-redirect-fix-2/ppluto-main/overlays/dev/
+    namespace: kkimdev--og-redirect-fix-2
   - name: kkimdev--og-redirect-fix
     path: auto_branch_pushes/kkimdev/og-redirect-fix/ppluto-main/overlays/dev/
     namespace: kkimdev--og-redirect-fix
