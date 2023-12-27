@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--add-language-toggle
+    path: auto_branch_pushes/sungbin/add-language-toggle/ppluto-main/overlays/dev/
+    namespace: sungbin--add-language-toggle
+  - name: mk--update-marketwrap-ui
+    path: auto_branch_pushes/mk/update-marketwrap-ui/ppluto-main/overlays/dev/
+    namespace: mk--update-marketwrap-ui
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
