@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--admin-exclusive-research2
+    path: auto_branch_pushes/sungbin/admin-exclusive-research2/ppluto-main/overlays/dev/
+    namespace: sungbin--admin-exclusive-research2
   - name: sungbin--add-language-toggle
     path: auto_branch_pushes/sungbin/add-language-toggle/ppluto-main/overlays/dev/
     namespace: sungbin--add-language-toggle
