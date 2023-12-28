@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--add-twitter-https
+    path: auto_branch_pushes/mk/add-twitter-https/ppluto-main/overlays/dev/
+    namespace: mk--add-twitter-https
   - name: mk--add-category-list
     path: auto_branch_pushes/mk/add-category-list/ppluto-main/overlays/dev/
     namespace: mk--add-category-list
