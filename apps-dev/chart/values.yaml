@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--fix-mobile-meta-article-font-size
+    path: auto_branch_pushes/mk/fix-mobile-meta-article-font-size/ppluto-main/overlays/dev/
+    namespace: mk--fix-mobile-meta-article-font-size
   - name: mk--fix-tweet-v2
     path: auto_branch_pushes/mk/fix-tweet-v2/ppluto-main/overlays/dev/
     namespace: mk--fix-tweet-v2
