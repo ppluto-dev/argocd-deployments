@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--update-robot-txt
+    path: auto_branch_pushes/mk/update-robot-txt/ppluto-main/overlays/dev/
+    namespace: mk--update-robot-txt
   - name: mk--fix-tweet-v2
     path: auto_branch_pushes/mk/fix-tweet-v2/ppluto-main/overlays/dev/
     namespace: mk--fix-tweet-v2
