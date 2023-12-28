@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--update-ui-feedback
+    path: auto_branch_pushes/mk/update-ui-feedback/ppluto-main/overlays/dev/
+    namespace: mk--update-ui-feedback
+  - name: sungbin--admin-fix-ui
+    path: auto_branch_pushes/sungbin/admin-fix-ui/ppluto-main/overlays/dev/
+    namespace: sungbin--admin-fix-ui
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
