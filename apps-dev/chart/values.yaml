@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--add-image-rss
+    path: auto_branch_pushes/mk/add-image-rss/ppluto-main/overlays/dev/
+    namespace: mk--add-image-rss
   - name: mk--avoid-dup-tweet
     path: auto_branch_pushes/mk/avoid-dup-tweet/ppluto-main/overlays/dev/
     namespace: mk--avoid-dup-tweet
