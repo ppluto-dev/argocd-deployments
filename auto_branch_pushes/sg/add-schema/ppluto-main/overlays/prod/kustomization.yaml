@@ -92,6 +92,14 @@ patches:
 
   - target:
       kind: Deployment
+      name: ppluto-main-crawling-barrons-ticker
+    patch: |
+      - op: replace
+        path: /spec/replicas
+        value: 1
+
+  - target:
+      kind: Deployment
       name: ppluto-main-crawling-wsj
     patch: |
       - op: replace
