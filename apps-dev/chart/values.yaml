@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-search-and-bookmark
+    path: auto_branch_pushes/sg/fix-search-and-bookmark/ppluto-main/overlays/dev/
+    namespace: sg--fix-search-and-bookmark
   - name: sg--add-schema
     path: auto_branch_pushes/sg/add-schema/ppluto-main/overlays/dev/
     namespace: sg--add-schema
