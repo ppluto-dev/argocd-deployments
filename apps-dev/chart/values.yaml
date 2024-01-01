@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--article-detail-update-ui
+    path: auto_branch_pushes/banggre/article-detail-update-ui/ppluto-main/overlays/dev/
+    namespace: banggre--article-detail-update-ui
   - name: mk--fix-article-list-page-ui
     path: auto_branch_pushes/mk/fix-article-list-page-ui/ppluto-main/overlays/dev/
     namespace: mk--fix-article-list-page-ui
