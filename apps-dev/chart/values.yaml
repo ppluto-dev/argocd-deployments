@@ -5,21 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sg--change-account
-    path: auto_branch_pushes/sg/change-account/ppluto-main/overlays/dev/
-    namespace: sg--change-account
-  - name: sg--fix-wsj
-    path: auto_branch_pushes/sg/fix-wsj/ppluto-main/overlays/dev/
-    namespace: sg--fix-wsj
+  - name: mk--avoid-dup-tweet
+    path: auto_branch_pushes/mk/avoid-dup-tweet/ppluto-main/overlays/dev/
+    namespace: mk--avoid-dup-tweet
   - name: banggre--article-detail-update-ui
     path: auto_branch_pushes/banggre/article-detail-update-ui/ppluto-main/overlays/dev/
     namespace: banggre--article-detail-update-ui
   - name: mk--fix-article-list-page-ui
     path: auto_branch_pushes/mk/fix-article-list-page-ui/ppluto-main/overlays/dev/
     namespace: mk--fix-article-list-page-ui
-  - name: renovate--material-ui-monorepo
-    path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
-    namespace: renovate--material-ui-monorepo
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
