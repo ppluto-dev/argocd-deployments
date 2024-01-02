@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--fix-article-list-page-ui
+    path: auto_branch_pushes/mk/fix-article-list-page-ui/ppluto-main/overlays/dev/
+    namespace: mk--fix-article-list-page-ui
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
