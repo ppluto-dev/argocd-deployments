@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--add-indexnow
+    path: auto_branch_pushes/mk/add-indexnow/ppluto-main/overlays/dev/
+    namespace: mk--add-indexnow
   - name: yansfil--add-market-wrap-sources
     path: auto_branch_pushes/yansfil/add-market-wrap-sources/ppluto-main/overlays/dev/
     namespace: yansfil--add-market-wrap-sources
