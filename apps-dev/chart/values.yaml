@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-prompt-foldertree
+    path: auto_branch_pushes/yansfil/fix-prompt-foldertree/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-prompt-foldertree
   - name: yansfil--add-market-wrap-sources
     path: auto_branch_pushes/yansfil/add-market-wrap-sources/ppluto-main/overlays/dev/
     namespace: yansfil--add-market-wrap-sources
