@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--ssr
+    path: auto_branch_pushes/mk/ssr/ppluto-main/overlays/dev/
+    namespace: mk--ssr
   - name: yansfil--add-deploy-id-search
     path: auto_branch_pushes/yansfil/add-deploy-id-search/ppluto-main/overlays/dev/
     namespace: yansfil--add-deploy-id-search
