@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--block-retry-article-over-maximum
+    path: auto_branch_pushes/banggre/block-retry-article-over-maximum/ppluto-main/overlays/dev/
+    namespace: banggre--block-retry-article-over-maximum
   - name: mk--ssr
     path: auto_branch_pushes/mk/ssr/ppluto-main/overlays/dev/
     namespace: mk--ssr
