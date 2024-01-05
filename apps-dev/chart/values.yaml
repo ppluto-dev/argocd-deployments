@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--delete-logged-link
+    path: auto_branch_pushes/banggre/delete-logged-link/ppluto-main/overlays/dev/
+    namespace: banggre--delete-logged-link
   - name: sungbin--add-url-path
     path: auto_branch_pushes/sungbin/add-url-path/ppluto-main/overlays/dev/
     namespace: sungbin--add-url-path
