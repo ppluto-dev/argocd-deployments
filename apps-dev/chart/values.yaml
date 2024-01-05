@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--add-url-path
+    path: auto_branch_pushes/sungbin/add-url-path/ppluto-main/overlays/dev/
+    namespace: sungbin--add-url-path
   - name: mk--ssr
     path: auto_branch_pushes/mk/ssr/ppluto-main/overlays/dev/
     namespace: mk--ssr
