@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-excel-view-in-runboard
+    path: auto_branch_pushes/yansfil/add-excel-view-in-runboard/ppluto-main/overlays/dev/
+    namespace: yansfil--add-excel-view-in-runboard
   - name: sungin--manual-test-code
     path: auto_branch_pushes/sungin/manual-test-code/ppluto-main/overlays/dev/
     namespace: sungin--manual-test-code
