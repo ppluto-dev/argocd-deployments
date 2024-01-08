@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--block-marketwrap-duplicated
+    path: auto_branch_pushes/banggre/block-marketwrap-duplicated/ppluto-main/overlays/dev/
+    namespace: banggre--block-marketwrap-duplicated
   - name: mk--ssr
     path: auto_branch_pushes/mk/ssr/ppluto-main/overlays/dev/
     namespace: mk--ssr
