@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--delete-footnote-from-code
+    path: auto_branch_pushes/banggre/delete-footnote-from-code/ppluto-main/overlays/dev/
+    namespace: banggre--delete-footnote-from-code
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
