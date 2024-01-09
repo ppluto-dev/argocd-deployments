@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-nodes-prompt-unsave
+    path: auto_branch_pushes/yansfil/fix-nodes-prompt-unsave/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-nodes-prompt-unsave
   - name: sungbin--migration-test-code
     path: auto_branch_pushes/sungbin/migration-test-code/ppluto-main/overlays/dev/
     namespace: sungbin--migration-test-code
