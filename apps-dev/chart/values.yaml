@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--comment-out-test
+    path: auto_branch_pushes/yansfil/comment-out-test/ppluto-main/overlays/dev/
+    namespace: yansfil--comment-out-test
+  - name: sungbin--preset-switch
+    path: auto_branch_pushes/sungbin/preset-switch/ppluto-main/overlays/dev/
+    namespace: sungbin--preset-switch
   - name: sungbin--migration-test-code
     path: auto_branch_pushes/sungbin/migration-test-code/ppluto-main/overlays/dev/
     namespace: sungbin--migration-test-code
