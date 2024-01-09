@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--client-article
+    path: auto_branch_pushes/sungbin/client-article/ppluto-main/overlays/dev/
+    namespace: sungbin--client-article
   - name: yansfil--add-evaluation-schema
     path: auto_branch_pushes/yansfil/add-evaluation-schema/ppluto-main/overlays/dev/
     namespace: yansfil--add-evaluation-schema
