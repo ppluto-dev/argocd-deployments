@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-bloomberg
+    path: auto_branch_pushes/sg/fix-bloomberg/ppluto-main/overlays/dev/
+    namespace: sg--fix-bloomberg
   - name: mk--nextjs
     path: auto_branch_pushes/mk/nextjs/ppluto-main/overlays/dev/
     namespace: mk--nextjs
   - name: sungbin--client-article
     path: auto_branch_pushes/sungbin/client-article/ppluto-main/overlays/dev/
     namespace: sungbin--client-article
-  - name: mk--ssr
-    path: auto_branch_pushes/mk/ssr/ppluto-main/overlays/dev/
-    namespace: mk--ssr
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
