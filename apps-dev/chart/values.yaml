@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-send-message
+    path: auto_branch_pushes/banggre/fix-send-message/ppluto-main/overlays/dev/
+    namespace: banggre--fix-send-message
   - name: mk--nextjs
     path: auto_branch_pushes/mk/nextjs/ppluto-main/overlays/dev/
     namespace: mk--nextjs
