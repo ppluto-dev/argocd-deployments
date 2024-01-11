@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--deduct-language-fix-url
+    path: auto_branch_pushes/banggre/deduct-language-fix-url/ppluto-main/overlays/dev/
+    namespace: banggre--deduct-language-fix-url
   - name: mk--nxt
     path: auto_branch_pushes/mk/nxt/ppluto-main/overlays/dev/
     namespace: mk--nxt
