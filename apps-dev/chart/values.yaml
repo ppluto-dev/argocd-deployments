@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--seo
+    path: auto_branch_pushes/sungbin/seo/ppluto-main/overlays/dev/
+    namespace: sungbin--seo
   - name: sg--fix-newsletter-crawling-time
     path: auto_branch_pushes/sg/fix-newsletter-crawling-time/ppluto-main/overlays/dev/
     namespace: sg--fix-newsletter-crawling-time
