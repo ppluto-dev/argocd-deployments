@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--deduct-streetlive-from-all-news
+    path: auto_branch_pushes/banggre/deduct-streetlive-from-all-news/ppluto-main/overlays/dev/
+    namespace: banggre--deduct-streetlive-from-all-news
   - name: mk--nextjs
     path: auto_branch_pushes/mk/nextjs/ppluto-main/overlays/dev/
     namespace: mk--nextjs
