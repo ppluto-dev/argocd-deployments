@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-newsletter-crawling-time
+    path: auto_branch_pushes/sg/fix-newsletter-crawling-time/ppluto-main/overlays/dev/
+    namespace: sg--fix-newsletter-crawling-time
   - name: banggre--deduct-language-fix-url
     path: auto_branch_pushes/banggre/deduct-language-fix-url/ppluto-main/overlays/dev/
     namespace: banggre--deduct-language-fix-url
