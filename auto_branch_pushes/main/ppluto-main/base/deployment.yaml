@@ -17,16 +17,26 @@ spec:
         - name: ppluto-main--prod-client
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:UNSPECIFIED
           ports:
-            - containerPort: 80
             - containerPort: 8003
             - containerPort: 8004
+          resources:
+            limits:
+              ephemeral-storage: "1Gi"
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 60"]
+        - name: ppluto-main--prod-client-tickerbell
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:UNSPECIFIED
+          ports:
+            - containerPort: 5080
           readinessProbe:
             httpGet:
-              port: 80
+              port: 5080
               path: /
           livenessProbe:
             httpGet:
-              port: 80
+              port: 5080
               path: /
           resources:
             limits:
@@ -35,7 +45,6 @@ spec:
             preStop:
               exec:
                 command: ["/bin/sh", "-c", "sleep 60"]
-
         - name: ppluto-main--prod-server
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
@@ -60,6 +69,5 @@ spec:
             preStop:
               exec:
                 command: ["/bin/sh", "-c", "sleep 60"]
-
       imagePullSecrets:
         - name: gitlab-container-registry
