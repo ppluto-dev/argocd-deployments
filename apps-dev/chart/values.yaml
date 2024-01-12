@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--live-page
+    path: auto_branch_pushes/banggre/live-page/ppluto-main/overlays/dev/
+    namespace: banggre--live-page
   - name: sg--fix-wsj-crawling
     path: auto_branch_pushes/sg/fix-wsj-crawling/ppluto-main/overlays/dev/
     namespace: sg--fix-wsj-crawling
