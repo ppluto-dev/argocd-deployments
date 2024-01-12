@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--migrate-indexnow
+    path: auto_branch_pushes/mk/migrate-indexnow/ppluto-main/overlays/dev/
+    namespace: mk--migrate-indexnow
   - name: banggre--live-page
     path: auto_branch_pushes/banggre/live-page/ppluto-main/overlays/dev/
     namespace: banggre--live-page
-  - name: sg--fix-wsj-crawling
-    path: auto_branch_pushes/sg/fix-wsj-crawling/ppluto-main/overlays/dev/
-    namespace: sg--fix-wsj-crawling
   - name: mk--nxt
     path: auto_branch_pushes/mk/nxt/ppluto-main/overlays/dev/
     namespace: mk--nxt
