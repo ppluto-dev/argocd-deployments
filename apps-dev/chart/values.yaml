@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--misc-ui
+    path: auto_branch_pushes/kkimdev/misc-ui/ppluto-main/overlays/dev/
+    namespace: kkimdev--misc-ui
   - name: sg--add-mixpanel-articles
     path: auto_branch_pushes/sg/add-mixpanel-articles/ppluto-main/overlays/dev/
     namespace: sg--add-mixpanel-articles
