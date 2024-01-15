@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-additional-feed
+    path: auto_branch_pushes/banggre/add-additional-feed/ppluto-main/overlays/dev/
+    namespace: banggre--add-additional-feed
   - name: mk--fix-favicon
     path: auto_branch_pushes/mk/fix-favicon/ppluto-main/overlays/dev/
     namespace: mk--fix-favicon
