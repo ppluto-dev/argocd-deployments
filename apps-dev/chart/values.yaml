@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-load-testset
+    path: auto_branch_pushes/yansfil/add-load-testset/ppluto-main/overlays/dev/
+    namespace: yansfil--add-load-testset
   - name: kkimdev--dockerfile
     path: auto_branch_pushes/kkimdev/dockerfile/ppluto-main/overlays/dev/
     namespace: kkimdev--dockerfile
