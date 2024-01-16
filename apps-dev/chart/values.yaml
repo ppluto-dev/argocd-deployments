@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-sitemap
+    path: auto_branch_pushes/banggre/update-sitemap/ppluto-main/overlays/dev/
+    namespace: banggre--update-sitemap
   - name: yansfil--refactor-openai-keys
     path: auto_branch_pushes/yansfil/refactor-openai-keys/ppluto-main/overlays/dev/
     namespace: yansfil--refactor-openai-keys
