@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--article-related-question-ui
+    path: auto_branch_pushes/banggre/article-related-question-ui/ppluto-main/overlays/dev/
+    namespace: banggre--article-related-question-ui
   - name: sungbin--ssr-tmp
     path: auto_branch_pushes/sungbin/ssr-tmp/ppluto-main/overlays/dev/
     namespace: sungbin--ssr-tmp
