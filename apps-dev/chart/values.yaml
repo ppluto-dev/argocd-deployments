@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--gaia-654
+    path: auto_branch_pushes/mk/gaia-654/ppluto-main/overlays/dev/
+    namespace: mk--gaia-654
   - name: banggre--stop-telegram
     path: auto_branch_pushes/banggre/stop-telegram/ppluto-main/overlays/dev/
     namespace: banggre--stop-telegram
