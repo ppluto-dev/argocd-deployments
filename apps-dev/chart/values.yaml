@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-server-moitoring-ch
+    path: auto_branch_pushes/yansfil/add-server-moitoring-ch/ppluto-main/overlays/dev/
+    namespace: yansfil--add-server-moitoring-ch
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
