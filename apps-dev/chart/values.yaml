@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-wsj-2
+    path: auto_branch_pushes/sg/fix-wsj-2/ppluto-main/overlays/dev/
+    namespace: sg--fix-wsj-2
   - name: yansfil--disable-to-enable-cache
     path: auto_branch_pushes/yansfil/disable-to-enable-cache/ppluto-main/overlays/dev/
     namespace: yansfil--disable-to-enable-cache
