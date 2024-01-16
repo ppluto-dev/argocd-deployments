@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--replace-main-left-widget
+    path: auto_branch_pushes/banggre/replace-main-left-widget/ppluto-main/overlays/dev/
+    namespace: banggre--replace-main-left-widget
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
