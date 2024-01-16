@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-barrons
+    path: auto_branch_pushes/sg/fix-barrons/ppluto-main/overlays/dev/
+    namespace: sg--fix-barrons
   - name: yansfil--refactor-openai-keys
     path: auto_branch_pushes/yansfil/refactor-openai-keys/ppluto-main/overlays/dev/
     namespace: yansfil--refactor-openai-keys
