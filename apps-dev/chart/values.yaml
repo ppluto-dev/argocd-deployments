@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-streetlive-widget
+    path: auto_branch_pushes/banggre/update-streetlive-widget/ppluto-main/overlays/dev/
+    namespace: banggre--update-streetlive-widget
   - name: sungbin--ssr-tmp3
     path: auto_branch_pushes/sungbin/ssr-tmp3/ppluto-main/overlays/dev/
     namespace: sungbin--ssr-tmp3
-  - name: banggre--fix-expect-not-nil
-    path: auto_branch_pushes/banggre/fix-expect-not-nil/ppluto-main/overlays/dev/
-    namespace: banggre--fix-expect-not-nil
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
