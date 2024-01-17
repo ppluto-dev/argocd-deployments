@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--reenable-bundle-analyzer
+    path: auto_branch_pushes/kkimdev/reenable-bundle-analyzer/ppluto-main/overlays/dev/
+    namespace: kkimdev--reenable-bundle-analyzer
   - name: banggre--fix-expect-not-nil
     path: auto_branch_pushes/banggre/fix-expect-not-nil/ppluto-main/overlays/dev/
     namespace: banggre--fix-expect-not-nil
