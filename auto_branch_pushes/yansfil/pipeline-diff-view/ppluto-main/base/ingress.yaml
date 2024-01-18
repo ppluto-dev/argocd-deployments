@@ -5,7 +5,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/target-group-attributes: stickiness.enabled=true,stickiness.lb_cookie.duration_seconds=60 # Sticky session for rolling release stability.
+    alb.ingress.kubernetes.io/target-group-attributes: stickiness.enabled=false
     alb.ingress.kubernetes.io/group.name: ppluto-main # the same group belongs to the same ALB (https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/annotations/#group.name)
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
@@ -23,14 +23,14 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 82
           - path: /api/auth
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 83
           # prerender.io service
@@ -45,41 +45,41 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 83
           - path: /sitemap
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 83
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 80
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: HOST_NAME_PLACEHOLDER_0
+    - host: HOST_NAME_PLACEHOLDER_1
       http:
         paths:
           - path: /api
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 82
           - path: /api/auth
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 83
           # prerender.io service
@@ -94,21 +94,21 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 83
           - path: /sitemap
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 83
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 80
 
@@ -120,14 +120,14 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 8003
           - path: /api
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 82
 
@@ -139,13 +139,13 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 8004
           - path: /api
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-service
+                name: ppluto-main-service-active
                 port:
                   number: 82
