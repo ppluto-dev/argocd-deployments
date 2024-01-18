@@ -4,7 +4,9 @@
 - op: replace
   path: /spec/rules/0/host
   value: main---tickerbell.auto-branch-pushes.ppluto-main.ppluto.dev
-# NOTE: Skip wallstreet-now.com as it's identical to tickerbell.ai.
+- op: replace
+  path: /spec/rules/1/host
+  value: main---wallstreetnow.auto-branch-pushes.ppluto-main.ppluto.dev
 - op: replace
   path: /spec/rules/2/host
   value: main---gaia.auto-branch-pushes.ppluto-main.ppluto.dev
