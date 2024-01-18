@@ -1,5 +1,5 @@
-kind: Deployment
-apiVersion: apps/v1
+kind: Rollout
+apiVersion: argoproj.io/v1alpha1
 metadata:
   name: ppluto-main
 spec:
@@ -7,6 +7,7 @@ spec:
     matchLabels:
       app: ppluto-main
   replicas: 0 # To be replaced
+  revisionHistoryLimit: 2
   template:
     metadata:
       labels:
@@ -71,3 +72,8 @@ spec:
                 command: ["/bin/sh", "-c", "sleep 60"]
       imagePullSecrets:
         - name: gitlab-container-registry
+  strategy:
+    blueGreen:
+      activeService: ppluto-main-service-active
+      previewService: ppluto-main-service-preview
+      autoPromotionEnabled: true
