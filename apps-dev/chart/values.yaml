@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--debug-eslint
+    path: auto_branch_pushes/kkimdev/debug-eslint/ppluto-main/overlays/dev/
+    namespace: kkimdev--debug-eslint
   - name: sg--fix-font
     path: auto_branch_pushes/sg/fix-font/ppluto-main/overlays/dev/
     namespace: sg--fix-font
-  - name: banggre--update-streetlive-widget
-    path: auto_branch_pushes/banggre/update-streetlive-widget/ppluto-main/overlays/dev/
-    namespace: banggre--update-streetlive-widget
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
