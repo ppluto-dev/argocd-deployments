@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-newsletter-path
+    path: auto_branch_pushes/sungbin/hotfix-newsletter-path/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-newsletter-path
   - name: yansfil--llm-for-debugging
     path: auto_branch_pushes/yansfil/llm-for-debugging/ppluto-main/overlays/dev/
     namespace: yansfil--llm-for-debugging
