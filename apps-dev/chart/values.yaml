@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-login-dynamic
+    path: auto_branch_pushes/sungbin/hotfix-login-dynamic/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-login-dynamic
   - name: sg--fix-opti
     path: auto_branch_pushes/sg/fix-opti/ppluto-main/overlays/dev/
     namespace: sg--fix-opti
