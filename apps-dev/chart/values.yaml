@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--left-side-widget
+    path: auto_branch_pushes/banggre/left-side-widget/ppluto-main/overlays/dev/
+    namespace: banggre--left-side-widget
   - name: kkimdev--debug-eslint
     path: auto_branch_pushes/kkimdev/debug-eslint/ppluto-main/overlays/dev/
     namespace: kkimdev--debug-eslint
