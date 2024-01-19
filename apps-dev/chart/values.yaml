@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--qa-ssr
+    path: auto_branch_pushes/banggre/qa-ssr/ppluto-main/overlays/dev/
+    namespace: banggre--qa-ssr
+  - name: yansfil--update-appbarlayout
+    path: auto_branch_pushes/yansfil/update-appbarlayout/ppluto-main/overlays/dev/
+    namespace: yansfil--update-appbarlayout
   - name: yansfil--chore-run-feature
     path: auto_branch_pushes/yansfil/chore-run-feature/ppluto-main/overlays/dev/
     namespace: yansfil--chore-run-feature
