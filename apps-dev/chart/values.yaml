@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-opti
+    path: auto_branch_pushes/sg/fix-opti/ppluto-main/overlays/dev/
+    namespace: sg--fix-opti
   - name: kkimdev--eslint
     path: auto_branch_pushes/kkimdev/eslint/ppluto-main/overlays/dev/
     namespace: kkimdev--eslint
