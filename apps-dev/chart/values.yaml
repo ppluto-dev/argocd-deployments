@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-mobile-article
+    path: auto_branch_pushes/sungbin/hotfix-mobile-article/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-mobile-article
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
   - name: renovate--material-ui-monorepo
     path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--material-ui-monorepo
-  - name: sg--fix-opti
-    path: auto_branch_pushes/sg/fix-opti/ppluto-main/overlays/dev/
-    namespace: sg--fix-opti
   - name: kkimdev--eslint
     path: auto_branch_pushes/kkimdev/eslint/ppluto-main/overlays/dev/
     namespace: kkimdev--eslint
