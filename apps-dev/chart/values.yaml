@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-admin-edit
+    path: auto_branch_pushes/sungbin/hotfix-admin-edit/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-admin-edit
   - name: banggre--add-bitcoin-ticker
     path: auto_branch_pushes/banggre/add-bitcoin-ticker/ppluto-main/overlays/dev/
     namespace: banggre--add-bitcoin-ticker
