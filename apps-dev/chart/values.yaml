@@ -5,9 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-bitcoin-ticker
+    path: auto_branch_pushes/banggre/add-bitcoin-ticker/ppluto-main/overlays/dev/
+    namespace: banggre--add-bitcoin-ticker
   - name: yansfil--runboard-sticky-header
     path: auto_branch_pushes/yansfil/runboard-sticky-header/ppluto-main/overlays/dev/
     namespace: yansfil--runboard-sticky-header
+  - name: kkimdev--cache
+    path: auto_branch_pushes/kkimdev/cache/ppluto-main/overlays/dev/
+    namespace: kkimdev--cache
   - name: renovate--swc-monorepo
     path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
     namespace: renovate--swc-monorepo
