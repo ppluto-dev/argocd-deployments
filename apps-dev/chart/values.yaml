@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--enhance-mixpanel-identify
+    path: auto_branch_pushes/yansfil/enhance-mixpanel-identify/ppluto-main/overlays/dev/
+    namespace: yansfil--enhance-mixpanel-identify
   - name: sungbin--hotfix-custom-card-width
     path: auto_branch_pushes/sungbin/hotfix-custom-card-width/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-custom-card-width
