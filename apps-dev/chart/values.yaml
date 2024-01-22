@@ -5,18 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sg--fix-app-name
-    path: auto_branch_pushes/sg/fix-app-name/ppluto-main/overlays/dev/
-    namespace: sg--fix-app-name
-  - name: renovate--swc-monorepo
-    path: auto_branch_pushes/renovate/swc-monorepo/ppluto-main/overlays/dev/
-    namespace: renovate--swc-monorepo
-  - name: renovate--material-ui-monorepo
-    path: auto_branch_pushes/renovate/material-ui-monorepo/ppluto-main/overlays/dev/
-    namespace: renovate--material-ui-monorepo
-  - name: kkimdev--eslint
-    path: auto_branch_pushes/kkimdev/eslint/ppluto-main/overlays/dev/
-    namespace: kkimdev--eslint
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
