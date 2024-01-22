@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-custom-card-width
+    path: auto_branch_pushes/sungbin/hotfix-custom-card-width/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-custom-card-width
   - name: mk--prompt-playground
     path: auto_branch_pushes/mk/prompt-playground/ppluto-main/overlays/dev/
     namespace: mk--prompt-playground
