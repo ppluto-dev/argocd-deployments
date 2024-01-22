@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-google-search
+    path: auto_branch_pushes/banggre/update-google-search/ppluto-main/overlays/dev/
+    namespace: banggre--update-google-search
   - name: sg--fix-app-name
     path: auto_branch_pushes/sg/fix-app-name/ppluto-main/overlays/dev/
     namespace: sg--fix-app-name
