@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungin--hotfix-loginpage
+    path: auto_branch_pushes/sungin/hotfix-loginpage/ppluto-main/overlays/dev/
+    namespace: sungin--hotfix-loginpage
   - name: sungbin--hotfix-seo
     path: auto_branch_pushes/sungbin/hotfix-seo/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-seo
