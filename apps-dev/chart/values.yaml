@@ -5,6 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--gaia-661
+    path: auto_branch_pushes/mk/gaia-661/ppluto-main/overlays/dev/
+    namespace: mk--gaia-661
+  - name: yansfil--show-alert-prompt-load
+    path: auto_branch_pushes/yansfil/show-alert-prompt-load/ppluto-main/overlays/dev/
+    namespace: yansfil--show-alert-prompt-load
+  - name: sungbin--ko-user-auth
+    path: auto_branch_pushes/sungbin/ko-user-auth/ppluto-main/overlays/dev/
+    namespace: sungbin--ko-user-auth
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
