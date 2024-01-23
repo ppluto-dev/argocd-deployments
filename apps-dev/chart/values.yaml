@@ -5,15 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: banggre--handle-agg
-    path: auto_branch_pushes/banggre/handle-agg/ppluto-main/overlays/dev/
-    namespace: banggre--handle-agg
+  - name: sungbin--hotfix-seo
+    path: auto_branch_pushes/sungbin/hotfix-seo/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-seo
   - name: sungbin--symbol-article
     path: auto_branch_pushes/sungbin/symbol-article/ppluto-main/overlays/dev/
     namespace: sungbin--symbol-article
-  - name: sg--fix-app-name
-    path: auto_branch_pushes/sg/fix-app-name/ppluto-main/overlays/dev/
-    namespace: sg--fix-app-name
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
