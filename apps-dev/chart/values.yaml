@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-admin-edit2
+    path: auto_branch_pushes/sungbin/hotfix-admin-edit2/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-admin-edit2
   - name: sungbin--ticker-band
     path: auto_branch_pushes/sungbin/ticker-band/ppluto-main/overlays/dev/
     namespace: sungbin--ticker-band
