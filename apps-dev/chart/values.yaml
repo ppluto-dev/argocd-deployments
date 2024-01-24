@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--article-symbol-widget
+    path: auto_branch_pushes/sungbin/article-symbol-widget/ppluto-main/overlays/dev/
+    namespace: sungbin--article-symbol-widget
   - name: banggre--update-article-detail-tickergpt
     path: auto_branch_pushes/banggre/update-article-detail-tickergpt/ppluto-main/overlays/dev/
     namespace: banggre--update-article-detail-tickergpt
