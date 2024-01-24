@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-article-edit3
+    path: auto_branch_pushes/sungbin/hotfix-article-edit3/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-article-edit3
   - name: yansfil--fix-missing-edges
     path: auto_branch_pushes/yansfil/fix-missing-edges/ppluto-main/overlays/dev/
     namespace: yansfil--fix-missing-edges
