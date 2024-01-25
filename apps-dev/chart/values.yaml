@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-node-tree-panel
+    path: auto_branch_pushes/yansfil/add-node-tree-panel/ppluto-main/overlays/dev/
+    namespace: yansfil--add-node-tree-panel
   - name: sungbin--hotfix-search-article
     path: auto_branch_pushes/sungbin/hotfix-search-article/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-search-article
