@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-search-article
+    path: auto_branch_pushes/sungbin/hotfix-search-article/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-search-article
   - name: yansfil--fix-pipeline-abort
     path: auto_branch_pushes/yansfil/fix-pipeline-abort/ppluto-main/overlays/dev/
     namespace: yansfil--fix-pipeline-abort
