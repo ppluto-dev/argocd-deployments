@@ -5,12 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-finacnegpt-page
+    path: auto_branch_pushes/banggre/update-finacnegpt-page/ppluto-main/overlays/dev/
+    namespace: banggre--update-finacnegpt-page
+  - name: sg--fix-image-crawling
+    path: auto_branch_pushes/sg/fix-image-crawling/ppluto-main/overlays/dev/
+    namespace: sg--fix-image-crawling
   - name: sungbin--hotfix-search-article
     path: auto_branch_pushes/sungbin/hotfix-search-article/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-search-article
-  - name: yansfil--fix-pipeline-abort
-    path: auto_branch_pushes/yansfil/fix-pipeline-abort/ppluto-main/overlays/dev/
-    namespace: yansfil--fix-pipeline-abort
   - name: sungbin--article-symbol-widget
     path: auto_branch_pushes/sungbin/article-symbol-widget/ppluto-main/overlays/dev/
     namespace: sungbin--article-symbol-widget
