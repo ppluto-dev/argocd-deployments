@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--article-tickers
+    path: auto_branch_pushes/sungbin/article-tickers/ppluto-main/overlays/dev/
+    namespace: sungbin--article-tickers
   - name: sungbin--hotfix-search-article
     path: auto_branch_pushes/sungbin/hotfix-search-article/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-search-article
-  - name: sungbin--article-symbol-widget
-    path: auto_branch_pushes/sungbin/article-symbol-widget/ppluto-main/overlays/dev/
-    namespace: sungbin--article-symbol-widget
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
