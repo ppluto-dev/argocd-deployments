@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-icons
+    path: auto_branch_pushes/sg/fix-icons/ppluto-main/overlays/dev/
+    namespace: sg--fix-icons
   - name: yansfil--show-warning-others-save-p
     path: auto_branch_pushes/yansfil/show-warning-others-save-p/ppluto-main/overlays/dev/
     namespace: yansfil--show-warning-others-save-p
