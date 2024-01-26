@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mk--update-admin-thumbnail-image
+    path: auto_branch_pushes/mk/update-admin-thumbnail-image/ppluto-main/overlays/dev/
+    namespace: mk--update-admin-thumbnail-image
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
