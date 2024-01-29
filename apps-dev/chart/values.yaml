@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-financegpt-ui-animation
+    path: auto_branch_pushes/banggre/update-financegpt-ui-animation/ppluto-main/overlays/dev/
+    namespace: banggre--update-financegpt-ui-animation
+  - name: yansfil--remove-min-read
+    path: auto_branch_pushes/yansfil/remove-min-read/ppluto-main/overlays/dev/
+    namespace: yansfil--remove-min-read
   - name: yansfil--update-llm
     path: auto_branch_pushes/yansfil/update-llm/ppluto-main/overlays/dev/
     namespace: yansfil--update-llm
