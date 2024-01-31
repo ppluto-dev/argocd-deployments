@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-prompt-provider
+    path: auto_branch_pushes/yansfil/fix-prompt-provider/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-prompt-provider
   - name: banggre--update-seo
     path: auto_branch_pushes/banggre/update-seo/ppluto-main/overlays/dev/
     namespace: banggre--update-seo
