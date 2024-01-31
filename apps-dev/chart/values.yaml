@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-textdecoration-safari
+    path: auto_branch_pushes/banggre/fix-textdecoration-safari/ppluto-main/overlays/dev/
+    namespace: banggre--fix-textdecoration-safari
   - name: yansfil--update-llm
     path: auto_branch_pushes/yansfil/update-llm/ppluto-main/overlays/dev/
     namespace: yansfil--update-llm
