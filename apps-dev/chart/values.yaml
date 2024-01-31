@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-thumbnail
+    path: auto_branch_pushes/sg/fix-thumbnail/ppluto-main/overlays/dev/
+    namespace: sg--fix-thumbnail
   - name: banggre--fix-textdecoration-safari
     path: auto_branch_pushes/banggre/fix-textdecoration-safari/ppluto-main/overlays/dev/
     namespace: banggre--fix-textdecoration-safari
