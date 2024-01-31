@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--revert-twitter-utm
+    path: auto_branch_pushes/yansfil/revert-twitter-utm/ppluto-main/overlays/dev/
+    namespace: yansfil--revert-twitter-utm
   - name: yansfil--remove-min-read
     path: auto_branch_pushes/yansfil/remove-min-read/ppluto-main/overlays/dev/
     namespace: yansfil--remove-min-read
