@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-vdb
+    path: auto_branch_pushes/sg/fix-vdb/ppluto-main/overlays/dev/
+    namespace: sg--fix-vdb
+  - name: banggre--add-keywords
+    path: auto_branch_pushes/banggre/add-keywords/ppluto-main/overlays/dev/
+    namespace: banggre--add-keywords
   - name: yansfil--revert-twitter-utm
     path: auto_branch_pushes/yansfil/revert-twitter-utm/ppluto-main/overlays/dev/
     namespace: yansfil--revert-twitter-utm
