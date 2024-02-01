@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--tailwind-appy
+    path: auto_branch_pushes/yansfil/tailwind-appy/ppluto-main/overlays/dev/
+    namespace: yansfil--tailwind-appy
   - name: banggre--add-article-setting
     path: auto_branch_pushes/banggre/add-article-setting/ppluto-main/overlays/dev/
     namespace: banggre--add-article-setting
