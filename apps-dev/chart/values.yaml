@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-article-setting
+    path: auto_branch_pushes/banggre/add-article-setting/ppluto-main/overlays/dev/
+    namespace: banggre--add-article-setting
   - name: kkimdev--cookie-update
     path: auto_branch_pushes/kkimdev/cookie-update/ppluto-main/overlays/dev/
     namespace: kkimdev--cookie-update
