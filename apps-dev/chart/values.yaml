@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--remove-dev-errors
+    path: auto_branch_pushes/yansfil/remove-dev-errors/ppluto-main/overlays/dev/
+    namespace: yansfil--remove-dev-errors
   - name: kkimdev--cookie-update
     path: auto_branch_pushes/kkimdev/cookie-update/ppluto-main/overlays/dev/
     namespace: kkimdev--cookie-update
