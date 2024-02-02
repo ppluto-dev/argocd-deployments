@@ -5,18 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-upper
+    path: auto_branch_pushes/sg/fix-upper/ppluto-main/overlays/dev/
+    namespace: sg--fix-upper
+  - name: banggre--add-tech-ai
+    path: auto_branch_pushes/banggre/add-tech-ai/ppluto-main/overlays/dev/
+    namespace: banggre--add-tech-ai
   - name: sg--fix-bloom-2
     path: auto_branch_pushes/sg/fix-bloom-2/ppluto-main/overlays/dev/
     namespace: sg--fix-bloom-2
-  - name: sg--fix-bloomberg
-    path: auto_branch_pushes/sg/fix-bloomberg/ppluto-main/overlays/dev/
-    namespace: sg--fix-bloomberg
-  - name: sg--fix-flutter
-    path: auto_branch_pushes/sg/fix-flutter/ppluto-main/overlays/dev/
-    namespace: sg--fix-flutter
-  - name: yansfil--update-mobile-ui
-    path: auto_branch_pushes/yansfil/update-mobile-ui/ppluto-main/overlays/dev/
-    namespace: yansfil--update-mobile-ui
   - name: kkimdev--main-page-cache
     path: auto_branch_pushes/kkimdev/main-page-cache/ppluto-main/overlays/dev/
     namespace: kkimdev--main-page-cache
