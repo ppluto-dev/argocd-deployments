@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-img-sizes-auto
+    path: auto_branch_pushes/yansfil/fix-img-sizes-auto/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-img-sizes-auto
   - name: sg--fix-upper
     path: auto_branch_pushes/sg/fix-upper/ppluto-main/overlays/dev/
     namespace: sg--fix-upper
