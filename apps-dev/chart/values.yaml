@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-bloom-2
+    path: auto_branch_pushes/sg/fix-bloom-2/ppluto-main/overlays/dev/
+    namespace: sg--fix-bloom-2
   - name: sg--fix-bloomberg
     path: auto_branch_pushes/sg/fix-bloomberg/ppluto-main/overlays/dev/
     namespace: sg--fix-bloomberg
