@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-googlesearch-limit
+    path: auto_branch_pushes/yansfil/fix-googlesearch-limit/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-googlesearch-limit
   - name: yansfil--performance-update
     path: auto_branch_pushes/yansfil/performance-update/ppluto-main/overlays/dev/
     namespace: yansfil--performance-update
