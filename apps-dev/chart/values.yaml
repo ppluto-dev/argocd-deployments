@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-category-related-problem
+    path: auto_branch_pushes/banggre/fix-category-related-problem/ppluto-main/overlays/dev/
+    namespace: banggre--fix-category-related-problem
   - name: yansfil--performance-update
     path: auto_branch_pushes/yansfil/performance-update/ppluto-main/overlays/dev/
     namespace: yansfil--performance-update
