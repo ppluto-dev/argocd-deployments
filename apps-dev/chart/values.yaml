@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-marketwatch
+    path: auto_branch_pushes/sg/add-marketwatch/ppluto-main/overlays/dev/
+    namespace: sg--add-marketwatch
   - name: yansfil--performance-update
     path: auto_branch_pushes/yansfil/performance-update/ppluto-main/overlays/dev/
     namespace: yansfil--performance-update
