@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-admin
+    path: auto_branch_pushes/sungbin/hotfix-admin/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-admin
   - name: banggre--fix-category-related-problem
     path: auto_branch_pushes/banggre/fix-category-related-problem/ppluto-main/overlays/dev/
     namespace: banggre--fix-category-related-problem
