@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-financegpt-answer
+    path: auto_branch_pushes/banggre/fix-financegpt-answer/ppluto-main/overlays/dev/
+    namespace: banggre--fix-financegpt-answer
   - name: sungbin--admin-article
     path: auto_branch_pushes/sungbin/admin-article/ppluto-main/overlays/dev/
     namespace: sungbin--admin-article
