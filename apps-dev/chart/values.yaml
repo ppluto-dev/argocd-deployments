@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-textarea-autosize
+    path: auto_branch_pushes/yansfil/update-textarea-autosize/ppluto-main/overlays/dev/
+    namespace: yansfil--update-textarea-autosize
   - name: yansfil--update-node-tree-1
     path: auto_branch_pushes/yansfil/update-node-tree-1/ppluto-main/overlays/dev/
     namespace: yansfil--update-node-tree-1
