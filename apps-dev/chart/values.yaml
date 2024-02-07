@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-subheader-translate
+    path: auto_branch_pushes/banggre/add-subheader-translate/ppluto-main/overlays/dev/
+    namespace: banggre--add-subheader-translate
   - name: yansfil--update-node-tree-1
     path: auto_branch_pushes/yansfil/update-node-tree-1/ppluto-main/overlays/dev/
     namespace: yansfil--update-node-tree-1
