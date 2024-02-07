@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-pipeline-viewer
+    path: auto_branch_pushes/yansfil/update-pipeline-viewer/ppluto-main/overlays/dev/
+    namespace: yansfil--update-pipeline-viewer
   - name: yansfil--add-once-rpcclient
     path: auto_branch_pushes/yansfil/add-once-rpcclient/ppluto-main/overlays/dev/
     namespace: yansfil--add-once-rpcclient
