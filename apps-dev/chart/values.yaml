@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-admin-view
+    path: auto_branch_pushes/sungbin/hotfix-admin-view/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-admin-view
   - name: yansfil--enable-revalidate-article
     path: auto_branch_pushes/yansfil/enable-revalidate-article/ppluto-main/overlays/dev/
     namespace: yansfil--enable-revalidate-article
