@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-modelname-2
+    path: auto_branch_pushes/yansfil/fix-modelname-2/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-modelname-2
   - name: kkimdev--main-page-cache
     path: auto_branch_pushes/kkimdev/main-page-cache/ppluto-main/overlays/dev/
     namespace: kkimdev--main-page-cache
