@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--upgrad-depend
+    path: auto_branch_pushes/kkimdev/upgrad-depend/ppluto-main/overlays/dev/
+    namespace: kkimdev--upgrad-depend
   - name: banggre--add-ticker-page
     path: auto_branch_pushes/banggre/add-ticker-page/ppluto-main/overlays/dev/
     namespace: banggre--add-ticker-page
