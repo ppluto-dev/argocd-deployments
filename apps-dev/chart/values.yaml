@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--add-analysis-chart
-    path: auto_branch_pushes/yansfil/add-analysis-chart/ppluto-main/overlays/dev/
-    namespace: yansfil--add-analysis-chart
+  - name: yansfil--fix-dashboard-show
+    path: auto_branch_pushes/yansfil/fix-dashboard-show/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-dashboard-show
+  - name: kkimdev--remove-prerender
+    path: auto_branch_pushes/kkimdev/remove-prerender/ppluto-main/overlays/dev/
+    namespace: kkimdev--remove-prerender
   - name: banggre--quotes-page
     path: auto_branch_pushes/banggre/quotes-page/ppluto-main/overlays/dev/
     namespace: banggre--quotes-page
