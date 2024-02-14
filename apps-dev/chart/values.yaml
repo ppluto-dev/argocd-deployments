@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--quotes-page
+    path: auto_branch_pushes/banggre/quotes-page/ppluto-main/overlays/dev/
+    namespace: banggre--quotes-page
   - name: yansfil--add-analysis-service-api
     path: auto_branch_pushes/yansfil/add-analysis-service-api/ppluto-main/overlays/dev/
     namespace: yansfil--add-analysis-service-api
