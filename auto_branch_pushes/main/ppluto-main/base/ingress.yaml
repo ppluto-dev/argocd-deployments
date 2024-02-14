@@ -33,12 +33,11 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
-          # prerender.io service
           - path: /wsrvProxy
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-prerender-service
+                name: ppluto-main-misc-service
                 port:
                   number: 5088
           - path: /rss
@@ -82,12 +81,11 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
-          # prerender.io service
           - path: /wsrvProxy
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-prerender-service
+                name: ppluto-main-misc-service
                 port:
                   number: 5088
           - path: /rss
@@ -131,12 +129,11 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
-          # prerender.io service
           - path: /wsrvProxy
             pathType: Prefix
             backend:
               service:
-                name: ppluto-main-prerender-service
+                name: ppluto-main-misc-service
                 port:
                   number: 5088
           - path: /rss
