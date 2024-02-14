@@ -154,3 +154,11 @@ patches:
       - op: replace
         path: /spec/replicas
         value: 1
+
+  - target:
+      kind: Deployment
+      name: ppluto-main-crawling-aggregate-prompt-runs
+    patch: |
+      - op: replace
+        path: /spec/replicas
+        value: 1
