@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-crawling-replicas
+    path: auto_branch_pushes/yansfil/fix-crawling-replicas/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-crawling-replicas
   - name: kkimdev--keytakways
     path: auto_branch_pushes/kkimdev/keytakways/ppluto-main/overlays/dev/
     namespace: kkimdev--keytakways
