@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-hourly-usage-prompt
+    path: auto_branch_pushes/yansfil/add-hourly-usage-prompt/ppluto-main/overlays/dev/
+    namespace: yansfil--add-hourly-usage-prompt
   - name: sungbin--mobile-ux
     path: auto_branch_pushes/sungbin/mobile-ux/ppluto-main/overlays/dev/
     namespace: sungbin--mobile-ux
