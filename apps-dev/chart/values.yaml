@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-label
+    path: auto_branch_pushes/sg/fix-label/ppluto-main/overlays/dev/
+    namespace: sg--fix-label
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
