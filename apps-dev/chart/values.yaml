@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--rename-chart-title
+    path: auto_branch_pushes/yansfil/rename-chart-title/ppluto-main/overlays/dev/
+    namespace: yansfil--rename-chart-title
   - name: sungbin--mobile-ux
     path: auto_branch_pushes/sungbin/mobile-ux/ppluto-main/overlays/dev/
     namespace: sungbin--mobile-ux
