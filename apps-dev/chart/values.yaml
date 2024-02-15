@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-marketwatch
+    path: auto_branch_pushes/sg/fix-marketwatch/ppluto-main/overlays/dev/
+    namespace: sg--fix-marketwatch
   - name: sungbin--mobile-ux
     path: auto_branch_pushes/sungbin/mobile-ux/ppluto-main/overlays/dev/
     namespace: sungbin--mobile-ux
