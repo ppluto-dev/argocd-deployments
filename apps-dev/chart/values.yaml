@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-deployment-dependent
+    path: auto_branch_pushes/yansfil/add-deployment-dependent/ppluto-main/overlays/dev/
+    namespace: yansfil--add-deployment-dependent
   - name: kkimdev--404
     path: auto_branch_pushes/kkimdev/404/ppluto-main/overlays/dev/
     namespace: kkimdev--404
