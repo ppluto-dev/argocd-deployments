@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--quotes-page-2
+    path: auto_branch_pushes/banggre/quotes-page-2/ppluto-main/overlays/dev/
+    namespace: banggre--quotes-page-2
+  - name: sungbin--hotfix-table-overflow
+    path: auto_branch_pushes/sungbin/hotfix-table-overflow/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-table-overflow
   - name: kkimdev--404
     path: auto_branch_pushes/kkimdev/404/ppluto-main/overlays/dev/
     namespace: kkimdev--404
