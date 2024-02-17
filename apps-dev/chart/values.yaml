@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--improve-article-search
+    path: auto_branch_pushes/banggre/improve-article-search/ppluto-main/overlays/dev/
+    namespace: banggre--improve-article-search
   - name: kkimdev--404
     path: auto_branch_pushes/kkimdev/404/ppluto-main/overlays/dev/
     namespace: kkimdev--404
