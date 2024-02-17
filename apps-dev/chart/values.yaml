@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-admin-subheader
+    path: auto_branch_pushes/sungbin/hotfix-admin-subheader/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-admin-subheader
   - name: kkimdev--404
     path: auto_branch_pushes/kkimdev/404/ppluto-main/overlays/dev/
     namespace: kkimdev--404
