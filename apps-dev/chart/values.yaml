@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-canonical
+    path: auto_branch_pushes/sg/fix-canonical/ppluto-main/overlays/dev/
+    namespace: sg--fix-canonical
   - name: kkimdev--404
     path: auto_branch_pushes/kkimdev/404/ppluto-main/overlays/dev/
     namespace: kkimdev--404
