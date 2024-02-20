@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-wall-street-now
+    path: auto_branch_pushes/sg/fix-wall-street-now/ppluto-main/overlays/dev/
+    namespace: sg--fix-wall-street-now
   - name: kkimdev--crawling-korean-articles
     path: auto_branch_pushes/kkimdev/crawling-korean-articles/ppluto-main/overlays/dev/
     namespace: kkimdev--crawling-korean-articles
