@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-backlogs-240221
+    path: auto_branch_pushes/yansfil/fix-backlogs-240221/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-backlogs-240221
+  - name: sungbin--mobile-main
+    path: auto_branch_pushes/sungbin/mobile-main/ppluto-main/overlays/dev/
+    namespace: sungbin--mobile-main
   - name: banggre--quote-page-5
     path: auto_branch_pushes/banggre/quote-page-5/ppluto-main/overlays/dev/
     namespace: banggre--quote-page-5
