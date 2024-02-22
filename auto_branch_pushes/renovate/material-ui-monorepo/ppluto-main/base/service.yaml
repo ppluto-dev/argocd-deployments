@@ -79,12 +79,12 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: ppluto-main-prerender-service
+  name: ppluto-main-misc-service
 spec:
   selector:
-    app: ppluto-main-prerender
+    app: ppluto-main-misc
   ports:
-    - name: prerender
+    - name: misc
       protocol: TCP
       port: 5088
       targetPort: 5088
