@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-article-chart-image
+    path: auto_branch_pushes/yansfil/add-article-chart-image/ppluto-main/overlays/dev/
+    namespace: yansfil--add-article-chart-image
   - name: sungbin--pagination-zustand
     path: auto_branch_pushes/sungbin/pagination-zustand/ppluto-main/overlays/dev/
     namespace: sungbin--pagination-zustand
