@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--custom-image-admin
+    path: auto_branch_pushes/sungbin/custom-image-admin/ppluto-main/overlays/dev/
+    namespace: sungbin--custom-image-admin
   - name: yansfil--prompt-modelname-
     path: auto_branch_pushes/yansfil/prompt-modelname-/ppluto-main/overlays/dev/
     namespace: yansfil--prompt-modelname-
