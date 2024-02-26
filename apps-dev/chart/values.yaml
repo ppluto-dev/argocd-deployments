@@ -5,9 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: yansfil--add-article-chart-image
-    path: auto_branch_pushes/yansfil/add-article-chart-image/ppluto-main/overlays/dev/
-    namespace: yansfil--add-article-chart-image
+  - name: sg--fix-gsearch
+    path: auto_branch_pushes/sg/fix-gsearch/ppluto-main/overlays/dev/
+    namespace: sg--fix-gsearch
+  - name: renovate--npm-vite-vulnerability
+    path: auto_branch_pushes/renovate/npm-vite-vulnerability/ppluto-main/overlays/dev/
+    namespace: renovate--npm-vite-vulnerability
+  - name: renovate--npm-zod-vulnerability
+    path: auto_branch_pushes/renovate/npm-zod-vulnerability/ppluto-main/overlays/dev/
+    namespace: renovate--npm-zod-vulnerability
+  - name: renovate--npm-nodemailer-vulnerability
+    path: auto_branch_pushes/renovate/npm-nodemailer-vulnerability/ppluto-main/overlays/dev/
+    namespace: renovate--npm-nodemailer-vulnerability
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
