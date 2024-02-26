@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--restore-premium
+    path: auto_branch_pushes/sg/restore-premium/ppluto-main/overlays/dev/
+    namespace: sg--restore-premium
+  - name: yansfil--chart-pipeline
+    path: auto_branch_pushes/yansfil/chart-pipeline/ppluto-main/overlays/dev/
+    namespace: yansfil--chart-pipeline
   - name: sungbin--headlines-page
     path: auto_branch_pushes/sungbin/headlines-page/ppluto-main/overlays/dev/
     namespace: sungbin--headlines-page
