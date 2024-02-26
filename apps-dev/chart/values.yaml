@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--retry-equities-multiview
+    path: auto_branch_pushes/banggre/retry-equities-multiview/ppluto-main/overlays/dev/
+    namespace: banggre--retry-equities-multiview
   - name: sg--restore-premium
     path: auto_branch_pushes/sg/restore-premium/ppluto-main/overlays/dev/
     namespace: sg--restore-premium
