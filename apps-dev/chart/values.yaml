@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--headlines-page
+    path: auto_branch_pushes/sungbin/headlines-page/ppluto-main/overlays/dev/
+    namespace: sungbin--headlines-page
   - name: sg--fix-gsearch
     path: auto_branch_pushes/sg/fix-gsearch/ppluto-main/overlays/dev/
     namespace: sg--fix-gsearch
