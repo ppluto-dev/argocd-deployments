@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-streetlive
+    path: auto_branch_pushes/sungbin/fix-streetlive/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-streetlive
   - name: banggre--streetview-add-date
     path: auto_branch_pushes/banggre/streetview-add-date/ppluto-main/overlays/dev/
     namespace: banggre--streetview-add-date
