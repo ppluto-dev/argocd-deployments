@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-blooomberg-html-parsing
+    path: auto_branch_pushes/sg/fix-blooomberg-html-parsing/ppluto-main/overlays/dev/
+    namespace: sg--fix-blooomberg-html-parsing
   - name: yansfil--fix-article-c-concurrency
     path: auto_branch_pushes/yansfil/fix-article-c-concurrency/ppluto-main/overlays/dev/
     namespace: yansfil--fix-article-c-concurrency
