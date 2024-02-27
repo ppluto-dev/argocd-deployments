@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-nyt-crawling
+    path: auto_branch_pushes/sg/add-nyt-crawling/ppluto-main/overlays/dev/
+    namespace: sg--add-nyt-crawling
   - name: yansfil--add-chart-live-page
     path: auto_branch_pushes/yansfil/add-chart-live-page/ppluto-main/overlays/dev/
     namespace: yansfil--add-chart-live-page
