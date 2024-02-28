@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-cronjob-article-image
+    path: auto_branch_pushes/yansfil/fix-cronjob-article-image/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-cronjob-article-image
   - name: yansfil--add-chart-live-page
     path: auto_branch_pushes/yansfil/add-chart-live-page/ppluto-main/overlays/dev/
     namespace: yansfil--add-chart-live-page
