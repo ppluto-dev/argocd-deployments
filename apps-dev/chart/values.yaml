@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--login-continue
+    path: auto_branch_pushes/sungbin/login-continue/ppluto-main/overlays/dev/
+    namespace: sungbin--login-continue
   - name: yansfil--fix-cronjob-article-image
     path: auto_branch_pushes/yansfil/fix-cronjob-article-image/ppluto-main/overlays/dev/
     namespace: yansfil--fix-cronjob-article-image
