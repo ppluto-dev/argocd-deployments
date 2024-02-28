@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-auth
+    path: auto_branch_pushes/sungbin/hotfix-auth/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-auth
   - name: yansfil--next-config-poweredby
     path: auto_branch_pushes/yansfil/next-config-poweredby/ppluto-main/overlays/dev/
     namespace: yansfil--next-config-poweredby
