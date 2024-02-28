@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--quote-page-7
+    path: auto_branch_pushes/banggre/quote-page-7/ppluto-main/overlays/dev/
+    namespace: banggre--quote-page-7
   - name: sungbin--login-continue
     path: auto_branch_pushes/sungbin/login-continue/ppluto-main/overlays/dev/
     namespace: sungbin--login-continue
