@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--next-config-poweredby
+    path: auto_branch_pushes/yansfil/next-config-poweredby/ppluto-main/overlays/dev/
+    namespace: yansfil--next-config-poweredby
   - name: yansfil--convert-streetlive-ssr
     path: auto_branch_pushes/yansfil/convert-streetlive-ssr/ppluto-main/overlays/dev/
     namespace: yansfil--convert-streetlive-ssr
