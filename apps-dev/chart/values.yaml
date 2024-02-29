@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-rss-sitemap
+    path: auto_branch_pushes/yansfil/update-rss-sitemap/ppluto-main/overlays/dev/
+    namespace: yansfil--update-rss-sitemap
   - name: banggre--add-other-view-type-in-article
     path: auto_branch_pushes/banggre/add-other-view-type-in-article/ppluto-main/overlays/dev/
     namespace: banggre--add-other-view-type-in-article
