@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-server-only
+    path: auto_branch_pushes/yansfil/add-server-only/ppluto-main/overlays/dev/
+    namespace: yansfil--add-server-only
   - name: sungbin--category
     path: auto_branch_pushes/sungbin/category/ppluto-main/overlays/dev/
     namespace: sungbin--category
