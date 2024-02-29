@@ -5,15 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-login-continue2
+    path: auto_branch_pushes/sungbin/hotfix-login-continue2/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-login-continue2
   - name: yansfil--fix-dynamic-render-force
     path: auto_branch_pushes/yansfil/fix-dynamic-render-force/ppluto-main/overlays/dev/
     namespace: yansfil--fix-dynamic-render-force
   - name: banggre--add-other-view-type-in-article
     path: auto_branch_pushes/banggre/add-other-view-type-in-article/ppluto-main/overlays/dev/
     namespace: banggre--add-other-view-type-in-article
-  - name: yansfil--convert-streetlive-ssr
-    path: auto_branch_pushes/yansfil/convert-streetlive-ssr/ppluto-main/overlays/dev/
-    namespace: yansfil--convert-streetlive-ssr
   - name: renovate--npm-vite-vulnerability
     path: auto_branch_pushes/renovate/npm-vite-vulnerability/ppluto-main/overlays/dev/
     namespace: renovate--npm-vite-vulnerability
