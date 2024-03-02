@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-twitter-parsing
+    path: auto_branch_pushes/banggre/fix-twitter-parsing/ppluto-main/overlays/dev/
+    namespace: banggre--fix-twitter-parsing
   - name: banggre--add-event-click-link-in-article
     path: auto_branch_pushes/banggre/add-event-click-link-in-article/ppluto-main/overlays/dev/
     namespace: banggre--add-event-click-link-in-article
