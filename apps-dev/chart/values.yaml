@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--server-structure
+    path: auto_branch_pushes/banggre/server-structure/ppluto-main/overlays/dev/
+    namespace: banggre--server-structure
   - name: banggre--add-event-click-link-in-article
     path: auto_branch_pushes/banggre/add-event-click-link-in-article/ppluto-main/overlays/dev/
     namespace: banggre--add-event-click-link-in-article
