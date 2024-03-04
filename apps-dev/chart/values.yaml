@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-tailwind-dynamic
+    path: auto_branch_pushes/yansfil/fix-tailwind-dynamic/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-tailwind-dynamic
+  - name: yansfil--apply-chartview-responsive
+    path: auto_branch_pushes/yansfil/apply-chartview-responsive/ppluto-main/overlays/dev/
+    namespace: yansfil--apply-chartview-responsive
   - name: banggre--fix-equities-ui
     path: auto_branch_pushes/banggre/fix-equities-ui/ppluto-main/overlays/dev/
     namespace: banggre--fix-equities-ui
