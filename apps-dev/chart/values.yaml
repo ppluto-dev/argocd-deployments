@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-main-street-live-widget
+    path: auto_branch_pushes/sg/fix-main-street-live-widget/ppluto-main/overlays/dev/
+    namespace: sg--fix-main-street-live-widget
+  - name: banggre--update-streetview
+    path: auto_branch_pushes/banggre/update-streetview/ppluto-main/overlays/dev/
+    namespace: banggre--update-streetview
   - name: yansfil--add-scroll-depth-event
     path: auto_branch_pushes/yansfil/add-scroll-depth-event/ppluto-main/overlays/dev/
     namespace: yansfil--add-scroll-depth-event
