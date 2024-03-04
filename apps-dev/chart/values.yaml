@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--supernews-migration
+    path: auto_branch_pushes/kkimdev/supernews-migration/ppluto-main/overlays/dev/
+    namespace: kkimdev--supernews-migration
   - name: banggre--fix-equities-ui
     path: auto_branch_pushes/banggre/fix-equities-ui/ppluto-main/overlays/dev/
     namespace: banggre--fix-equities-ui
