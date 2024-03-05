@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--sn-font
+    path: auto_branch_pushes/sungbin/sn-font/ppluto-main/overlays/dev/
+    namespace: sungbin--sn-font
   - name: banggre--add-error-db
     path: auto_branch_pushes/banggre/add-error-db/ppluto-main/overlays/dev/
     namespace: banggre--add-error-db
