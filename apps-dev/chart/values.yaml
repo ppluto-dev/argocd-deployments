@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--rss
+    path: auto_branch_pushes/sungbin/rss/ppluto-main/overlays/dev/
+    namespace: sungbin--rss
   - name: sungbin--mobile-main2
     path: auto_branch_pushes/sungbin/mobile-main2/ppluto-main/overlays/dev/
     namespace: sungbin--mobile-main2
