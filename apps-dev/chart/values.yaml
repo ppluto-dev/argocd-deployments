@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--favicon-update
+    path: auto_branch_pushes/kkimdev/favicon-update/ppluto-main/overlays/dev/
+    namespace: kkimdev--favicon-update
   - name: yansfil--fix-custom-handle
     path: auto_branch_pushes/yansfil/fix-custom-handle/ppluto-main/overlays/dev/
     namespace: yansfil--fix-custom-handle
