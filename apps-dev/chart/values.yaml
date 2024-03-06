@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-news-comments-schema
+    path: auto_branch_pushes/yansfil/add-news-comments-schema/ppluto-main/overlays/dev/
+    namespace: yansfil--add-news-comments-schema
   - name: yansfil--fix-llm-color-dashboard
     path: auto_branch_pushes/yansfil/fix-llm-color-dashboard/ppluto-main/overlays/dev/
     namespace: yansfil--fix-llm-color-dashboard
