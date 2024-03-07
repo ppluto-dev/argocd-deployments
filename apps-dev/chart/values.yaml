@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--deployment-schema-any
+    path: auto_branch_pushes/yansfil/deployment-schema-any/ppluto-main/overlays/dev/
+    namespace: yansfil--deployment-schema-any
   - name: yansfil--add-news-comments-schema
     path: auto_branch_pushes/yansfil/add-news-comments-schema/ppluto-main/overlays/dev/
     namespace: yansfil--add-news-comments-schema
