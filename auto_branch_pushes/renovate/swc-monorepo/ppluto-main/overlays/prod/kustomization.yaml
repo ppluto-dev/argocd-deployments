@@ -178,3 +178,11 @@ patches:
       - op: replace
         path: /spec/replicas
         value: 1
+
+  - target:
+      kind: Deployment
+      name: ppluto-main-crawling-yahoo-finance
+    patch: |
+      - op: replace
+        path: /spec/replicas
+        value: 1
