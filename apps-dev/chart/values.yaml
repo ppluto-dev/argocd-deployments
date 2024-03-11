@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--remove-company-address
+    path: auto_branch_pushes/kkimdev/remove-company-address/ppluto-main/overlays/dev/
+    namespace: kkimdev--remove-company-address
   - name: banggre--add-inner-crawling-bloomberg
     path: auto_branch_pushes/banggre/add-inner-crawling-bloomberg/ppluto-main/overlays/dev/
     namespace: banggre--add-inner-crawling-bloomberg
