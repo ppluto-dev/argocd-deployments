@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-the-real-deal
+    path: auto_branch_pushes/sg/add-the-real-deal/ppluto-main/overlays/dev/
+    namespace: sg--add-the-real-deal
   - name: yansfil--fix-article-search
     path: auto_branch_pushes/yansfil/fix-article-search/ppluto-main/overlays/dev/
     namespace: yansfil--fix-article-search
