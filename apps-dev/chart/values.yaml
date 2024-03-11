@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-inner-crawling-bloomberg
+    path: auto_branch_pushes/banggre/add-inner-crawling-bloomberg/ppluto-main/overlays/dev/
+    namespace: banggre--add-inner-crawling-bloomberg
   - name: kkimdev--manifest
     path: auto_branch_pushes/kkimdev/manifest/ppluto-main/overlays/dev/
     namespace: kkimdev--manifest
