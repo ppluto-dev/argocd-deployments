@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--weekend2
+    path: auto_branch_pushes/sungbin/weekend2/ppluto-main/overlays/dev/
+    namespace: sungbin--weekend2
   - name: banggre--add-comment-to-bloomberg-bodyselection
     path: auto_branch_pushes/banggre/add-comment-to-bloomberg-bodyselection/ppluto-main/overlays/dev/
     namespace: banggre--add-comment-to-bloomberg-bodyselection
