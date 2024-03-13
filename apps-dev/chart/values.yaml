@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--gaia-error-handle
+    path: auto_branch_pushes/yansfil/gaia-error-handle/ppluto-main/overlays/dev/
+    namespace: yansfil--gaia-error-handle
   - name: banggre--ticker-component
     path: auto_branch_pushes/banggre/ticker-component/ppluto-main/overlays/dev/
     namespace: banggre--ticker-component
