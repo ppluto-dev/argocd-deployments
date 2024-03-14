@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-reddit-worker-7
+    path: auto_branch_pushes/yansfil/fix-reddit-worker-7/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-reddit-worker-7
   - name: sungbin--login-tocontinue
     path: auto_branch_pushes/sungbin/login-tocontinue/ppluto-main/overlays/dev/
     namespace: sungbin--login-tocontinue
