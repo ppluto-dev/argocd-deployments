@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--weekend-bugfix
+    path: auto_branch_pushes/sungbin/weekend-bugfix/ppluto-main/overlays/dev/
+    namespace: sungbin--weekend-bugfix
   - name: yansfil--disable-reddit-embedding
     path: auto_branch_pushes/yansfil/disable-reddit-embedding/ppluto-main/overlays/dev/
     namespace: yansfil--disable-reddit-embedding
