@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--remove-redirect
+    path: auto_branch_pushes/kkimdev/remove-redirect/ppluto-main/overlays/dev/
+    namespace: kkimdev--remove-redirect
   - name: yansfil--vscdoe-prettierrc
     path: auto_branch_pushes/yansfil/vscdoe-prettierrc/ppluto-main/overlays/dev/
     namespace: yansfil--vscdoe-prettierrc
