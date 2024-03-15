@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-main-street-views
+    path: auto_branch_pushes/yansfil/add-main-street-views/ppluto-main/overlays/dev/
+    namespace: yansfil--add-main-street-views
   - name: renovate--npm-vite-vulnerability
     path: auto_branch_pushes/renovate/npm-vite-vulnerability/ppluto-main/overlays/dev/
     namespace: renovate--npm-vite-vulnerability
