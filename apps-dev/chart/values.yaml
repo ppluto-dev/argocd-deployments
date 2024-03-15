@@ -5,12 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--admin-bug
+    path: auto_branch_pushes/sungbin/admin-bug/ppluto-main/overlays/dev/
+    namespace: sungbin--admin-bug
   - name: yansfil--hoyeon-test
     path: auto_branch_pushes/yansfil/hoyeon-test/ppluto-main/overlays/dev/
     namespace: yansfil--hoyeon-test
   - name: yansfil--add-main-street-views
     path: auto_branch_pushes/yansfil/add-main-street-views/ppluto-main/overlays/dev/
     namespace: yansfil--add-main-street-views
+  - name: yansfil--add-comparison-table
+    path: auto_branch_pushes/yansfil/add-comparison-table/ppluto-main/overlays/dev/
+    namespace: yansfil--add-comparison-table
   - name: renovate--npm-vite-vulnerability
     path: auto_branch_pushes/renovate/npm-vite-vulnerability/ppluto-main/overlays/dev/
     namespace: renovate--npm-vite-vulnerability
