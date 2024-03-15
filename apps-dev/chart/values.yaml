@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-main2
+    path: auto_branch_pushes/sungbin/hotfix-main2/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-main2
   - name: yansfil--hoyeon-test
     path: auto_branch_pushes/yansfil/hoyeon-test/ppluto-main/overlays/dev/
     namespace: yansfil--hoyeon-test
