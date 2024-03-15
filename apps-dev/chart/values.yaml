@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-main
+    path: auto_branch_pushes/sungbin/hotfix-main/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-main
   - name: banggre--update-subscribe-feature
     path: auto_branch_pushes/banggre/update-subscribe-feature/ppluto-main/overlays/dev/
     namespace: banggre--update-subscribe-feature
