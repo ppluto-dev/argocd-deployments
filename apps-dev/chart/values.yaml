@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--presubmit-fix
+    path: auto_branch_pushes/kkimdev/presubmit-fix/ppluto-main/overlays/dev/
+    namespace: kkimdev--presubmit-fix
   - name: yansfil--add-comparison-table
     path: auto_branch_pushes/yansfil/add-comparison-table/ppluto-main/overlays/dev/
     namespace: yansfil--add-comparison-table
