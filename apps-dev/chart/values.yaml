@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-viewtypemap
+    path: auto_branch_pushes/sungbin/hotfix-viewtypemap/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-viewtypemap
+  - name: yansfil--upgrade-axios
+    path: auto_branch_pushes/yansfil/upgrade-axios/ppluto-main/overlays/dev/
+    namespace: yansfil--upgrade-axios
   - name: yansfil--add-comparison-table
     path: auto_branch_pushes/yansfil/add-comparison-table/ppluto-main/overlays/dev/
     namespace: yansfil--add-comparison-table
