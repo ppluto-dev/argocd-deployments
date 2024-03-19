@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ogimage
+    path: auto_branch_pushes/kkimdev/ogimage/ppluto-main/overlays/dev/
+    namespace: kkimdev--ogimage
   - name: banggre--search-related-news
     path: auto_branch_pushes/banggre/search-related-news/ppluto-main/overlays/dev/
     namespace: banggre--search-related-news
