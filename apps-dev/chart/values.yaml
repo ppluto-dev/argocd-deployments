@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--title-update
+    path: auto_branch_pushes/kkimdev/title-update/ppluto-main/overlays/dev/
+    namespace: kkimdev--title-update
   - name: renovate--npm-vite-vulnerability
     path: auto_branch_pushes/renovate/npm-vite-vulnerability/ppluto-main/overlays/dev/
     namespace: renovate--npm-vite-vulnerability
