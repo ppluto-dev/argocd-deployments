@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--add-timezone-user
+    path: auto_branch_pushes/sungbin/add-timezone-user/ppluto-main/overlays/dev/
+    namespace: sungbin--add-timezone-user
   - name: kkimdev--title-update
     path: auto_branch_pushes/kkimdev/title-update/ppluto-main/overlays/dev/
     namespace: kkimdev--title-update
