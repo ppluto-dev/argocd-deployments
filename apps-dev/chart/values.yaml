@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--subscribe-form-update
+    path: auto_branch_pushes/kkimdev/subscribe-form-update/ppluto-main/overlays/dev/
+    namespace: kkimdev--subscribe-form-update
   - name: renovate--npm-vite-vulnerability
     path: auto_branch_pushes/renovate/npm-vite-vulnerability/ppluto-main/overlays/dev/
     namespace: renovate--npm-vite-vulnerability
