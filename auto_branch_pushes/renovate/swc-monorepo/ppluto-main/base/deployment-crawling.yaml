@@ -728,28 +728,28 @@ spec:
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: ppluto-main-crawling-reddit
+  name: ppluto-main-crawling-community
 spec:
   selector:
     matchLabels:
-      app: ppluto-main-crawling-reddit
+      app: ppluto-main-crawling-community
   replicas: 0 # To be replaced
   template:
     metadata:
       labels:
-        app: ppluto-main-crawling-reddit
+        app: ppluto-main-crawling-community
     spec:
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
-        - name: ppluto-main-crawling-reddit
+        - name: ppluto-main-crawling-community
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:UNSPECIFIED
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: IS_LOCAL_CRONJOB
               value: "true"
-            - name: IS_REDDIT
+            - name: IS_COMMUNITY_CRAWLING
               value: "true"
           resources:
             requests:
