@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-google-search-date
+    path: auto_branch_pushes/yansfil/fix-google-search-date/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-google-search-date
   - name: sungbin--footer2
     path: auto_branch_pushes/sungbin/footer2/ppluto-main/overlays/dev/
     namespace: sungbin--footer2
