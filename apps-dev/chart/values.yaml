@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-space-read
+    path: auto_branch_pushes/sg/fix-space-read/ppluto-main/overlays/dev/
+    namespace: sg--fix-space-read
   - name: sungbin--hotfix-createarticle-byid
     path: auto_branch_pushes/sungbin/hotfix-createarticle-byid/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-createarticle-byid
