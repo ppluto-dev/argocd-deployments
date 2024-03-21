@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-monitoring-articles
+    path: auto_branch_pushes/yansfil/add-monitoring-articles/ppluto-main/overlays/dev/
+    namespace: yansfil--add-monitoring-articles
   - name: renovate--npm-vite-vulnerability
     path: auto_branch_pushes/renovate/npm-vite-vulnerability/ppluto-main/overlays/dev/
     namespace: renovate--npm-vite-vulnerability
