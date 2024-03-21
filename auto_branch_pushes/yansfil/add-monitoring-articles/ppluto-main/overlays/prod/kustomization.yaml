@@ -202,10 +202,3 @@ patches:
       - op: replace
         path: /spec/replicas
         value: 1
-  - target:
-      kind: Deployment
-      name: ppluto-main-monitoring-article
-    patch: |
-      - op: replace
-        path: /spec/replicas
-        value: 1
