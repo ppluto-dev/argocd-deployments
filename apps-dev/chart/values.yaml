@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-image
+    path: auto_branch_pushes/sg/fix-image/ppluto-main/overlays/dev/
+    namespace: sg--fix-image
   - name: sungbin--admin-custom
     path: auto_branch_pushes/sungbin/admin-custom/ppluto-main/overlays/dev/
     namespace: sungbin--admin-custom
