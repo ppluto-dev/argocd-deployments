@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-mainstreetview
+    path: auto_branch_pushes/yansfil/update-mainstreetview/ppluto-main/overlays/dev/
+    namespace: yansfil--update-mainstreetview
   - name: sungbin--hotfix-createarticle-byid
     path: auto_branch_pushes/sungbin/hotfix-createarticle-byid/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-createarticle-byid
