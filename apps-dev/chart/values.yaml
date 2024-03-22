@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--chart-image-article-worker
+    path: auto_branch_pushes/yansfil/chart-image-article-worker/ppluto-main/overlays/dev/
+    namespace: yansfil--chart-image-article-worker
   - name: sungbin--fix-financechatbot
     path: auto_branch_pushes/sungbin/fix-financechatbot/ppluto-main/overlays/dev/
     namespace: sungbin--fix-financechatbot
