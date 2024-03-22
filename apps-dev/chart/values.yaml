@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-financechatbot
+    path: auto_branch_pushes/sungbin/fix-financechatbot/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-financechatbot
   - name: banggre--add-vector-db
     path: auto_branch_pushes/banggre/add-vector-db/ppluto-main/overlays/dev/
     namespace: banggre--add-vector-db
