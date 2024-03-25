@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: revert-3707-sungbin--mobile-ui
+    path: auto_branch_pushes/revert-3707-sungbin/mobile-ui/ppluto-main/overlays/dev/
+    namespace: revert-3707-sungbin--mobile-ui
   - name: sungbin--add-subscribe-mobile
     path: auto_branch_pushes/sungbin/add-subscribe-mobile/ppluto-main/overlays/dev/
     namespace: sungbin--add-subscribe-mobile
