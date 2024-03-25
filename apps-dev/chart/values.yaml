@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--mobile-ui
+    path: auto_branch_pushes/sungbin/mobile-ui/ppluto-main/overlays/dev/
+    namespace: sungbin--mobile-ui
   - name: kkimdev--login-bottom-margin-fix
     path: auto_branch_pushes/kkimdev/login-bottom-margin-fix/ppluto-main/overlays/dev/
     namespace: kkimdev--login-bottom-margin-fix
-  - name: sungbin--about-us2
-    path: auto_branch_pushes/sungbin/about-us2/ppluto-main/overlays/dev/
-    namespace: sungbin--about-us2
   - name: yansfil--show-mainstreetview
     path: auto_branch_pushes/yansfil/show-mainstreetview/ppluto-main/overlays/dev/
     namespace: yansfil--show-mainstreetview
