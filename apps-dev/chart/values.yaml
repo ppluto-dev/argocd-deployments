@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--chart-tracker-published-at-fix
+    path: auto_branch_pushes/kkimdev/chart-tracker-published-at-fix/ppluto-main/overlays/dev/
+    namespace: kkimdev--chart-tracker-published-at-fix
   - name: sungbin--add-subscribe-mobile
     path: auto_branch_pushes/sungbin/add-subscribe-mobile/ppluto-main/overlays/dev/
     namespace: sungbin--add-subscribe-mobile
