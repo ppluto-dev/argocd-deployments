@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-signupmodal
+    path: auto_branch_pushes/sungbin/fix-signupmodal/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-signupmodal
   - name: kkimdev--crawling-fix-3
     path: auto_branch_pushes/kkimdev/crawling-fix-3/ppluto-main/overlays/dev/
     namespace: kkimdev--crawling-fix-3
