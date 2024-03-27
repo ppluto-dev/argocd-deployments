@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-error
+    path: auto_branch_pushes/sg/fix-error/ppluto-main/overlays/dev/
+    namespace: sg--fix-error
   - name: banggre--translate-article
     path: auto_branch_pushes/banggre/translate-article/ppluto-main/overlays/dev/
     namespace: banggre--translate-article
