@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--sitemap-rss-ko
+    path: auto_branch_pushes/banggre/sitemap-rss-ko/ppluto-main/overlays/dev/
+    namespace: banggre--sitemap-rss-ko
   - name: sungbin--newsletter-crawling
     path: auto_branch_pushes/sungbin/newsletter-crawling/ppluto-main/overlays/dev/
     namespace: sungbin--newsletter-crawling
