@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--newsletter-crawling
+    path: auto_branch_pushes/sungbin/newsletter-crawling/ppluto-main/overlays/dev/
+    namespace: sungbin--newsletter-crawling
   - name: yansfil--article-created-at-fix
     path: auto_branch_pushes/yansfil/article-created-at-fix/ppluto-main/overlays/dev/
     namespace: yansfil--article-created-at-fix
-  - name: kkimdev--kv
-    path: auto_branch_pushes/kkimdev/kv/ppluto-main/overlays/dev/
-    namespace: kkimdev--kv
   - name: yansfil--show-mainstreetview
     path: auto_branch_pushes/yansfil/show-mainstreetview/ppluto-main/overlays/dev/
     namespace: yansfil--show-mainstreetview
