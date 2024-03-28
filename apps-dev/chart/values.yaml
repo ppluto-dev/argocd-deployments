@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--article-created-at-fix
+    path: auto_branch_pushes/yansfil/article-created-at-fix/ppluto-main/overlays/dev/
+    namespace: yansfil--article-created-at-fix
   - name: yansfil--add-gemini-1-5
     path: auto_branch_pushes/yansfil/add-gemini-1-5/ppluto-main/overlays/dev/
     namespace: yansfil--add-gemini-1-5
