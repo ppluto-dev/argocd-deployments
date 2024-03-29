@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-mobile-floating
+    path: auto_branch_pushes/sungbin/hotfix-mobile-floating/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-mobile-floating
   - name: sungbin--hotfix-md-size
     path: auto_branch_pushes/sungbin/hotfix-md-size/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-md-size
