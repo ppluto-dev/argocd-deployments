@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-bloomberg-time
+    path: auto_branch_pushes/sg/fix-bloomberg-time/ppluto-main/overlays/dev/
+    namespace: sg--fix-bloomberg-time
   - name: sungbin--hotfix-subheaders
     path: auto_branch_pushes/sungbin/hotfix-subheaders/ppluto-main/overlays/dev/
     namespace: sungbin--hotfix-subheaders
