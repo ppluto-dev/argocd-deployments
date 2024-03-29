@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--change-to-finance-gpt
+    path: auto_branch_pushes/banggre/change-to-finance-gpt/ppluto-main/overlays/dev/
+    namespace: banggre--change-to-finance-gpt
   - name: sungbin--language2
     path: auto_branch_pushes/sungbin/language2/ppluto-main/overlays/dev/
     namespace: sungbin--language2
