@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-md-size
+    path: auto_branch_pushes/sungbin/hotfix-md-size/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-md-size
+  - name: sungbin--mobile-lang
+    path: auto_branch_pushes/sungbin/mobile-lang/ppluto-main/overlays/dev/
+    namespace: sungbin--mobile-lang
   - name: banggre--change-to-finance-gpt
     path: auto_branch_pushes/banggre/change-to-finance-gpt/ppluto-main/overlays/dev/
     namespace: banggre--change-to-finance-gpt
