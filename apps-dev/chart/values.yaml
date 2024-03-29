@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--language2
+    path: auto_branch_pushes/sungbin/language2/ppluto-main/overlays/dev/
+    namespace: sungbin--language2
   - name: yansfil--article-created-at-fix
     path: auto_branch_pushes/yansfil/article-created-at-fix/ppluto-main/overlays/dev/
     namespace: yansfil--article-created-at-fix
