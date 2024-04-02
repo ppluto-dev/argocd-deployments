@@ -761,11 +761,11 @@ spec:
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: ppluto-main-crawling-gsi
+  name: ppluto-main-crawling-fomc-rate
 spec:
   selector:
     matchLabels:
-      app: ppluto-main-crawling-gsi
+      app: ppluto-main-crawling-fomc-rate
   replicas: 0 # To be replaced
   template:
     metadata:
