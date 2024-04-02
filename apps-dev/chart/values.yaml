@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-claude-multimodal2
+    path: auto_branch_pushes/yansfil/add-claude-multimodal2/ppluto-main/overlays/dev/
+    namespace: yansfil--add-claude-multimodal2
   - name: yansfil--add-claude-multimodal
     path: auto_branch_pushes/yansfil/add-claude-multimodal/ppluto-main/overlays/dev/
     namespace: yansfil--add-claude-multimodal
