@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--permanentredirect-ko-null-article
+    path: auto_branch_pushes/banggre/permanentredirect-ko-null-article/ppluto-main/overlays/dev/
+    namespace: banggre--permanentredirect-ko-null-article
   - name: yansfil--article-created-at-fix
     path: auto_branch_pushes/yansfil/article-created-at-fix/ppluto-main/overlays/dev/
     namespace: yansfil--article-created-at-fix
