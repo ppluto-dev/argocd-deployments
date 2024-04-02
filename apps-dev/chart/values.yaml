@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-load-font
+    path: auto_branch_pushes/banggre/fix-load-font/ppluto-main/overlays/dev/
+    namespace: banggre--fix-load-font
   - name: yansfil--add-deployment-chat
     path: auto_branch_pushes/yansfil/add-deployment-chat/ppluto-main/overlays/dev/
     namespace: yansfil--add-deployment-chat
