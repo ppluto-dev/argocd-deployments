@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-concurrency-issue
+    path: auto_branch_pushes/banggre/fix-concurrency-issue/ppluto-main/overlays/dev/
+    namespace: banggre--fix-concurrency-issue
   - name: sg--add-iframe-src
     path: auto_branch_pushes/sg/add-iframe-src/ppluto-main/overlays/dev/
     namespace: sg--add-iframe-src
