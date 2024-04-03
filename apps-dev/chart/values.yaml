@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-mainstreet-view-worker
+    path: auto_branch_pushes/yansfil/fix-mainstreet-view-worker/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-mainstreet-view-worker
   - name: sg--add-iframe-src
     path: auto_branch_pushes/sg/add-iframe-src/ppluto-main/overlays/dev/
     namespace: sg--add-iframe-src
