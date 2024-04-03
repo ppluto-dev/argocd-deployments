@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--set-main-canonical
+    path: auto_branch_pushes/banggre/set-main-canonical/ppluto-main/overlays/dev/
+    namespace: banggre--set-main-canonical
   - name: yansfil--show-mainstreetview
     path: auto_branch_pushes/yansfil/show-mainstreetview/ppluto-main/overlays/dev/
     namespace: yansfil--show-mainstreetview
