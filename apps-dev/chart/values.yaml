@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-quotes-page-title
+    path: auto_branch_pushes/banggre/update-quotes-page-title/ppluto-main/overlays/dev/
+    namespace: banggre--update-quotes-page-title
   - name: banggre--add-transaction-filter
     path: auto_branch_pushes/banggre/add-transaction-filter/ppluto-main/overlays/dev/
     namespace: banggre--add-transaction-filter
