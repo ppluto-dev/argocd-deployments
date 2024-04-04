@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-chart-cnbc
+    path: auto_branch_pushes/sungbin/fix-chart-cnbc/ppluto-main/overlays/dev/
+    namespace: sungbin--fix-chart-cnbc
   - name: yansfil--handle-prompt-undefined
     path: auto_branch_pushes/yansfil/handle-prompt-undefined/ppluto-main/overlays/dev/
     namespace: yansfil--handle-prompt-undefined
