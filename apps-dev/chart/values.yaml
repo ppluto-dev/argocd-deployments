@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--hotfix-most-read
+    path: auto_branch_pushes/sungbin/hotfix-most-read/ppluto-main/overlays/dev/
+    namespace: sungbin--hotfix-most-read
   - name: yansfil--handle-prompt-undefined
     path: auto_branch_pushes/yansfil/handle-prompt-undefined/ppluto-main/overlays/dev/
     namespace: yansfil--handle-prompt-undefined
