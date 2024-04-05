@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--revert-bloomberg-crawling
+    path: auto_branch_pushes/yansfil/revert-bloomberg-crawling/ppluto-main/overlays/dev/
+    namespace: yansfil--revert-bloomberg-crawling
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
