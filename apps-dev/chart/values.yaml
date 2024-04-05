@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--enable-bloomberg-worker
+    path: auto_branch_pushes/yansfil/enable-bloomberg-worker/ppluto-main/overlays/dev/
+    namespace: yansfil--enable-bloomberg-worker
   - name: sungbin--fix-read-next-lang
     path: auto_branch_pushes/sungbin/fix-read-next-lang/ppluto-main/overlays/dev/
     namespace: sungbin--fix-read-next-lang
-  - name: sungbin--gaia-google-search
-    path: auto_branch_pushes/sungbin/gaia-google-search/ppluto-main/overlays/dev/
-    namespace: sungbin--gaia-google-search
   - name: banggre--article-view-type
     path: auto_branch_pushes/banggre/article-view-type/ppluto-main/overlays/dev/
     namespace: banggre--article-view-type
