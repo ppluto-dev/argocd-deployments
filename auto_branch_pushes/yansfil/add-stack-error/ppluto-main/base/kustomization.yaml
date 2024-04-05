@@ -1,0 +1,15 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+resources:
+  - deployment.yaml
+  - ingress.yaml
+  - service.yaml
+  - deployment-crawling.yaml
+  - deployment-misc.yaml
+images:
+  - name: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client
+    newTag: 832222e15a4a9de2401f4667c359ab23d3e15d0bc8d29645ed642b8da9ea1e23
+  - name: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server
+    newTag: 00271e84eae1b736fb41c92908dac9506ec727e09261867ad1224bc9d31708ea
+  - name: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell
+    newTag: 707a9235e5e56621782c143b2757a7f05af5e21bfff0a4623d13b24dded21d8e
