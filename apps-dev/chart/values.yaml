@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-message-crawling
+    path: auto_branch_pushes/yansfil/add-message-crawling/ppluto-main/overlays/dev/
+    namespace: yansfil--add-message-crawling
   - name: banggre--financegpt-ui-update
     path: auto_branch_pushes/banggre/financegpt-ui-update/ppluto-main/overlays/dev/
     namespace: banggre--financegpt-ui-update
