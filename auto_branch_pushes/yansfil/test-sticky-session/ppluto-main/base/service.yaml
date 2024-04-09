@@ -88,26 +88,3 @@ spec:
       protocol: TCP
       port: 5088
       targetPort: 5088
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: open-embedding-api-service # to apply sticky session
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-target-group-attributes: stickiness.enabled=true, stickiness.lb_cookie.duration_seconds=600
-spec:
-  selector:
-    app: ppluto-main
-  ports:
-    - name: grpc # Node gRpc
-      protocol: TCP
-      port: 81
-      targetPort: 81
-    - name: grpc-web # Envoy for gRpc
-      protocol: TCP
-      port: 82
-      targetPort: 82
-    - name: auth # Auth (REST API)
-      protocol: TCP
-      port: 83
-      targetPort: 83
