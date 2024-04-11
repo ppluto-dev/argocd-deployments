@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--change-gaia-title
+    path: auto_branch_pushes/banggre/change-gaia-title/ppluto-main/overlays/dev/
+    namespace: banggre--change-gaia-title
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
