@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--turn-off-view-type
+    path: auto_branch_pushes/banggre/turn-off-view-type/ppluto-main/overlays/dev/
+    namespace: banggre--turn-off-view-type
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev/
     namespace: main
