@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--migrate-crawling-5
+    path: auto_branch_pushes/yansfil/migrate-crawling-5/ppluto-main/overlays/dev/
+    namespace: yansfil--migrate-crawling-5
   - name: yansfil--add-published-at-filter
     path: auto_branch_pushes/yansfil/add-published-at-filter/ppluto-main/overlays/dev/
     namespace: yansfil--add-published-at-filter
