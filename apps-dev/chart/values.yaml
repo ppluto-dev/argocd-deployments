@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--chore-run-delete
+    path: auto_branch_pushes/yansfil/chore-run-delete/ppluto-main/overlays/dev/
+    namespace: yansfil--chore-run-delete
   - name: sungbin--chartr
     path: auto_branch_pushes/sungbin/chartr/ppluto-main/overlays/dev/
     namespace: sungbin--chartr
