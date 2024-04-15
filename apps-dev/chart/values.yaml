@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-benzinga
+    path: auto_branch_pushes/sg/fix-benzinga/ppluto-main/overlays/dev/
+    namespace: sg--fix-benzinga
   - name: yansfil--add-run-table-view
     path: auto_branch_pushes/yansfil/add-run-table-view/ppluto-main/overlays/dev/
     namespace: yansfil--add-run-table-view
