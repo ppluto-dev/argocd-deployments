@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--naver-seo
+    path: auto_branch_pushes/banggre/naver-seo/ppluto-main/overlays/dev/
+    namespace: banggre--naver-seo
   - name: sungbin--worldwide
     path: auto_branch_pushes/sungbin/worldwide/ppluto-main/overlays/dev/
     namespace: sungbin--worldwide
