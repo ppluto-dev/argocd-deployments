@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-inf-recursive-rendering
+    path: auto_branch_pushes/yansfil/fix-inf-recursive-rendering/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-inf-recursive-rendering
   - name: sungbin--fix-add-image
     path: auto_branch_pushes/sungbin/fix-add-image/ppluto-main/overlays/dev/
     namespace: sungbin--fix-add-image
