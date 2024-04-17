@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--redirect
+    path: auto_branch_pushes/sungbin/redirect/ppluto-main/overlays/dev/
+    namespace: sungbin--redirect
   - name: yansfil--runboard-1-0
     path: auto_branch_pushes/yansfil/runboard-1-0/ppluto-main/overlays/dev/
     namespace: yansfil--runboard-1-0
