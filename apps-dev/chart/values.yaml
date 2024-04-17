@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--main-click
+    path: auto_branch_pushes/sg/main-click/ppluto-main/overlays/dev/
+    namespace: sg--main-click
   - name: sungbin--redirect
     path: auto_branch_pushes/sungbin/redirect/ppluto-main/overlays/dev/
     namespace: sungbin--redirect
