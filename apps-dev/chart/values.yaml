@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--resize-headlines-fontsize
+    path: auto_branch_pushes/banggre/resize-headlines-fontsize/ppluto-main/overlays/dev/
+    namespace: banggre--resize-headlines-fontsize
   - name: yansfil--runboard-1-0
     path: auto_branch_pushes/yansfil/runboard-1-0/ppluto-main/overlays/dev/
     namespace: yansfil--runboard-1-0
