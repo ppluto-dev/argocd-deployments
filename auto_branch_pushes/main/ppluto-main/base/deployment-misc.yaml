@@ -22,13 +22,13 @@ spec:
           ports:
             - containerPort: 5088
           readinessProbe:
-            # TODO: We should also check the status code
-            tcpSocket:
+            httpGet:
+              path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
               port: 5088
-          # TODO: Enable `livenessProbe`.
-          # livenessProbe:
-          #   tcpSocket:
-          #     port: 5088
+          livenessProbe:
+            httpGet:
+              path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
+              port: 5088
           resources:
             limits:
               ephemeral-storage: "5Gi"
