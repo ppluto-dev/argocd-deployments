@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--improve-vectordb-node
+    path: auto_branch_pushes/yansfil/improve-vectordb-node/ppluto-main/overlays/dev/
+    namespace: yansfil--improve-vectordb-node
   - name: kkimdev--projectb
     path: auto_branch_pushes/kkimdev/projectb/ppluto-main/overlays/dev/
     namespace: kkimdev--projectb
