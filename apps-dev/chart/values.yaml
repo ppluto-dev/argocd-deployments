@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--playwright
+    path: auto_branch_pushes/kkimdev/playwright/ppluto-main/overlays/dev/
+    namespace: kkimdev--playwright
   - name: kkimdev--projectb
     path: auto_branch_pushes/kkimdev/projectb/ppluto-main/overlays/dev/
     namespace: kkimdev--projectb
