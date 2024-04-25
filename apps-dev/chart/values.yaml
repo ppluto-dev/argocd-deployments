@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-refined-db
+    path: auto_branch_pushes/banggre/add-refined-db/ppluto-main/overlays/dev/
+    namespace: banggre--add-refined-db
   - name: yansfil--fix-run-history-1
     path: auto_branch_pushes/yansfil/fix-run-history-1/ppluto-main/overlays/dev/
     namespace: yansfil--fix-run-history-1
