@@ -3,4 +3,12 @@ apiVersion: apps/v1
 metadata:
   name: ppluto-main-misc
 spec:
-  replicas: 2
+  replicas: 1
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-wsrv
+spec:
+  replicas: 3
