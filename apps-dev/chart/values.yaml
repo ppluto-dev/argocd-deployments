@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-pipeline-run-error
+    path: auto_branch_pushes/yansfil/fix-pipeline-run-error/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-pipeline-run-error
   - name: sungbin--pdf-extract-chart
     path: auto_branch_pushes/sungbin/pdf-extract-chart/ppluto-main/overlays/dev/
     namespace: sungbin--pdf-extract-chart
