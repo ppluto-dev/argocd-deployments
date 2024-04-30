@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-sheet-copy
+    path: auto_branch_pushes/yansfil/fix-sheet-copy/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-sheet-copy
   - name: yansfil--runboard-1-0-0
     path: auto_branch_pushes/yansfil/runboard-1-0-0/ppluto-main/overlays/dev/
     namespace: yansfil--runboard-1-0-0
