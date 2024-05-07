@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-favicon
+    path: auto_branch_pushes/sg/fix-favicon/ppluto-main/overlays/dev/
+    namespace: sg--fix-favicon
   - name: sungbin--pb
     path: auto_branch_pushes/sungbin/pb/ppluto-main/overlays/dev/
     namespace: sungbin--pb
