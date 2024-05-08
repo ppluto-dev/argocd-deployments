@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-favicon2
+    path: auto_branch_pushes/sg/fix-favicon2/ppluto-main/overlays/dev/
+    namespace: sg--fix-favicon2
   - name: yansfil--projectb-add-footnote
     path: auto_branch_pushes/yansfil/projectb-add-footnote/ppluto-main/overlays/dev/
     namespace: yansfil--projectb-add-footnote
