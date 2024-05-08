@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-vdb-embedding-api
+    path: auto_branch_pushes/yansfil/fix-vdb-embedding-api/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-vdb-embedding-api
   - name: sg--fix-favicon2
     path: auto_branch_pushes/sg/fix-favicon2/ppluto-main/overlays/dev/
     namespace: sg--fix-favicon2
