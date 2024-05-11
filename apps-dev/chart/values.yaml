@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-runboard-run-select
+    path: auto_branch_pushes/yansfil/fix-runboard-run-select/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-runboard-run-select
   - name: yansfil--projectb-add-footnote
     path: auto_branch_pushes/yansfil/projectb-add-footnote/ppluto-main/overlays/dev/
     namespace: yansfil--projectb-add-footnote
