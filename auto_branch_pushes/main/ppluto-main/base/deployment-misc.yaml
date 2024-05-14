@@ -61,10 +61,6 @@ spec:
             httpGet:
               path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
               port: 5088
-          livenessProbe:
-            httpGet:
-              path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
-              port: 5088
           resources:
             requests:
               memory: "1Gi"
