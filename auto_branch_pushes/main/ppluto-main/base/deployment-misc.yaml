@@ -61,7 +61,13 @@ spec:
             httpGet:
               path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
               port: 5088
-          resources:
+            # TODO: The pod is frequently reported as not responding for an unknown reason.
+            #       Maybe it's a false warning so disable livenessProbe to test that.
+            # livenessProbe:
+            #   httpGet:
+            #     path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
+            #     port: 5088
+            # resources:
             requests:
               memory: "1Gi"
             limits:
