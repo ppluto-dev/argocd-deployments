@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--limit-3-figures
+    path: auto_branch_pushes/yansfil/limit-3-figures/ppluto-main/overlays/dev/
+    namespace: yansfil--limit-3-figures
   - name: yansfil--update-batchpromptnode
     path: auto_branch_pushes/yansfil/update-batchpromptnode/ppluto-main/overlays/dev/
     namespace: yansfil--update-batchpromptnode
