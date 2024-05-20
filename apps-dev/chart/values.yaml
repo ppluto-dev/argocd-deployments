@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--pb2
+    path: auto_branch_pushes/sungbin/pb2/ppluto-main/overlays/dev/
+    namespace: sungbin--pb2
+  - name: yansfil--add-amplitude
+    path: auto_branch_pushes/yansfil/add-amplitude/ppluto-main/overlays/dev/
+    namespace: yansfil--add-amplitude
   - name: sg--save-history
     path: auto_branch_pushes/sg/save-history/ppluto-main/overlays/dev/
     namespace: sg--save-history
