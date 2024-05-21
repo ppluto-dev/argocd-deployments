@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--resize-memo-node
+    path: auto_branch_pushes/yansfil/resize-memo-node/ppluto-main/overlays/dev/
+    namespace: yansfil--resize-memo-node
   - name: sungbin--pb
     path: auto_branch_pushes/sungbin/pb/ppluto-main/overlays/dev/
     namespace: sungbin--pb
