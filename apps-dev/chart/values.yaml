@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-input-var-edges-err
+    path: auto_branch_pushes/yansfil/fix-input-var-edges-err/ppluto-main/overlays/dev/
+    namespace: yansfil--fix-input-var-edges-err
   - name: sungbin--pb
     path: auto_branch_pushes/sungbin/pb/ppluto-main/overlays/dev/
     namespace: sungbin--pb
