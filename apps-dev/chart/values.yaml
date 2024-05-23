@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--supersearchx-com
+    path: auto_branch_pushes/kkimdev/supersearchx-com/ppluto-main/overlays/dev/
+    namespace: kkimdev--supersearchx-com
   - name: yansfil--add-vectordb-metadata
     path: auto_branch_pushes/yansfil/add-vectordb-metadata/ppluto-main/overlays/dev/
     namespace: yansfil--add-vectordb-metadata
