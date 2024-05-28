@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--thumbnail
+    path: auto_branch_pushes/kkimdev/thumbnail/ppluto-main/overlays/dev/
+    namespace: kkimdev--thumbnail
   - name: kkimdev--black-favicon
     path: auto_branch_pushes/kkimdev/black-favicon/ppluto-main/overlays/dev/
     namespace: kkimdev--black-favicon
