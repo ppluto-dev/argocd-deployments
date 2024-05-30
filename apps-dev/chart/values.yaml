@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--sx-pdf-ui
+    path: auto_branch_pushes/banggre/sx-pdf-ui/ppluto-main/overlays/dev/
+    namespace: banggre--sx-pdf-ui
   - name: yansfil--update-node-schema
     path: auto_branch_pushes/yansfil/update-node-schema/ppluto-main/overlays/dev/
     namespace: yansfil--update-node-schema
