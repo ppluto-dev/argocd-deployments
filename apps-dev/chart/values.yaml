@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--usefinancegpt-fix
+    path: auto_branch_pushes/banggre/usefinancegpt-fix/ppluto-main/overlays/dev/
+    namespace: banggre--usefinancegpt-fix
   - name: yansfil--add-deployment-drawer
     path: auto_branch_pushes/yansfil/add-deployment-drawer/ppluto-main/overlays/dev/
     namespace: yansfil--add-deployment-drawer
