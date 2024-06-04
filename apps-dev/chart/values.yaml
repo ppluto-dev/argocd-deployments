@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-admin-opinion-manual
+    path: auto_branch_pushes/sg/add-admin-opinion-manual/ppluto-main/overlays/dev/
+    namespace: sg--add-admin-opinion-manual
   - name: yansfil--query-key-factory
     path: auto_branch_pushes/yansfil/query-key-factory/ppluto-main/overlays/dev/
     namespace: yansfil--query-key-factory
