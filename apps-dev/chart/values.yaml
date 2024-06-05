@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-supersearch-login
+    path: auto_branch_pushes/banggre/fix-supersearch-login/ppluto-main/overlays/dev/
+    namespace: banggre--fix-supersearch-login
   - name: sg--add-admin-opinion-manual
     path: auto_branch_pushes/sg/add-admin-opinion-manual/ppluto-main/overlays/dev/
     namespace: sg--add-admin-opinion-manual
