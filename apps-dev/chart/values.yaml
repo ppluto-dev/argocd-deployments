@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--disable-brief
+    path: auto_branch_pushes/kkimdev/disable-brief/ppluto-main/overlays/dev/
+    namespace: kkimdev--disable-brief
   - name: sg--add-admin-opinion-manual
     path: auto_branch_pushes/sg/add-admin-opinion-manual/ppluto-main/overlays/dev/
     namespace: sg--add-admin-opinion-manual
