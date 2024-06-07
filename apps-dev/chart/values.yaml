@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--most-asked
+    path: auto_branch_pushes/banggre/most-asked/ppluto-main/overlays/dev/
+    namespace: banggre--most-asked
   - name: yansfil--fix-deployment-
     path: auto_branch_pushes/yansfil/fix-deployment-/ppluto-main/overlays/dev/
     namespace: yansfil--fix-deployment-
