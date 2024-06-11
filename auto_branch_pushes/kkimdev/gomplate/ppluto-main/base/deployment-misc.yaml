@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-misc
-  replicas: { { .PPLUTO_MAIN_MISC_DEPLOYMENT_REPLICAS } }
+  replicas: {{.PPLUTO_MAIN_MISC_DEPLOYMENT_REPLICAS}}
   template:
     metadata:
       labels:
@@ -42,7 +42,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-wsrv
-  replicas: { { .PPLUTO_MAIN_WSRV_DEPLOYMENT_REPLICAS } }
+  replicas: {{.PPLUTO_MAIN_WSRV_DEPLOYMENT_REPLICAS}}
   template:
     metadata:
       labels:

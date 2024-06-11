@@ -16,7 +16,7 @@ metadata:
 spec:
   rules:
     # tickerbell.ai
-    - host: { { .TICKERBELL_AI_DOMAIN } }
+    - host: {{.TICKERBELL_AI_DOMAIN}}
       http:
         paths:
           - path: /
@@ -29,7 +29,7 @@ spec:
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: { { .WALLSTREET_NOW_COM_DOMAIN } }
+    - host: {{.WALLSTREET_NOW_COM_DOMAIN}}
       http:
         paths:
           - path: /
@@ -42,7 +42,7 @@ spec:
 
     # supernews.io
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: { { .SUPERNEWS_IO_DOMAIN } }
+    - host: {{.SUPERNEWS_IO_DOMAIN}}
       http:
         paths:
           - path: /
@@ -55,7 +55,7 @@ spec:
 
     # wallstreetnow.co
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: { { .WALLSTREETNOW_CO_DOMAIN } }
+    - host: {{.WALLSTREETNOW_CO_DOMAIN}}
       http:
         paths:
           - path: /
@@ -68,7 +68,7 @@ spec:
 
     # super.news
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: { { .SUPER_NEWS_DOMAIN } }
+    - host: {{.SUPER_NEWS_DOMAIN}}
       http:
         paths:
           - path: /
@@ -80,7 +80,7 @@ spec:
                   number: 80
 
     # supersearchx.com
-    - host: { { .SUPERSEARCHX_COM_DOMAIN } }
+    - host: {{.SUPERSEARCHX_COM_DOMAIN}}
       http:
         paths:
           - path: /api
@@ -127,7 +127,7 @@ spec:
                   number: 80
 
     # projectpluto.co (Company website)
-    - host: { { .WWW_PROJECTPLUTO_CO_DOMAIN } }
+    - host: {{.WWW_PROJECTPLUTO_CO_DOMAIN}}
       http:
         paths:
           - path: /
@@ -164,7 +164,7 @@ metadata:
 spec:
   rules:
     # openembedding.com (Project Gaia)
-    - host: { { .OPENEMBEDDING_COM_DOMAIN } }
+    - host: {{.OPENEMBEDDING_COM_DOMAIN}}
       http:
         paths:
           - path: /

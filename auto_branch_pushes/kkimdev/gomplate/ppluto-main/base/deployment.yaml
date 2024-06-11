@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main
-  replicas: { { .PPLUTO_MAIN_DEPLOYMENT_REPLICAS } }
+  replicas: {{.PPLUTO_MAIN_DEPLOYMENT_REPLICAS}}
   revisionHistoryLimit: 2
   template:
     metadata:
