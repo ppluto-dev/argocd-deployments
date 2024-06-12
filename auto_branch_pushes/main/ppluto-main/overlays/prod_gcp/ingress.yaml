@@ -25,99 +25,43 @@ spec:
   rules:
     # tickerbell.ai
     - host: tickerbell.ai
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *ppluto-main-service-rules
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: wallstreet-now.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *ppluto-main-service-rules
 
     # supernews.io
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: supernews.io
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *ppluto-main-service-rules
 
     # wallstreetnow.co
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: wallstreetnow.co
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *ppluto-main-service-rules
 
     # super.news
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: super.news
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *ppluto-main-service-rules
 
     # TODO: For testing, remove?
     # tickersbell.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: tickersbell.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *ppluto-main-service-rules
 
     # TODO: For testing, remove?
     # test-1.supersearchx.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: test-1.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *ppluto-main-service-rules
 
     # supersearchx.com
     - host: supersearchx.com
-      http:
+      http: &ppluto-main-service-rules
         paths:
           - path: /api
             pathType: Prefix
@@ -164,15 +108,7 @@ spec:
 
     # projectpluto.co (Company website)
     - host: www.projectpluto.co
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 8004
+      http: *ppluto-main-service-rules04
           - path: /api
             pathType: Prefix
             backend:
