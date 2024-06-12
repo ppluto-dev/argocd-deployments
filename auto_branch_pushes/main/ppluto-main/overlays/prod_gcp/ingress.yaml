@@ -101,6 +101,20 @@ spec:
                 port:
                   number: 80
 
+    # TODO: For testing, remove?
+    # test-1.supersearchx.com
+    # NOTE: Keep in sync with `tickerbell.ai` section above.
+    - host: test-1.ppluto.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 80
+
     # supersearchx.com
     - host: supersearchx.com
       http:
