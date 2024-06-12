@@ -21,6 +21,7 @@ spec:
       - openembedding.com
       - ppluto.dev
       - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
+      secretName: ingress-tls-secret
   rules:
     # tickerbell.ai
     - host: tickerbell.ai
@@ -167,6 +168,7 @@ spec:
   tls:
     - hosts:
       - openembedding.com
+      secretName: ingress-for-sticky-tls-secret
   rules:
     # openembedding.com (Project Gaia)
     - host: openembedding.com
