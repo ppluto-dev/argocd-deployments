@@ -22,12 +22,12 @@ spec:
             - containerPort: 8004
           resources:
             requests:
-              cpu: 200m
-              memory: 1Gi
+              cpu: 100m
+              memory: 10Mi
             limits:
-              cpu: 500m
-              memory: 3Gi
-              ephemeral-storage: "1Gi"
+              cpu: 200m
+              memory: 100Mi
+              ephemeral-storage: 1Gi
           lifecycle:
             preStop:
               exec:
@@ -45,8 +45,13 @@ spec:
               port: 5080
               path: /
           resources:
+            requests:
+              cpu: 200m
+              memory: 500Mi
             limits:
-              ephemeral-storage: "1Gi"
+              cpu: 500m
+              memory: 2Gi
+              ephemeral-storage: 1Gi
           lifecycle:
             preStop:
               exec:
