@@ -27,9 +27,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -60,9 +64,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -93,9 +101,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -126,9 +138,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -159,9 +175,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -172,7 +192,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-bloomberg
-  replicas: 1
+  replicas: 0
   template:
     metadata:
       labels:
@@ -192,9 +212,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -225,9 +249,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -258,9 +286,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -291,9 +323,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -324,9 +360,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -357,9 +397,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -390,9 +434,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -423,9 +471,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -456,9 +508,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -489,9 +545,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -522,9 +582,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -555,9 +619,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -588,9 +656,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -621,9 +693,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -654,9 +730,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -687,9 +767,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -720,9 +804,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "5Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -753,9 +841,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "5Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -786,9 +878,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "5Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -819,9 +915,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "5Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -852,9 +952,13 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "5Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment
@@ -885,6 +989,10 @@ spec:
               value: "true"
           resources:
             requests:
-              ephemeral-storage: "3Gi"
+              cpu: 1000m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "10Gi"
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 10Gi

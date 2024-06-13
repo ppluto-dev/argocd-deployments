@@ -21,7 +21,12 @@ spec:
             - containerPort: 8003
             - containerPort: 8004
           resources:
+            requests:
+              cpu: 200m
+              memory: 1Gi
             limits:
+              cpu: 500m
+              memory: 3Gi
               ephemeral-storage: "1Gi"
           lifecycle:
             preStop:
@@ -64,8 +69,14 @@ spec:
           #   tcpSocket:
           #     port: 82
           resources:
+            requests:
+              cpu: 500m
+              memory: 1Gi
+              ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "5Gi"
+              cpu: 1000m
+              memory: 3Gi
+              ephemeral-storage: 5Gi
           lifecycle:
             preStop:
               exec:
