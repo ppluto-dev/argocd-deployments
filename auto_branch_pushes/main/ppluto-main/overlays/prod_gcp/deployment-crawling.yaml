@@ -849,42 +849,42 @@ spec:
               memory: 3Gi
               ephemeral-storage: 10Gi
 
-# ---
-# kind: Deployment
-# apiVersion: apps/v1
-# metadata:
-#   name: ppluto-main-crawling-sec
-# spec:
-#   selector:
-#     matchLabels:
-#       app: ppluto-main-crawling-sec
-#   replicas: 1
-#   template:
-#     metadata:
-#       labels:
-#         app: ppluto-main-crawling-sec
-#     spec:
-#       imagePullSecrets:
-#         - name: gitlab-container-registry
-#       containers:
-#         - name: ppluto-main-crawling-sec
-#           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:6388c9fbdf29231f2e64a6b56a4580c2cd8fc62fd3ccac7b3c0a6bee8b383b53
-#           env:
-#             - name: PPLUTO_SERVER_ARG_SERVER
-#               value: api-server
-#             - name: IS_LOCAL_CRONJOB
-#               value: "true"
-#             - name: IS_SEC_ON
-#               value: "true"
-#           resources:
-#             # requests:
-#             #   cpu: 1000m
-#             #   memory: 1Gi
-#             #   ephemeral-storage: 3Gi
-#             limits:
-#               cpu: 2000m
-#               memory: 5Gi
-#               ephemeral-storage: 10Gi
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-sec
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-sec
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-sec
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-crawling-sec
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:6388c9fbdf29231f2e64a6b56a4580c2cd8fc62fd3ccac7b3c0a6bee8b383b53
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_SEC_ON
+              value: "true"
+          resources:
+            # requests:
+            #   cpu: 1000m
+            #   memory: 1Gi
+            #   ephemeral-storage: 3Gi
+            limits:
+              cpu: 2000m
+              memory: 5Gi
+              ephemeral-storage: 10Gi
 
 ---
 kind: Deployment

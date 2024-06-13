@@ -24,7 +24,7 @@ spec:
       secretName: ingress-tls-secret
   rules:
     # tickerbell.ai
-    - host: $SUBDOMAIN_FROM_BRANCH_NAME---tickerbell.auto-branch-pushes.ppluto-main.ppluto.dev
+    - host: main---tickerbell.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -37,7 +37,7 @@ spec:
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: $SUBDOMAIN_FROM_BRANCH_NAME---wallstreetnow.auto-branch-pushes.ppluto-main.ppluto.dev
+    - host: main---wallstreetnow.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -50,7 +50,7 @@ spec:
 
     # supernews.io
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: $SUBDOMAIN_FROM_BRANCH_NAME---supernews.auto-branch-pushes.ppluto-main.ppluto.dev
+    - host: main---supernews.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -63,7 +63,7 @@ spec:
 
     # wallstreetnow.co
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: $SUBDOMAIN_FROM_BRANCH_NAME---wallstreetnow-co.auto-branch-pushes.ppluto-main.ppluto.dev
+    - host: main---wallstreetnow-co.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -76,7 +76,7 @@ spec:
 
     # super.news
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: $SUBDOMAIN_FROM_BRANCH_NAME---super-news.auto-branch-pushes.ppluto-main.ppluto.dev
+    - host: main---super-news.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -151,7 +151,7 @@ spec:
                   number: 80
 
     # supersearchx.com
-    - host: $SUBDOMAIN_FROM_BRANCH_NAME---supersearchx.auto-branch-pushes.ppluto-main.ppluto.dev
+    - host: main---supersearchx.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /api
@@ -198,7 +198,7 @@ spec:
                   number: 80
 
     # projectpluto.co (Company website)
-    - host: $SUBDOMAIN_FROM_BRANCH_NAME---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
+    - host: main---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -235,7 +235,7 @@ spec:
       secretName: ingress-for-sticky-tls-secret
   rules:
     # openembedding.com (Project Gaia)
-    - host: $SUBDOMAIN_FROM_BRANCH_NAME---gaia.auto-branch-pushes.ppluto-main.ppluto.dev
+    - host: main---gaia.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
