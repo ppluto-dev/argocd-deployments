@@ -5,9 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  # - name: yansfil--prompt-v1
-  #   path: auto_branch_pushes/yansfil/prompt-v1/ppluto-main/overlays/dev_gcp/
-  #   namespace: yansfil--prompt-v1
+  - name: yansfil--prompt-v1
+    path: auto_branch_pushes/yansfil/prompt-v1/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--prompt-v1
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
