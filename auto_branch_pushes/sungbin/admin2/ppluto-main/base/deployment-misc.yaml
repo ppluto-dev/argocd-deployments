@@ -20,11 +20,14 @@ spec:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: misc
           resources:
-            requests:
-              memory: "1Gi"
+            # requests:
+            #   cpu: 200m
+            #   memory: 1Gi
+            #   ephemeral-storage: 1Gi
             limits:
-              ephemeral-storage: "5Gi"
-              memory: "4Gi"
+              cpu: 500m
+              memory: 3Gi
+              ephemeral-storage: 5Gi
           lifecycle:
             preStop:
               exec:
@@ -68,11 +71,14 @@ spec:
             #     path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
             #     port: 5088
           resources:
-            requests:
-              memory: "1Gi"
+            # requests:
+            #   cpu: 50m
+            #   memory: 1Gi
+            #   ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "5Gi"
-              memory: "4Gi"
+              cpu: 100m
+              memory: 3Gi
+              ephemeral-storage: 5Gi
           lifecycle:
             preStop:
               exec:

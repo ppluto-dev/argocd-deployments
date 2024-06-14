@@ -16,19 +16,24 @@ spec:
       terminationGracePeriodSeconds: 1800 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:e88e9fcb9593abd3042984ffcf0836d4920616033eded698ef9796b9e0279aa2
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:ddaec91b79b64005f1fd4825003710070705f7fb8d1ce675569e984383b10d24
           ports:
             - containerPort: 8003
             - containerPort: 8004
           resources:
+            # requests:
+            #   cpu: 100m
+            #   memory: 10Mi
             limits:
-              ephemeral-storage: "1Gi"
+              cpu: 200m
+              memory: 100Mi
+              ephemeral-storage: 1Gi
           lifecycle:
             preStop:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:a67fad69a62fd14c8575e4207687ab0d1c3a5b3cbc2cb9fb6f5eb2239d2514f5
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:0fc70122b28588b11a2184c4574ad88cd8542a9ee7b4a3a573d55cfd2793ab0a
           ports:
             - containerPort: 5080
           readinessProbe:
@@ -40,14 +45,19 @@ spec:
               port: 5080
               path: /
           resources:
+            # requests:
+            #   cpu: 200m
+            #   memory: 500Mi
             limits:
-              ephemeral-storage: "1Gi"
+              cpu: 500m
+              memory: 3Gi
+              ephemeral-storage: 1Gi
           lifecycle:
             preStop:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:2c156c79925face4f391271025b48cc6a9e4074c452562122471768ed3921305
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:cdca21c4aa7127ca5139c86142ecb1e4e31d95b573831074ee41aabef9193b5c
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -64,8 +74,14 @@ spec:
           #   tcpSocket:
           #     port: 82
           resources:
+            # requests:
+            #   cpu: 500m
+            #   memory: 1Gi
+            #   ephemeral-storage: 3Gi
             limits:
-              ephemeral-storage: "5Gi"
+              cpu: 1000m
+              memory: 3Gi
+              ephemeral-storage: 5Gi
           lifecycle:
             preStop:
               exec:
