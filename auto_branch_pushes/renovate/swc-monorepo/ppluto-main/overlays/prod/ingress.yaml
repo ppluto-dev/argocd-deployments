@@ -1,4 +1,4 @@
-{{ if eq .INGRESS_TYPE "EKS" }}
+
 
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -18,7 +18,7 @@ metadata:
 spec:
   rules:
     # tickerbell.ai
-    - host: {{.TICKERBELL_AI_DOMAIN}}
+    - host: tickerbell.ai
       http:
         paths:
           - path: /
@@ -31,7 +31,7 @@ spec:
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.WALLSTREET_NOW_COM_DOMAIN}}
+    - host: wallstreet-now.com
       http:
         paths:
           - path: /
@@ -44,7 +44,7 @@ spec:
 
     # supernews.io
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.SUPERNEWS_IO_DOMAIN}}
+    - host: supernews.io
       http:
         paths:
           - path: /
@@ -57,7 +57,7 @@ spec:
 
     # wallstreetnow.co
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.WALLSTREETNOW_CO_DOMAIN}}
+    - host: wallstreetnow.co
       http:
         paths:
           - path: /
@@ -70,7 +70,7 @@ spec:
 
     # super.news
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.SUPER_NEWS_DOMAIN}}
+    - host: super.news
       http:
         paths:
           - path: /
@@ -82,7 +82,7 @@ spec:
                   number: 80
 
     # supersearchx.com
-    - host: {{.SUPERSEARCHX_COM_DOMAIN}}
+    - host: supersearchx.com
       http:
         paths:
           - path: /api
@@ -129,7 +129,7 @@ spec:
                   number: 80
 
     # projectpluto.co (Company website)
-    - host: {{.WWW_PROJECTPLUTO_CO_DOMAIN}}
+    - host: www.projectpluto.co
       http:
         paths:
           - path: /
@@ -166,7 +166,7 @@ metadata:
 spec:
   rules:
     # openembedding.com (Project Gaia)
-    - host: {{.OPENEMBEDDING_COM_DOMAIN}}
+    - host: openembedding.com
       http:
         paths:
           - path: /
@@ -184,261 +184,4 @@ spec:
                 port:
                   number: 82
 
-{{ else if eq .INGRESS_TYPE "GKE" }}
 
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: "ingress"
-  annotations:
-    kubernetes.io/ingress.class: traefik
-    cert-manager.io/cluster-issuer: "letsencrypt"
-spec:
-  tls:
-    - hosts:
-      - tickersbell.com
-      - tickerbell.ai
-      - wallstreet-now.com
-      - supernews.io
-      - wallstreetnow.co
-      - super.news
-      - supersearchx.com
-      - www.projectpluto.co
-      - openembedding.com
-      - ppluto.dev
-      - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
-      secretName: ingress-tls-secret
-  rules:
-    # tickerbell.ai
-    - host: {{.TICKERBELL_AI_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
-
-    # wallstreet-now.com
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.WALLSTREET_NOW_COM_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
-
-    # supernews.io
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.SUPERNEWS_IO_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
-
-    # wallstreetnow.co
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.WALLSTREETNOW_CO_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
-
-    # super.news
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.SUPER_NEWS_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
-
-    # TODO: For testing, remove?
-    # tickersbell.com
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: tickersbell.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
-
-    # TODO: For testing, remove?
-    # test-1.supersearchx.com
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: test-1.ppluto.dev
-      http:
-        paths:
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-          - path: /api/auth
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /wsrvProxy
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-misc-service
-                port:
-                  number: 5088
-          - path: /rss
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /sitemap
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
-
-    # supersearchx.com
-    - host: {{.SUPERSEARCHX_COM_DOMAIN}}
-      http:
-        paths:
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-          - path: /api/auth
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /wsrvProxy
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-misc-service
-                port:
-                  number: 5088
-          - path: /rss
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /sitemap
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
-
-    # projectpluto.co (Company website)
-    - host: {{.WWW_PROJECTPLUTO_CO_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 8004
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: "ingress-for-sticky"
-  annotations:
-    kubernetes.io/ingress.class: traefik
-    cert-manager.io/cluster-issuer: "letsencrypt"
-    traefik.ingress.kubernetes.io/service.sticky: "true"
-    traefik.ingress.kubernetes.io/service.sticky.cookie.name: "gaia-session"
-    # TODO: Migrate the following configs
-    # alb.ingress.kubernetes.io/idle-timeout: "300" # idle timeout for ALB (TODO: reset to 60 and handle the long latency connection in the other way)
-spec:
-  tls:
-    - hosts:
-      - openembedding.com
-      secretName: ingress-for-sticky-tls-secret
-  rules:
-    # openembedding.com (Project Gaia)
-    - host: {{.OPENEMBEDDING_COM_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 8003
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-
-{{ else }}
-  {{ fail "Unknown .INGRESS_TYPE" }}
-{{ end }}
