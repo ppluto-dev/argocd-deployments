@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--worker-pod-memory-up
+    path: auto_branch_pushes/yansfil/worker-pod-memory-up/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--worker-pod-memory-up
+  - name: kkimdev--hompage-about
+    path: auto_branch_pushes/kkimdev/hompage-about/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--hompage-about
   - name: banggre--graph-search-test-code
     path: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_gcp/
     namespace: banggre--graph-search-test-code
