@@ -969,7 +969,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-worker
-  replicas: {{.PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS}}
+  replicas: {{.PPLUTO_MAIN_WORKER_DEPLOYMENT_REPLICAS}}
   template:
     metadata:
       labels:
