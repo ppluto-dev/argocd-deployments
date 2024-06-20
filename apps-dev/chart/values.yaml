@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-script
+    path: auto_branch_pushes/sg/fix-script/ppluto-main/overlays/dev_gcp/
+    namespace: sg--fix-script
   - name: kkimdev--en-news
     path: auto_branch_pushes/kkimdev/en-news/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--en-news
