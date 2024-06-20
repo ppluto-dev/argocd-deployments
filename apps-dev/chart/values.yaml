@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-embedding-code
+    path: auto_branch_pushes/banggre/fix-embedding-code/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-embedding-code
   - name: kkimdev--en-news
     path: auto_branch_pushes/kkimdev/en-news/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--en-news
