@@ -33,7 +33,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:a28bf967490c643a205325d6f2ea9ddb5e4443af456bee345b7cb77c97ade9ae
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:ad78904b25e15fa58040e19bc66f65306042d3162bdf1bbabe85dda47de9fb42
           ports:
             - containerPort: 5080
           readinessProbe:
