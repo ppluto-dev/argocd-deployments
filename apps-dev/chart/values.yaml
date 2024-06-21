@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-vectordb-embedding
+    path: auto_branch_pushes/banggre/update-vectordb-embedding/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-vectordb-embedding
   - name: sg--fix-script
     path: auto_branch_pushes/sg/fix-script/ppluto-main/overlays/dev_gcp/
     namespace: sg--fix-script
