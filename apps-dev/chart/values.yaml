@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--sec-add
+    path: auto_branch_pushes/sungbin/sec-add/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--sec-add
   - name: kkimdev--most-asked-question-ui
     path: auto_branch_pushes/kkimdev/most-asked-question-ui/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--most-asked-question-ui
