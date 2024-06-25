@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--flake-update
+    path: auto_branch_pushes/kkimdev/flake-update/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--flake-update
   - name: kkimdev--en-news
     path: auto_branch_pushes/kkimdev/en-news/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--en-news
