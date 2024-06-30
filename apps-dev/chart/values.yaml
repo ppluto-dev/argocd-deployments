@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--fff
+    path: auto_branch_pushes/kkimdev/fff/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--fff
   - name: yansfil--add-pinecone-hybrid
     path: auto_branch_pushes/yansfil/add-pinecone-hybrid/ppluto-main/overlays/dev_gcp/
     namespace: yansfil--add-pinecone-hybrid
