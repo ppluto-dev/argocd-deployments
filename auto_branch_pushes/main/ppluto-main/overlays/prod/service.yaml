@@ -21,6 +21,11 @@ spec:
       port: 8004
       targetPort: 8004
 
+    - name: web-supersearch # Client -- terminal.supersearchx.com
+      protocol: TCP
+      port: 8005
+      targetPort: 8005
+
     - name: grpc # Node gRpc
       protocol: TCP
       port: 81
@@ -59,6 +64,11 @@ spec:
       protocol: TCP
       port: 8004
       targetPort: 8004
+
+    - name: web-supersearch # Client -- terminal.supersearchx.com
+      protocol: TCP
+      port: 8005
+      targetPort: 8005
 
     - name: grpc # Node gRpc
       protocol: TCP
