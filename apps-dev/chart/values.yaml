@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--projectx-saas
+    path: auto_branch_pushes/kkimdev/projectx-saas/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--projectx-saas
   - name: sungbin--sec-ticker
     path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--sec-ticker
