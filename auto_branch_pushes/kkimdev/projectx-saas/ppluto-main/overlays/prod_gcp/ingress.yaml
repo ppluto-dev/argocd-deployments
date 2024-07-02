@@ -216,6 +216,25 @@ spec:
                 port:
                   number: 82
 
+    # projectpluto.co (Company website)
+    - host: terminal.supersearchx.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 8005
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
