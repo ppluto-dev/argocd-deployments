@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--sec-vdb
+    path: auto_branch_pushes/sungbin/sec-vdb/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--sec-vdb
   - name: kkimdev--deepkit-rpc
     path: auto_branch_pushes/kkimdev/deepkit-rpc/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc
