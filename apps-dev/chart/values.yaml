@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--misc-fixes
+    path: auto_branch_pushes/kkimdev/misc-fixes/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--misc-fixes
   - name: sungbin--storage-sync
     path: auto_branch_pushes/sungbin/storage-sync/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--storage-sync
