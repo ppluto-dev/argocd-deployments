@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--sec-checkdata
+    path: auto_branch_pushes/sungbin/sec-checkdata/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--sec-checkdata
   - name: kkimdev--import-cleanup
     path: auto_branch_pushes/kkimdev/import-cleanup/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--import-cleanup
