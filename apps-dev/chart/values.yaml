@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-vdb-manually
+    path: auto_branch_pushes/sg/add-vdb-manually/ppluto-main/overlays/dev_gcp/
+    namespace: sg--add-vdb-manually
   - name: sungbin--storage-sync
     path: auto_branch_pushes/sungbin/storage-sync/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--storage-sync
