@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--deepkit-rpc-2
+    path: auto_branch_pushes/kkimdev/deepkit-rpc-2/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--deepkit-rpc-2
   - name: sungbin--storage-worker
     path: auto_branch_pushes/sungbin/storage-worker/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--storage-worker
