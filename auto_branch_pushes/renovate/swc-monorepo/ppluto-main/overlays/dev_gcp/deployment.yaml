@@ -16,7 +16,7 @@ spec:
       terminationGracePeriodSeconds: 1800 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:12f69224f01983c2128d8b25a78dc2a95792f8abfbf8a3c2819ac8cd6412c7ae
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:26e2123acf2f9cbf3bee1ad7386d3cf4541e37f176d45f227378da106016aeeb
           ports:
             - containerPort: 8003
             - containerPort: 8004
@@ -34,7 +34,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:892826b3877b735a5ec4e37ed76445f7dd02c35a7b8c692d6c3d8a47a69c4eb2
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:ce964975fc817cd387a9a9aa772375f97a82e65cc6d0c0c2bf55785ffda906df
           ports:
             - containerPort: 5080
           readinessProbe:
@@ -58,7 +58,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:48d30c44b7b1f0645258a9dc95b496f7fa102d8fc2bcddc116c802001eaf9c8c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:c11e7224cafe85b9368dbcff669e7dc2a863359ed01f3d70cc54194c443be93c
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -66,6 +66,7 @@ spec:
             - containerPort: 81
             - containerPort: 82
             - containerPort: 83
+            - containerPort: 84
           readinessProbe:
             # TODO: Implement gRPC health check instead. https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#probe-check-methods
             tcpSocket:

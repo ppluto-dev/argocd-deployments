@@ -98,6 +98,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
           - path: /api/auth
             pathType: Prefix
             backend:
@@ -152,6 +159,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
 
     # terminal.supersearchx.com
     - host: renovate--swc-monorepo---terminal-supersearchx-com.auto-branch-pushes.ppluto-main.ppluto.dev
@@ -171,6 +185,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -208,5 +229,12 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
 
 
