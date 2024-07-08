@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--fix-storage
+    path: auto_branch_pushes/sungbin/fix-storage/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--fix-storage
   - name: yansfil--update-auth
     path: auto_branch_pushes/yansfil/update-auth/ppluto-main/overlays/dev_gcp/
     namespace: yansfil--update-auth
