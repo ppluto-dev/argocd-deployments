@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--fix-earnings-embeddings
+    path: auto_branch_pushes/sg/fix-earnings-embeddings/ppluto-main/overlays/dev_gcp/
+    namespace: sg--fix-earnings-embeddings
   - name: kkimdev--deepkit-rpc-get-ip
     path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-get-ip
