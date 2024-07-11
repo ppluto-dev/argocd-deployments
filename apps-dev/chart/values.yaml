@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--japan
+    path: auto_branch_pushes/sungbin/japan/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--japan
   - name: banggre--add-payment
     path: auto_branch_pushes/banggre/add-payment/ppluto-main/overlays/dev_gcp/
     namespace: banggre--add-payment
