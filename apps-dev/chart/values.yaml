@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--reapply-auth
+    path: auto_branch_pushes/yansfil/reapply-auth/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--reapply-auth
   - name: sungbin--custom-data
     path: auto_branch_pushes/sungbin/custom-data/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--custom-data
