@@ -5,9 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: banggre--add-payment
-    path: auto_branch_pushes/banggre/add-payment/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--add-payment
+  - name: sungbin--press
+    path: auto_branch_pushes/sungbin/press/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--press
+  - name: yansfil--downgrade-prisma-version
+    path: auto_branch_pushes/yansfil/downgrade-prisma-version/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--downgrade-prisma-version
+  - name: banggre--add-stripe
+    path: auto_branch_pushes/banggre/add-stripe/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--add-stripe
   - name: kkimdev--bx-minor-ui-fix
     path: auto_branch_pushes/kkimdev/bx-minor-ui-fix/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--bx-minor-ui-fix
