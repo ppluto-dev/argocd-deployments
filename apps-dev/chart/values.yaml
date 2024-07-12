@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-sec-article
+    path: auto_branch_pushes/banggre/fix-sec-article/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-sec-article
   - name: yansfil--downgrade-prisma-version
     path: auto_branch_pushes/yansfil/downgrade-prisma-version/ppluto-main/overlays/dev_gcp/
     namespace: yansfil--downgrade-prisma-version
