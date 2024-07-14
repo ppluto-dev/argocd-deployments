@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--add-email-login
+    path: auto_branch_pushes/yansfil/add-email-login/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--add-email-login
   - name: yansfil--fix-user-auth-2
     path: auto_branch_pushes/yansfil/fix-user-auth-2/ppluto-main/overlays/dev_gcp/
     namespace: yansfil--fix-user-auth-2
