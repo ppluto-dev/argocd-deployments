@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--press
+    path: auto_branch_pushes/sungbin/press/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--press
   - name: me1e--fix-pp-footer-link
     path: auto_branch_pushes/me1e/fix-pp-footer-link/ppluto-main/overlays/dev_gcp/
     namespace: me1e--fix-pp-footer-link
