@@ -5,12 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--link-stripe-supertoken
+    path: auto_branch_pushes/banggre/link-stripe-supertoken/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--link-stripe-supertoken
+  - name: me1e--fix-pp-logged-link
+    path: auto_branch_pushes/me1e/fix-pp-logged-link/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--fix-pp-logged-link
   - name: sungbin--press
     path: auto_branch_pushes/sungbin/press/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--press
-  - name: me1e--fix-pp-footer-link
-    path: auto_branch_pushes/me1e/fix-pp-footer-link/ppluto-main/overlays/dev_gcp/
-    namespace: me1e--fix-pp-footer-link
   - name: kkimdev--deepkit-rpc-get-ip
     path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-get-ip
