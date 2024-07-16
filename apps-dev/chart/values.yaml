@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--initialize-ssx
+    path: auto_branch_pushes/yansfil/initialize-ssx/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--initialize-ssx
   - name: banggre--link-stripe-supertoken
     path: auto_branch_pushes/banggre/link-stripe-supertoken/ppluto-main/overlays/dev_gcp/
     namespace: banggre--link-stripe-supertoken
