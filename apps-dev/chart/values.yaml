@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--pr
+    path: auto_branch_pushes/sungbin/pr/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--pr
   - name: me1e--fix-news-live-ko-only
     path: auto_branch_pushes/me1e/fix-news-live-ko-only/ppluto-main/overlays/dev_gcp/
     namespace: me1e--fix-news-live-ko-only
