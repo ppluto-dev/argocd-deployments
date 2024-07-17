@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--supersearch-add-profile
+    path: auto_branch_pushes/yansfil/supersearch-add-profile/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--supersearch-add-profile
   - name: me1e--fix-supernews-user-log-create
     path: auto_branch_pushes/me1e/fix-supernews-user-log-create/ppluto-main/overlays/dev_gcp/
     namespace: me1e--fix-supernews-user-log-create
