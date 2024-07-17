@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--px
+    path: auto_branch_pushes/sungbin/px/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--px
   - name: me1e--hotfix-create-sec
     path: auto_branch_pushes/me1e/hotfix-create-sec/ppluto-main/overlays/dev_gcp/
     namespace: me1e--hotfix-create-sec
