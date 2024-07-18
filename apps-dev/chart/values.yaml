@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--fix-gaia-markdown
+    path: auto_branch_pushes/yansfil/fix-gaia-markdown/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--fix-gaia-markdown
   - name: banggre--ss-add-stripe
     path: auto_branch_pushes/banggre/ss-add-stripe/ppluto-main/overlays/dev_gcp/
     namespace: banggre--ss-add-stripe
