@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--add-gpt-4o-mini
+    path: auto_branch_pushes/me1e/add-gpt-4o-mini/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--add-gpt-4o-mini
   - name: kkimdev--re-enable-sx
     path: auto_branch_pushes/kkimdev/re-enable-sx/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--re-enable-sx
