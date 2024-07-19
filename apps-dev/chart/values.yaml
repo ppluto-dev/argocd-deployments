@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--re-enable-sx
+    path: auto_branch_pushes/kkimdev/re-enable-sx/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--re-enable-sx
   - name: banggre--update-barchart-api
     path: auto_branch_pushes/banggre/update-barchart-api/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-barchart-api
@@ -17,9 +20,6 @@ spec:
   - name: sungbin--pr
     path: auto_branch_pushes/sungbin/pr/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--pr
-  - name: me1e--fix-pp-logged-link
-    path: auto_branch_pushes/me1e/fix-pp-logged-link/ppluto-main/overlays/dev_gcp/
-    namespace: me1e--fix-pp-logged-link
   - name: kkimdev--deepkit-rpc-get-ip
     path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-get-ip
