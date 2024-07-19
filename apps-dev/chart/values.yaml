@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-barchart-api
+    path: auto_branch_pushes/banggre/update-barchart-api/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-barchart-api
   - name: banggre--ss-add-stripe
     path: auto_branch_pushes/banggre/ss-add-stripe/ppluto-main/overlays/dev_gcp/
     namespace: banggre--ss-add-stripe
