@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-sec-create-article
+    path: auto_branch_pushes/banggre/update-sec-create-article/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-sec-create-article
   - name: yansfil--add-pdf-sources
     path: auto_branch_pushes/yansfil/add-pdf-sources/ppluto-main/overlays/dev_gcp/
     namespace: yansfil--add-pdf-sources
