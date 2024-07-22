@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sungbin--sec-vdb2
+    path: auto_branch_pushes/sungbin/sec-vdb2/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--sec-vdb2
   - name: banggre--update-sec-transaction
     path: auto_branch_pushes/banggre/update-sec-transaction/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-sec-transaction
