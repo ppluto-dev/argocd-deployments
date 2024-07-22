@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-search-result-citi
+    path: auto_branch_pushes/banggre/update-search-result-citi/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-search-result-citi
   - name: banggre--update-sec-transaction
     path: auto_branch_pushes/banggre/update-sec-transaction/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-sec-transaction
-  - name: banggre--update-current-price
-    path: auto_branch_pushes/banggre/update-current-price/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--update-current-price
   - name: banggre--ss-add-stripe
     path: auto_branch_pushes/banggre/ss-add-stripe/ppluto-main/overlays/dev_gcp/
     namespace: banggre--ss-add-stripe
