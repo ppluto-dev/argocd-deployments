@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--sec-apply-title
+    path: auto_branch_pushes/banggre/sec-apply-title/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--sec-apply-title
   - name: banggre--update-current-price
     path: auto_branch_pushes/banggre/update-current-price/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-current-price
