@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--apply-optimized-image
+    path: auto_branch_pushes/me1e/apply-optimized-image/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--apply-optimized-image
   - name: banggre--update-search-result-citi
     path: auto_branch_pushes/banggre/update-search-result-citi/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-search-result-citi
-  - name: banggre--update-sec-transaction
-    path: auto_branch_pushes/banggre/update-sec-transaction/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--update-sec-transaction
   - name: banggre--ss-add-stripe
     path: auto_branch_pushes/banggre/ss-add-stripe/ppluto-main/overlays/dev_gcp/
     namespace: banggre--ss-add-stripe
