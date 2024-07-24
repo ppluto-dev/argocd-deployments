@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--update-source-urls
+    path: auto_branch_pushes/yansfil/update-source-urls/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--update-source-urls
   - name: banggre--add-earnings-call-pipeline
     path: auto_branch_pushes/banggre/add-earnings-call-pipeline/ppluto-main/overlays/dev_gcp/
     namespace: banggre--add-earnings-call-pipeline
