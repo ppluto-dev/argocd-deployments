@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--newsrun-origin-name
+    path: auto_branch_pushes/yansfil/newsrun-origin-name/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--newsrun-origin-name
   - name: sungbin--embed-2
     path: auto_branch_pushes/sungbin/embed-2/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--embed-2
