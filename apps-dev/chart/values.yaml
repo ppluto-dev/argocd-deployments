@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: yansfil--article-transaction-wait
+    path: auto_branch_pushes/yansfil/article-transaction-wait/ppluto-main/overlays/dev_gcp/
+    namespace: yansfil--article-transaction-wait
   - name: yansfil--fix-get-ip
     path: auto_branch_pushes/yansfil/fix-get-ip/ppluto-main/overlays/dev_gcp/
     namespace: yansfil--fix-get-ip
-  - name: kkimdev--disable-seeking-alpha
-    path: auto_branch_pushes/kkimdev/disable-seeking-alpha/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--disable-seeking-alpha
   - name: me1e--combine-earnings-tabs
     path: auto_branch_pushes/me1e/combine-earnings-tabs/ppluto-main/overlays/dev_gcp/
     namespace: me1e--combine-earnings-tabs
