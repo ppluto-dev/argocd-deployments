@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--px-ui-login-dialog-update
+    path: auto_branch_pushes/kkimdev/px-ui-login-dialog-update/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--px-ui-login-dialog-update
   - name: sg--clean-press-release
     path: auto_branch_pushes/sg/clean-press-release/ppluto-main/overlays/dev_gcp/
     namespace: sg--clean-press-release
