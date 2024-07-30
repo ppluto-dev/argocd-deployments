@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--px-msg-detailed
+    path: auto_branch_pushes/kkimdev/px-msg-detailed/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--px-msg-detailed
   - name: me1e--use-newsletter-research-pdf
     path: auto_branch_pushes/me1e/use-newsletter-research-pdf/ppluto-main/overlays/dev_gcp/
     namespace: me1e--use-newsletter-research-pdf
