@@ -143,6 +143,7 @@ spec:
 
     # blackswanpost.com
     - host: kkimdev--super-news-new-domain---blackswanpost.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
         paths:
           - path: /api
             pathType: Prefix
@@ -179,8 +180,6 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 5095
-      http:
-        paths:
           - path: /
             pathType: Prefix
             backend:
