@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--pnpm-run-cleanup
+    path: auto_branch_pushes/kkimdev/pnpm-run-cleanup/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--pnpm-run-cleanup
   - name: kkimdev--infra-nextjs-custom-server-on-prod
     path: auto_branch_pushes/kkimdev/infra-nextjs-custom-server-on-prod/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--infra-nextjs-custom-server-on-prod
