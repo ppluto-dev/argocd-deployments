@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: sg--fix-citi
-    path: auto_branch_pushes/sg/fix-citi/ppluto-main/overlays/dev_gcp/
-    namespace: sg--fix-citi
   - name: kkimdev--infra-nextjs-custom-server-on-prod
     path: auto_branch_pushes/kkimdev/infra-nextjs-custom-server-on-prod/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--infra-nextjs-custom-server-on-prod
