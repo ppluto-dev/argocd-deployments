@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--blackswanpost-theterminalx-migration
+    path: auto_branch_pushes/kkimdev/blackswanpost-theterminalx-migration/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--blackswanpost-theterminalx-migration
   - name: me1e--use-newsletter-research-pdf
     path: auto_branch_pushes/me1e/use-newsletter-research-pdf/ppluto-main/overlays/dev_gcp/
     namespace: me1e--use-newsletter-research-pdf
