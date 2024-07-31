@@ -141,6 +141,46 @@ spec:
                 port:
                   number: 80
 
+    # blackswanpost.com
+    - host: main---blackswanpost.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5095
+
     # projectpluto.co (Company website)
     - host: main---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
       http:

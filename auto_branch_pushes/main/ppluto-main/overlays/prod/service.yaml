@@ -11,6 +11,11 @@ spec:
       port: 80
       targetPort: 5080
 
+    - name: web-blackswanpost-com # Client -- blackswanpost.com
+      protocol: TCP
+      port: 5095
+      targetPort: 5095
+
     - name: web-gaia # Client -- openembedding.com (Project Gaia)
       protocol: TCP
       port: 8003
@@ -59,6 +64,11 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 5080
+
+    - name: web-blackswanpost-com # Client -- blackswanpost.com
+      protocol: TCP
+      port: 5095
+      targetPort: 5095
 
     - name: web-gaia # Client -- openembedding.com (Project Gaia)
       protocol: TCP
