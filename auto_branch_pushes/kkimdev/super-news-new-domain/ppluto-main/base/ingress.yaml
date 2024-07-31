@@ -139,6 +139,34 @@ spec:
     - host: {{.BLACKSWANPOST_COM_DOMAIN}}
       http:
         paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
           - path: /
             pathType: Prefix
             backend:
@@ -383,6 +411,34 @@ spec:
     - host: {{.BLACKSWANPOST_COM_DOMAIN}}
       http:
         paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
           - path: /
             pathType: Prefix
             backend:
