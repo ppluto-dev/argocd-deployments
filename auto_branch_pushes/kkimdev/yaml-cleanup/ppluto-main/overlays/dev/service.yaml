@@ -6,48 +6,48 @@ spec:
   selector:
     app: ppluto-main
   ports:
-    # Client -- tickerbell.ai
-    - protocol: TCP
+    - name: web-tickerbell # Client -- tickerbell.ai
+      protocol: TCP
       port: 5080
       targetPort: 5080
 
-    # Client -- theterminalx.com
-    - protocol: TCP
+    - name: web-theterminalx-com # Client -- theterminalx.com
+      protocol: TCP
       port: 5095
       targetPort: 5095
 
-    # Client -- openembedding.com (Project Gaia)
-    - protocol: TCP
+    - name: web-gaia # Client -- openembedding.com (Project Gaia)
+      protocol: TCP
       port: 8003
       targetPort: 8003
 
-    # Client -- www.projectpluto.co (Company website)
-    - protocol: TCP
+    - name: web-projectpluto # Client -- www.projectpluto.co (Company website)
+      protocol: TCP
       port: 8004
       targetPort: 8004
 
-    # Client -- terminal.supersearchx.com
-    - protocol: TCP
+    - name: web-supersearch # Client -- terminal.supersearchx.com
+      protocol: TCP
       port: 8005
       targetPort: 8005
 
-    # Node gRpc
-    - protocol: TCP
+    - name: grpc # Node gRpc
+      protocol: TCP
       port: 81
       targetPort: 81
 
-    # Envoy for gRpc
-    - protocol: TCP
+    - name: grpc-web # Envoy for gRpc
+      protocol: TCP
       port: 82
       targetPort: 82
 
-    # Auth (REST API)
-    - protocol: TCP
+    - name: auth # Auth (REST API)
+      protocol: TCP
       port: 83
       targetPort: 83
 
-    # Deepkit RPC
-    - protocol: TCP
+    - name: deepkit-rpc
+      protocol: TCP
       port: 84
       targetPort: 84
 
@@ -60,48 +60,48 @@ spec:
   selector:
     app: ppluto-main
   ports:
-    # Client -- tickerbell.ai
-    - protocol: TCP
+    - name: web-tickerbell # Client -- tickerbell.ai
+      protocol: TCP
       port: 5080
       targetPort: 5080
 
-    # Client -- theterminalx.com
-    - protocol: TCP
+    - name: web-theterminalx-com # Client -- theterminalx.com
+      protocol: TCP
       port: 5095
       targetPort: 5095
 
-    # Client -- openembedding.com (Project Gaia)
-    - protocol: TCP
+    - name: web-gaia # Client -- openembedding.com (Project Gaia)
+      protocol: TCP
       port: 8003
       targetPort: 8003
 
-    # Client -- www.projectpluto.co (Company website)
-    - protocol: TCP
+    - name: web-projectpluto # Client -- www.projectpluto.co (Company website)
+      protocol: TCP
       port: 8004
       targetPort: 8004
 
-    # Client -- terminal.supersearchx.com
-    - protocol: TCP
+    - name: web-supersearch # Client -- terminal.supersearchx.com
+      protocol: TCP
       port: 8005
       targetPort: 8005
 
-    # Node gRpc
-    - protocol: TCP
+    - name: grpc # Node gRpc
+      protocol: TCP
       port: 81
       targetPort: 81
 
-    # Envoy for gRpc
-    - protocol: TCP
+    - name: grpc-web # Envoy for gRpc
+      protocol: TCP
       port: 82
       targetPort: 82
 
-    # Auth (REST API)
-    - protocol: TCP
+    - name: auth # Auth (REST API)
+      protocol: TCP
       port: 83
       targetPort: 83
 
-    # Deepkit RPC
-    - protocol: TCP
+    - name: deepkit-rpc
+      protocol: TCP
       port: 84
       targetPort: 84
 
@@ -114,7 +114,7 @@ spec:
   selector:
     app: ppluto-main-wsrv
   ports:
-    # WSRV
-    - protocol: TCP
+    - name: wsrv
+      protocol: TCP
       port: 5088
       targetPort: 5088
