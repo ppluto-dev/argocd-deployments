@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--sec-article-update
+    path: auto_branch_pushes/banggre/sec-article-update/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--sec-article-update
   - name: kkimdev--terminalx-prototype
     path: auto_branch_pushes/kkimdev/terminalx-prototype/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--terminalx-prototype
