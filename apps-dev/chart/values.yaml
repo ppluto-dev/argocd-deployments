@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--yaml-cleanup
+    path: auto_branch_pushes/kkimdev/yaml-cleanup/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--yaml-cleanup
   - name: kkimdev--terminalx-prototype
     path: auto_branch_pushes/kkimdev/terminalx-prototype/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--terminalx-prototype
