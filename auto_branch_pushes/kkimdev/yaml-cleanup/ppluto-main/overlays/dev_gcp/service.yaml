@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: ppluto-main-service-active
-spec: &common-spec
+spec:
   selector:
     app: ppluto-main
   ports:
@@ -56,7 +56,54 @@ kind: Service
 apiVersion: v1
 metadata:
   name: ppluto-main-service-preview
-spec: *common-spec
+spec:
+  selector:
+    app: ppluto-main
+  ports:
+    # Client -- tickerbell.ai
+    - protocol: TCP
+      port: 5080
+      targetPort: 5080
+
+    # Client -- theterminalx.com
+    - protocol: TCP
+      port: 5095
+      targetPort: 5095
+
+    # Client -- openembedding.com (Project Gaia)
+    - protocol: TCP
+      port: 8003
+      targetPort: 8003
+
+    # Client -- www.projectpluto.co (Company website)
+    - protocol: TCP
+      port: 8004
+      targetPort: 8004
+
+    # Client -- terminal.supersearchx.com
+    - protocol: TCP
+      port: 8005
+      targetPort: 8005
+
+    # Node gRpc
+    - protocol: TCP
+      port: 81
+      targetPort: 81
+
+    # Envoy for gRpc
+    - protocol: TCP
+      port: 82
+      targetPort: 82
+
+    # Auth (REST API)
+    - protocol: TCP
+      port: 83
+      targetPort: 83
+
+    # Deepkit RPC
+    - protocol: TCP
+      port: 84
+      targetPort: 84
 
 ---
 kind: Service
