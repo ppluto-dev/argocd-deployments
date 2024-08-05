@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--fix-research-create
+    path: auto_branch_pushes/me1e/fix-research-create/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--fix-research-create
   - name: kkimdev--server-port-cleanup-2
     path: auto_branch_pushes/kkimdev/server-port-cleanup-2/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--server-port-cleanup-2
