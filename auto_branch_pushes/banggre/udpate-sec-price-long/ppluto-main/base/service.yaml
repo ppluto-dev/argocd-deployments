@@ -1,0 +1,120 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ppluto-main-service-active
+spec:
+  selector:
+    app: ppluto-main
+  ports:
+    - name: web-tickerbell # Client -- tickerbell.ai
+      protocol: TCP
+      port: 5080
+      targetPort: 5080
+
+    - name: web-theterminalx-com # Client -- theterminalx.com
+      protocol: TCP
+      port: 5095
+      targetPort: 5095
+
+    - name: web-gaia # Client -- openembedding.com (Project Gaia)
+      protocol: TCP
+      port: 8003
+      targetPort: 8003
+
+    - name: web-projectpluto # Client -- www.projectpluto.co (Company website)
+      protocol: TCP
+      port: 8004
+      targetPort: 8004
+
+    - name: web-supersearch # Client -- terminal.supersearchx.com
+      protocol: TCP
+      port: 8005
+      targetPort: 8005
+
+    - name: grpc # Node gRpc
+      protocol: TCP
+      port: 81
+      targetPort: 81
+
+    - name: grpc-web # Envoy for gRpc
+      protocol: TCP
+      port: 82
+      targetPort: 82
+
+    - name: auth # Auth (REST API)
+      protocol: TCP
+      port: 83
+      targetPort: 83
+
+    - name: deepkit-rpc
+      protocol: TCP
+      port: 84
+      targetPort: 84
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ppluto-main-service-preview
+spec:
+  selector:
+    app: ppluto-main
+  ports:
+    - name: web-tickerbell # Client -- tickerbell.ai
+      protocol: TCP
+      port: 5080
+      targetPort: 5080
+
+    - name: web-theterminalx-com # Client -- theterminalx.com
+      protocol: TCP
+      port: 5095
+      targetPort: 5095
+
+    - name: web-gaia # Client -- openembedding.com (Project Gaia)
+      protocol: TCP
+      port: 8003
+      targetPort: 8003
+
+    - name: web-projectpluto # Client -- www.projectpluto.co (Company website)
+      protocol: TCP
+      port: 8004
+      targetPort: 8004
+
+    - name: web-supersearch # Client -- terminal.supersearchx.com
+      protocol: TCP
+      port: 8005
+      targetPort: 8005
+
+    - name: grpc # Node gRpc
+      protocol: TCP
+      port: 81
+      targetPort: 81
+
+    - name: grpc-web # Envoy for gRpc
+      protocol: TCP
+      port: 82
+      targetPort: 82
+
+    - name: auth # Auth (REST API)
+      protocol: TCP
+      port: 83
+      targetPort: 83
+
+    - name: deepkit-rpc
+      protocol: TCP
+      port: 84
+      targetPort: 84
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ppluto-main-misc-service
+spec:
+  selector:
+    app: ppluto-main-wsrv
+  ports:
+    - name: wsrv
+      protocol: TCP
+      port: 5088
+      targetPort: 5088
