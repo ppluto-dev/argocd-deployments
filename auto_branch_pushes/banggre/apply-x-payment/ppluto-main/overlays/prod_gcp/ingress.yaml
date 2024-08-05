@@ -25,7 +25,7 @@ spec:
   rules:
     # tickerbell.ai
     - host: tickerbell.ai
-      http:
+      http: &common-config
         paths:
           - path: /
             pathType: Prefix
@@ -33,50 +33,30 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5080
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: wallstreet-now.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # supernews.io
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: supernews.io
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # wallstreetnow.co
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: wallstreetnow.co
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # super.news
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: super.news
+      http: *common-config
+
+    # projectpluto.co (Company website)
+    - host: www.projectpluto.co
       http:
         paths:
           - path: /
@@ -85,7 +65,21 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5380
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
 
     # supersearchx.com
     - host: supersearchx.com
@@ -139,19 +133,12 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5080
 
-    # projectpluto.co (Company website)
-    - host: www.projectpluto.co
+    # theterminalx.com
+    - host: theterminalx.com
       http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 8004
           - path: /api
             pathType: Prefix
             backend:
@@ -166,6 +153,27 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5095
 
     # terminal.supersearchx.com
     - host: terminal.supersearchx.com
@@ -177,7 +185,7 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 8005
+                  number: 5480
           - path: /api
             pathType: Prefix
             backend:
@@ -221,7 +229,7 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 8003
+                  number: 5280
           - path: /api
             pathType: Prefix
             backend:

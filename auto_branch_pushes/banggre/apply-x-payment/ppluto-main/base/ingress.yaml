@@ -19,7 +19,7 @@ spec:
   rules:
     # tickerbell.ai
     - host: {{.TICKERBELL_AI_DOMAIN}}
-      http:
+      http: &common-config
         paths:
           - path: /
             pathType: Prefix
@@ -27,50 +27,30 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5080
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: {{.WALLSTREET_NOW_COM_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # supernews.io
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: {{.SUPERNEWS_IO_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # wallstreetnow.co
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: {{.WALLSTREETNOW_CO_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # super.news
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: {{.SUPER_NEWS_DOMAIN}}
+      http: *common-config
+
+    # projectpluto.co (Company website)
+    - host: {{.WWW_PROJECTPLUTO_CO_DOMAIN}}
       http:
         paths:
           - path: /
@@ -79,7 +59,21 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5380
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
 
     # supersearchx.com
     - host: {{.SUPERSEARCHX_COM_DOMAIN}}
@@ -133,19 +127,12 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5080
 
-    # projectpluto.co (Company website)
-    - host: {{.WWW_PROJECTPLUTO_CO_DOMAIN}}
+    # theterminalx.com
+    - host: {{.THETERMINALX_COM_DOMAIN}}
       http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 8004
           - path: /api
             pathType: Prefix
             backend:
@@ -160,6 +147,27 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5095
 
     # terminal.supersearchx.com
     - host: {{.TERMINAL_SUPERSEARCHX_COM_DOMAIN}}
@@ -171,7 +179,7 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 8005
+                  number: 5480
           - path: /api
             pathType: Prefix
             backend:
@@ -215,7 +223,7 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 8003
+                  number: 5280
           - path: /api
             pathType: Prefix
             backend:
@@ -251,7 +259,7 @@ spec:
   rules:
     # tickerbell.ai
     - host: {{.TICKERBELL_AI_DOMAIN}}
-      http:
+      http: &common-config
         paths:
           - path: /
             pathType: Prefix
@@ -259,50 +267,30 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5080
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: {{.WALLSTREET_NOW_COM_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # supernews.io
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: {{.SUPERNEWS_IO_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # wallstreetnow.co
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: {{.WALLSTREETNOW_CO_DOMAIN}}
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # super.news
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: {{.SUPER_NEWS_DOMAIN}}
+      http: *common-config
+
+    # projectpluto.co (Company website)
+    - host: {{.WWW_PROJECTPLUTO_CO_DOMAIN}}
       http:
         paths:
           - path: /
@@ -311,7 +299,21 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5380
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
 
     # supersearchx.com
     - host: {{.SUPERSEARCHX_COM_DOMAIN}}
@@ -365,19 +367,12 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5080
 
-    # projectpluto.co (Company website)
-    - host: {{.WWW_PROJECTPLUTO_CO_DOMAIN}}
+    # theterminalx.com
+    - host: {{.THETERMINALX_COM_DOMAIN}}
       http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 8004
           - path: /api
             pathType: Prefix
             backend:
@@ -392,6 +387,27 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5095
 
     # terminal.supersearchx.com
     - host: {{.TERMINAL_SUPERSEARCHX_COM_DOMAIN}}
@@ -403,7 +419,7 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 8005
+                  number: 5480
           - path: /api
             pathType: Prefix
             backend:
@@ -447,7 +463,7 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 8003
+                  number: 5280
           - path: /api
             pathType: Prefix
             backend:
