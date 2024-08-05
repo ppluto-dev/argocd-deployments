@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--udpate-sec-price-long
+    path: auto_branch_pushes/banggre/udpate-sec-price-long/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--udpate-sec-price-long
   - name: kkimdev--client-port-cleanup
     path: auto_branch_pushes/kkimdev/client-port-cleanup/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--client-port-cleanup
