@@ -66,14 +66,14 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 82
+                  number: 5082
           - path: /api-dk
             pathType: Prefix
             backend:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 84
+                  number: 5089
 
     # supersearchx.com
     - host: main---supersearchx.auto-branch-pushes.ppluto-main.ppluto.dev
@@ -85,21 +85,21 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 82
+                  number: 5082
           - path: /api-dk
             pathType: Prefix
             backend:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 84
+                  number: 5089
           - path: /api/auth
             pathType: Prefix
             backend:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 83
+                  number: 5086
           - path: /wsrvProxy
             pathType: Prefix
             backend:
@@ -113,14 +113,14 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 83
+                  number: 5086
           - path: /sitemap
             pathType: Prefix
             backend:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 83
+                  number: 5086
           - path: /
             pathType: Prefix
             backend:
@@ -139,21 +139,21 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 82
+                  number: 5082
           - path: /api-dk
             pathType: Prefix
             backend:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 84
+                  number: 5089
           - path: /api/auth
             pathType: Prefix
             backend:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 83
+                  number: 5086
           - path: /wsrvProxy
             pathType: Prefix
             backend:
@@ -186,14 +186,14 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 82
+                  number: 5082
           - path: /api-dk
             pathType: Prefix
             backend:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 84
+                  number: 5089
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -230,6 +230,6 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 82
+                  number: 5082
 
 
