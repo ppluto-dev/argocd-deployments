@@ -64,18 +64,18 @@ spec:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
           ports:
-            - containerPort: 5081
-            - containerPort: 5082
-            - containerPort: 5086
-            - containerPort: 5089
+            - containerPort: 81
+            - containerPort: 82
+            - containerPort: 83
+            - containerPort: 84
           readinessProbe:
             # TODO: Implement gRPC health check instead. https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#probe-check-methods
             tcpSocket:
-              port: 5082
+              port: 82
           # TODO: Enable `livenessProbe`.  Temporarily disabled to debug container crash issue.
           # livenessProbe:
           #   tcpSocket:
-          #     port: 5082
+          #     port: 82
           resources:
             # requests:
             #   cpu: 500m

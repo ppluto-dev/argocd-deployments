@@ -33,23 +33,23 @@ spec:
 
     - name: grpc # Node gRpc
       protocol: TCP
-      port: 5081
-      targetPort: 5081
+      port: 81
+      targetPort: 81
 
     - name: grpc-web # Envoy for gRpc
       protocol: TCP
-      port: 5082
-      targetPort: 5082
+      port: 82
+      targetPort: 82
 
     - name: auth # Auth (REST API)
       protocol: TCP
-      port: 5086
-      targetPort: 5086
+      port: 83
+      targetPort: 83
 
     - name: deepkit-rpc
       protocol: TCP
-      port: 5089
-      targetPort: 5089
+      port: 84
+      targetPort: 84
 
 ---
 kind: Service
@@ -87,23 +87,23 @@ spec:
 
     - name: grpc # Node gRpc
       protocol: TCP
-      port: 5081
-      targetPort: 5081
+      port: 81
+      targetPort: 81
 
     - name: grpc-web # Envoy for gRpc
       protocol: TCP
-      port: 5082
-      targetPort: 5082
+      port: 82
+      targetPort: 82
 
     - name: auth # Auth (REST API)
       protocol: TCP
-      port: 5086
-      targetPort: 5086
+      port: 83
+      targetPort: 83
 
     - name: deepkit-rpc
       protocol: TCP
-      port: 5089
-      targetPort: 5089
+      port: 84
+      targetPort: 84
 
 ---
 kind: Service
