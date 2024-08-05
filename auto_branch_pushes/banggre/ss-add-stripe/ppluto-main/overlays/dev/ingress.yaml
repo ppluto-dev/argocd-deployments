@@ -19,7 +19,7 @@ spec:
   rules:
     # tickerbell.ai
     - host: banggre--ss-add-stripe---tickerbell.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
+      http: &common-config
         paths:
           - path: /
             pathType: Prefix
@@ -27,50 +27,30 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5080
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: banggre--ss-add-stripe---wallstreetnow.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # supernews.io
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: banggre--ss-add-stripe---supernews.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # wallstreetnow.co
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: banggre--ss-add-stripe---wallstreetnow-co.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 80
+      http: *common-config
 
     # super.news
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: banggre--ss-add-stripe---super-news.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *common-config
+
+    # projectpluto.co (Company website)
+    - host: banggre--ss-add-stripe---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -79,7 +59,21 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5380
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
 
     # supersearchx.com
     - host: banggre--ss-add-stripe---supersearchx.auto-branch-pushes.ppluto-main.ppluto.dev
@@ -133,7 +127,7 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 80
+                  number: 5080
 
     # theterminalx.com
     - host: banggre--ss-add-stripe---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
@@ -175,32 +169,6 @@ spec:
                 port:
                   number: 5095
 
-    # projectpluto.co (Company website)
-    - host: banggre--ss-add-stripe---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 8004
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-          - path: /api-dk
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 84
-
     # terminal.supersearchx.com
     - host: banggre--ss-add-stripe---terminal-supersearchx-com.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
@@ -211,7 +179,7 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 8005
+                  number: 5480
           - path: /api
             pathType: Prefix
             backend:
@@ -255,7 +223,7 @@ spec:
               service:
                 name: ppluto-main-service-active
                 port:
-                  number: 8003
+                  number: 5280
           - path: /api
             pathType: Prefix
             backend:
