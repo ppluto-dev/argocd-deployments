@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--y-main
+    path: auto_branch_pushes/banggre/y-main/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--y-main
   - name: me1e--gaia-history
     path: auto_branch_pushes/me1e/gaia-history/ppluto-main/overlays/dev_gcp/
     namespace: me1e--gaia-history
