@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-article-page
+    path: auto_branch_pushes/banggre/update-article-page/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-article-page
   - name: banggre--y-main
     path: auto_branch_pushes/banggre/y-main/ppluto-main/overlays/dev_gcp/
     namespace: banggre--y-main
