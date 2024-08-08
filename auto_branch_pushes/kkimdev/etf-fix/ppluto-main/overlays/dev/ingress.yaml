@@ -1,0 +1,235 @@
+
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "ingress"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/target-group-attributes: stickiness.enabled=false
+    alb.ingress.kubernetes.io/group.name: ppluto-main # the same group belongs to the same ALB (https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/annotations/#group.name)
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/ssl-redirect: "443" # http 80 port redirects to https 443
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:912892869657:certificate/7cad03f5-41d0-41a7-9a3a-f77e58b77de0,arn:aws:acm:ap-northeast-2:912892869657:certificate/9c24bb1c-9247-4291-9a87-d181f49f9034,arn:aws:acm:ap-northeast-2:912892869657:certificate/5b2afc86-2c8e-4a7c-ba38-29281a1f04eb,arn:aws:acm:ap-northeast-2:912892869657:certificate/b4477296-a40a-43a0-89c6-5b42dd09c962,arn:aws:acm:ap-northeast-2:912892869657:certificate/64171bbd-a8af-42f4-b7cf-add40d948b31,arn:aws:acm:ap-northeast-2:912892869657:certificate/6e69c989-c321-42d9-acf9-d9d652feaa19,arn:aws:acm:ap-northeast-2:912892869657:certificate/ee3f8462-82f8-4f4e-91b0-0d87c99aa6d0,arn:aws:acm:ap-northeast-2:912892869657:certificate/7a7a8708-b4a8-420d-adcd-748ddeb85a24,arn:aws:acm:ap-northeast-2:912892869657:certificate/ad7bd495-cae7-4937-b1cd-8ff876c9981f,arn:aws:acm:ap-northeast-2:912892869657:certificate/c9bfbf4a-55d2-4f85-ad23-493e7e02d68d,arn:aws:acm:ap-northeast-2:912892869657:certificate/6fe81470-9e28-423a-b55c-e3da2219d30a,arn:aws:acm:ap-northeast-2:912892869657:certificate/a3c85155-4343-475f-8500-3537d41b0cd4 # certificate arn to allow https traffic
+    alb.ingress.kubernetes.io/subnets: subnet-0e702042fef1214b0,subnet-0e2d06adbcc8e5ea0,subnet-0b5971ee8ec80ecd7 # same vpc subnetes in the k8s cluster
+    alb.ingress.kubernetes.io/idle-timeout: "300" # idle timeout for ALB (TODO: reset to 60 and handle the long latency connection in the other way)
+spec:
+  rules:
+    # tickerbell.ai
+    - host: kkimdev--etf-fix---tickerbell.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: &common-config
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5080
+
+    # wallstreet-now.com
+    # NOTE: Keep in sync with `tickerbell.ai` section above.
+    - host: kkimdev--etf-fix---wallstreetnow.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *common-config
+
+    # supernews.io
+    # NOTE: Keep in sync with `tickerbell.ai` section above.
+    - host: kkimdev--etf-fix---supernews.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *common-config
+
+    # wallstreetnow.co
+    # NOTE: Keep in sync with `tickerbell.ai` section above.
+    - host: kkimdev--etf-fix---wallstreetnow-co.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *common-config
+
+    # super.news
+    # NOTE: Keep in sync with `tickerbell.ai` section above.
+    - host: kkimdev--etf-fix---super-news.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *common-config
+
+    # projectpluto.co (Company website)
+    - host: kkimdev--etf-fix---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5380
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+
+    # supersearchx.com
+    - host: kkimdev--etf-fix---supersearchx.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
+          - path: /rss
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /sitemap
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5080
+
+    # theterminalx.com
+    - host: kkimdev--etf-fix---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5095
+
+    # terminal.supersearchx.com
+    - host: kkimdev--etf-fix---terminal-supersearchx-com.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5480
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "ingress-for-sticky"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/target-group-attributes: stickiness.enabled=true # enable sticky session for gaia only
+    alb.ingress.kubernetes.io/group.name: ppluto-main # the same group belongs to the same ALB (https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/annotations/#group.name)
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/ssl-redirect: "443" # http 80 port redirects to https 443
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:912892869657:certificate/7cad03f5-41d0-41a7-9a3a-f77e58b77de0,arn:aws:acm:ap-northeast-2:912892869657:certificate/9c24bb1c-9247-4291-9a87-d181f49f9034,arn:aws:acm:ap-northeast-2:912892869657:certificate/5b2afc86-2c8e-4a7c-ba38-29281a1f04eb,arn:aws:acm:ap-northeast-2:912892869657:certificate/b4477296-a40a-43a0-89c6-5b42dd09c962,arn:aws:acm:ap-northeast-2:912892869657:certificate/64171bbd-a8af-42f4-b7cf-add40d948b31,arn:aws:acm:ap-northeast-2:912892869657:certificate/6e69c989-c321-42d9-acf9-d9d652feaa19,arn:aws:acm:ap-northeast-2:912892869657:certificate/ee3f8462-82f8-4f4e-91b0-0d87c99aa6d0,arn:aws:acm:ap-northeast-2:912892869657:certificate/7a7a8708-b4a8-420d-adcd-748ddeb85a24,arn:aws:acm:ap-northeast-2:912892869657:certificate/ad7bd495-cae7-4937-b1cd-8ff876c9981f,arn:aws:acm:ap-northeast-2:912892869657:certificate/c9bfbf4a-55d2-4f85-ad23-493e7e02d68d,arn:aws:acm:ap-northeast-2:912892869657:certificate/6fe81470-9e28-423a-b55c-e3da2219d30a # certificate arn to allow https traffic
+    alb.ingress.kubernetes.io/subnets: subnet-0e702042fef1214b0,subnet-0e2d06adbcc8e5ea0,subnet-0b5971ee8ec80ecd7 # same vpc subnetes in the k8s cluster
+    alb.ingress.kubernetes.io/idle-timeout: "300" # idle timeout for ALB (TODO: reset to 60 and handle the long latency connection in the other way)
+spec:
+  rules:
+    # openembedding.com (Project Gaia)
+    - host: kkimdev--etf-fix---gaia.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5280
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+
+
