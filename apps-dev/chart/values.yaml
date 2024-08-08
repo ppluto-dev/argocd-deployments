@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--remove-sungbin
+    path: auto_branch_pushes/sg/remove-sungbin/ppluto-main/overlays/dev_gcp/
+    namespace: sg--remove-sungbin
   - name: me1e--add-variable-annotation-option
     path: auto_branch_pushes/me1e/add-variable-annotation-option/ppluto-main/overlays/dev_gcp/
     namespace: me1e--add-variable-annotation-option
