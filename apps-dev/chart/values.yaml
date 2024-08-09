@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-mobile
+    path: auto_branch_pushes/banggre/update-mobile/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-mobile
   - name: yansfil--remove-serialization
     path: auto_branch_pushes/yansfil/remove-serialization/ppluto-main/overlays/dev_gcp/
     namespace: yansfil--remove-serialization
