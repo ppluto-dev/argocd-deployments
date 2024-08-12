@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--set-default-ticker
+    path: auto_branch_pushes/banggre/set-default-ticker/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--set-default-ticker
   - name: sg--remove-search
     path: auto_branch_pushes/sg/remove-search/ppluto-main/overlays/dev_gcp/
     namespace: sg--remove-search
