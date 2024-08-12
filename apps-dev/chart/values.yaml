@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--fix-new-pipeline-init
+    path: auto_branch_pushes/me1e/fix-new-pipeline-init/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--fix-new-pipeline-init
   - name: banggre--update-py-pipeline
     path: auto_branch_pushes/banggre/update-py-pipeline/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-py-pipeline
