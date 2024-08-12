@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--crawl-economic-calendar
+    path: auto_branch_pushes/banggre/crawl-economic-calendar/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--crawl-economic-calendar
   - name: me1e--test-add-gaia-node
     path: auto_branch_pushes/me1e/test-add-gaia-node/ppluto-main/overlays/dev_gcp/
     namespace: me1e--test-add-gaia-node
