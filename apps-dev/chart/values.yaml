@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--test-add-gaia-node
+    path: auto_branch_pushes/me1e/test-add-gaia-node/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--test-add-gaia-node
   - name: yansfil--leave-comment-on-gaia
     path: auto_branch_pushes/yansfil/leave-comment-on-gaia/ppluto-main/overlays/dev_gcp/
     namespace: yansfil--leave-comment-on-gaia
-  - name: banggre--update-main-ui
-    path: auto_branch_pushes/banggre/update-main-ui/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--update-main-ui
   - name: me1e--fix-new-pipeline-init
     path: auto_branch_pushes/me1e/fix-new-pipeline-init/ppluto-main/overlays/dev_gcp/
     namespace: me1e--fix-new-pipeline-init
