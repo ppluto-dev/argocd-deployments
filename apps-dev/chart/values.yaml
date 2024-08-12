@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--es-lo
+    path: auto_branch_pushes/kkimdev/es-lo/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--es-lo
+  - name: sg--fix-news-vectorize
+    path: auto_branch_pushes/sg/fix-news-vectorize/ppluto-main/overlays/dev_gcp/
+    namespace: sg--fix-news-vectorize
   - name: me1e--test-add-gaia-node
     path: auto_branch_pushes/me1e/test-add-gaia-node/ppluto-main/overlays/dev_gcp/
     namespace: me1e--test-add-gaia-node
