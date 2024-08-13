@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--apply-infinite-scroll
+    path: auto_branch_pushes/banggre/apply-infinite-scroll/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--apply-infinite-scroll
   - name: me1e--test-add-gaia-node
     path: auto_branch_pushes/me1e/test-add-gaia-node/ppluto-main/overlays/dev_gcp/
     namespace: me1e--test-add-gaia-node
-  - name: yansfil--leave-comment-on-gaia
-    path: auto_branch_pushes/yansfil/leave-comment-on-gaia/ppluto-main/overlays/dev_gcp/
-    namespace: yansfil--leave-comment-on-gaia
   - name: yansfil--remove-serialization
     path: auto_branch_pushes/yansfil/remove-serialization/ppluto-main/overlays/dev_gcp/
     namespace: yansfil--remove-serialization
