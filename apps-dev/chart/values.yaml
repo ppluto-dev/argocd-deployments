@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--getpriceoverviewfallback
+    path: auto_branch_pushes/kkimdev/getpriceoverviewfallback/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--getpriceoverviewfallback
   - name: me1e--add-dependent-pipeline-by-deployment
     path: auto_branch_pushes/me1e/add-dependent-pipeline-by-deployment/ppluto-main/overlays/dev_gcp/
     namespace: me1e--add-dependent-pipeline-by-deployment
