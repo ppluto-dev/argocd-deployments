@@ -1,0 +1,59 @@
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: ppluto-dev
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    # TODO: Update path automatically.
+    path: apps-dev/chart
+    targetRevision: HEAD
+  destination:
+    # TODO: This has to be `argocd` for ArgoCD's app of apps to work, which is
+    #       not ideal.
+    #       https://github.com/argoproj/argo-cd/issues/3181#issuecomment-626901858
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+
+
+
+
+
+
+
+{{- if .Values.spec.applications }}
+{{- range $application := .Values.spec.applications }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ $application.name }} # To be fixed
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: {{ $application.namespace }} # To be fixed
+    server: {{ $.Values.spec.destination.server }}
+  project: default
+  source:
+    path: {{ $application.path }} # To be fixed
+    repoURL: {{ $.Values.spec.source.repoURL }}
+    targetRevision: {{ $.Values.spec.source.targetRevision }}
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+{{- end }}
+{{- end }}
