@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--block-pipeline-deletion-with-dependencies
+    path: auto_branch_pushes/me1e/block-pipeline-deletion-with-dependencies/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--block-pipeline-deletion-with-dependencies
   - name: banggre--y-ssr
     path: auto_branch_pushes/banggre/y-ssr/ppluto-main/overlays/dev_gcp/
     namespace: banggre--y-ssr
-  - name: me1e--add-dependent-pipeline-by-deployment
-    path: auto_branch_pushes/me1e/add-dependent-pipeline-by-deployment/ppluto-main/overlays/dev_gcp/
-    namespace: me1e--add-dependent-pipeline-by-deployment
   - name: kkimdev--trading-view-api-test
     path: auto_branch_pushes/kkimdev/trading-view-api-test/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--trading-view-api-test
