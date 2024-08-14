@@ -22,3 +22,13 @@ spec:
                 name: argocd-server
                 port:
                   name: https
+    - host: argocd-eks.ppluto.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: argocd-server
+                port:
+                  name: https
