@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kkimdev--eks-migration-3
+  name: kkimdev--eks-migration-branch-test
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: kkimdev--eks-migration-3
+    namespace: kkimdev--eks-migration-branch-test
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/kkimdev/eks-migration-3/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/kkimdev/eks-migration-branch-test/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
