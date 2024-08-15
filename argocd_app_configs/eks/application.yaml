@@ -27,7 +27,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kkimdev--eks-migration-2
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -37,7 +36,6 @@ spec:
   project: default
   source:
     path: kkimdev--eks-migration-2
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -52,7 +50,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: me1e--set-pipeline-editor-default-open
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -62,7 +59,6 @@ spec:
   project: default
   source:
     path: me1e--set-pipeline-editor-default-open
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -77,7 +73,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: banggre--y-ssr
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -87,7 +82,6 @@ spec:
   project: default
   source:
     path: banggre--y-ssr
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -102,7 +96,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kkimdev--trading-view-api-test
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -112,7 +105,6 @@ spec:
   project: default
   source:
     path: kkimdev--trading-view-api-test
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -127,7 +119,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kkimdev--server-port-cleanup-2
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -137,7 +128,6 @@ spec:
   project: default
   source:
     path: kkimdev--server-port-cleanup-2
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -152,7 +142,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: banggre--apply-x-payment
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -162,7 +151,6 @@ spec:
   project: default
   source:
     path: banggre--apply-x-payment
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -177,7 +165,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kkimdev--px-ui-metadata-fix
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -187,7 +174,6 @@ spec:
   project: default
   source:
     path: kkimdev--px-ui-metadata-fix
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -202,7 +188,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: me1e--apply-optimized-image
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -212,7 +197,6 @@ spec:
   project: default
   source:
     path: me1e--apply-optimized-image
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -227,7 +211,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kkimdev--deepkit-rpc-get-ip
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -237,7 +220,6 @@ spec:
   project: default
   source:
     path: kkimdev--deepkit-rpc-get-ip
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -252,7 +234,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kkimdev--deepkit-rpc-example-simple
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -262,7 +243,6 @@ spec:
   project: default
   source:
     path: kkimdev--deepkit-rpc-example-simple
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -277,7 +257,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: sungbin--sec-ticker
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -287,7 +266,6 @@ spec:
   project: default
   source:
     path: sungbin--sec-ticker
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -302,7 +280,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kkimdev--pinecone-text-test
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -312,7 +289,6 @@ spec:
   project: default
   source:
     path: kkimdev--pinecone-text-test
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -327,7 +303,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kkimdev--remove-header-footer-hardcodes
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -337,7 +312,6 @@ spec:
   project: default
   source:
     path: kkimdev--remove-header-footer-hardcodes
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -352,7 +326,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kkimdev--en-news-revert4
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -362,7 +335,6 @@ spec:
   project: default
   source:
     path: kkimdev--en-news-revert4
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -377,7 +349,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: banggre--graph-search-test-code
-
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -387,7 +358,6 @@ spec:
   project: default
   source:
     path: banggre--graph-search-test-code
-
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
