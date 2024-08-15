@@ -1066,3 +1066,40 @@ spec:
               cpu: 2000m
               memory: 5000Mi
               ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-ydown-article-worker
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-ydown-article-worker
+  replicas: {{.PPLUTO_MAIN_YDOWN_ARTICLE_WORKER_REPLICAS}}
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-ydown-article-worker
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-ydown-article-worker
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_YDOWN_ARTICLE_WORKER
+              value: "true"
+          resources:
+            # requests:
+            #   cpu: 1000m
+            #   memory: 1Gi
+            #   ephemeral-storage: 3Gi
+            limits:
+              cpu: 2000m
+              memory: 5000Mi
+              ephemeral-storage: 9Gi
