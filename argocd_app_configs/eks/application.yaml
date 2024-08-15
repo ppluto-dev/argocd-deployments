@@ -8,11 +8,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/main/ppluto-main/overlays/prod_eks
+    namespace: main----production
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: main----production
+    path: auto_branch_pushes/main/ppluto-main/overlays/prod_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -31,11 +31,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/kkimdev/eks-migration-2/ppluto-main/overlays/dev_eks
+    namespace: kkimdev--eks-migration-2
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kkimdev--eks-migration-2
+    path: auto_branch_pushes/kkimdev/eks-migration-2/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -54,11 +54,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/me1e/set-pipeline-editor-default-open/ppluto-main/overlays/dev_eks
+    namespace: me1e--set-pipeline-editor-default-open
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: me1e--set-pipeline-editor-default-open
+    path: auto_branch_pushes/me1e/set-pipeline-editor-default-open/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -77,11 +77,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/banggre/y-ssr/ppluto-main/overlays/dev_eks
+    namespace: banggre--y-ssr
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: banggre--y-ssr
+    path: auto_branch_pushes/banggre/y-ssr/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -100,11 +100,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/kkimdev/trading-view-api-test/ppluto-main/overlays/dev_eks
+    namespace: kkimdev--trading-view-api-test
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kkimdev--trading-view-api-test
+    path: auto_branch_pushes/kkimdev/trading-view-api-test/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -123,11 +123,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/kkimdev/server-port-cleanup-2/ppluto-main/overlays/dev_eks
+    namespace: kkimdev--server-port-cleanup-2
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kkimdev--server-port-cleanup-2
+    path: auto_branch_pushes/kkimdev/server-port-cleanup-2/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -146,11 +146,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/banggre/apply-x-payment/ppluto-main/overlays/dev_eks
+    namespace: banggre--apply-x-payment
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: banggre--apply-x-payment
+    path: auto_branch_pushes/banggre/apply-x-payment/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -169,11 +169,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/kkimdev/px-ui-metadata-fix/ppluto-main/overlays/dev_eks
+    namespace: kkimdev--px-ui-metadata-fix
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kkimdev--px-ui-metadata-fix
+    path: auto_branch_pushes/kkimdev/px-ui-metadata-fix/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -192,11 +192,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/me1e/apply-optimized-image/ppluto-main/overlays/dev_eks
+    namespace: me1e--apply-optimized-image
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: me1e--apply-optimized-image
+    path: auto_branch_pushes/me1e/apply-optimized-image/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -215,11 +215,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_eks
+    namespace: kkimdev--deepkit-rpc-get-ip
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kkimdev--deepkit-rpc-get-ip
+    path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -238,11 +238,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_eks
+    namespace: kkimdev--deepkit-rpc-example-simple
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kkimdev--deepkit-rpc-example-simple
+    path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -261,11 +261,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_eks
+    namespace: sungbin--sec-ticker
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: sungbin--sec-ticker
+    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -284,11 +284,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_eks
+    namespace: kkimdev--pinecone-text-test
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kkimdev--pinecone-text-test
+    path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -307,11 +307,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_eks
+    namespace: kkimdev--remove-header-footer-hardcodes
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kkimdev--remove-header-footer-hardcodes
+    path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -330,11 +330,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_eks
+    namespace: kkimdev--en-news-revert4
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kkimdev--en-news-revert4
+    path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -353,11 +353,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_eks
+    namespace: banggre--graph-search-test-code
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: banggre--graph-search-test-code
+    path: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
