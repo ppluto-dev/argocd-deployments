@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-mobile-time-ago
+    path: auto_branch_pushes/sg/add-mobile-time-ago/ppluto-main/overlays/dev_gcp/
+    namespace: sg--add-mobile-time-ago
   - name: banggre--y-update-trigger-condition
     path: auto_branch_pushes/banggre/y-update-trigger-condition/ppluto-main/overlays/dev_gcp/
     namespace: banggre--y-update-trigger-condition
