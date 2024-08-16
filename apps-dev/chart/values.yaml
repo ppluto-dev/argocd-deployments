@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-crawling-sec
+    path: auto_branch_pushes/banggre/fix-crawling-sec/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-crawling-sec
   - name: me1e--set-pipeline-editor-default-open
     path: auto_branch_pushes/me1e/set-pipeline-editor-default-open/ppluto-main/overlays/dev_gcp/
     namespace: me1e--set-pipeline-editor-default-open
