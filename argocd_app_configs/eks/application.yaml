@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--fix-crawling-sec
+  name: sg--add-index-pipeline
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--fix-crawling-sec
+    namespace: sg--add-index-pipeline
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/fix-crawling-sec/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sg/add-index-pipeline/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
