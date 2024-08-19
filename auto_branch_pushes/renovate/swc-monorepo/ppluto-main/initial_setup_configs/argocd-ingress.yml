@@ -13,7 +13,7 @@ spec:
   ingressClassName: nginx
   rules:
     - host: argocd.ppluto.dev
-      http:
+      http: &argocd-server-path
         paths:
           - path: /
             pathType: Prefix
@@ -22,3 +22,5 @@ spec:
                 name: argocd-server
                 port:
                   name: https
+    - host: argocd-eks.ppluto.dev
+      http: *argocd-server-path
