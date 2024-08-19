@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--copy-bypass
+    path: auto_branch_pushes/banggre/copy-bypass/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--copy-bypass
   - name: me1e--migration-new-price-info-api
     path: auto_branch_pushes/me1e/migration-new-price-info-api/ppluto-main/overlays/dev_gcp/
     namespace: me1e--migration-new-price-info-api
