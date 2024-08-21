@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: sg--add-admin-link
+    path: auto_branch_pushes/sg/add-admin-link/ppluto-main/overlays/dev_gcp/
+    namespace: sg--add-admin-link
   - name: me1e--rss-for-customer
     path: auto_branch_pushes/me1e/rss-for-customer/ppluto-main/overlays/dev_gcp/
     namespace: me1e--rss-for-customer
