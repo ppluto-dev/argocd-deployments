@@ -22,7 +22,7 @@ spec:
       secretName: ingress-tls-secret
   rules:
     # tickerbell.ai
-    - host: {{.TICKERBELL_AI_DOMAIN}}
+    - host: ---tickerbell.auto-branch-pushes.ppluto-main.ppluto.dev
       http: &common-config
         paths:
           - path: /
@@ -35,26 +35,26 @@ spec:
 
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.WALLSTREET_NOW_COM_DOMAIN}}
+    - host: ---wallstreetnow.auto-branch-pushes.ppluto-main.ppluto.dev
       http: *common-config
 
     # supernews.io
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.SUPERNEWS_IO_DOMAIN}}
+    - host: ---supernews.auto-branch-pushes.ppluto-main.ppluto.dev
       http: *common-config
 
     # wallstreetnow.co
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.WALLSTREETNOW_CO_DOMAIN}}
+    - host: ---wallstreetnow-co.auto-branch-pushes.ppluto-main.ppluto.dev
       http: *common-config
 
     # super.news
     # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.SUPER_NEWS_DOMAIN}}
+    - host: ---super-news.auto-branch-pushes.ppluto-main.ppluto.dev
       http: *common-config
 
     # projectpluto.co (Company website)
-    - host: {{.WWW_PROJECTPLUTO_CO_DOMAIN}}
+    - host: ---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -80,7 +80,7 @@ spec:
                   number: 84
 
     # supersearchx.com
-    - host: {{.SUPERSEARCHX_COM_DOMAIN}}
+    - host: ---supersearchx.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /api
@@ -134,7 +134,7 @@ spec:
                   number: 5080
 
     # theterminalx.com
-    - host: {{.THETERMINALX_COM_DOMAIN}}
+    - host: ---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /api
@@ -181,7 +181,7 @@ spec:
                   number: 5095
 
     # terminal.supersearchx.com
-    - host: {{.TERMINAL_SUPERSEARCHX_COM_DOMAIN}}
+    - host: ---terminal-supersearchx-com.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -226,7 +226,7 @@ spec:
       secretName: ingress-for-sticky-tls-secret
   rules:
     # openembedding.com (Project Gaia)
-    - host: {{.OPENEMBEDDING_COM_DOMAIN}}
+    - host: ---gaia.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
         paths:
           - path: /
@@ -252,8 +252,5 @@ spec:
                   number: 84
 
 # TODO: Delete if no longer needed?
-{{ if eq .INGRESS_TYPE "EKS" }}
-{{ else if eq .INGRESS_TYPE "GKE" }}
-{{ else }}
-  {{ fail "Unknown .INGRESS_TYPE" }}
-{{ end }}
+
+
