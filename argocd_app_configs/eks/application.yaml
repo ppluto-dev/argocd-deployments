@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sg--add-updown-translate
+  name: banggre--update-sitemap-url
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sg--add-updown-translate
+    namespace: banggre--update-sitemap-url
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sg/add-updown-translate/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/update-sitemap-url/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
