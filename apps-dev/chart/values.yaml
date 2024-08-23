@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--y-add-sitemap
+    path: auto_branch_pushes/banggre/y-add-sitemap/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--y-add-sitemap
   - name: kkimdev--fix-default-symbol
     path: auto_branch_pushes/kkimdev/fix-default-symbol/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--fix-default-symbol
