@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-metadata
+    path: auto_branch_pushes/banggre/update-metadata/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-metadata
+  - name: me1e--fix-mobile-touch-bug
+    path: auto_branch_pushes/me1e/fix-mobile-touch-bug/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--fix-mobile-touch-bug
   - name: kkimdev--fix-default-symbol
     path: auto_branch_pushes/kkimdev/fix-default-symbol/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--fix-default-symbol
