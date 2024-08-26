@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--feedlist-fix
+    path: auto_branch_pushes/kkimdev/feedlist-fix/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--feedlist-fix
   - name: me1e--apply-ttx-rss-https
     path: auto_branch_pushes/me1e/apply-ttx-rss-https/ppluto-main/overlays/dev_gcp/
     namespace: me1e--apply-ttx-rss-https
