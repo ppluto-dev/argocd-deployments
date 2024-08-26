@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-marketwatch
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -17,7 +17,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-marketwatch
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -26,10 +26,8 @@ spec:
             - name: IS_LOCAL_MARKETWATCH
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -44,7 +42,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-summarize
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -54,7 +52,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-summarize
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -63,10 +61,8 @@ spec:
             - name: IS_LOCAL_SUMMARIZE
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -81,7 +77,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-thestreet
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -91,7 +87,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-thestreet
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -100,10 +96,8 @@ spec:
             - name: IS_LOCAL_THESTREET
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -118,7 +112,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-tipranks
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -128,7 +122,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-tipranks
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -137,10 +131,8 @@ spec:
             - name: IS_LOCAL_TIPRANKS
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -155,7 +147,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-vectorizer
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -165,7 +157,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-vectorizer
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -174,10 +166,8 @@ spec:
             - name: IS_LOCAL_VECTORIZER
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -192,7 +182,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-bloomberg
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -202,7 +192,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-bloomberg
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -211,10 +201,8 @@ spec:
             - name: IS_LOCAL_BLOOMBERG
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -229,7 +217,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-cnbc
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -239,7 +227,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-cnbc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -248,10 +236,8 @@ spec:
             - name: IS_LOCAL_CNBC
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -266,7 +252,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-financial-times
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -276,7 +262,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-financial-times
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -285,10 +271,8 @@ spec:
             - name: IS_FINANCIAL_TIMES
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -303,7 +287,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-trading-view
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -313,7 +297,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-trading-view
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -322,10 +306,8 @@ spec:
             - name: IS_LOCAL_TRADINGVIEW
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -340,7 +322,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-barrons
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -350,7 +332,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-barrons
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -359,10 +341,8 @@ spec:
             - name: IS_BRRONS
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -377,7 +357,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-barrons-ticker
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -387,7 +367,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-barrons-ticker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -396,10 +376,8 @@ spec:
             - name: IS_BRRONS_TICKER
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -414,7 +392,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-wsj
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -424,7 +402,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-wsj
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -433,10 +411,8 @@ spec:
             - name: IS_WSJ
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -451,7 +427,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-benzinga
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -461,7 +437,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-benzinga
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -470,10 +446,8 @@ spec:
             - name: IS_BENZINGA
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -488,7 +462,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-coindesk
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -498,7 +472,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-coindesk
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -507,10 +481,8 @@ spec:
             - name: IS_COINDESK
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -525,7 +497,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-yahoo-finance
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -535,7 +507,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-yahoo-finance
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -544,10 +516,8 @@ spec:
             - name: IS_YAHOO_FINANCE
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -562,7 +532,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-nytimes
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -572,7 +542,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-nytimes
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -581,10 +551,8 @@ spec:
             - name: IS_NYTIMES
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -599,7 +567,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-newsletter
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -609,7 +577,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-newsletter
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -618,10 +586,8 @@ spec:
             - name: IS_NEWSLETTER
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -636,7 +602,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-create-news-contents
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -646,7 +612,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-create-news-contents
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -655,10 +621,8 @@ spec:
             - name: IS_CREATE_NEWS_CONTENTS_FROM_CUSTOM_DATA_DOCUMENT
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -673,7 +637,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-update-vector-status-outdated
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -683,7 +647,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-update-vector-status-outdated
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -692,10 +656,8 @@ spec:
             - name: IS_UPDATE_VECTOR_STATUS_OUTDATED
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -710,7 +672,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-create-article-summary
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -720,7 +682,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-create-article-summary
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -729,10 +691,8 @@ spec:
             - name: IS_LOCAL_ARTICLE_SUMMARIZE
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -747,7 +707,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-aggregate-prompt-runs
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -757,7 +717,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-aggregate-prompt-runs
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -766,10 +726,8 @@ spec:
             - name: IS_AGGREGATE_PROMPT_RUN
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -784,7 +742,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-community
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -794,7 +752,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-community
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -803,10 +761,8 @@ spec:
             - name: IS_CRAWLING_COMMUNITY
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -821,7 +777,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-sec
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -831,7 +787,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-sec
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -840,10 +796,8 @@ spec:
             - name: IS_SEC_ON
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 5Gi
@@ -858,7 +812,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-press-release-crawling
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -868,7 +822,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-press-release-crawling
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -877,10 +831,8 @@ spec:
             - name: IS_PRESS_RELEASE_ON
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 5Gi
@@ -895,7 +847,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-storage-file-sync
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -905,7 +857,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-storage-file-sync
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -914,10 +866,8 @@ spec:
             - name: IS_STORAGE_FILE_SYNC_ON
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 5Gi
@@ -932,7 +882,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-fomc-rate
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -942,7 +892,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-fomc-rate
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -951,10 +901,8 @@ spec:
             - name: IS_FOMC_RATE
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -969,7 +917,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-gsi
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -979,7 +927,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-gsi
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -988,10 +936,8 @@ spec:
             - name: IS_GSI
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 3Gi
@@ -1001,12 +947,46 @@ spec:
 kind: Deployment
 apiVersion: apps/v1
 metadata:
+  name: ppluto-main-crawling-seeking-alpha
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-seeking-alpha
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-seeking-alpha
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-crawling-seeking-alpha
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_SEEKING_ALPHA
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
   name: ppluto-main-check-payment
 spec:
   selector:
     matchLabels:
       app: ppluto-main-check-payment
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -1016,7 +996,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-check-payment
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -1025,6 +1005,8 @@ spec:
             - name: IS_PAYMENT_SYNC
               value: "true"
           resources:
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 5000Mi
@@ -1039,7 +1021,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-worker
-  replicas: 0
+  replicas: 3
   template:
     metadata:
       labels:
@@ -1049,7 +1031,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f81a11b76bb1ad7ae5a92686617588348606f664e88e86a145bc038a54bad96c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -1058,10 +1040,43 @@ spec:
             - name: IS_LOCAL_CRAWLING_WORKER
               value: "true"
           resources:
-            # requests:
-            #   cpu: 1000m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 5000Mi
+              ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-ydown-article-worker
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-ydown-article-worker
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-ydown-article-worker
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-ydown-article-worker
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bcad350e14f48801fa4c6689ad6f6519c1277c08ff05484dbec35da6043f8523
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_YDOWN_ARTICLE_WORKER
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
             limits:
               cpu: 2000m
               memory: 5000Mi
