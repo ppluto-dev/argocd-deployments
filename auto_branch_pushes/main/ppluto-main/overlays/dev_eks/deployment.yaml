@@ -22,9 +22,8 @@ spec:
             - containerPort: 5380
             - containerPort: 5480
           resources:
-            # requests:
-            #   cpu: 100m
-            #   memory: 10Mi
+            requests:
+              cpu: 40m
             limits:
               cpu: 200m
               memory: 100Mi
@@ -34,7 +33,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:0f5ef3b61793bc000c08db5b024234073502241b71bed1f7f3782e93eb157b83
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:f36e637f8420d1bea4b6d32e3b15d4276569b91516cfa4f621436fe3f50e4925
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -47,9 +46,8 @@ spec:
               port: 5080
               path: /
           resources:
-            # requests:
-            #   cpu: 200m
-            #   memory: 500Mi
+            requests:
+              cpu: 100m
             limits:
               cpu: 500m
               memory: 3Gi
@@ -59,7 +57,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:fe4ebe389b3ec66841ba3b36d43d8b9aab580f5e8a5656a0e502c4f745a3f2f5
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5884fae36b4b64ae3dfa0a30bfd6f483429663a7235b90ca88b28f10d2ec0c8b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -77,10 +75,8 @@ spec:
           #   tcpSocket:
           #     port: 82
           resources:
-            # requests:
-            #   cpu: 500m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 200m
             limits:
               cpu: 1000m
               memory: 3Gi
