@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--add-ticker-list-sort-button
+    path: auto_branch_pushes/me1e/add-ticker-list-sort-button/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--add-ticker-list-sort-button
   - name: me1e--apply-ttx-rss-https
     path: auto_branch_pushes/me1e/apply-ttx-rss-https/ppluto-main/overlays/dev_gcp/
     namespace: me1e--apply-ttx-rss-https
