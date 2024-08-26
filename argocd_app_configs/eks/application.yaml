@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--delete-host-check
+  name: banggre--fix-transaction
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--delete-host-check
+    namespace: banggre--fix-transaction
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/delete-host-check/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/fix-transaction/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
