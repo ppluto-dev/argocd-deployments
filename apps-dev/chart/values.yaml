@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--change-chatting-room
+    path: auto_branch_pushes/banggre/change-chatting-room/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--change-chatting-room
   - name: kkimdev--fix-default-symbol
     path: auto_branch_pushes/kkimdev/fix-default-symbol/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--fix-default-symbol
