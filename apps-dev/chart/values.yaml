@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--y-add-ga
+    path: auto_branch_pushes/banggre/y-add-ga/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--y-add-ga
   - name: sg--add-admin-link
     path: auto_branch_pushes/sg/add-admin-link/ppluto-main/overlays/dev_gcp/
     namespace: sg--add-admin-link
