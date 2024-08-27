@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kkimdev--fix-default-symbol
+  name: me1e--set-default-ticker-gspx
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: kkimdev--fix-default-symbol
+    namespace: me1e--set-default-ticker-gspx
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/kkimdev/fix-default-symbol/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/me1e/set-default-ticker-gspx/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
