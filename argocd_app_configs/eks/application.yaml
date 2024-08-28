@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: me1e--add-edit-mode-in-detail-page
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: me1e--add-edit-mode-in-detail-page
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/me1e/add-edit-mode-in-detail-page/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: sg--add-admin-link
   finalizers:
     - resources-finalizer.argocd.argoproj.io
