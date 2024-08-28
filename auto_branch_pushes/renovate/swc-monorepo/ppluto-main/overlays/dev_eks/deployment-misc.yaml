@@ -15,17 +15,15 @@ spec:
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:3c02cffd3e4823987247bda2839d5bb835b7b4fc101511a68887409aa534ad39
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8f771b432f13ff898ef690ac7ffc4bf9c9106949383e81b369045cb27c294abe
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: misc
           resources:
-            # requests:
-            #   cpu: 200m
-            #   memory: 1Gi
-            #   ephemeral-storage: 1Gi
+            requests:
+              cpu: 200m
             limits:
-              cpu: 500m
+              cpu: 1000m
               memory: 3Gi
               ephemeral-storage: 9Gi
           lifecycle:
@@ -54,7 +52,7 @@ spec:
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:3c02cffd3e4823987247bda2839d5bb835b7b4fc101511a68887409aa534ad39
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8f771b432f13ff898ef690ac7ffc4bf9c9106949383e81b369045cb27c294abe
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: wsrv
@@ -71,12 +69,10 @@ spec:
             #     path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
             #     port: 5088
           resources:
-            # requests:
-            #   cpu: 50m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 100m
             limits:
-              cpu: 500m
+              cpu: 1000m
               memory: 3Gi
               ephemeral-storage: 5Gi
           lifecycle:

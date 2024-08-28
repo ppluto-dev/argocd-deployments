@@ -22,9 +22,8 @@ spec:
             - containerPort: 5380
             - containerPort: 5480
           resources:
-            # requests:
-            #   cpu: 100m
-            #   memory: 10Mi
+            requests:
+              cpu: 40m
             limits:
               cpu: 200m
               memory: 100Mi
@@ -47,9 +46,8 @@ spec:
               port: 5080
               path: /
           resources:
-            # requests:
-            #   cpu: 200m
-            #   memory: 500Mi
+            requests:
+              cpu: 100m
             limits:
               cpu: 500m
               memory: 3Gi
@@ -77,10 +75,8 @@ spec:
           #   tcpSocket:
           #     port: 82
           resources:
-            # requests:
-            #   cpu: 500m
-            #   memory: 1Gi
-            #   ephemeral-storage: 3Gi
+            requests:
+              cpu: 200m
             limits:
               cpu: 1000m
               memory: 3Gi
