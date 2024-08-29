@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: revert-5047-sg--remove-sg
+    path: auto_branch_pushes/revert-5047-sg/remove-sg/ppluto-main/overlays/dev_gcp/
+    namespace: revert-5047-sg--remove-sg
   - name: kkimdev--trading-view-api-test
     path: auto_branch_pushes/kkimdev/trading-view-api-test/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--trading-view-api-test
