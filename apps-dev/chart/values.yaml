@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--toss-api
+    path: auto_branch_pushes/banggre/toss-api/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--toss-api
   - name: kkimdev--trading-view-api-test
     path: auto_branch_pushes/kkimdev/trading-view-api-test/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--trading-view-api-test
