@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--limit-mirae-asset-rss-date
+    path: auto_branch_pushes/me1e/limit-mirae-asset-rss-date/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--limit-mirae-asset-rss-date
   - name: banggre--toss-api
     path: auto_branch_pushes/banggre/toss-api/ppluto-main/overlays/dev_gcp/
     namespace: banggre--toss-api
