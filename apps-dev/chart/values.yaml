@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--udpate-yahoofinance
+    path: auto_branch_pushes/banggre/udpate-yahoofinance/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--udpate-yahoofinance
   - name: banggre--toss-api
     path: auto_branch_pushes/banggre/toss-api/ppluto-main/overlays/dev_gcp/
     namespace: banggre--toss-api
