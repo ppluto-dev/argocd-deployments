@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--update-ticker-register-logic
+  name: banggre--off-translate
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--update-ticker-register-logic
+    namespace: banggre--off-translate
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/update-ticker-register-logic/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/off-translate/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
