@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-supernews-transcation
+    path: auto_branch_pushes/banggre/update-supernews-transcation/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-supernews-transcation
   - name: me1e--improve-google-search-node
     path: auto_branch_pushes/me1e/improve-google-search-node/ppluto-main/overlays/dev_gcp/
     namespace: me1e--improve-google-search-node
