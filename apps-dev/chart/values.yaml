@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--yahoo-ffff
+    path: auto_branch_pushes/kkimdev/yahoo-ffff/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--yahoo-ffff
   - name: banggre--update-supernews-transcation
     path: auto_branch_pushes/banggre/update-supernews-transcation/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-supernews-transcation
