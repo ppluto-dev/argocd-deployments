@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--no-create-close
+    path: auto_branch_pushes/banggre/no-create-close/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--no-create-close
   - name: kkimdev--trading-view-api-test
     path: auto_branch_pushes/kkimdev/trading-view-api-test/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--trading-view-api-test
