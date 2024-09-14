@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: me1e--add-o1-models
+  name: me1e--ttx-design-renewal
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: me1e--add-o1-models
+    namespace: me1e--ttx-design-renewal
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/me1e/add-o1-models/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/me1e/ttx-design-renewal/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
