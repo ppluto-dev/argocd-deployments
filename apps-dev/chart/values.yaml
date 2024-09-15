@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--ttx-design-renewal-article-list
+    path: auto_branch_pushes/me1e/ttx-design-renewal-article-list/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--ttx-design-renewal-article-list
   - name: me1e--ttx-design-renewal
     path: auto_branch_pushes/me1e/ttx-design-renewal/ppluto-main/overlays/dev_gcp/
     namespace: me1e--ttx-design-renewal
