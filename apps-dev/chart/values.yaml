@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-schema-ticker-size
+    path: auto_branch_pushes/banggre/update-schema-ticker-size/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-schema-ticker-size
   - name: me1e--ttx-renewal-mobile-list
     path: auto_branch_pushes/me1e/ttx-renewal-mobile-list/ppluto-main/overlays/dev_gcp/
     namespace: me1e--ttx-renewal-mobile-list
