@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--ttx--update-chart-color
+    path: auto_branch_pushes/me1e/ttx/update-chart-color/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--ttx--update-chart-color
   - name: banggre--add-marketwrap
     path: auto_branch_pushes/banggre/add-marketwrap/ppluto-main/overlays/dev_gcp/
     namespace: banggre--add-marketwrap
