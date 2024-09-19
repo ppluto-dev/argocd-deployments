@@ -33,7 +33,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:d6546ea7278fae1b8e49ca37eed4944365631c065e2cc8ae10d544f271259fdc
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:50d51935359e6b406c292bb470e19209012df02a89f17bb983a30b890cab3fbd
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -57,7 +57,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8c794628114ba6fb2f008cfeddf5de03670645259811d085f5b0f5459b5402ef
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:515a5a8fb22969b82096dfd05e14abc5a3ecaf2a1e9fc600c64b4f41d6e0ea70
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
