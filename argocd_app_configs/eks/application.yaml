@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--update-options-api
+  name: banggre--except-vix-pipeline
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--update-options-api
+    namespace: banggre--except-vix-pipeline
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/update-options-api/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/except-vix-pipeline/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
