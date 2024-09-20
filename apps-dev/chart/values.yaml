@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--enhance-render-logic
+    path: auto_branch_pushes/me1e/enhance-render-logic/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--enhance-render-logic
   - name: me1e--apply-htag-for-title
     path: auto_branch_pushes/me1e/apply-htag-for-title/ppluto-main/overlays/dev_gcp/
     namespace: me1e--apply-htag-for-title
