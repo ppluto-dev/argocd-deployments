@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-monitor
+    path: auto_branch_pushes/banggre/update-monitor/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-monitor
   - name: me1e--handle-not-found
     path: auto_branch_pushes/me1e/handle-not-found/ppluto-main/overlays/dev_gcp/
     namespace: me1e--handle-not-found
