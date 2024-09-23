@@ -1,0 +1,270 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "ingress"
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    cert-manager.io/cluster-issuer: "letsencrypt"
+spec:
+  tls:
+    - hosts:
+      - tickersbell.com
+      - tickerbell.ai
+      - wallstreet-now.com
+      - supernews.io
+      - wallstreetnow.co
+      - super.news
+      - supersearchx.com
+      - www.projectpluto.co
+      - openembedding.com
+      - ppluto.dev
+      - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
+      secretName: ingress-tls-secret
+  rules:
+    # tickerbell.ai
+    - host: me1e--fix-infinity-scroll-logic---tickerbell.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: &common-config
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5080
+
+    # wallstreet-now.com
+    # NOTE: Keep in sync with `tickerbell.ai` section above.
+    - host: me1e--fix-infinity-scroll-logic---wallstreetnow.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *common-config
+
+    # supernews.io
+    # NOTE: Keep in sync with `tickerbell.ai` section above.
+    - host: me1e--fix-infinity-scroll-logic---supernews.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *common-config
+
+    # wallstreetnow.co
+    # NOTE: Keep in sync with `tickerbell.ai` section above.
+    - host: me1e--fix-infinity-scroll-logic---wallstreetnow-co.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *common-config
+
+    # super.news
+    # NOTE: Keep in sync with `tickerbell.ai` section above.
+    - host: me1e--fix-infinity-scroll-logic---super-news.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *common-config
+
+    # projectpluto.co (Company website)
+    - host: me1e--fix-infinity-scroll-logic---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5380
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+
+    # supersearchx.com
+    - host: me1e--fix-infinity-scroll-logic---supersearchx.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
+          - path: /rss
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /sitemap
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5080
+
+    # theterminalx.com
+    - host: me1e--fix-infinity-scroll-logic---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /api/news
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /wsrvProxy
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-misc-service
+                port:
+                  number: 5088
+          - path: /rss
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /sitemap
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5095
+
+    # terminal.supersearchx.com
+    - host: me1e--fix-infinity-scroll-logic---terminal-supersearchx-com.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5480
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "ingress-for-sticky"
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    cert-manager.io/cluster-issuer: "letsencrypt"
+    traefik.ingress.kubernetes.io/service.sticky: "true"
+    traefik.ingress.kubernetes.io/service.sticky.cookie.name: "gaia-session"
+    # TODO: Migrate the following configs
+    # alb.ingress.kubernetes.io/idle-timeout: "300" # idle timeout for ALB (TODO: reset to 60 and handle the long latency connection in the other way)
+spec:
+  tls:
+    - hosts:
+      - openembedding.com
+      secretName: ingress-for-sticky-tls-secret
+  rules:
+    # openembedding.com (Project Gaia)
+    - host: me1e--fix-infinity-scroll-logic---gaia.auto-branch-pushes.ppluto-main.ppluto.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5280
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api-dk
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 84
+
+# TODO: Delete if no longer needed?
+
+
