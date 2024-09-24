@@ -228,7 +228,7 @@ metadata:
   name: "ingress-for-sticky"
   annotations:
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-nginx
+    # cert-manager.io/cluster-issuer: letsencrypt-nginx
     nginx.ingress.kubernetes.io/affinity: "cookie"
     nginx.ingress.kubernetes.io/session-cookie-name: "gaia-session"
     nginx.ingress.kubernetes.io/session-cookie-expires: "172800"
@@ -238,13 +238,13 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-connect-timeout: "60"
     nginx.ingress.kubernetes.io/keepalive-timeout: "3600"
 spec:
-  tls:
-    - hosts:
-      - openembedding.com
-      - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
-      - auto-branch-pushes.ppluto-main.ppluto.dev
-      - kkimdev--ingress-sticky-test---gaia.auto-branch-pushes.ppluto-main.ppluto.dev
-      secretName: ingress-for-sticky-tls-secret
+  # tls:
+  #   - hosts:
+  #     - openembedding.com
+  #     - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
+  #     - auto-branch-pushes.ppluto-main.ppluto.dev
+  #     - kkimdev--ingress-sticky-test---gaia.auto-branch-pushes.ppluto-main.ppluto.dev
+  #     secretName: ingress-for-sticky-tls-secret
   rules:
     # openembedding.com (Project Gaia)
     - host: kkimdev--ingress-sticky-test---gaia.auto-branch-pushes.ppluto-main.ppluto.dev
