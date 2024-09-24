@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: me1e--handle-not-found
+  name: banggre--add-reddit
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: me1e--handle-not-found
+    namespace: banggre--add-reddit
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/me1e/handle-not-found/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/add-reddit/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
