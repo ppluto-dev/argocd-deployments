@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--delete-twitter
+    path: auto_branch_pushes/banggre/delete-twitter/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--delete-twitter
   - name: me1e--migration-rss-select-logic
     path: auto_branch_pushes/me1e/migration-rss-select-logic/ppluto-main/overlays/dev_gcp/
     namespace: me1e--migration-rss-select-logic
