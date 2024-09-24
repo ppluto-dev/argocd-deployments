@@ -228,7 +228,7 @@ metadata:
   name: "ingress-for-sticky"
   annotations:
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: "letsencrypt"
+    cert-manager.io/cluster-issuer: letsencrypt-nginx
     nginx.ingress.kubernetes.io/affinity: "cookie"
     nginx.ingress.kubernetes.io/session-cookie-name: "gaia-session"
     nginx.ingress.kubernetes.io/session-cookie-expires: "172800"
