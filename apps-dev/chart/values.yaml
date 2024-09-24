@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-manual-change
+    path: auto_branch_pushes/banggre/fix-manual-change/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-manual-change
   - name: me1e--migration-rss-select-logic
     path: auto_branch_pushes/me1e/migration-rss-select-logic/ppluto-main/overlays/dev_gcp/
     namespace: me1e--migration-rss-select-logic
