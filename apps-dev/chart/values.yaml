@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ingress-sticky-test
+    path: auto_branch_pushes/kkimdev/ingress-sticky-test/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--ingress-sticky-test
   - name: banggre--add-reddit
     path: auto_branch_pushes/banggre/add-reddit/ppluto-main/overlays/dev_gcp/
     namespace: banggre--add-reddit
