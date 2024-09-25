@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-ssetf-wrap
+    path: auto_branch_pushes/banggre/add-ssetf-wrap/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--add-ssetf-wrap
   - name: me1e--migration-rss-select-logic
     path: auto_branch_pushes/me1e/migration-rss-select-logic/ppluto-main/overlays/dev_gcp/
     namespace: me1e--migration-rss-select-logic
