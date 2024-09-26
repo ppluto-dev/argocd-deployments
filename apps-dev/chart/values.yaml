@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--turn-off-supernews
+    path: auto_branch_pushes/banggre/turn-off-supernews/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--turn-off-supernews
   - name: sam--firstday
     path: auto_branch_pushes/sam/firstday/ppluto-main/overlays/dev_gcp/
     namespace: sam--firstday
