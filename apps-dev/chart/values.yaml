@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-fund-flows
+    path: auto_branch_pushes/banggre/add-fund-flows/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--add-fund-flows
+  - name: ken--fix-try-error
+    path: auto_branch_pushes/ken/fix-try-error/ppluto-main/overlays/dev_gcp/
+    namespace: ken--fix-try-error
   - name: sam--firstday
     path: auto_branch_pushes/sam/firstday/ppluto-main/overlays/dev_gcp/
     namespace: sam--firstday
