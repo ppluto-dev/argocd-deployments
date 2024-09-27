@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-equity-news
+    path: auto_branch_pushes/banggre/add-equity-news/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--add-equity-news
   - name: ken--01-short-circuit
     path: auto_branch_pushes/ken/01-short-circuit/ppluto-main/overlays/dev_gcp/
     namespace: ken--01-short-circuit
