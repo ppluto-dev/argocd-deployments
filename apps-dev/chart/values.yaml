@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--fix-node-module-vscode
+    path: auto_branch_pushes/cheol/fix-node-module-vscode/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--fix-node-module-vscode
   - name: kkimdev--prisma-bt
     path: auto_branch_pushes/kkimdev/prisma-bt/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-bt
