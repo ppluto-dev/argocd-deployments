@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-sec-news-contents
+    path: auto_branch_pushes/banggre/add-sec-news-contents/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--add-sec-news-contents
   - name: me1e--add-private-research-task-transaction
     path: auto_branch_pushes/me1e/add-private-research-task-transaction/ppluto-main/overlays/dev_gcp/
     namespace: me1e--add-private-research-task-transaction
