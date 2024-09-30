@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--add-private-research-task-transaction
+    path: auto_branch_pushes/me1e/add-private-research-task-transaction/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--add-private-research-task-transaction
   - name: kkimdev--prisma-bt
     path: auto_branch_pushes/kkimdev/prisma-bt/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-bt
