@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--morgan-crawling
+    path: auto_branch_pushes/me1e/morgan-crawling/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--morgan-crawling
   - name: kkimdev--prisma-bt
     path: auto_branch_pushes/kkimdev/prisma-bt/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-bt
