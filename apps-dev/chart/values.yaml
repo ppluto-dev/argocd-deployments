@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: abel--modify-sec-article-creation
+    path: auto_branch_pushes/abel/modify-sec-article-creation/ppluto-main/overlays/dev_gcp/
+    namespace: abel--modify-sec-article-creation
+  - name: banggre--add-barclays
+    path: auto_branch_pushes/banggre/add-barclays/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--add-barclays
   - name: ken--citi
     path: auto_branch_pushes/ken/citi/ppluto-main/overlays/dev_gcp/
     namespace: ken--citi
