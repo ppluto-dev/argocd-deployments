@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--ubs-add-grifols
+    path: auto_branch_pushes/ken/ubs-add-grifols/ppluto-main/overlays/dev_gcp/
+    namespace: ken--ubs-add-grifols
   - name: kkimdev--prisma-bt
     path: auto_branch_pushes/kkimdev/prisma-bt/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-bt
