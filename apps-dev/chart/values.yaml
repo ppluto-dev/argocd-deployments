@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--apply-naming-convetion
+    path: auto_branch_pushes/me1e/apply-naming-convetion/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--apply-naming-convetion
   - name: me1e--rename-privateresearch-to-brokerresearch
     path: auto_branch_pushes/me1e/rename-privateresearch-to-brokerresearch/ppluto-main/overlays/dev_gcp/
     namespace: me1e--rename-privateresearch-to-brokerresearch
