@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--fix-barc-error-case
+    path: auto_branch_pushes/me1e/fix-barc-error-case/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--fix-barc-error-case
   - name: kkimdev--prisma-bt
     path: auto_branch_pushes/kkimdev/prisma-bt/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-bt
