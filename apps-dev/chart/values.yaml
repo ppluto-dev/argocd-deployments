@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--fix-citi-timeout
+    path: auto_branch_pushes/ken/fix-citi-timeout/ppluto-main/overlays/dev_gcp/
+    namespace: ken--fix-citi-timeout
   - name: ken--ubs-add-grifols
     path: auto_branch_pushes/ken/ubs-add-grifols/ppluto-main/overlays/dev_gcp/
     namespace: ken--ubs-add-grifols
