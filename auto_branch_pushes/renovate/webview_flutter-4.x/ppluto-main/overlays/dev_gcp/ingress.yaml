@@ -158,6 +158,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /api/news
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /wsrvProxy
             pathType: Prefix
             backend:
@@ -166,6 +173,13 @@ spec:
                 port:
                   number: 5088
           - path: /rss
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /sitemap
             pathType: Prefix
             backend:
               service:
