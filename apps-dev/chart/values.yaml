@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--citi-newsletter-pdf
+    path: auto_branch_pushes/ken/citi-newsletter-pdf/ppluto-main/overlays/dev_gcp/
+    namespace: ken--citi-newsletter-pdf
   - name: kkimdev--prisma-bt
     path: auto_branch_pushes/kkimdev/prisma-bt/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-bt
