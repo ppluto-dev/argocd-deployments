@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-english-for-ss
+    path: auto_branch_pushes/banggre/add-english-for-ss/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--add-english-for-ss
   - name: kkimdev--prisma-bt
     path: auto_branch_pushes/kkimdev/prisma-bt/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-bt
