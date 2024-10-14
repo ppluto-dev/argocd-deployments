@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: abel--pdf-chunk-experiment
+    path: auto_branch_pushes/abel/pdf-chunk-experiment/ppluto-main/overlays/dev_gcp/
+    namespace: abel--pdf-chunk-experiment
   - name: kkimdev--prisma-bt
     path: auto_branch_pushes/kkimdev/prisma-bt/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-bt
