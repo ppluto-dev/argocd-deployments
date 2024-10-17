@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-public-comps
+    path: auto_branch_pushes/banggre/update-public-comps/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-public-comps
   - name: me1e--improve-barc-remove-overlay-logic
     path: auto_branch_pushes/me1e/improve-barc-remove-overlay-logic/ppluto-main/overlays/dev_gcp/
     namespace: me1e--improve-barc-remove-overlay-logic
