@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--citi-sector
+  name: ken--capiq-add-tpr
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--citi-sector
+    namespace: ken--capiq-add-tpr
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/citi-sector/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/capiq-add-tpr/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
