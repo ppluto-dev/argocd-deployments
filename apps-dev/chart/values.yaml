@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--debug-capiq
+    path: auto_branch_pushes/me1e/debug-capiq/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--debug-capiq
   - name: cheol--ocr-to-rdb
     path: auto_branch_pushes/cheol/ocr-to-rdb/ppluto-main/overlays/dev_gcp/
     namespace: cheol--ocr-to-rdb
@@ -59,9 +62,6 @@ spec:
   - name: kkimdev--en-news-revert4
     path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--en-news-revert4
-  - name: banggre--graph-search-test-code
-    path: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--graph-search-test-code
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
