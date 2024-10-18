@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--barclay-fix-4kb
+    path: auto_branch_pushes/ken/barclay-fix-4kb/ppluto-main/overlays/dev_gcp/
+    namespace: ken--barclay-fix-4kb
   - name: ken--ubs-model
     path: auto_branch_pushes/ken/ubs-model/ppluto-main/overlays/dev_gcp/
     namespace: ken--ubs-model
