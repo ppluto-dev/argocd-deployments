@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--add-model-config
+    path: auto_branch_pushes/ken/add-model-config/ppluto-main/overlays/dev_gcp/
+    namespace: ken--add-model-config
   - name: ken--jpm-sector
     path: auto_branch_pushes/ken/jpm-sector/ppluto-main/overlays/dev_gcp/
     namespace: ken--jpm-sector
@@ -14,9 +17,6 @@ spec:
   - name: ken--ubs-model
     path: auto_branch_pushes/ken/ubs-model/ppluto-main/overlays/dev_gcp/
     namespace: ken--ubs-model
-  - name: banggre--update-public-comps
-    path: auto_branch_pushes/banggre/update-public-comps/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--update-public-comps
   - name: cheol--pdf-metadata
     path: auto_branch_pushes/cheol/pdf-metadata/ppluto-main/overlays/dev_gcp/
     namespace: cheol--pdf-metadata
