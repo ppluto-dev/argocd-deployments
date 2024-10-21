@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cheol--adding-chunk-delete-logger
+  name: cheol--add-chunk-count-in-stroage-file
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: cheol--adding-chunk-delete-logger
+    namespace: cheol--add-chunk-count-in-stroage-file
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/cheol/adding-chunk-delete-logger/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/cheol/add-chunk-count-in-stroage-file/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
