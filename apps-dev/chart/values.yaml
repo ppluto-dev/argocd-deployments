@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--projectx-json
-    path: auto_branch_pushes/kkimdev/projectx-json/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--projectx-json
   - name: ken--barclay-fix-4kb
     path: auto_branch_pushes/ken/barclay-fix-4kb/ppluto-main/overlays/dev_gcp/
     namespace: ken--barclay-fix-4kb
@@ -62,6 +59,9 @@ spec:
   - name: kkimdev--en-news-revert4
     path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--en-news-revert4
+  - name: banggre--graph-search-test-code
+    path: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--graph-search-test-code
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
