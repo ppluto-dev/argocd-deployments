@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--ticker-filter-update
+    path: auto_branch_pushes/kkimdev/ticker-filter-update/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--ticker-filter-update
   - name: cheo--file-name
     path: auto_branch_pushes/cheo/file-name/ppluto-main/overlays/dev_gcp/
     namespace: cheo--file-name
