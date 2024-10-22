@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--sectorfix
+    path: auto_branch_pushes/kkimdev/sectorfix/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--sectorfix
   - name: cheol--pdf-metadata
     path: auto_branch_pushes/cheol/pdf-metadata/ppluto-main/overlays/dev_gcp/
     namespace: cheol--pdf-metadata
