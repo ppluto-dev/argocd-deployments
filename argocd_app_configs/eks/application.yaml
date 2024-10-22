@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--update-script
+  name: cheo--file-name
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--update-script
+    namespace: cheo--file-name
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/update-script/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/cheo/file-name/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
