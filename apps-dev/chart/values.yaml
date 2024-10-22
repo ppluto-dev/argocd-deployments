@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--update-rdb-save-logic
+    path: auto_branch_pushes/cheol/update-rdb-save-logic/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--update-rdb-save-logic
   - name: cheol--pdf-metadata
     path: auto_branch_pushes/cheol/pdf-metadata/ppluto-main/overlays/dev_gcp/
     namespace: cheol--pdf-metadata
