@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--fix-chunk
+    path: auto_branch_pushes/cheol/fix-chunk/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--fix-chunk
   - name: kkimdev--prisma-update
     path: auto_branch_pushes/kkimdev/prisma-update/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-update
