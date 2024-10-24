@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--capiq-manual-update-logic
+    path: auto_branch_pushes/banggre/capiq-manual-update-logic/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--capiq-manual-update-logic
   - name: kkimdev--prisma-update
     path: auto_branch_pushes/kkimdev/prisma-update/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-update
