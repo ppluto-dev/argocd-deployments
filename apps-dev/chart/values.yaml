@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-transaction-logic
+    path: auto_branch_pushes/banggre/update-transaction-logic/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-transaction-logic
+  - name: cheol--update-public-comps-pipeline
+    path: auto_branch_pushes/cheol/update-public-comps-pipeline/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--update-public-comps-pipeline
   - name: kkimdev--prisma-update
     path: auto_branch_pushes/kkimdev/prisma-update/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-update
@@ -53,9 +59,6 @@ spec:
   - name: kkimdev--en-news-revert4
     path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--en-news-revert4
-  - name: banggre--graph-search-test-code
-    path: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--graph-search-test-code
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
