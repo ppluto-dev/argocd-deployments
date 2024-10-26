@@ -5,12 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: cheol--update-limit
-    path: auto_branch_pushes/cheol/update-limit/ppluto-main/overlays/dev_gcp/
-    namespace: cheol--update-limit
-  - name: me1e--add-arrowpoint-log
-    path: auto_branch_pushes/me1e/add-arrowpoint-log/ppluto-main/overlays/dev_gcp/
-    namespace: me1e--add-arrowpoint-log
   - name: ken--excel-to-storage
     path: auto_branch_pushes/ken/excel-to-storage/ppluto-main/overlays/dev_gcp/
     namespace: ken--excel-to-storage
@@ -62,6 +56,9 @@ spec:
   - name: kkimdev--en-news-revert4
     path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--en-news-revert4
+  - name: banggre--graph-search-test-code
+    path: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--graph-search-test-code
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
