@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--misssssssssss
+    path: auto_branch_pushes/kkimdev/misssssssssss/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--misssssssssss
   - name: me1e--fix-extract-2pg-chunk
     path: auto_branch_pushes/me1e/fix-extract-2pg-chunk/ppluto-main/overlays/dev_gcp/
     namespace: me1e--fix-extract-2pg-chunk
@@ -59,9 +62,6 @@ spec:
   - name: kkimdev--remove-header-footer-hardcodes
     path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--remove-header-footer-hardcodes
-  - name: kkimdev--en-news-revert4
-    path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--en-news-revert4
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
