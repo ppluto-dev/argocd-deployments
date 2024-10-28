@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--temporal-local-test
+    path: auto_branch_pushes/banggre/temporal-local-test/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--temporal-local-test
   - name: banggre--onclick-process
     path: auto_branch_pushes/banggre/onclick-process/ppluto-main/overlays/dev_gcp/
     namespace: banggre--onclick-process
