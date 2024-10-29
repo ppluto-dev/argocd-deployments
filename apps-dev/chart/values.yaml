@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--merge-separated-page-chunks
+    path: auto_branch_pushes/me1e/merge-separated-page-chunks/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--merge-separated-page-chunks
   - name: banggre--multi-namespace
     path: auto_branch_pushes/banggre/multi-namespace/ppluto-main/overlays/dev_gcp/
     namespace: banggre--multi-namespace
@@ -20,9 +23,6 @@ spec:
   - name: kkimdev--prisma-update
     path: auto_branch_pushes/kkimdev/prisma-update/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-update
-  - name: cheol--pdf-metadata
-    path: auto_branch_pushes/cheol/pdf-metadata/ppluto-main/overlays/dev_gcp/
-    namespace: cheol--pdf-metadata
   - name: kkimdev--prisma-bt
     path: auto_branch_pushes/kkimdev/prisma-bt/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--prisma-bt
@@ -56,12 +56,6 @@ spec:
   - name: sungbin--sec-ticker
     path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--sec-ticker
-  - name: kkimdev--pinecone-text-test
-    path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--pinecone-text-test
-  - name: kkimdev--remove-header-footer-hardcodes
-    path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--remove-header-footer-hardcodes
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
