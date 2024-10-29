@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--multi-namespace
+    path: auto_branch_pushes/banggre/multi-namespace/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--multi-namespace
   - name: me1e--handle-source-parsing-issue
     path: auto_branch_pushes/me1e/handle-source-parsing-issue/ppluto-main/overlays/dev_gcp/
     namespace: me1e--handle-source-parsing-issue
@@ -14,9 +17,6 @@ spec:
   - name: cheol--add-pqueue-pdfoptm
     path: auto_branch_pushes/cheol/add-pqueue-pdfoptm/ppluto-main/overlays/dev_gcp/
     namespace: cheol--add-pqueue-pdfoptm
-  - name: banggre--temporal-local-test
-    path: auto_branch_pushes/banggre/temporal-local-test/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--temporal-local-test
   - name: banggre--onclick-process
     path: auto_branch_pushes/banggre/onclick-process/ppluto-main/overlays/dev_gcp/
     namespace: banggre--onclick-process
