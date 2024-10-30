@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: ken--seekingalpha-rfcred
-    path: auto_branch_pushes/ken/seekingalpha-rfcred/ppluto-main/overlays/dev_gcp/
-    namespace: ken--seekingalpha-rfcred
+  - name: banggre--fix-translate-transaction
+    path: auto_branch_pushes/banggre/fix-translate-transaction/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-translate-transaction
+  - name: cheol--google-storage-cache
+    path: auto_branch_pushes/cheol/google-storage-cache/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--google-storage-cache
   - name: me1e--check-chunk-status-page
     path: auto_branch_pushes/me1e/check-chunk-status-page/ppluto-main/overlays/dev_gcp/
     namespace: me1e--check-chunk-status-page
@@ -56,9 +59,6 @@ spec:
   - name: sungbin--sec-ticker
     path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--sec-ticker
-  - name: kkimdev--pinecone-text-test
-    path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--pinecone-text-test
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
