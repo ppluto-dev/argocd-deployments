@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--data-process
+    path: auto_branch_pushes/banggre/data-process/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--data-process
   - name: me1e--merge-separated-page-chunks
     path: auto_branch_pushes/me1e/merge-separated-page-chunks/ppluto-main/overlays/dev_gcp/
     namespace: me1e--merge-separated-page-chunks
-  - name: banggre--multi-namespace
-    path: auto_branch_pushes/banggre/multi-namespace/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--multi-namespace
   - name: kkimdev--etrade
     path: auto_branch_pushes/kkimdev/etrade/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--etrade
