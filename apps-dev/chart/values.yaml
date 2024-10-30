@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: ken--fix-seekingalpha
-    path: auto_branch_pushes/ken/fix-seekingalpha/ppluto-main/overlays/dev_gcp/
-    namespace: ken--fix-seekingalpha
   - name: me1e--merge-separated-page-chunks
     path: auto_branch_pushes/me1e/merge-separated-page-chunks/ppluto-main/overlays/dev_gcp/
     namespace: me1e--merge-separated-page-chunks
@@ -56,6 +53,9 @@ spec:
   - name: kkimdev--deepkit-rpc-example-simple
     path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-example-simple
+  - name: sungbin--sec-ticker
+    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--sec-ticker
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
