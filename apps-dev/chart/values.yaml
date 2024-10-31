@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: me1e--update-langchain-packages
-    path: auto_branch_pushes/me1e/update-langchain-packages/ppluto-main/overlays/dev_gcp/
-    namespace: me1e--update-langchain-packages
   - name: cheol--apply-new-chunks
     path: auto_branch_pushes/cheol/apply-new-chunks/ppluto-main/overlays/dev_gcp/
     namespace: cheol--apply-new-chunks
@@ -59,6 +56,12 @@ spec:
   - name: kkimdev--pinecone-text-test
     path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--pinecone-text-test
+  - name: kkimdev--remove-header-footer-hardcodes
+    path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--remove-header-footer-hardcodes
+  - name: kkimdev--en-news-revert4
+    path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--en-news-revert4
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
