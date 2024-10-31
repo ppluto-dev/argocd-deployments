@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--seekingalpha-server-debug
+    path: auto_branch_pushes/ken/seekingalpha-server-debug/ppluto-main/overlays/dev_gcp/
+    namespace: ken--seekingalpha-server-debug
   - name: banggre--temporal-migration-2
     path: auto_branch_pushes/banggre/temporal-migration-2/ppluto-main/overlays/dev_gcp/
     namespace: banggre--temporal-migration-2
@@ -56,9 +59,6 @@ spec:
   - name: kkimdev--pinecone-text-test
     path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--pinecone-text-test
-  - name: kkimdev--remove-header-footer-hardcodes
-    path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--remove-header-footer-hardcodes
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
