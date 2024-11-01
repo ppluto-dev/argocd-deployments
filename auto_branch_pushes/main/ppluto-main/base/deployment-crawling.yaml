@@ -1222,7 +1222,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-temporal-worker
-  replicas: {{.PPLUTO_MAIN_YDOWN_ARTICLE_WORKER_REPLICAS}}
+  replicas: {{.PPLUTO_MAIN_TEMPORAL_WORKER_DEPLOYMENT_REPLICAS}}
   template:
     metadata:
       labels:
