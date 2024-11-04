@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--temporal-cyclic
+    path: auto_branch_pushes/kkimdev/temporal-cyclic/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--temporal-cyclic
   - name: ken--excel-to-storage
     path: auto_branch_pushes/ken/excel-to-storage/ppluto-main/overlays/dev_gcp/
     namespace: ken--excel-to-storage
