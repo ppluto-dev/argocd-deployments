@@ -26,29 +26,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--notify-indexnow-only
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: banggre--notify-indexnow-only
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/banggre/notify-indexnow-only/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: cheol--temporal-chunking
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -59,29 +36,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/cheol/temporal-chunking/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: kkimdev--temporal-test-hangs
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: kkimdev--temporal-test-hangs
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/kkimdev/temporal-test-hangs/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -450,6 +404,29 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: banggre--graph-search-test-code
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: banggre--graph-search-test-code
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
