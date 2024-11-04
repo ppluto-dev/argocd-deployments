@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--seekingalpha-try-batch
+    path: auto_branch_pushes/ken/seekingalpha-try-batch/ppluto-main/overlays/dev_gcp/
+    namespace: ken--seekingalpha-try-batch
   - name: cheol--temporal-chunking
     path: auto_branch_pushes/cheol/temporal-chunking/ppluto-main/overlays/dev_gcp/
     namespace: cheol--temporal-chunking
