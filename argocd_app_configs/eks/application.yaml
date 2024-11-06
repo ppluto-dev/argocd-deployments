@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cheol--fix-getblocks
+  name: me1e--add-answer-ticker-lookup-statistic
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: cheol--fix-getblocks
+    namespace: me1e--add-answer-ticker-lookup-statistic
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/cheol/fix-getblocks/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/me1e/add-answer-ticker-lookup-statistic/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
