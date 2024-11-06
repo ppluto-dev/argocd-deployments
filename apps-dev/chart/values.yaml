@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--fix-getblocks
+    path: auto_branch_pushes/cheol/fix-getblocks/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--fix-getblocks
   - name: ken--excel-to-storage
     path: auto_branch_pushes/ken/excel-to-storage/ppluto-main/overlays/dev_gcp/
     namespace: ken--excel-to-storage
