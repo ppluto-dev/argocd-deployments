@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: banggre--handle-serper-issue
-    path: auto_branch_pushes/banggre/handle-serper-issue/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--handle-serper-issue
   - name: banggre--add-scheduler
     path: auto_branch_pushes/banggre/add-scheduler/ppluto-main/overlays/dev_gcp/
     namespace: banggre--add-scheduler
@@ -59,6 +56,9 @@ spec:
   - name: kkimdev--en-news-revert4
     path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--en-news-revert4
+  - name: banggre--graph-search-test-code
+    path: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--graph-search-test-code
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
