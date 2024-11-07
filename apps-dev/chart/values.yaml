@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--migration-pdf-to-watermark-removed
+    path: auto_branch_pushes/me1e/migration-pdf-to-watermark-removed/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--migration-pdf-to-watermark-removed
   - name: banggre--en-ko-migration
     path: auto_branch_pushes/banggre/en-ko-migration/ppluto-main/overlays/dev_gcp/
     namespace: banggre--en-ko-migration
