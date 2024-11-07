@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--seekingalpha-hotfix
+    path: auto_branch_pushes/ken/seekingalpha-hotfix/ppluto-main/overlays/dev_gcp/
+    namespace: ken--seekingalpha-hotfix
   - name: banggre--en-ko-migration
     path: auto_branch_pushes/banggre/en-ko-migration/ppluto-main/overlays/dev_gcp/
     namespace: banggre--en-ko-migration
