@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: cheol--exhibit-metadata
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: cheol--exhibit-metadata
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/cheol/exhibit-metadata/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: me1e--add-web-search-tab
   finalizers:
     - resources-finalizer.argocd.argoproj.io

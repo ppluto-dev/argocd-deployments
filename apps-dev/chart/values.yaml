@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--exhibit-metadata
+    path: auto_branch_pushes/cheol/exhibit-metadata/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--exhibit-metadata
   - name: me1e--add-web-search-tab
     path: auto_branch_pushes/me1e/add-web-search-tab/ppluto-main/overlays/dev_gcp/
     namespace: me1e--add-web-search-tab
