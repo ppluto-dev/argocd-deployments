@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--tmp-watermark-removal-script
+    path: auto_branch_pushes/me1e/tmp-watermark-removal-script/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--tmp-watermark-removal-script
   - name: banggre--update-dataprocess-workflow
     path: auto_branch_pushes/banggre/update-dataprocess-workflow/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-dataprocess-workflow
