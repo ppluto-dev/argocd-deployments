@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--hold-scheduler
+    path: auto_branch_pushes/banggre/hold-scheduler/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--hold-scheduler
   - name: me1e--tmp-watermark-removal-script
     path: auto_branch_pushes/me1e/tmp-watermark-removal-script/ppluto-main/overlays/dev_gcp/
     namespace: me1e--tmp-watermark-removal-script
