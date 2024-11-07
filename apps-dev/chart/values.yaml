@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--seekinglapha-googlesearch-debug
+    path: auto_branch_pushes/ken/seekinglapha-googlesearch-debug/ppluto-main/overlays/dev_gcp/
+    namespace: ken--seekinglapha-googlesearch-debug
   - name: kkimdev--chase-jpm-crawling
     path: auto_branch_pushes/kkimdev/chase-jpm-crawling/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--chase-jpm-crawling
@@ -56,9 +59,6 @@ spec:
   - name: kkimdev--en-news-revert4
     path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--en-news-revert4
-  - name: banggre--graph-search-test-code
-    path: auto_branch_pushes/banggre/graph-search-test-code/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--graph-search-test-code
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
