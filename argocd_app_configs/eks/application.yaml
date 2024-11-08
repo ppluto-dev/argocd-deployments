@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: me1e--fix-research-agent-response-exception
+  name: cheol--fix-chuking-time
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: me1e--fix-research-agent-response-exception
+    namespace: cheol--fix-chuking-time
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/me1e/fix-research-agent-response-exception/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/cheol/fix-chuking-time/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
