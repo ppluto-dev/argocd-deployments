@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--agentx-url
+    path: auto_branch_pushes/kkimdev/agentx-url/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--agentx-url
   - name: cheol--update-vdb-insert
     path: auto_branch_pushes/cheol/update-vdb-insert/ppluto-main/overlays/dev_gcp/
     namespace: cheol--update-vdb-insert
