@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: banggre--increase-worker-pod
-    path: auto_branch_pushes/banggre/increase-worker-pod/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--increase-worker-pod
   - name: banggre--migrate-x
     path: auto_branch_pushes/banggre/migrate-x/ppluto-main/overlays/dev_gcp/
     namespace: banggre--migrate-x
