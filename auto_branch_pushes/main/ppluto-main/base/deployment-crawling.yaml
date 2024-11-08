@@ -1189,6 +1189,11 @@ spec:
     matchLabels:
       app: ppluto-main-temporal-worker
   replicas: {{.PPLUTO_MAIN_TEMPORAL_WORKER_DEPLOYMENT_REPLICAS}}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 0
   template:
     metadata:
       labels:
