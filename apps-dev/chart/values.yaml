@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--fix-research-agent-response-exception
+    path: auto_branch_pushes/me1e/fix-research-agent-response-exception/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--fix-research-agent-response-exception
   - name: ken--excel-to-storage
     path: auto_branch_pushes/ken/excel-to-storage/ppluto-main/overlays/dev_gcp/
     namespace: ken--excel-to-storage
