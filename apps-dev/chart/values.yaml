@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-build
+    path: auto_branch_pushes/banggre/fix-build/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-build
   - name: banggre--migrate-x-agent
     path: auto_branch_pushes/banggre/migrate-x-agent/ppluto-main/overlays/dev_gcp/
     namespace: banggre--migrate-x-agent
-  - name: banggre--migrate-x
-    path: auto_branch_pushes/banggre/migrate-x/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--migrate-x
   - name: ken--excel-to-storage
     path: auto_branch_pushes/ken/excel-to-storage/ppluto-main/overlays/dev_gcp/
     namespace: ken--excel-to-storage

@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--migrate-x-agent
+  name: banggre--fix-build
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--migrate-x-agent
+    namespace: banggre--fix-build
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/migrate-x-agent/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/fix-build/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--migrate-x
+  name: banggre--migrate-x-agent
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--migrate-x
+    namespace: banggre--migrate-x-agent
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/migrate-x/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/migrate-x-agent/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
