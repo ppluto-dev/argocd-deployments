@@ -5,9 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: banggre--increase-heartbeattimeout
-    path: auto_branch_pushes/banggre/increase-heartbeattimeout/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--increase-heartbeattimeout
+  - name: banggre--increase-worker-pod
+    path: auto_branch_pushes/banggre/increase-worker-pod/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--increase-worker-pod
+  - name: banggre--migrate-x
+    path: auto_branch_pushes/banggre/migrate-x/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--migrate-x
   - name: me1e--ui-v2-4
     path: auto_branch_pushes/me1e/ui-v2-4/ppluto-main/overlays/dev_gcp/
     namespace: me1e--ui-v2-4
