@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--fix-build
+  name: banggre--add-login
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--fix-build
+    namespace: banggre--add-login
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/fix-build/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/add-login/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
