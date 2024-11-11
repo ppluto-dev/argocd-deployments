@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--citi-more-tickers
+    path: auto_branch_pushes/ken/citi-more-tickers/ppluto-main/overlays/dev_gcp/
+    namespace: ken--citi-more-tickers
   - name: kkimdev--ttx-homepage
     path: auto_branch_pushes/kkimdev/ttx-homepage/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--ttx-homepage
