@@ -26,52 +26,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--add-articledb-take-query
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: banggre--add-articledb-take-query
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/banggre/add-articledb-take-query/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: me1e--merge-tickerlookup-and-researchagent
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: me1e--merge-tickerlookup-and-researchagent
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/me1e/merge-tickerlookup-and-researchagent/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: ken--excel-to-storage
   finalizers:
     - resources-finalizer.argocd.argoproj.io
