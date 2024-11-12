@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--cluster-autoscaler
+    path: auto_branch_pushes/cheol/cluster-autoscaler/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--cluster-autoscaler
   - name: kkimdev--temporal-workflow-eslint-import
     path: auto_branch_pushes/kkimdev/temporal-workflow-eslint-import/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--temporal-workflow-eslint-import
