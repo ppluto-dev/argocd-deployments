@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--add-deployment-price-info
+    path: auto_branch_pushes/me1e/add-deployment-price-info/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--add-deployment-price-info
   - name: ken--excel-to-storage
     path: auto_branch_pushes/ken/excel-to-storage/ppluto-main/overlays/dev_gcp/
     namespace: ken--excel-to-storage
