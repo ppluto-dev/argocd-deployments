@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: cheol--temporal-worker-30
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: cheol--temporal-worker-30
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/cheol/temporal-worker-30/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: ken--temporal-add-watermarkremoval
   finalizers:
     - resources-finalizer.argocd.argoproj.io
