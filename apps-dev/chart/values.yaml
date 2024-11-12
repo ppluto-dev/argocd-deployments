@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-password-reset
+    path: auto_branch_pushes/banggre/add-password-reset/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--add-password-reset
   - name: cheol--crash-gaia
     path: auto_branch_pushes/cheol/crash-gaia/ppluto-main/overlays/dev_gcp/
     namespace: cheol--crash-gaia
