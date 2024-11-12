@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--ubs-login-fix
+  name: ken--temporal-add-watermarkremoval
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--ubs-login-fix
+    namespace: ken--temporal-add-watermarkremoval
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/ubs-login-fix/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/temporal-add-watermarkremoval/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
