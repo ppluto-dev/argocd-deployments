@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--crawling-cron-add-index
+  name: banggre--update-pennymeme-transaction-logic
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--crawling-cron-add-index
+    namespace: banggre--update-pennymeme-transaction-logic
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/crawling-cron-add-index/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/update-pennymeme-transaction-logic/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
