@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: banggre--update-sec-api
-    path: auto_branch_pushes/banggre/update-sec-api/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--update-sec-api
   - name: ken--crawling-cron-add-index
     path: auto_branch_pushes/ken/crawling-cron-add-index/ppluto-main/overlays/dev_gcp/
     namespace: ken--crawling-cron-add-index
@@ -62,6 +59,9 @@ spec:
   - name: kkimdev--remove-header-footer-hardcodes
     path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--remove-header-footer-hardcodes
+  - name: kkimdev--en-news-revert4
+    path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--en-news-revert4
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
