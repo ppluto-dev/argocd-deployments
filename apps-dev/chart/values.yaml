@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--delete-chunk-id-col
+    path: auto_branch_pushes/banggre/delete-chunk-id-col/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--delete-chunk-id-col
   - name: cheol--cluster-autoscaler
     path: auto_branch_pushes/cheol/cluster-autoscaler/ppluto-main/overlays/dev_gcp/
     namespace: cheol--cluster-autoscaler
