@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--gaia-remove-row-delay
+    path: auto_branch_pushes/ken/gaia-remove-row-delay/ppluto-main/overlays/dev_gcp/
+    namespace: ken--gaia-remove-row-delay
   - name: me1e--update-ui-data-map
     path: auto_branch_pushes/me1e/update-ui-data-map/ppluto-main/overlays/dev_gcp/
     namespace: me1e--update-ui-data-map
-  - name: cheol--add-exhitibt-metadata
-    path: auto_branch_pushes/cheol/add-exhitibt-metadata/ppluto-main/overlays/dev_gcp/
-    namespace: cheol--add-exhitibt-metadata
   - name: kkimdev--temporal-individual-dev-namespaces
     path: auto_branch_pushes/kkimdev/temporal-individual-dev-namespaces/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--temporal-individual-dev-namespaces

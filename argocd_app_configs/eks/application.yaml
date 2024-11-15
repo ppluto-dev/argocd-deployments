@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: me1e--update-ui-data-map
+  name: ken--gaia-remove-row-delay
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: me1e--update-ui-data-map
+    namespace: ken--gaia-remove-row-delay
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/me1e/update-ui-data-map/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/gaia-remove-row-delay/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cheol--add-exhitibt-metadata
+  name: me1e--update-ui-data-map
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: cheol--add-exhitibt-metadata
+    namespace: me1e--update-ui-data-map
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/cheol/add-exhitibt-metadata/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/me1e/update-ui-data-map/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
