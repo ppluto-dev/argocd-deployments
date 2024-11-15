@@ -5,12 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--gaia-temporal-hotfix
+    path: auto_branch_pushes/ken/gaia-temporal-hotfix/ppluto-main/overlays/dev_gcp/
+    namespace: ken--gaia-temporal-hotfix
+  - name: cheol--remove-unused-storage-file-column
+    path: auto_branch_pushes/cheol/remove-unused-storage-file-column/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--remove-unused-storage-file-column
+  - name: kkimdev--temporal-individual-dev-namespaces
+    path: auto_branch_pushes/kkimdev/temporal-individual-dev-namespaces/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--temporal-individual-dev-namespaces
   - name: kkimdev--makedevtemporal
     path: auto_branch_pushes/kkimdev/makedevtemporal/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--makedevtemporal
-  - name: ken--pe3-gaia
-    path: auto_branch_pushes/ken/pe3-gaia/ppluto-main/overlays/dev_gcp/
-    namespace: ken--pe3-gaia
   - name: cheol--cluster-autoscaler
     path: auto_branch_pushes/cheol/cluster-autoscaler/ppluto-main/overlays/dev_gcp/
     namespace: cheol--cluster-autoscaler
@@ -59,9 +65,6 @@ spec:
   - name: kkimdev--pinecone-text-test
     path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--pinecone-text-test
-  - name: kkimdev--remove-header-footer-hardcodes
-    path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--remove-header-footer-hardcodes
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
