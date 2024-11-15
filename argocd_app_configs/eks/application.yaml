@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: me1e--merge-agent-ticker-websearch
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: me1e--merge-agent-ticker-websearch
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/me1e/merge-agent-ticker-websearch/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: cheol--cluster-autoscaler
   finalizers:
     - resources-finalizer.argocd.argoproj.io

@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--merge-agent-ticker-websearch
+    path: auto_branch_pushes/me1e/merge-agent-ticker-websearch/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--merge-agent-ticker-websearch
   - name: cheol--cluster-autoscaler
     path: auto_branch_pushes/cheol/cluster-autoscaler/ppluto-main/overlays/dev_gcp/
     namespace: cheol--cluster-autoscaler
