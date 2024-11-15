@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--update-ui-data-map
+    path: auto_branch_pushes/me1e/update-ui-data-map/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--update-ui-data-map
   - name: cheol--add-exhitibt-metadata
     path: auto_branch_pushes/cheol/add-exhitibt-metadata/ppluto-main/overlays/dev_gcp/
     namespace: cheol--add-exhitibt-metadata
@@ -62,9 +65,6 @@ spec:
   - name: kkimdev--pinecone-text-test
     path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--pinecone-text-test
-  - name: kkimdev--remove-header-footer-hardcodes
-    path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--remove-header-footer-hardcodes
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
