@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: me1e--update-ui-data-map
+  name: me1e--upload-large-json-column-to-s3
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: me1e--update-ui-data-map
+    namespace: me1e--upload-large-json-column-to-s3
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/me1e/update-ui-data-map/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/me1e/upload-large-json-column-to-s3/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
