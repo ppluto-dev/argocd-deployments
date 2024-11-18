@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: ken--gaia-api-temporal
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ken--gaia-api-temporal
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ken/gaia-api-temporal/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: kkimdev--temporal-individual-dev-namespaces
   finalizers:
     - resources-finalizer.argocd.argoproj.io
