@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--free-from-stringify
+    path: auto_branch_pushes/me1e/free-from-stringify/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--free-from-stringify
   - name: kkimdev--temporal-worfklow-test
     path: auto_branch_pushes/kkimdev/temporal-worfklow-test/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--temporal-worfklow-test
