@@ -1222,12 +1222,12 @@ spec:
             httpGet:
               path: /health
               port: 5096
-              failureThreshold: 3
-              periodSeconds: 10
+            failureThreshold: 3
+            periodSeconds: 10
           startupProbe:
             httpGet:
               path: /health
               port: 5096
-              failureThreshold: 10
-              periodSeconds: 10
+            failureThreshold: 30
+            periodSeconds: 10
           terminationGracePeriodSeconds: 300
