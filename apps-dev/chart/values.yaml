@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--gaia-fix-batch
+    path: auto_branch_pushes/ken/gaia-fix-batch/ppluto-main/overlays/dev_gcp/
+    namespace: ken--gaia-fix-batch
   - name: me1e--free-from-stringify
     path: auto_branch_pushes/me1e/free-from-stringify/ppluto-main/overlays/dev_gcp/
     namespace: me1e--free-from-stringify
@@ -59,9 +62,6 @@ spec:
   - name: kkimdev--remove-header-footer-hardcodes
     path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--remove-header-footer-hardcodes
-  - name: kkimdev--en-news-revert4
-    path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--en-news-revert4
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
