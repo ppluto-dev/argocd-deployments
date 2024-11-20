@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--migrate-reddit
+    path: auto_branch_pushes/banggre/migrate-reddit/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--migrate-reddit
   - name: me1e--stringify-optimization
     path: auto_branch_pushes/me1e/stringify-optimization/ppluto-main/overlays/dev_gcp/
     namespace: me1e--stringify-optimization
