@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--migrate-transalation
+    path: auto_branch_pushes/banggre/migrate-transalation/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--migrate-transalation
+  - name: me1e--stringify-optimization
+    path: auto_branch_pushes/me1e/stringify-optimization/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--stringify-optimization
   - name: kkimdev--temporal-priority-queue
     path: auto_branch_pushes/kkimdev/temporal-priority-queue/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--temporal-priority-queue
@@ -59,9 +65,6 @@ spec:
   - name: kkimdev--remove-header-footer-hardcodes
     path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--remove-header-footer-hardcodes
-  - name: kkimdev--en-news-revert4
-    path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--en-news-revert4
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
