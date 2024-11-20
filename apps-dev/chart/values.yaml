@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--reduce-gaia-filter-size
+    path: auto_branch_pushes/cheol/reduce-gaia-filter-size/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--reduce-gaia-filter-size
   - name: me1e--stringify-optimization
     path: auto_branch_pushes/me1e/stringify-optimization/ppluto-main/overlays/dev_gcp/
     namespace: me1e--stringify-optimization
