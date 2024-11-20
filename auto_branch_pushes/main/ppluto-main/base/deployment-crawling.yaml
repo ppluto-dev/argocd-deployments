@@ -555,42 +555,6 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-
----
-kind: Deployment
-apiVersion: apps/v1
-metadata:
-  name: ppluto-main-crawling-create-article-summary
-spec:
-  selector:
-    matchLabels:
-      app: ppluto-main-crawling-create-article-summary
-  replicas: {{ .PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS }}
-  template:
-    metadata:
-      labels:
-        app: ppluto-main-crawling-create-article-summary
-    spec:
-      imagePullSecrets:
-        - name: gitlab-container-registry
-      containers:
-        - name: ppluto-main--prod-server-create-article-summary
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
-          env:
-            - name: PPLUTO_SERVER_ARG_SERVER
-              value: api-server
-            - name: IS_LOCAL_CRONJOB
-              value: "true"
-            - name: IS_LOCAL_ARTICLE_SUMMARIZE
-              value: "true"
-          resources:
-            requests:
-              cpu: 400m
-            limits:
-              cpu: 2000m
-              memory: 3Gi
-              ephemeral-storage: 9Gi
-
 ---
 kind: Deployment
 apiVersion: apps/v1
