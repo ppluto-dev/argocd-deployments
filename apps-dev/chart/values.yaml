@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--migrate-sec-vix
+    path: auto_branch_pushes/banggre/migrate-sec-vix/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--migrate-sec-vix
   - name: me1e--stringify-optimization
     path: auto_branch_pushes/me1e/stringify-optimization/ppluto-main/overlays/dev_gcp/
     namespace: me1e--stringify-optimization
