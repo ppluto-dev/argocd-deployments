@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--migrate-price
+  name: banggre--fix-ticker-issue
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--migrate-price
+    namespace: banggre--fix-ticker-issue
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/migrate-price/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/fix-ticker-issue/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
