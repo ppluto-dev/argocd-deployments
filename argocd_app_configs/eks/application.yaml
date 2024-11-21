@@ -49,29 +49,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--gaia-fix-batch
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ken--gaia-fix-batch
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ken/gaia-fix-batch/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: me1e--stringify-optimization
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -473,6 +450,29 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kkimdev--remove-header-footer-hardcodes
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: kkimdev--remove-header-footer-hardcodes
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
