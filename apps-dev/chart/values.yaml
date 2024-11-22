@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-article-monitor
+    path: auto_branch_pushes/banggre/fix-article-monitor/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-article-monitor
   - name: cheol--cluster-autoscaler
     path: auto_branch_pushes/cheol/cluster-autoscaler/ppluto-main/overlays/dev_gcp/
     namespace: cheol--cluster-autoscaler
