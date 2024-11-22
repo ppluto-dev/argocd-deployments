@@ -79,8 +79,8 @@ spec:
               cpu: 200m
             limits:
               cpu: 1000m
-              memory: 3Gi
-              ephemeral-storage: 5Gi
+              memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
+              ephemeral-storage: 9Gi
           lifecycle:
             preStop:
               exec:

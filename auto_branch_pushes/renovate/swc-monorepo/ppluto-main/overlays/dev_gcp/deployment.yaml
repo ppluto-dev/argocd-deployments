@@ -16,7 +16,7 @@ spec:
       terminationGracePeriodSeconds: 1800 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:29f962d99c489d7248679ba26191178ca4170ec19186e93a44a5962d09451ecf
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:212e330ea77ecd49422ccaf1a184b2a83547ebae7ee869724aaa7f6624dfcb17
           ports:
             - containerPort: 5280
             - containerPort: 5380
@@ -33,7 +33,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:a0e89ed1654f0ee0cf18278730704a917ae52fdd1d9ee5568bac297fef58620a
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:0e99a906f70d650ed7bf57b56d4a8bcb89c25524738c4a54d1f240f71b19022a
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -57,7 +57,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e484d227282c79b9163cda7d94b6ae7a560d7db2f4e42399d3f1f42606460da5
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8efbd681e49bf57f1c33ad7ce75d35976e79289782773b43ecc75edf0e467463
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -79,8 +79,8 @@ spec:
               cpu: 200m
             limits:
               cpu: 1000m
-              memory: 3Gi
-              ephemeral-storage: 5Gi
+              memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
+              ephemeral-storage: 9Gi
           lifecycle:
             preStop:
               exec:
