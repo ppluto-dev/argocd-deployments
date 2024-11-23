@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cheol--manual-update-metadata
+  name: me1e--update-vision-token-case
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: cheol--manual-update-metadata
+    namespace: me1e--update-vision-token-case
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/cheol/manual-update-metadata/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/me1e/update-vision-token-case/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
