@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-admin-access
+    path: auto_branch_pushes/banggre/fix-admin-access/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-admin-access
   - name: banggre--fix-ticker-page-metadata
     path: auto_branch_pushes/banggre/fix-ticker-page-metadata/ppluto-main/overlays/dev_gcp/
     namespace: banggre--fix-ticker-page-metadata
