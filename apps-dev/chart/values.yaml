@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--support-string-res-in-array
+    path: auto_branch_pushes/me1e/support-string-res-in-array/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--support-string-res-in-array
   - name: me1e--set-min-width
     path: auto_branch_pushes/me1e/set-min-width/ppluto-main/overlays/dev_gcp/
     namespace: me1e--set-min-width
