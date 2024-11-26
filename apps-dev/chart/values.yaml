@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--add-fallbacks-and-fix-date-coverter
+    path: auto_branch_pushes/me1e/add-fallbacks-and-fix-date-coverter/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--add-fallbacks-and-fix-date-coverter
   - name: kkimdev--ttx-ui-profile
     path: auto_branch_pushes/kkimdev/ttx-ui-profile/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--ttx-ui-profile
@@ -59,9 +62,6 @@ spec:
   - name: kkimdev--remove-header-footer-hardcodes
     path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--remove-header-footer-hardcodes
-  - name: kkimdev--en-news-revert4
-    path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--en-news-revert4
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
