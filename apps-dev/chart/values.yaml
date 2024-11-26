@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-markdown
+    path: auto_branch_pushes/banggre/fix-markdown/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-markdown
   - name: me1e--add-fallbacks-and-fix-date-coverter
     path: auto_branch_pushes/me1e/add-fallbacks-and-fix-date-coverter/ppluto-main/overlays/dev_gcp/
     namespace: me1e--add-fallbacks-and-fix-date-coverter
