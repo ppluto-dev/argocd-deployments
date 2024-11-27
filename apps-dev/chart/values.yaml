@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--fix-document-sector-custom-code
+    path: auto_branch_pushes/cheol/fix-document-sector-custom-code/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--fix-document-sector-custom-code
   - name: cheol--cluster-autoscaler
     path: auto_branch_pushes/cheol/cluster-autoscaler/ppluto-main/overlays/dev_gcp/
     namespace: cheol--cluster-autoscaler
