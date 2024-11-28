@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--add-sec-link
+  name: ken--gs-ubs-hotfix
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--add-sec-link
+    namespace: ken--gs-ubs-hotfix
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/add-sec-link/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/gs-ubs-hotfix/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
