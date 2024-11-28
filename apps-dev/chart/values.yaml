@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--admin-temporal
+    path: auto_branch_pushes/cheol/admin-temporal/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--admin-temporal
   - name: banggre--add-crypto-pipeline
     path: auto_branch_pushes/banggre/add-crypto-pipeline/ppluto-main/overlays/dev_gcp/
     namespace: banggre--add-crypto-pipeline
