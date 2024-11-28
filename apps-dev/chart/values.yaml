@@ -5,12 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: banggre--fix-meta-description
-    path: auto_branch_pushes/banggre/fix-meta-description/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--fix-meta-description
-  - name: kkimdev--profile-ui
-    path: auto_branch_pushes/kkimdev/profile-ui/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--profile-ui
   - name: cheol--cluster-autoscaler
     path: auto_branch_pushes/cheol/cluster-autoscaler/ppluto-main/overlays/dev_gcp/
     namespace: cheol--cluster-autoscaler
@@ -62,6 +56,9 @@ spec:
   - name: kkimdev--remove-header-footer-hardcodes
     path: auto_branch_pushes/kkimdev/remove-header-footer-hardcodes/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--remove-header-footer-hardcodes
+  - name: kkimdev--en-news-revert4
+    path: auto_branch_pushes/kkimdev/en-news-revert4/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--en-news-revert4
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
