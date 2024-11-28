@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: cheol--add-new-vision
+    path: auto_branch_pushes/cheol/add-new-vision/ppluto-main/overlays/dev_gcp/
+    namespace: cheol--add-new-vision
   - name: cheol--admin-temporal
     path: auto_branch_pushes/cheol/admin-temporal/ppluto-main/overlays/dev_gcp/
     namespace: cheol--admin-temporal
