@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--add-default-price-trigger-for-coin
+    path: auto_branch_pushes/banggre/add-default-price-trigger-for-coin/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--add-default-price-trigger-for-coin
   - name: cheol--cluster-autoscaler
     path: auto_branch_pushes/cheol/cluster-autoscaler/ppluto-main/overlays/dev_gcp/
     namespace: cheol--cluster-autoscaler
