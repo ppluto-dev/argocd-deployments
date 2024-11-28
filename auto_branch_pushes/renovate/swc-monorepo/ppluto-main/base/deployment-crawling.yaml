@@ -1186,8 +1186,8 @@ spec:
             httpGet:
               path: /health
               port: 5096
-            failureThreshold: 3
-            periodSeconds: 10
+            failureThreshold: 5
+            periodSeconds: 300
           startupProbe:
             httpGet:
               path: /health
