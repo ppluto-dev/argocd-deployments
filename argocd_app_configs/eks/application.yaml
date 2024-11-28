@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--fix-infinity-price
+  name: cheol--liveness
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--fix-infinity-price
+    namespace: cheol--liveness
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/fix-infinity-price/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/cheol/liveness/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
