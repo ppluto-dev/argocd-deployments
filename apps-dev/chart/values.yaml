@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--fix-goldman
+    path: auto_branch_pushes/ken/fix-goldman/ppluto-main/overlays/dev_gcp/
+    namespace: ken--fix-goldman
   - name: cheol--fix-soruce
     path: auto_branch_pushes/cheol/fix-soruce/ppluto-main/overlays/dev_gcp/
     namespace: cheol--fix-soruce
