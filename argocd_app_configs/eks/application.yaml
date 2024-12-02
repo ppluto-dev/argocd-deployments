@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--update-main-page-link
+  name: banggre--update-stripe-secretekey
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--update-main-page-link
+    namespace: banggre--update-stripe-secretekey
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/update-main-page-link/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/update-stripe-secretekey/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
