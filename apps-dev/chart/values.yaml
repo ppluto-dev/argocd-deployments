@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-main-page-link
+    path: auto_branch_pushes/banggre/update-main-page-link/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-main-page-link
   - name: banggre--add-appleplay-domain
     path: auto_branch_pushes/banggre/add-appleplay-domain/ppluto-main/overlays/dev_gcp/
     namespace: banggre--add-appleplay-domain
