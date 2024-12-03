@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--fix-alarm
+  name: cheol--error
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--fix-alarm
+    namespace: cheol--error
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/fix-alarm/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/cheol/error/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
