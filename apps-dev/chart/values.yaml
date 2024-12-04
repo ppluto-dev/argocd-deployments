@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--handle-profile
+    path: auto_branch_pushes/banggre/handle-profile/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--handle-profile
   - name: banggre--fix-cnbc
     path: auto_branch_pushes/banggre/fix-cnbc/ppluto-main/overlays/dev_gcp/
     namespace: banggre--fix-cnbc
