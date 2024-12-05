@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--citi-add-crypto
+    path: auto_branch_pushes/ken/citi-add-crypto/ppluto-main/overlays/dev_gcp/
+    namespace: ken--citi-add-crypto
   - name: banggre--migrate-vectorizer-temporal
     path: auto_branch_pushes/banggre/migrate-vectorizer-temporal/ppluto-main/overlays/dev_gcp/
     namespace: banggre--migrate-vectorizer-temporal
