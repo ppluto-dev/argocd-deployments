@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--redirect-to-subscription
+  name: banggre--migrate-vectorizer-temporal
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--redirect-to-subscription
+    namespace: banggre--migrate-vectorizer-temporal
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/redirect-to-subscription/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/migrate-vectorizer-temporal/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
