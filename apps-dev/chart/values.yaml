@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--sorting-logic-change
+    path: auto_branch_pushes/me1e/sorting-logic-change/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--sorting-logic-change
   - name: cheol--add-auth-api
     path: auto_branch_pushes/cheol/add-auth-api/ppluto-main/overlays/dev_gcp/
     namespace: cheol--add-auth-api
-  - name: banggre--fix-na
-    path: auto_branch_pushes/banggre/fix-na/ppluto-main/overlays/dev_gcp/
-    namespace: banggre--fix-na
   - name: banggre--fix-cnbc
     path: auto_branch_pushes/banggre/fix-cnbc/ppluto-main/overlays/dev_gcp/
     namespace: banggre--fix-cnbc
