@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: me1e--add-vdb-migration-logic
+    path: auto_branch_pushes/me1e/add-vdb-migration-logic/ppluto-main/overlays/dev_gcp/
+    namespace: me1e--add-vdb-migration-logic
   - name: banggre--update-news-contents-date-meta
     path: auto_branch_pushes/banggre/update-news-contents-date-meta/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-news-contents-date-meta
