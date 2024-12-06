@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--fix-admin
+  name: banggre--update-news-contents-crawl
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--fix-admin
+    namespace: banggre--update-news-contents-crawl
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/fix-admin/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/update-news-contents-crawl/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
