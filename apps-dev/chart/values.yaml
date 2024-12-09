@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--goldman-time-cut
+    path: auto_branch_pushes/ken/goldman-time-cut/ppluto-main/overlays/dev_gcp/
+    namespace: ken--goldman-time-cut
   - name: banggre--update-tag
     path: auto_branch_pushes/banggre/update-tag/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-tag
