@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: me1e--pipeline-run-migration-script
+  name: banggre--udpate-sec-api
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: me1e--pipeline-run-migration-script
+    namespace: banggre--udpate-sec-api
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/me1e/pipeline-run-migration-script/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/udpate-sec-api/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--udpate-badge-text-aligh
+  name: me1e--pipeline-run-migration-script
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--udpate-badge-text-aligh
+    namespace: me1e--pipeline-run-migration-script
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/udpate-badge-text-aligh/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/me1e/pipeline-run-migration-script/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
