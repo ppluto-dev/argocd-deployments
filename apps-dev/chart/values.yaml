@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--crawling-add-ids
+    path: auto_branch_pushes/ken/crawling-add-ids/ppluto-main/overlays/dev_gcp/
+    namespace: ken--crawling-add-ids
   - name: me1e--pipeline-run-migration-script
     path: auto_branch_pushes/me1e/pipeline-run-migration-script/ppluto-main/overlays/dev_gcp/
     namespace: me1e--pipeline-run-migration-script
