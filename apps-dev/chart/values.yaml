@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--fix-sec-api-type
+    path: auto_branch_pushes/banggre/fix-sec-api-type/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--fix-sec-api-type
   - name: me1e--pipeline-run-migration-script
     path: auto_branch_pushes/me1e/pipeline-run-migration-script/ppluto-main/overlays/dev_gcp/
     namespace: me1e--pipeline-run-migration-script
