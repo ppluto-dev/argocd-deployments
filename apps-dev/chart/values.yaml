@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--remove-filter
+    path: auto_branch_pushes/banggre/remove-filter/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--remove-filter
   - name: me1e--pipeline-run-migration-script
     path: auto_branch_pushes/me1e/pipeline-run-migration-script/ppluto-main/overlays/dev_gcp/
     namespace: me1e--pipeline-run-migration-script
