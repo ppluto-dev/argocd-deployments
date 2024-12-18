@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banggre--update-table-ui
+  name: banggre--add-ticker-search-api
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: banggre--update-table-ui
+    namespace: banggre--add-ticker-search-api
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/banggre/update-table-ui/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/banggre/add-ticker-search-api/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
