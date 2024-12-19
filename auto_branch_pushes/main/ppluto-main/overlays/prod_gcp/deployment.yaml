@@ -16,7 +16,7 @@ spec:
       terminationGracePeriodSeconds: 1800 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:d9f0cb693f50d4316906ac4415f23032ccc0e9ff8e740f7bf04c83bfc49a7dcd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:a8110676c795cb4c8071f93fcd03dbff8de9259eef38ef329eb344d473c95f85
           ports:
             - containerPort: 5280
             - containerPort: 5380
@@ -33,7 +33,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:a83c14e34662d929706404adeea73635c7d7af6023d02a245f2f3ea0060b6bf9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:ceec0082b79c1814acb75d1dc5faafeb09ba2569eaefa0580ab2ba1da751393a
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -57,7 +57,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ba08539d7bc7bbcb01478662497f06229e754eafb19af34d6bf5f7e1905d3489
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:18dc834f7a9b2aaade303ea1068fab92196988fe9bf0fa4ed23c7ba8d9001813
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
