@@ -5,6 +5,18 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mason--groq
+    path: auto_branch_pushes/mason/groq/ppluto-main/overlays/dev_gcp/
+    namespace: mason--groq
+  - name: banggre--revert-pro
+    path: auto_branch_pushes/banggre/revert-pro/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--revert-pro
+  - name: mason--login-bugfix
+    path: auto_branch_pushes/mason/login-bugfix/ppluto-main/overlays/dev_gcp/
+    namespace: mason--login-bugfix
+  - name: mason--validation
+    path: auto_branch_pushes/mason/validation/ppluto-main/overlays/dev_gcp/
+    namespace: mason--validation
   - name: kkimdev--ttx-restore-pro-try
     path: auto_branch_pushes/kkimdev/ttx-restore-pro-try/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--ttx-restore-pro-try
@@ -56,15 +68,6 @@ spec:
   - name: kkimdev--deepkit-rpc-get-ip
     path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-get-ip
-  - name: kkimdev--deepkit-rpc-example-simple
-    path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--deepkit-rpc-example-simple
-  - name: sungbin--sec-ticker
-    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
-    namespace: sungbin--sec-ticker
-  - name: kkimdev--pinecone-text-test
-    path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--pinecone-text-test
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
