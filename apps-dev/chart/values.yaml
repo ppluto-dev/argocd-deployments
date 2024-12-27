@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--monitor-targets
+    path: auto_branch_pushes/ken/monitor-targets/ppluto-main/overlays/dev_gcp/
+    namespace: ken--monitor-targets
   - name: mason--validation
     path: auto_branch_pushes/mason/validation/ppluto-main/overlays/dev_gcp/
     namespace: mason--validation
-  - name: kkimdev--ttx-restore-pro-try
-    path: auto_branch_pushes/kkimdev/ttx-restore-pro-try/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--ttx-restore-pro-try
   - name: banggre--update-get-pdf
     path: auto_branch_pushes/banggre/update-get-pdf/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-get-pdf
