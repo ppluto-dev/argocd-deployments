@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--promo-text-update
+    path: auto_branch_pushes/kkimdev/promo-text-update/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--promo-text-update
   - name: mason--seekingalpha
     path: auto_branch_pushes/mason/seekingalpha/ppluto-main/overlays/dev_gcp/
     namespace: mason--seekingalpha
