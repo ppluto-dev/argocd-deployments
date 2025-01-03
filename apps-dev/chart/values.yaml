@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mason--seekingalpha
+    path: auto_branch_pushes/mason/seekingalpha/ppluto-main/overlays/dev_gcp/
+    namespace: mason--seekingalpha
   - name: banggre--update-mobile-answer
     path: auto_branch_pushes/banggre/update-mobile-answer/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-mobile-answer
-  - name: kkimdev--suggested-ui-update
-    path: auto_branch_pushes/kkimdev/suggested-ui-update/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--suggested-ui-update
   - name: kkimdev--ttx-agent-appbar-profile-buttons
     path: auto_branch_pushes/kkimdev/ttx-agent-appbar-profile-buttons/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--ttx-agent-appbar-profile-buttons
