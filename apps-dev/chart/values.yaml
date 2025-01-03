@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--support-payment-log
+    path: auto_branch_pushes/banggre/support-payment-log/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--support-payment-log
+  - name: banggre--update-mobile-answer
+    path: auto_branch_pushes/banggre/update-mobile-answer/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-mobile-answer
   - name: kkimdev--suggested-ui-update
     path: auto_branch_pushes/kkimdev/suggested-ui-update/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--suggested-ui-update
@@ -62,9 +68,6 @@ spec:
   - name: kkimdev--deepkit-rpc-example-simple
     path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-example-simple
-  - name: sungbin--sec-ticker
-    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
-    namespace: sungbin--sec-ticker
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
