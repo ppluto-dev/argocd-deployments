@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-answer-chart-gap
+    path: auto_branch_pushes/banggre/update-answer-chart-gap/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-answer-chart-gap
   - name: mason--seekingalpha
     path: auto_branch_pushes/mason/seekingalpha/ppluto-main/overlays/dev_gcp/
     namespace: mason--seekingalpha
