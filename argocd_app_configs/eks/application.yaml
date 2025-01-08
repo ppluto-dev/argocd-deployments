@@ -26,6 +26,52 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: banggre--fix-mobile-profile-scroll
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: banggre--fix-mobile-profile-scroll
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/banggre/fix-mobile-profile-scroll/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: banggre--update-add-source-url
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: banggre--update-add-source-url
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/banggre/update-add-source-url/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: kkimdev--mobile-ui-fix
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -427,52 +473,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: sungbin--sec-ticker
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: sungbin--sec-ticker
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: kkimdev--pinecone-text-test
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: kkimdev--pinecone-text-test
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
