@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--dead-end-decomposed
+    path: auto_branch_pushes/ken/dead-end-decomposed/ppluto-main/overlays/dev_gcp/
+    namespace: ken--dead-end-decomposed
   - name: banggre--update-tickerlookup-answer
     path: auto_branch_pushes/banggre/update-tickerlookup-answer/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-tickerlookup-answer
