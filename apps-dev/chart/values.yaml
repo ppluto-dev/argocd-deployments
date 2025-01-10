@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: banggre--update-bottom-scroll
+    path: auto_branch_pushes/banggre/update-bottom-scroll/ppluto-main/overlays/dev_gcp/
+    namespace: banggre--update-bottom-scroll
   - name: seyeong-han--add-enterprise-tab
     path: auto_branch_pushes/seyeong-han/add-enterprise-tab/ppluto-main/overlays/dev_gcp/
     namespace: seyeong-han--add-enterprise-tab
@@ -62,9 +65,6 @@ spec:
   - name: kkimdev--deepkit-rpc-example-simple
     path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-example-simple
-  - name: sungbin--sec-ticker
-    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
-    namespace: sungbin--sec-ticker
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
