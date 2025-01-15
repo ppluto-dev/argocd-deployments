@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--im-table-of-contents
+    path: auto_branch_pushes/kkimdev/im-table-of-contents/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--im-table-of-contents
   - name: kkimdev--show-event
     path: auto_branch_pushes/kkimdev/show-event/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--show-event
