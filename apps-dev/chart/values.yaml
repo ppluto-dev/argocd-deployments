@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--fix-transaction-metadata
+    path: auto_branch_pushes/ken/fix-transaction-metadata/ppluto-main/overlays/dev_gcp/
+    namespace: ken--fix-transaction-metadata
   - name: kkimdev--show-event
     path: auto_branch_pushes/kkimdev/show-event/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--show-event
