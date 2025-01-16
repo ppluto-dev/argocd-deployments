@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: kkimdev--nix-flake-update
-    path: auto_branch_pushes/kkimdev/nix-flake-update/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--nix-flake-update
   - name: kkimdev--show-event
     path: auto_branch_pushes/kkimdev/show-event/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--show-event
@@ -68,6 +65,9 @@ spec:
   - name: kkimdev--deepkit-rpc-get-ip
     path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-get-ip
+  - name: kkimdev--deepkit-rpc-example-simple
+    path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--deepkit-rpc-example-simple
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
