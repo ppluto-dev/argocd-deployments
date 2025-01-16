@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: kkimdev--nix-flake-update
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: kkimdev--nix-flake-update
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/kkimdev/nix-flake-update/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: kkimdev--show-event
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -82,52 +105,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/banggre/add-annual/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: kkimdev--nix-update
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: kkimdev--nix-update
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/kkimdev/nix-update/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: kkimdev--upgrade-prisma
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: kkimdev--upgrade-prisma
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/kkimdev/upgrade-prisma/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -496,6 +473,29 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/me1e/apply-optimized-image/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kkimdev--deepkit-rpc-get-ip
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: kkimdev--deepkit-rpc-get-ip
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:

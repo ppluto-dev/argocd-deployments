@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: kkimdev--nix-flake-update
+    path: auto_branch_pushes/kkimdev/nix-flake-update/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--nix-flake-update
   - name: kkimdev--show-event
     path: auto_branch_pushes/kkimdev/show-event/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--show-event
@@ -14,12 +17,6 @@ spec:
   - name: banggre--add-annual
     path: auto_branch_pushes/banggre/add-annual/ppluto-main/overlays/dev_gcp/
     namespace: banggre--add-annual
-  - name: kkimdev--nix-update
-    path: auto_branch_pushes/kkimdev/nix-update/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--nix-update
-  - name: kkimdev--upgrade-prisma
-    path: auto_branch_pushes/kkimdev/upgrade-prisma/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--upgrade-prisma
   - name: banggre--update-tickerlookup-answer
     path: auto_branch_pushes/banggre/update-tickerlookup-answer/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-tickerlookup-answer
@@ -68,6 +65,9 @@ spec:
   - name: me1e--apply-optimized-image
     path: auto_branch_pushes/me1e/apply-optimized-image/ppluto-main/overlays/dev_gcp/
     namespace: me1e--apply-optimized-image
+  - name: kkimdev--deepkit-rpc-get-ip
+    path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--deepkit-rpc-get-ip
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
