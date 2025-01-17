@@ -5,9 +5,6 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: ken--fix-profile
-    path: auto_branch_pushes/ken/fix-profile/ppluto-main/overlays/dev_gcp/
-    namespace: ken--fix-profile
   - name: mason--prometheus
     path: auto_branch_pushes/mason/prometheus/ppluto-main/overlays/dev_gcp/
     namespace: mason--prometheus
@@ -68,6 +65,9 @@ spec:
   - name: me1e--apply-optimized-image
     path: auto_branch_pushes/me1e/apply-optimized-image/ppluto-main/overlays/dev_gcp/
     namespace: me1e--apply-optimized-image
+  - name: kkimdev--deepkit-rpc-get-ip
+    path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--deepkit-rpc-get-ip
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
