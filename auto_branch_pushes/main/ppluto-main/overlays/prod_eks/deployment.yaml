@@ -12,11 +12,15 @@ spec:
     metadata:
       labels:
         app: ppluto-main
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '9464'
     spec:
       terminationGracePeriodSeconds: 1800 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:448d4c73ce5d8bf92053cd66b3f44252ff98980defd6d5ee65f4c74833644029
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:2f028f43b60538cc88321df73ced3c3dc3755fbefb722c6eb1898f36681eafe3
           ports:
             - containerPort: 5280
             - containerPort: 5380
@@ -33,7 +37,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:8d7016151a5c565bed0e110988700e9e5c7a1328d0f141d9a327fd8774c5adbe
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:46a014fb8876379fe038d4b809067874e6280a542decc8167bc6164c3b95aea1
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -57,7 +61,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:2ff23bd640d47c82875fc65c06c22506f56c5c764afa4d81215716a2b6aaa795
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:6f9a0d793d8e5383170027203e3fd25401ec2a0fd0cdc450c2e65b890a6060c3
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -78,7 +82,7 @@ spec:
             requests:
               cpu: 200m
             limits:
-              cpu: 1000m
+              cpu: 2000m
               memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
               ephemeral-storage: 9Gi
           lifecycle:
