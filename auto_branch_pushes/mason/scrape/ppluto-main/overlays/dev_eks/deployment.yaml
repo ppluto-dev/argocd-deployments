@@ -12,15 +12,15 @@ spec:
     metadata:
       labels:
         app: ppluto-main
-    annotations:
-      prometheus.io/scrape: 'true'
-      prometheus.io/path: '/metrics'
-      prometheus.io/port: '9464'
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '9464'
     spec:
       terminationGracePeriodSeconds: 1800 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:fa242adbb2436df9e2d132bcd6581645e0f0f711577cafaa7b169d3e42524a76
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:01fdf781112c04f36a658f28efe788a59c3f38ce67fc0ec8ad9fd61df68acceb
           ports:
             - containerPort: 5280
             - containerPort: 5380
@@ -37,7 +37,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:1428243e18ab81df3a1aafdbb99e16bea1d65c5428e7d56f01a168c979774535
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:c4fa0af519a8a90f0a7f098bd5836f134b1108a8a5320437199f7fdb6bd7b1a5
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -61,7 +61,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:1190d3375ebab7593343261801f88335f831e921260749211aface005d6ecc0c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0bba9b0190b8d11c43979619a67b33508e5c416b17c97c70c76df084b9dc5a6f
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server

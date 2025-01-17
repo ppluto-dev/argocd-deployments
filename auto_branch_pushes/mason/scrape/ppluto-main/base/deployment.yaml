@@ -12,10 +12,10 @@ spec:
     metadata:
       labels:
         app: ppluto-main
-    annotations:
-      prometheus.io/scrape: 'true'
-      prometheus.io/path: '/metrics'
-      prometheus.io/port: '9464'
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '9464'
     spec:
       terminationGracePeriodSeconds: 1800 # https://jenakim47.tistory.com/80
       containers:
