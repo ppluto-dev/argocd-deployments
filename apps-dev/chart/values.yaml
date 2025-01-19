@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: seyeong-han--modify-rewrite-share-button
+    path: auto_branch_pushes/seyeong-han/modify-rewrite-share-button/ppluto-main/overlays/dev_gcp/
+    namespace: seyeong-han--modify-rewrite-share-button
   - name: mason--kustomize
     path: auto_branch_pushes/mason/kustomize/ppluto-main/overlays/dev_gcp/
     namespace: mason--kustomize
