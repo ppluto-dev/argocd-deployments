@@ -1523,15 +1523,6 @@ spec:
       labels:
         app: ppluto-main-temporal-worker
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1564,8 +1555,3 @@ spec:
             failureThreshold: 180
             periodSeconds: 10
           terminationGracePeriodSeconds: 300
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
