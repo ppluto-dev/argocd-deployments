@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: mason--kustomize
+    path: auto_branch_pushes/mason/kustomize/ppluto-main/overlays/dev_gcp/
+    namespace: mason--kustomize
+  - name: seyeong-han--787-remove-pro-button
+    path: auto_branch_pushes/seyeong-han/787-remove-pro-button/ppluto-main/overlays/dev_gcp/
+    namespace: seyeong-han--787-remove-pro-button
   - name: seyeong-han--fix-research-drawer
     path: auto_branch_pushes/seyeong-han/fix-research-drawer/ppluto-main/overlays/dev_gcp/
     namespace: seyeong-han--fix-research-drawer
@@ -62,12 +68,6 @@ spec:
   - name: me1e--apply-optimized-image
     path: auto_branch_pushes/me1e/apply-optimized-image/ppluto-main/overlays/dev_gcp/
     namespace: me1e--apply-optimized-image
-  - name: kkimdev--deepkit-rpc-get-ip
-    path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--deepkit-rpc-get-ip
-  - name: kkimdev--deepkit-rpc-example-simple
-    path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--deepkit-rpc-example-simple
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
