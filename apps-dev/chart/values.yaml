@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: ken--fix-sec-chunks
+    path: auto_branch_pushes/ken/fix-sec-chunks/ppluto-main/overlays/dev_gcp/
+    namespace: ken--fix-sec-chunks
   - name: seyeong-han--suggested-search-queries
     path: auto_branch_pushes/seyeong-han/suggested-search-queries/ppluto-main/overlays/dev_gcp/
     namespace: seyeong-han--suggested-search-queries
