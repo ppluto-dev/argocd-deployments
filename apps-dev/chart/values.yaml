@@ -5,6 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: seyeong-han--add-comps-build-query
+    path: auto_branch_pushes/seyeong-han/add-comps-build-query/ppluto-main/overlays/dev_gcp/
+    namespace: seyeong-han--add-comps-build-query
+  - name: mason--ui
+    path: auto_branch_pushes/mason/ui/ppluto-main/overlays/dev_gcp/
+    namespace: mason--ui
   - name: seyeong-han--787-remove-pro-button
     path: auto_branch_pushes/seyeong-han/787-remove-pro-button/ppluto-main/overlays/dev_gcp/
     namespace: seyeong-han--787-remove-pro-button
@@ -65,12 +71,6 @@ spec:
   - name: kkimdev--deepkit-rpc-example-simple
     path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-example-simple
-  - name: sungbin--sec-ticker
-    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
-    namespace: sungbin--sec-ticker
-  - name: kkimdev--pinecone-text-test
-    path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--pinecone-text-test
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
