@@ -13,11 +13,20 @@ spec:
       labels:
         app: ppluto-main-crawling-marketwatch
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-marketwatch
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -32,6 +41,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -47,11 +61,20 @@ spec:
       labels:
         app: ppluto-main-crawling-thestreet
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-thestreet
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -66,6 +89,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -82,11 +110,20 @@ spec:
       labels:
         app: ppluto-main-crawling-tipranks
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-tipranks
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -101,6 +138,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -117,11 +159,20 @@ spec:
       labels:
         app: ppluto-main-crawling-bloomberg
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-bloomberg
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -136,6 +187,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -152,11 +208,20 @@ spec:
       labels:
         app: ppluto-main-crawling-cnbc
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-cnbc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -171,6 +236,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -187,11 +257,20 @@ spec:
       labels:
         app: ppluto-main-crawling-financial-times
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-financial-times
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -206,6 +285,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -222,11 +306,20 @@ spec:
       labels:
         app: ppluto-main-crawling-trading-view
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-trading-view
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -241,6 +334,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -257,11 +355,20 @@ spec:
       labels:
         app: ppluto-main-crawling-barrons
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-barrons
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -276,6 +383,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -291,11 +403,20 @@ spec:
       labels:
         app: ppluto-main-crawling-wsj
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-wsj
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -310,6 +431,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -326,11 +452,20 @@ spec:
       labels:
         app: ppluto-main-crawling-benzinga
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-benzinga
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -345,6 +480,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -361,11 +501,20 @@ spec:
       labels:
         app: ppluto-main-crawling-yahoo-finance
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-yahoo-finance
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -380,6 +529,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -396,11 +550,20 @@ spec:
       labels:
         app: ppluto-main-crawling-nytimes
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-nytimes
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -415,6 +578,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -431,11 +599,20 @@ spec:
       labels:
         app: ppluto-main-crawling-hinderburg
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-hinderburg
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -450,6 +627,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -466,11 +648,20 @@ spec:
       labels:
         app: ppluto-main-crawling-newsletter
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-newsletter
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -485,6 +676,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -500,11 +696,20 @@ spec:
       labels:
         app: ppluto-main-crawling-aggregate-prompt-runs
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-aggregate-prompt-runs
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -519,7 +724,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -535,11 +744,20 @@ spec:
       labels:
         app: ppluto-main-crawling-community
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-community
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -554,7 +772,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -570,11 +792,20 @@ spec:
       labels:
         app: ppluto-main-crawling-sec
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-sec
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -589,7 +820,11 @@ spec:
               cpu: 2000m
               memory: 5Gi
               ephemeral-storage: 9Gi
-
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -605,11 +840,20 @@ spec:
       labels:
         app: ppluto-main-press-release-crawling
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-press-release-crawling
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -624,7 +868,11 @@ spec:
               cpu: 2000m
               memory: 5Gi
               ephemeral-storage: 9Gi
-
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -640,11 +888,20 @@ spec:
       labels:
         app: ppluto-main-storage-file-sync
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-storage-file-sync
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -659,6 +916,11 @@ spec:
               cpu: 2000m
               memory: 8Gi
               ephemeral-storage: 30Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -675,11 +937,20 @@ spec:
       labels:
         app: ppluto-main-crawling-fomc-rate
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-fomc-rate
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -694,6 +965,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -710,11 +986,20 @@ spec:
       labels:
         app: ppluto-main-crawling-gsi
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-gsi
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -729,6 +1014,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -745,11 +1035,20 @@ spec:
       labels:
         app: ppluto-main-crawling-seeking-alpha
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-seeking-alpha
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -764,6 +1063,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -773,17 +1077,26 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
-  replicas: 1
+  replicas: 0
   template:
     metadata:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -798,6 +1111,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -807,17 +1125,26 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-ms-c
-  replicas: 1
+  replicas: 0
   template:
     metadata:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-ms-c
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ms-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -832,6 +1159,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -847,11 +1179,20 @@ spec:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-sector-c
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-sector-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -866,6 +1207,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -875,17 +1221,26 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
-  replicas: 1
+  replicas: 0
   template:
     metadata:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -900,6 +1255,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -915,11 +1275,20 @@ spec:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -934,6 +1303,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -949,11 +1323,20 @@ spec:
       labels:
         app: ppluto-main-crawling-pluto-broker-research-email
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-pluto-broker-research-email
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -968,6 +1351,11 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -983,11 +1371,20 @@ spec:
       labels:
         app: ppluto-main-check-payment
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-check-payment
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -1002,6 +1399,11 @@ spec:
               cpu: 2000m
               memory: 5000Mi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -1018,11 +1420,20 @@ spec:
       labels:
         app: ppluto-main-crawling-worker
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -1037,6 +1448,11 @@ spec:
               cpu: 2000m
               memory: 5000Mi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -1053,11 +1469,20 @@ spec:
       labels:
         app: ppluto-main-ydown-article-worker
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - crawling
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-ydown-article-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -1072,6 +1497,11 @@ spec:
               cpu: 2000m
               memory: 5000Mi
               ephemeral-storage: 9Gi
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "crawling"
+          effect: "NoSchedule"
 
 ---
 kind: Deployment
@@ -1097,7 +1527,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:988798ac7ed0a30caef9c226135acbc49deea52c2104d00fc00578652e52e020
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
