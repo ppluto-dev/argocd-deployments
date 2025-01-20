@@ -51,9 +51,10 @@ spec:
               path: /
           resources:
             requests:
-              cpu: 100m
-            limits:
               cpu: 500m
+              memory: 512Mi
+            limits:
+              cpu: 2
               memory: 3Gi
               ephemeral-storage: 1Gi
           lifecycle:
@@ -80,9 +81,10 @@ spec:
           #     port: 82
           resources:
             requests:
-              cpu: 200m
+              cpu: 1
+              memory: 8Gi
             limits:
-              cpu: 2000m
+              cpu: 3
               memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
               ephemeral-storage: 9Gi
           lifecycle:
