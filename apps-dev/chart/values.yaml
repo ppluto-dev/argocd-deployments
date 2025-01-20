@@ -5,24 +5,15 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: seyeong-han--modify-rewrite-share-button
-    path: auto_branch_pushes/seyeong-han/modify-rewrite-share-button/ppluto-main/overlays/dev_gcp/
-    namespace: seyeong-han--modify-rewrite-share-button
   - name: mason--kustomize
     path: auto_branch_pushes/mason/kustomize/ppluto-main/overlays/dev_gcp/
     namespace: mason--kustomize
   - name: seyeong-han--787-remove-pro-button
     path: auto_branch_pushes/seyeong-han/787-remove-pro-button/ppluto-main/overlays/dev_gcp/
     namespace: seyeong-han--787-remove-pro-button
-  - name: seyeong-han--fix-research-drawer
-    path: auto_branch_pushes/seyeong-han/fix-research-drawer/ppluto-main/overlays/dev_gcp/
-    namespace: seyeong-han--fix-research-drawer
   - name: kkimdev--show-event
     path: auto_branch_pushes/kkimdev/show-event/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--show-event
-  - name: seyeong-han--remove-tickerinfo-for-enterprise
-    path: auto_branch_pushes/seyeong-han/remove-tickerinfo-for-enterprise/ppluto-main/overlays/dev_gcp/
-    namespace: seyeong-han--remove-tickerinfo-for-enterprise
   - name: banggre--update-tickerlookup-answer
     path: auto_branch_pushes/banggre/update-tickerlookup-answer/ppluto-main/overlays/dev_gcp/
     namespace: banggre--update-tickerlookup-answer
@@ -74,6 +65,12 @@ spec:
   - name: kkimdev--deepkit-rpc-get-ip
     path: auto_branch_pushes/kkimdev/deepkit-rpc-get-ip/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-get-ip
+  - name: kkimdev--deepkit-rpc-example-simple
+    path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--deepkit-rpc-example-simple
+  - name: sungbin--sec-ticker
+    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--sec-ticker
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
