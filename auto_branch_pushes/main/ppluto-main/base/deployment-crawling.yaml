@@ -1077,7 +1077,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
-  replicas: {{ .PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS }}
+  replicas: 0
   template:
     metadata:
       labels:
@@ -1125,7 +1125,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-ms-c
-  replicas: {{ .PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS }}
+  replicas: 0
   template:
     metadata:
       labels:
@@ -1221,7 +1221,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
-  replicas: {{ .PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS }}
+  replicas: 0
   template:
     metadata:
       labels:
