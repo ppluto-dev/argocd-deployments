@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: seyeong-han--fix-comps-builder-enterprise-only
+  name: seyeong-han--suggested-search-queries-gaia
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: seyeong-han--fix-comps-builder-enterprise-only
+    namespace: seyeong-han--suggested-search-queries-gaia
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/seyeong-han/fix-comps-builder-enterprise-only/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/seyeong-han/suggested-search-queries-gaia/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
