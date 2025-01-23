@@ -12,6 +12,15 @@ spec:
       labels:
         app: ppluto-main-misc
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - service
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
