@@ -5,15 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: seyeong-han--rename-pdf-source
-    path: auto_branch_pushes/seyeong-han/rename-pdf-source/ppluto-main/overlays/dev_gcp/
-    namespace: seyeong-han--rename-pdf-source
   - name: kkimdev--profile-loading
     path: auto_branch_pushes/kkimdev/profile-loading/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--profile-loading
-  - name: seyeong-han--787-remove-pro-button
-    path: auto_branch_pushes/seyeong-han/787-remove-pro-button/ppluto-main/overlays/dev_gcp/
-    namespace: seyeong-han--787-remove-pro-button
   - name: kkimdev--show-event
     path: auto_branch_pushes/kkimdev/show-event/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--show-event
@@ -71,6 +65,9 @@ spec:
   - name: sungbin--sec-ticker
     path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--sec-ticker
+  - name: kkimdev--pinecone-text-test
+    path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--pinecone-text-test
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
