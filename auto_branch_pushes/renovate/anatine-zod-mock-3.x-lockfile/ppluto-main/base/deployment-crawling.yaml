@@ -1522,7 +1522,20 @@ spec:
     metadata:
       labels:
         app: ppluto-main-temporal-worker
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '9464'
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - temporal
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1537,9 +1550,9 @@ spec:
               value: "true"
           resources:
             requests:
-              cpu: 400m
+              cpu: 2
             limits:
-              cpu: 2000m
+              cpu: 4
               memory: 5000Mi
               ephemeral-storage: 7Gi
           livenessProbe:
@@ -1555,3 +1568,8 @@ spec:
             failureThreshold: 180
             periodSeconds: 10
           terminationGracePeriodSeconds: 300
+      tolerations:
+        - key: "node.pluto.co/purpose"
+          operator: "Equal"
+          value: "temporal"
+          effect: "NoSchedule"

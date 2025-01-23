@@ -17,10 +17,19 @@ spec:
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
     spec:
-      terminationGracePeriodSeconds: 1800 # https://jenakim47.tistory.com/80
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node.pluto.co/purpose
+                    operator: In
+                    values:
+                      - service
+      terminationGracePeriodSeconds: 360 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:b5530f4b7175bfb60dcd309464003ccca75b63b3a09f548fd61f0efcf8b4a1c4
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:e1aead686ad5ef126e3e3d61ed7a0da20d0b3b379da3ca378125ff0c5c92b070
           ports:
             - containerPort: 5280
             - containerPort: 5380
@@ -37,7 +46,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:ac54c038badf2dc2fb363af04480608263470b738b8e6a3c147b62ae1ea4bb24
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:fdc74cef631bfc5df0e151755f1ed528c13baf6cfbcf77ca6f1ac8fe5cb0b318
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -51,9 +60,10 @@ spec:
               path: /
           resources:
             requests:
-              cpu: 100m
-            limits:
               cpu: 500m
+              memory: 512Mi
+            limits:
+              cpu: 2
               memory: 3Gi
               ephemeral-storage: 1Gi
           lifecycle:
@@ -61,7 +71,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ec445cb9a70e3e285a7efa7585bec62b8f22b70eb43f2c75d9e9b6ed00e76add
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0dbc214831bf761837a086d8a448181387b306a054a3570a48858096389d715a
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -80,9 +90,10 @@ spec:
           #     port: 82
           resources:
             requests:
-              cpu: 200m
+              cpu: 1
+              memory: 8Gi
             limits:
-              cpu: 2000m
+              cpu: 3
               memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
               ephemeral-storage: 9Gi
           lifecycle:
