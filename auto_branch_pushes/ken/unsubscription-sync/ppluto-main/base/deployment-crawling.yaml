@@ -1365,7 +1365,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-check-payment
-  replicas: {{ .PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS }}
+  replicas: 0
   template:
     metadata:
       labels:
