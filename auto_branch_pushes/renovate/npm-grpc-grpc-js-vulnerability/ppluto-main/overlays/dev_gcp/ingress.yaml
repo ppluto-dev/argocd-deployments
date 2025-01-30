@@ -104,6 +104,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /api/pdf-buffer
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /wsrvProxy
             pathType: Prefix
             backend:
@@ -152,6 +159,13 @@ spec:
                 port:
                   number: 84
           - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /api/pdf-buffer
             pathType: Prefix
             backend:
               service:
