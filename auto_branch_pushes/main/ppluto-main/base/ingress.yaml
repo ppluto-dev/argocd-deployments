@@ -142,7 +142,7 @@ spec:
 
     # theterminalx.com
     - host: {{.THETERMINALX_COM_DOMAIN}}
-      http:
+      http: &terminalx-common-rules
         paths:
           - path: /api
             pathType: Prefix
@@ -207,6 +207,8 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 5095
+    - host: "*.{{.THETERMINALX_COM_DOMAIN}}"
+      http: *terminalx-common-rules
 
     # terminal.supersearchx.com
     - host: {{.TERMINAL_SUPERSEARCHX_COM_DOMAIN}}

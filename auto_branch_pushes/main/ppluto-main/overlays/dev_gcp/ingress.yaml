@@ -142,7 +142,7 @@ spec:
 
     # theterminalx.com
     - host: main---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
+      http: &terminalx-common-rules
         paths:
           - path: /api
             pathType: Prefix
@@ -207,6 +207,8 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 5095
+    - host: "*.main---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev"
+      http: *terminalx-common-rules
 
     # terminal.supersearchx.com
     - host: main---terminal-supersearchx-com.auto-branch-pushes.ppluto-main.ppluto.dev
