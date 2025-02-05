@@ -5,18 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: ken--debug-impossible
-    path: auto_branch_pushes/ken/debug-impossible/ppluto-main/overlays/dev_gcp/
-    namespace: ken--debug-impossible
-  - name: kkimdev--ci-test-1
-    path: auto_branch_pushes/kkimdev/ci-test-1/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--ci-test-1
-  - name: heekyu--ui-answer-2
-    path: auto_branch_pushes/heekyu/ui-answer-2/ppluto-main/overlays/dev_gcp/
-    namespace: heekyu--ui-answer-2
-  - name: heekyu--ui-answer
-    path: auto_branch_pushes/heekyu/ui-answer/ppluto-main/overlays/dev_gcp/
-    namespace: heekyu--ui-answer
+  - name: kkimdev--content-blocker-update
+    path: auto_branch_pushes/kkimdev/content-blocker-update/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--content-blocker-update
+  - name: ken--fix-user-quota
+    path: auto_branch_pushes/ken/fix-user-quota/ppluto-main/overlays/dev_gcp/
+    namespace: ken--fix-user-quota
   - name: kkimdev--profile-loading
     path: auto_branch_pushes/kkimdev/profile-loading/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--profile-loading
@@ -74,6 +68,9 @@ spec:
   - name: kkimdev--deepkit-rpc-example-simple
     path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-example-simple
+  - name: sungbin--sec-ticker
+    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--sec-ticker
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
