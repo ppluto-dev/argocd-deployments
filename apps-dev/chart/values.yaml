@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: heekyu--ui-answer-3
+    path: auto_branch_pushes/heekyu/ui-answer-3/ppluto-main/overlays/dev_gcp/
+    namespace: heekyu--ui-answer-3
   - name: ken--fix-user-quota
     path: auto_branch_pushes/ken/fix-user-quota/ppluto-main/overlays/dev_gcp/
     namespace: ken--fix-user-quota
@@ -68,9 +71,6 @@ spec:
   - name: sungbin--sec-ticker
     path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
     namespace: sungbin--sec-ticker
-  - name: kkimdev--pinecone-text-test
-    path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--pinecone-text-test
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
