@@ -5,15 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
-  - name: eatnug--fix-blurring-content
-    path: auto_branch_pushes/eatnug/fix-blurring-content/ppluto-main/overlays/dev_gcp/
-    namespace: eatnug--fix-blurring-content
   - name: ken--subscription-to-session
     path: auto_branch_pushes/ken/subscription-to-session/ppluto-main/overlays/dev_gcp/
     namespace: ken--subscription-to-session
-  - name: kkimdev--o3-mini-option-fix
-    path: auto_branch_pushes/kkimdev/o3-mini-option-fix/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--o3-mini-option-fix
   - name: kkimdev--profile-loading
     path: auto_branch_pushes/kkimdev/profile-loading/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--profile-loading
@@ -71,6 +65,12 @@ spec:
   - name: kkimdev--deepkit-rpc-example-simple
     path: auto_branch_pushes/kkimdev/deepkit-rpc-example-simple/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--deepkit-rpc-example-simple
+  - name: sungbin--sec-ticker
+    path: auto_branch_pushes/sungbin/sec-ticker/ppluto-main/overlays/dev_gcp/
+    namespace: sungbin--sec-ticker
+  - name: kkimdev--pinecone-text-test
+    path: auto_branch_pushes/kkimdev/pinecone-text-test/ppluto-main/overlays/dev_gcp/
+    namespace: kkimdev--pinecone-text-test
   - name: main
     path: auto_branch_pushes/main/ppluto-main/overlays/dev_gcp/
     namespace: main
