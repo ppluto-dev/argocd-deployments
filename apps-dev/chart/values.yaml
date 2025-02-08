@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: eatnug--fix-header-search-input-alignment
+    path: auto_branch_pushes/eatnug/fix-header-search-input-alignment/ppluto-main/overlays/dev_gcp/
+    namespace: eatnug--fix-header-search-input-alignment
   - name: eatnug--add-disclaimer-on-footer
     path: auto_branch_pushes/eatnug/add-disclaimer-on-footer/ppluto-main/overlays/dev_gcp/
     namespace: eatnug--add-disclaimer-on-footer

@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: eatnug--fix-header-search-input-alignment
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: eatnug--fix-header-search-input-alignment
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/eatnug/fix-header-search-input-alignment/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: eatnug--add-disclaimer-on-footer
   finalizers:
     - resources-finalizer.argocd.argoproj.io
