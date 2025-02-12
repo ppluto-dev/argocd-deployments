@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--fix-no-chunk
+  name: eatnug--fix-chart-size
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--fix-no-chunk
+    namespace: eatnug--fix-chart-size
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/fix-no-chunk/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/eatnug/fix-chart-size/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
