@@ -5,12 +5,12 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: eatnug--set-drawer-open
+    path: auto_branch_pushes/eatnug/set-drawer-open/ppluto-main/overlays/dev_gcp/
+    namespace: eatnug--set-drawer-open
   - name: eatnug--fix-chart-size
     path: auto_branch_pushes/eatnug/fix-chart-size/ppluto-main/overlays/dev_gcp/
     namespace: eatnug--fix-chart-size
-  - name: kkimdev--answer-log-fix
-    path: auto_branch_pushes/kkimdev/answer-log-fix/ppluto-main/overlays/dev_gcp/
-    namespace: kkimdev--answer-log-fix
   - name: kkimdev--profile-loading
     path: auto_branch_pushes/kkimdev/profile-loading/ppluto-main/overlays/dev_gcp/
     namespace: kkimdev--profile-loading
