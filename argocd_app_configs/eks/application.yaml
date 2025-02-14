@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kkimdev--logout
+  name: ken--remove-top-movers
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: kkimdev--logout
+    namespace: ken--remove-top-movers
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/kkimdev/logout/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/remove-top-movers/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
