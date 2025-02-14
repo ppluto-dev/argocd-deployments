@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnnug--fix-mobile-ui-for-no-login-user
+  name: ken--stripe-add-promotion
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnnug--fix-mobile-ui-for-no-login-user
+    namespace: ken--stripe-add-promotion
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnnug/fix-mobile-ui-for-no-login-user/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/stripe-add-promotion/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
