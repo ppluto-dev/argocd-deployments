@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: eatnug--mobile-ui-fix
+    path: auto_branch_pushes/eatnug/mobile-ui-fix/ppluto-main/overlays/dev_gcp/
+    namespace: eatnug--mobile-ui-fix
   - name: ken--refactor-stripe
     path: auto_branch_pushes/ken/refactor-stripe/ppluto-main/overlays/dev_gcp/
     namespace: ken--refactor-stripe
