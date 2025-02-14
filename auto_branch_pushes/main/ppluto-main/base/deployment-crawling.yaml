@@ -1536,6 +1536,7 @@ spec:
                     operator: In
                     values:
                       - temporal
+      terminationGracePeriodSeconds: 900 # 15 min
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1567,7 +1568,6 @@ spec:
               port: 5096
             failureThreshold: 180
             periodSeconds: 10
-          terminationGracePeriodSeconds: 300
       tolerations:
         - key: "node.pluto.co/purpose"
           operator: "Equal"
