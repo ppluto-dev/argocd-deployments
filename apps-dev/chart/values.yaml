@@ -5,6 +5,9 @@ spec:
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   applications:
+  - name: eatnnug--fix-mobile-ui-for-no-login-user
+    path: auto_branch_pushes/eatnnug/fix-mobile-ui-for-no-login-user/ppluto-main/overlays/dev_gcp/
+    namespace: eatnnug--fix-mobile-ui-for-no-login-user
   - name: eatnug--show-decomposed-query
     path: auto_branch_pushes/eatnug/show-decomposed-query/ppluto-main/overlays/dev_gcp/
     namespace: eatnug--show-decomposed-query
