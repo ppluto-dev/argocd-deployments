@@ -1458,55 +1458,6 @@ spec:
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: ppluto-main-ydown-article-worker
-spec:
-  selector:
-    matchLabels:
-      app: ppluto-main-ydown-article-worker
-  replicas: {{ .PPLUTO_MAIN_YDOWN_ARTICLE_WORKER_REPLICAS }}
-  template:
-    metadata:
-      labels:
-        app: ppluto-main-ydown-article-worker
-    spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-      imagePullSecrets:
-        - name: gitlab-container-registry
-      containers:
-        - name: ppluto-main-ydown-article-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
-          env:
-            - name: PPLUTO_SERVER_ARG_SERVER
-              value: api-server
-            - name: IS_LOCAL_CRONJOB
-              value: "true"
-            - name: IS_YDOWN_ARTICLE_WORKER
-              value: "true"
-          resources:
-            requests:
-              cpu: 400m
-            limits:
-              cpu: 2000m
-              memory: 5000Mi
-              ephemeral-storage: 9Gi
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-
----
-kind: Deployment
-apiVersion: apps/v1
-metadata:
   name: ppluto-main-temporal-worker
 spec:
   selector:
