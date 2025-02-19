@@ -17,15 +17,7 @@ spec:
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - service
+
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
@@ -46,7 +38,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:8b18ab56bb687cf675298e7125ca44e263e7d526e4e73ddedf0eba5ef6fcc4d6
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:0d708af8dc51147279bb2ccdb5c134069f768e8efbb52663b70c3c4d3ea54195
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -71,7 +63,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:3ac39ff754f550a3a0b392686142462510d973a74846f327ce6b2af14d7f41ac
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:87389cb9894fe5cec0da378a89f10d25763c56a944147beb26a013a1f8eec18e
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server

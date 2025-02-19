@@ -12,6 +12,7 @@ spec:
       labels:
         app: ppluto-main-misc
     spec:
+{{ if eq .INGRESS_TYPE "EKS" }}    
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -21,6 +22,7 @@ spec:
                     operator: In
                     values:
                       - service
+{{ end }}
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc

@@ -17,6 +17,7 @@ spec:
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
     spec:
+{{ if eq .INGRESS_TYPE "EKS" }}
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -26,6 +27,7 @@ spec:
                     operator: In
                     values:
                       - service
+{{ end }}
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client

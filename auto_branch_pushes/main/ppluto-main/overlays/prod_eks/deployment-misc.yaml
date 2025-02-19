@@ -12,6 +12,7 @@ spec:
       labels:
         app: ppluto-main-misc
     spec:
+    
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -21,10 +22,11 @@ spec:
                     operator: In
                     values:
                       - service
+
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:3ac39ff754f550a3a0b392686142462510d973a74846f327ce6b2af14d7f41ac
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:87389cb9894fe5cec0da378a89f10d25763c56a944147beb26a013a1f8eec18e
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: misc
@@ -61,7 +63,7 @@ spec:
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:3ac39ff754f550a3a0b392686142462510d973a74846f327ce6b2af14d7f41ac
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:87389cb9894fe5cec0da378a89f10d25763c56a944147beb26a013a1f8eec18e
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: wsrv
