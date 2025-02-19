@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--pause-sync-scheduler
+  name: heekyu--change-url-early
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--pause-sync-scheduler
+    namespace: heekyu--change-url-early
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/pause-sync-scheduler/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/heekyu/change-url-early/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
