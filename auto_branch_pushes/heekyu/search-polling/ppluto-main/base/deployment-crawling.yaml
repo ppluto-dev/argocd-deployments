@@ -989,7 +989,7 @@ spec:
             limits:
               cpu: 2000m
               memory: 8Gi
-              ephemeral-storage: 30Gi
+              ephemeral-storage: 10Gi
 {{ if eq .INGRESS_TYPE "EKS" }}
       tolerations:
         - key: "node.pluto.co/purpose"
