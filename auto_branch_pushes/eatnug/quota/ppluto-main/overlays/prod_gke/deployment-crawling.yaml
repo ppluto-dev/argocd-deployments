@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-marketwatch
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -18,7 +18,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-marketwatch
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -43,7 +43,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-thestreet
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -54,7 +54,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-thestreet
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -80,7 +80,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-tipranks
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -91,7 +91,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-tipranks
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -117,7 +117,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-bloomberg
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -128,7 +128,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-bloomberg
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -154,7 +154,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-cnbc
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -165,7 +165,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-cnbc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -191,7 +191,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-financial-times
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -202,7 +202,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-financial-times
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -228,7 +228,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-trading-view
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -239,7 +239,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-trading-view
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -265,7 +265,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-barrons
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -276,7 +276,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-barrons
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -301,7 +301,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-wsj
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -312,7 +312,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-wsj
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -338,7 +338,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-benzinga
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -349,7 +349,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-benzinga
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -375,7 +375,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-yahoo-finance
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -386,7 +386,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-yahoo-finance
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -412,7 +412,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-nytimes
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -423,7 +423,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-nytimes
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -449,7 +449,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-hinderburg
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -460,7 +460,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-hinderburg
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -486,7 +486,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-newsletter
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -497,7 +497,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-newsletter
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -522,7 +522,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-aggregate-prompt-runs
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -533,7 +533,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-aggregate-prompt-runs
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -558,7 +558,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-community
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -569,7 +569,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-community
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -594,7 +594,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-sec
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -605,7 +605,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-sec
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -630,7 +630,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-press-release-crawling
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -641,7 +641,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-press-release-crawling
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -666,7 +666,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-storage-file-sync
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -677,7 +677,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-storage-file-sync
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -703,7 +703,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-fomc-rate
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -714,7 +714,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-fomc-rate
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -740,7 +740,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-gsi
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -751,7 +751,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-gsi
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -788,7 +788,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-seeking-alpha
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -824,7 +824,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -860,7 +860,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ms-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -885,7 +885,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-sector-c
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -896,7 +896,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-sector-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -932,7 +932,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -957,7 +957,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -968,7 +968,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -993,7 +993,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-pluto-broker-research-email
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -1004,7 +1004,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-pluto-broker-research-email
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -1040,7 +1040,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-check-payment
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -1066,7 +1066,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-worker
-  replicas: 0
+  replicas: 3
   template:
     metadata:
       labels:
@@ -1077,7 +1077,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -1103,7 +1103,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-temporal-worker
-  replicas: 1
+  replicas: 30
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -1124,7 +1124,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:976e6b51f8e667bfd5ed740d6b0f6e49fea5989bdeac0d9af87af601337d091d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5009a0dc2c3215821f934b007268dbaba55e57c6e1a564a17284d5d92cd0394
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
