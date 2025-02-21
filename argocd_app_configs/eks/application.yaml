@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--remove-auth-error-log
+  name: heekyu--status-dashboard
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--remove-auth-error-log
+    namespace: heekyu--status-dashboard
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/remove-auth-error-log/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/heekyu/status-dashboard/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: heekyu--answer-response
+  name: eatnug--remove-auth-error-log
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: heekyu--answer-response
+    namespace: eatnug--remove-auth-error-log
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/heekyu/answer-response/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/eatnug/remove-auth-error-log/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
