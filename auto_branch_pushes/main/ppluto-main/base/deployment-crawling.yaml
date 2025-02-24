@@ -13,17 +13,6 @@ spec:
       labels:
         app: ppluto-main-crawling-marketwatch
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -43,13 +32,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -65,17 +48,6 @@ spec:
       labels:
         app: ppluto-main-crawling-thestreet
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -95,13 +67,6 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
 
 ---
 kind: Deployment
@@ -118,17 +83,6 @@ spec:
       labels:
         app: ppluto-main-crawling-tipranks
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -148,13 +102,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -171,17 +119,6 @@ spec:
       labels:
         app: ppluto-main-crawling-bloomberg
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -201,13 +138,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -224,17 +155,6 @@ spec:
       labels:
         app: ppluto-main-crawling-cnbc
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -254,13 +174,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -277,17 +191,6 @@ spec:
       labels:
         app: ppluto-main-crawling-financial-times
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -307,13 +210,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -330,17 +227,6 @@ spec:
       labels:
         app: ppluto-main-crawling-trading-view
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -360,13 +246,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -383,17 +263,6 @@ spec:
       labels:
         app: ppluto-main-crawling-barrons
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -413,13 +282,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -435,17 +298,6 @@ spec:
       labels:
         app: ppluto-main-crawling-wsj
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -465,13 +317,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -488,17 +334,6 @@ spec:
       labels:
         app: ppluto-main-crawling-benzinga
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -518,13 +353,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -541,17 +370,6 @@ spec:
       labels:
         app: ppluto-main-crawling-yahoo-finance
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -571,13 +389,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -594,17 +406,6 @@ spec:
       labels:
         app: ppluto-main-crawling-nytimes
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -624,13 +425,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -647,17 +442,6 @@ spec:
       labels:
         app: ppluto-main-crawling-hinderburg
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -677,13 +461,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -700,17 +478,6 @@ spec:
       labels:
         app: ppluto-main-crawling-newsletter
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -730,13 +497,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -752,17 +513,6 @@ spec:
       labels:
         app: ppluto-main-crawling-aggregate-prompt-runs
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -782,13 +532,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -804,17 +548,6 @@ spec:
       labels:
         app: ppluto-main-crawling-community
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -834,13 +567,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -856,17 +583,6 @@ spec:
       labels:
         app: ppluto-main-crawling-sec
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -886,13 +602,7 @@ spec:
               cpu: 2000m
               memory: 5Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -908,17 +618,6 @@ spec:
       labels:
         app: ppluto-main-press-release-crawling
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -938,13 +637,7 @@ spec:
               cpu: 2000m
               memory: 5Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -960,17 +653,6 @@ spec:
       labels:
         app: ppluto-main-storage-file-sync
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -990,13 +672,7 @@ spec:
               cpu: 2000m
               memory: 8Gi
               ephemeral-storage: 10Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -1013,17 +689,6 @@ spec:
       labels:
         app: ppluto-main-crawling-fomc-rate
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1043,13 +708,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -1066,17 +725,6 @@ spec:
       labels:
         app: ppluto-main-crawling-gsi
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1096,13 +744,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -1119,17 +761,6 @@ spec:
       labels:
         app: ppluto-main-crawling-seeking-alpha
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1149,13 +780,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -1171,17 +796,6 @@ spec:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1201,13 +815,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -1223,17 +831,6 @@ spec:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-ms-c
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1253,13 +850,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -1275,17 +866,6 @@ spec:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-sector-c
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1305,13 +885,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -1327,17 +901,6 @@ spec:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1357,13 +920,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -1379,17 +936,6 @@ spec:
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1409,13 +955,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -1431,17 +971,6 @@ spec:
       labels:
         app: ppluto-main-crawling-pluto-broker-research-email
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1461,13 +990,7 @@ spec:
               cpu: 2000m
               memory: 3Gi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -1483,17 +1006,6 @@ spec:
       labels:
         app: ppluto-main-check-payment
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1513,13 +1025,7 @@ spec:
               cpu: 2000m
               memory: 5000Mi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -1536,17 +1042,6 @@ spec:
       labels:
         app: ppluto-main-crawling-worker
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - crawling
-{{ end }}
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -1566,13 +1061,7 @@ spec:
               cpu: 2000m
               memory: 5000Mi
               ephemeral-storage: 9Gi
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "crawling"
-          effect: "NoSchedule"
-{{ end }}
+
 
 ---
 kind: Deployment
@@ -1598,17 +1087,6 @@ spec:
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
     spec:
-{{ if eq .INGRESS_TYPE "EKS" }}
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node.pluto.co/purpose
-                    operator: In
-                    values:
-                      - temporal
-{{ end }}
       terminationGracePeriodSeconds: 900 # 15 min
       imagePullSecrets:
         - name: gitlab-container-registry
@@ -1641,10 +1119,3 @@ spec:
               port: 5096
             failureThreshold: 180
             periodSeconds: 10
-{{ if eq .INGRESS_TYPE "EKS" }}
-      tolerations:
-        - key: "node.pluto.co/purpose"
-          operator: "Equal"
-          value: "temporal"
-          effect: "NoSchedule"
-{{ end }}
