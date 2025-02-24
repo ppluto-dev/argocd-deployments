@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:3a80454d54e50409ac67a52fce3601f2d24532f754d8a01f48944d87326255b3
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:2c07ff0345ba5bad8e8043d0df9adea0e442dbd5dd24e5946a09ffc88163a18e
           ports:
             - containerPort: 5280
             - containerPort: 5380
@@ -37,7 +37,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:26d8ca16db5e0cd2f6532f36ae4044512187a293c901a175fdc9b291fb558cc3
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:09d31506472b23d08491de1941f79d2641d1149c3d77f43e2f5866f324b8bc41
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -51,7 +51,7 @@ spec:
               path: /
           resources:
             requests:
-              cpu: 500m
+              cpu: 0.5
               memory: 512Mi
             limits:
               cpu: 2
@@ -62,7 +62,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:c273192d79b91ecb6ba99c87a605c84146c1c05ce99c075bbc7950d801720654
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8c746a885bafbe20bd1b31d14e014cd68195b2a2d23a8dd1030cbcd98ca34196
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -81,10 +81,10 @@ spec:
           #     port: 82
           resources:
             requests:
-              cpu: 1
+              cpu: 0.5
               memory: 8Gi
             limits:
-              cpu: 3
+              cpu: 2
               memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
               ephemeral-storage: 9Gi
           lifecycle:
