@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--migrate-usesearch
+  name: ken--newsletter-workflow
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--migrate-usesearch
+    namespace: ken--newsletter-workflow
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/migrate-usesearch/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/newsletter-workflow/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
