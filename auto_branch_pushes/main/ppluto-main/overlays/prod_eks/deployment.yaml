@@ -37,7 +37,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:8835bb0cde7302da40457233448bca850b3f37df8327cb9f43adc670c976b6fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:15b26cb18e164d6b12054f8d6f4d60560ebd463a03a694926f233a50e0b01a43
           ports:
             - containerPort: 5080
             - containerPort: 5095
@@ -62,7 +62,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:86fed8624156beeb6c5504b6354f30f2b8e2b4bc8e99526afbb78826d62f3b16
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:f64d634bd8c4ffb7ebd8a0dbe462b545d6337d29d0b067af8d9ad13838b91fe7
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -86,7 +86,7 @@ spec:
             limits:
               cpu: 2
               memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
-              ephemeral-storage: 9Gi
+              ephemeral-storage: 8Gi
           lifecycle:
             preStop:
               exec:
