@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: fix--source-type-on-tabel
+  name: ahmet--fix-mobile-table
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: fix--source-type-on-tabel
+    namespace: ahmet--fix-mobile-table
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/fix/source-type-on-tabel/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ahmet/fix-mobile-table/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
