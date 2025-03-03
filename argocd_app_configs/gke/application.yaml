@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--revamp-enterprise-landing
+  name: eatnug--revamp-enterprise-landing-new-pr
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--revamp-enterprise-landing
+    namespace: eatnug--revamp-enterprise-landing-new-pr
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/revamp-enterprise-landing/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/eatnug/revamp-enterprise-landing-new-pr/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
