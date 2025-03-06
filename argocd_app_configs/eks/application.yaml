@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--price-move-inside-ticker
+  name: ahmet--enterprise-button
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--price-move-inside-ticker
+    namespace: ahmet--enterprise-button
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/price-move-inside-ticker/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ahmet/enterprise-button/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
