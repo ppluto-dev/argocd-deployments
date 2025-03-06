@@ -21,6 +21,18 @@ spec:
       - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
       secretName: ingress-tls-secret
   rules:
+    # tickerbell.ai
+    - host: {{.TICKERBELL_AI_DOMAIN}}
+      http: &common-config
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5080
+
     # wallstreet-now.com
     # NOTE: Keep in sync with `tickerbell.ai` section above.
     - host: {{.WALLSTREET_NOW_COM_DOMAIN}}
@@ -127,6 +139,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5080
 
     # theterminalx.com
     - host: {{.THETERMINALX_COM_DOMAIN}}
