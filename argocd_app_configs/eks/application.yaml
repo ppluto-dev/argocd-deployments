@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--escape-chars
+  name: ken--fix-auth-token
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--escape-chars
+    namespace: ken--fix-auth-token
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/escape-chars/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/fix-auth-token/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
