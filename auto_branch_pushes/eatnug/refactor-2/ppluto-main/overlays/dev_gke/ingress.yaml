@@ -8,39 +8,12 @@ metadata:
 spec:
   tls:
     - hosts:
-      - tickersbell.com
-      - tickerbell.ai
-      - wallstreet-now.com
-      - supernews.io
-      - wallstreetnow.co
-      - super.news
-      - supersearchx.com
       - www.projectpluto.co
       - openembedding.com
       - ppluto.dev
       - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
       secretName: ingress-tls-secret
   rules:
-    # wallstreet-now.com
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: eatnug--refactor-2---wallstreetnow.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: *common-config
-
-    # supernews.io
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: eatnug--refactor-2---supernews.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: *common-config
-
-    # wallstreetnow.co
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: eatnug--refactor-2---wallstreetnow-co.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: *common-config
-
-    # super.news
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: eatnug--refactor-2---super-news.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: *common-config
-
     # projectpluto.co (Company website)
     - host: eatnug--refactor-2---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
@@ -66,7 +39,6 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 84
-
     # theterminalx.com
     - host: eatnug--refactor-2---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
       http: &terminalx-common-rules

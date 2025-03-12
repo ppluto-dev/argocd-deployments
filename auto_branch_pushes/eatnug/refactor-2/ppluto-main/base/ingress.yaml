@@ -8,39 +8,12 @@ metadata:
 spec:
   tls:
     - hosts:
-      - tickersbell.com
-      - tickerbell.ai
-      - wallstreet-now.com
-      - supernews.io
-      - wallstreetnow.co
-      - super.news
-      - supersearchx.com
       - www.projectpluto.co
       - openembedding.com
       - ppluto.dev
       - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
       secretName: ingress-tls-secret
   rules:
-    # wallstreet-now.com
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.WALLSTREET_NOW_COM_DOMAIN}}
-      http: *common-config
-
-    # supernews.io
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.SUPERNEWS_IO_DOMAIN}}
-      http: *common-config
-
-    # wallstreetnow.co
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.WALLSTREETNOW_CO_DOMAIN}}
-      http: *common-config
-
-    # super.news
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: {{.SUPER_NEWS_DOMAIN}}
-      http: *common-config
-
     # projectpluto.co (Company website)
     - host: {{.WWW_PROJECTPLUTO_CO_DOMAIN}}
       http:
@@ -66,7 +39,6 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 84
-
     # theterminalx.com
     - host: {{.THETERMINALX_COM_DOMAIN}}
       http: &terminalx-common-rules
