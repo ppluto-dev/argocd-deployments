@@ -72,29 +72,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--revive-dodongdoc
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: eatnug--revive-dodongdoc
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/eatnug/revive-dodongdoc/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-test.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: eatnug--refactor-2
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -542,6 +519,29 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/kkimdev/server-port-cleanup-2/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-test.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: banggre--apply-x-payment
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: banggre--apply-x-payment
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/banggre/apply-x-payment/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-test.git
     targetRevision: HEAD
   syncPolicy:
