@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--fly-historical-final
+  name: eatnug--source-filter-2
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--fly-historical-final
+    namespace: eatnug--source-filter-2
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/fly-historical-final/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/eatnug/source-filter-2/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--source-filter
+  name: ahmet--fly-historical-final
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--source-filter
+    namespace: ahmet--fly-historical-final
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/source-filter/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ahmet/fly-historical-final/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
