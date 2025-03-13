@@ -6,11 +6,6 @@ spec:
   selector:
     app: ppluto-main
   ports:
-    - name: web-tickerbell # Client -- tickerbell.ai
-      protocol: TCP
-      port: 5080
-      targetPort: 5080
-
     - name: web-theterminalx-com # Client -- theterminalx.com
       protocol: TCP
       port: 5095
@@ -60,11 +55,6 @@ spec:
   selector:
     app: ppluto-main
   ports:
-    - name: web-tickerbell # Client -- tickerbell.ai
-      protocol: TCP
-      port: 5080
-      targetPort: 5080
-
     - name: web-theterminalx-com # Client -- theterminalx.com
       protocol: TCP
       port: 5095
