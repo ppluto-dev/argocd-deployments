@@ -8,51 +8,12 @@ metadata:
 spec:
   tls:
     - hosts:
-      - tickersbell.com
-      - tickerbell.ai
-      - wallstreet-now.com
-      - supernews.io
-      - wallstreetnow.co
-      - super.news
-      - supersearchx.com
       - www.projectpluto.co
       - openembedding.com
       - ppluto.dev
       - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
       secretName: ingress-tls-secret
   rules:
-    # tickerbell.ai
-    - host: main---tickerbell.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: &common-config
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 5080
-
-    # wallstreet-now.com
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: main---wallstreetnow.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: *common-config
-
-    # supernews.io
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: main---supernews.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: *common-config
-
-    # wallstreetnow.co
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: main---wallstreetnow-co.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: *common-config
-
-    # super.news
-    # NOTE: Keep in sync with `tickerbell.ai` section above.
-    - host: main---super-news.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: *common-config
-
     # projectpluto.co (Company website)
     - host: main---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
       http:
@@ -78,75 +39,6 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 84
-
-    # supersearchx.com
-    - host: main---supersearchx.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-          - path: /api-dk
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 84
-          - path: /api/auth
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /api/pdf-buffer
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /api/top-gainers
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /wsrvProxy
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-misc-service
-                port:
-                  number: 5088
-          - path: /rss
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /sitemap
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 5080
-
     # theterminalx.com
     - host: main---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
       http: &terminalx-common-rules
