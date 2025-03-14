@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--fix-sourcemap
+  name: eatnug--pseudo-shutdonw-retail
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--fix-sourcemap
+    namespace: eatnug--pseudo-shutdonw-retail
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/fix-sourcemap/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/eatnug/pseudo-shutdonw-retail/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
