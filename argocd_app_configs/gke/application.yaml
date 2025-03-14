@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--bulk-free-trial
+  name: ahmet--add-qwen-qwq32b
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--bulk-free-trial
+    namespace: ahmet--add-qwen-qwq32b
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/bulk-free-trial/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ahmet/add-qwen-qwq32b/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
