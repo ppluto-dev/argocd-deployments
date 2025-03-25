@@ -20,7 +20,7 @@ spec:
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:d7a0000b165f18fe69e946662a01c48d70f8c30c885ee04b744c3dd3aeba9995
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:360a57b02aa6eb6db3b2ca88fec8a12ef836ade14b4f3a65dfa78c2ca8a08a08
           ports:
             - containerPort: 5280
             - containerPort: 5380
@@ -37,17 +37,16 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:bc73b4fe90e362c638d94084ef707372a42c3e0972327d52a55fdcb83c9edbf4
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:77c0055eabbf0d96a1a7c5147c74f3565e1ad1564a7380a7bbb843fb6e4c15c8
           ports:
-            - containerPort: 5080
             - containerPort: 5095
           readinessProbe:
             httpGet:
-              port: 5080
+              port: 5095
               path: /
           livenessProbe:
             httpGet:
-              port: 5080
+              port: 5095
               path: /
           resources:
             requests:
@@ -62,7 +61,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:87b11d6d62ef8a2cd5d6b4740d682eb1f929d79b4cd9c9811f49b2f3d5ba8780
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bb31884f4165c56514da3c87d82e674573fba630f258a752b2871c47461272e4
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -86,7 +85,7 @@ spec:
             limits:
               cpu: 2
               memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
-              ephemeral-storage: 9Gi
+              ephemeral-storage: 8Gi
           lifecycle:
             preStop:
               exec:
