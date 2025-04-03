@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: eatnug--watchlist-live-feed
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: eatnug--watchlist-live-feed
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/eatnug/watchlist-live-feed/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: ken--fix-asynclocalstorage
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -542,29 +565,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/kkimdev/px-ui-metadata-fix/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: me1e--apply-optimized-image
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: me1e--apply-optimized-image
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/me1e/apply-optimized-image/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
