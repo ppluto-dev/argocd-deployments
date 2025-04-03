@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--fix-typo-disclaimer
+  name: eatnug--fix-auth
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--fix-typo-disclaimer
+    namespace: eatnug--fix-auth
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/fix-typo-disclaimer/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/eatnug/fix-auth/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
