@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bd944299389cc17b3510e377bf893cf12e21b0af7dedeceac6bc8b9a3e023c6a
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4ab3ce10bba7cc6d587dfc341d4b792fb956f995d0592a69ac19e28abec5f8ee
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: misc
@@ -52,7 +52,7 @@ spec:
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bd944299389cc17b3510e377bf893cf12e21b0af7dedeceac6bc8b9a3e023c6a
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4ab3ce10bba7cc6d587dfc341d4b792fb956f995d0592a69ac19e28abec5f8ee
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: wsrv
