@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--gemini-2-5
+  name: gmail
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--gemini-2-5
+    namespace: gmail
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/gemini-2-5/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/gmail/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--revive-gmail-block
+  name: ahmet--gemini-2-5
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--revive-gmail-block
+    namespace: ahmet--gemini-2-5
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/revive-gmail-block/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ahmet/gemini-2-5/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
