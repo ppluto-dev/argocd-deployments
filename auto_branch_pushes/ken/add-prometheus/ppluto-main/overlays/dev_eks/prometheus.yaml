@@ -1,0 +1,17 @@
+# ppluto-main-podmonitoring.yaml
+apiVersion: monitoring.googleapis.com/v1
+kind: PodMonitoring
+metadata:
+  name: ppluto-main-monitoring  # A descriptive name for this monitoring config
+  namespace: main----production
+spec:
+  # Selects the Pods based on labels
+  selector:
+    matchLabels:
+      app: ppluto-main
+
+  # Defines how to scrape the selected Pods
+  endpoints:
+  - port: '9464'      # Explicitly target port 9464 (use quotes for number)
+    path: /metrics    # Explicitly target /metrics path
+    interval: 30s
