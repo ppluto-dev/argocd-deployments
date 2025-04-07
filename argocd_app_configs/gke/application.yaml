@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--add-anchor-market-time
+  name: kkimdev--gemini-rotation
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--add-anchor-market-time
+    namespace: kkimdev--gemini-rotation
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/add-anchor-market-time/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/kkimdev/gemini-rotation/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
