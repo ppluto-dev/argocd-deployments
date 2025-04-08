@@ -8,20 +8,19 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main
+      app.kubernetes.io/name: ppluto-main
   replicas: 1
   revisionHistoryLimit: 2
   template:
     metadata:
       labels:
         app: ppluto-main
+        app.kubernetes.io/name: ppluto-main
     spec:
-      selector:
-        matchLabels:
-          app.kubernetes.io/name: ppluto-main
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:ec5e3ccb73f28c3bd88a601d1d2fd02433f760651f02b047ceb9aaf1c75de714
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:887754221b04f5c84768f7b254702acdecdf4a0e16819261d61ce3af28393398
           ports:
             - containerPort: 5280
             - containerPort: 5380
@@ -38,7 +37,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:b7fa9a2036d6d3b57027a1cd8fe38730c693e5d0535b475dffc5c57c54691e09
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:475a9a299eb4fa1493d0ab8d52d5cb30d5b0b74feec4c0eed40318550a4b9a49
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -62,7 +61,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:6fc7f3b190e55519159c7fdac322bdfbe2a09be0132abaf6b17d0e45336155e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8073be0e55dbd8af452a00450593189058fdcef219c606d6e0f63bd0b6c03dab
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server

@@ -8,16 +8,15 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main
+      app.kubernetes.io/name: ppluto-main
   replicas: {{.PPLUTO_MAIN_DEPLOYMENT_REPLICAS}}
   revisionHistoryLimit: 2
   template:
     metadata:
       labels:
         app: ppluto-main
+        app.kubernetes.io/name: ppluto-main
     spec:
-      selector:
-        matchLabels:
-          app.kubernetes.io/name: ppluto-main
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
