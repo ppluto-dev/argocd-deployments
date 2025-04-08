@@ -37,7 +37,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:b3b6f62ec947bed56ced908235fa67e3aca45f1e658d19cd1fc8285464ce371f
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:399feab16607ca87fb498f4d5ee6cbbde6109a5af0f9a50dca2892d73317add0
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -61,7 +61,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:a44176e2b2d6fdd4ac134263d2d7276058e0ca0f8f7e075a6bacb70e8a5c3f1c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:600bf48032e70e4a4cee2c33502ebf48d1b4be1618a41317074a213cb1ed166f
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -70,6 +70,9 @@ spec:
             - containerPort: 82
             - containerPort: 83
             - containerPort: 84
+            - containerPort: 9464
+              name: metrics
+              protocol: TCP
           readinessProbe:
             # TODO: Implement gRPC health check instead. https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#probe-check-methods
             tcpSocket:
