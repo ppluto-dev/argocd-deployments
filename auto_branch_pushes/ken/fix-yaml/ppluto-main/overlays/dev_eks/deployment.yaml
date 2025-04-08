@@ -1,0 +1,102 @@
+kind: Rollout
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: ppluto-main
+  labels:
+    app.kubernetes.io/name: ppluto-main
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main
+  replicas: 0
+  revisionHistoryLimit: 2
+  template:
+    metadata:
+      labels:
+        app: ppluto-main
+    spec:
+      selector:
+        matchLabels:
+          app.kubernetes.io/name: ppluto-main
+      terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
+      containers:
+        - name: ppluto-main--prod-client
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:d017233b6a0160e9c2f823db553eea4a4d1726fb5b9251bdbfaa8d54e1b1dfb4
+          ports:
+            - containerPort: 5280
+            - containerPort: 5380
+            - containerPort: 5480
+          resources:
+            requests:
+              cpu: 40m
+            limits:
+              cpu: 200m
+              memory: 100Mi
+              ephemeral-storage: 1Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+        - name: ppluto-main--prod-client-tickerbell
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:9687d562b3c9491abadc3d2cc622fa49f048e437636b931f7b495f9c3279c0d9
+          ports:
+            - containerPort: 5095
+          readinessProbe:
+            httpGet:
+              port: 5095
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 5095
+              path: /
+          resources:
+            requests:
+              cpu: 0.5
+              memory: 512Mi
+            limits:
+              cpu: 2
+              memory: 3Gi
+              ephemeral-storage: 1Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+        - name: ppluto-main--prod-server
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:2c0106cca64d341b2c08684d567856fc7495dd78b94c7ebfe616b492336b25ae
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+          ports:
+            - containerPort: 81
+            - containerPort: 82
+            - containerPort: 83
+            - containerPort: 84
+            - name: metrics
+              containerPort: 9464
+          readinessProbe:
+            # TODO: Implement gRPC health check instead. https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#probe-check-methods
+            tcpSocket:
+              port: 82
+          # TODO: Enable `livenessProbe`.  Temporarily disabled to debug container crash issue.
+          # livenessProbe:
+          #   tcpSocket:
+          #     port: 82
+          resources:
+            requests:
+              cpu: 0.5
+              memory: 8Gi
+            limits:
+              cpu: 2
+              memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
+              ephemeral-storage: 8Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+      imagePullSecrets:
+        - name: gitlab-container-registry
+  strategy:
+    blueGreen:
+      activeService: ppluto-main-service-active
+      previewService: ppluto-main-service-preview
+      autoPromotionEnabled: true
