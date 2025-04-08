@@ -70,6 +70,9 @@ spec:
             - containerPort: 82
             - containerPort: 83
             - containerPort: 84
+            - containerPort: 9464
+              name: metrics
+              protocol: TCP
           readinessProbe:
             # TODO: Implement gRPC health check instead. https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#probe-check-methods
             tcpSocket:
