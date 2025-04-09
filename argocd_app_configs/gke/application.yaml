@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--translation-button-on-report
+  name: ken--add-stripe-metadata
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--translation-button-on-report
+    namespace: ken--add-stripe-metadata
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/translation-button-on-report/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/add-stripe-metadata/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kkimdev--infra-shutdown-test
+  name: eatnug--translation-button-on-report
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: kkimdev--infra-shutdown-test
+    namespace: eatnug--translation-button-on-report
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/kkimdev/infra-shutdown-test/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/eatnug/translation-button-on-report/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
