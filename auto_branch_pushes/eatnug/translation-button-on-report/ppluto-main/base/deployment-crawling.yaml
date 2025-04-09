@@ -1100,6 +1100,10 @@ spec:
               value: "true"
             - name: IS_TEMPORAL_WORKER
               value: "true"
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "echo 'preStop hook creating stamp file in /tmp...' >&2; touch /tmp/sigterm_received.stamp"]
           resources:
             requests:
               cpu: 1
