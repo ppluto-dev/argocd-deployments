@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--add-marketwatch
+  name: eatnug--remove-my-log
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--add-marketwatch
+    namespace: eatnug--remove-my-log
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/add-marketwatch/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/eatnug/remove-my-log/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
