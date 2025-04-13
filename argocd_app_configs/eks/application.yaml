@@ -26,6 +26,52 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: eatnug--sign-up-fix-2
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: eatnug--sign-up-fix-2
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/eatnug/sign-up-fix-2/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: eatnug--sign-up-fix
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: eatnug--sign-up-fix
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/eatnug/sign-up-fix/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: kkimdev--testbranch
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -59,29 +105,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/eatnug/live-research-ui/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: eatnug--sign-up-fix
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: eatnug--sign-up-fix
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/eatnug/sign-up-fix/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -542,29 +565,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/kkimdev/px-ui-metadata-fix/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: me1e--apply-optimized-image
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: me1e--apply-optimized-image
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/me1e/apply-optimized-image/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
