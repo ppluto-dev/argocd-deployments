@@ -1,0 +1,26 @@
+# https://grafana.com/docs/grafana/latest/setup-grafana/installation/helm/
+
+assertNoLeakedSecrets: false
+
+persistence:
+  type: pvc
+  enabled: true
+  # storageClassName: default
+
+plugins:
+-  grafana-oncall-app
+deploymentStrategy:
+  type: Recreate
+grafana.ini:
+  database:
+    host: 34.21.42.130:3306
+    name: grafana
+    password: uJl2ghK4ZKFzD01CSEOKKz4wZBRVcp4YUx0uhhTpc0gPoRs5uc
+    ssl_mode: skip-verify
+    type: mysql
+    user: grafana
+  server:
+    root_url: https://grafana.ppluto.dev
+
+testFramework:
+  enabled: false
