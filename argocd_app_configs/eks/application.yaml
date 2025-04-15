@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--fix-sec-403
+  name: ken--add-overwrite
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--fix-sec-403
+    namespace: ken--add-overwrite
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/fix-sec-403/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/add-overwrite/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
