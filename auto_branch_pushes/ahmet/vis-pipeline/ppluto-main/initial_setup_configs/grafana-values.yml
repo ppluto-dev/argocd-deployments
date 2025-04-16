@@ -13,12 +13,13 @@ deploymentStrategy:
   type: Recreate
 grafana.ini:
   database:
-    host: ppluto-prod-cluster.cluster-cffyoqn2kqsu.us-east-1.rds.amazonaws.com:3306
+    host: 34.21.42.130:3306
     name: grafana
-    password: iXBaNm7dJpNq6wxxKmaBG.Pu
-    ssl_mode: disable
+    password: 9sqlSZvU4gq62Lj1vruw6WKTP65X9hSa1wy9RpYkkizZZitdPJ
+    ssl_mode: skip-verify
     type: mysql
-    user: grafana
+    user: production-1
+    ca_cert_path: /etc/ssl/certs/ca-certificates.crt
   server:
     root_url: https://grafana.ppluto.dev
 
