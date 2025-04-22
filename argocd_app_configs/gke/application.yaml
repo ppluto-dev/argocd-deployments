@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--encrypt-pdf-url
+  name: eatnug--add-ga-tags
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--encrypt-pdf-url
+    namespace: eatnug--add-ga-tags
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/encrypt-pdf-url/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/eatnug/add-ga-tags/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
