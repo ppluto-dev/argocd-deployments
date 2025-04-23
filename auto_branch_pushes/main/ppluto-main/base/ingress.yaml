@@ -64,13 +64,6 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
-          - path: /api/pdf-buffer
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
           - path: /api/encrypted-blob
             pathType: Prefix
             backend:
