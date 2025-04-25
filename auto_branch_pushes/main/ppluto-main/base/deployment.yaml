@@ -99,3 +99,14 @@ spec:
       activeService: ppluto-main-service-active
       previewService: ppluto-main-service-preview
       autoPromotionEnabled: true
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ppluto-main-pdb
+spec:
+  minAvailable: {{.PPLUTO_MAIN_DEPLOYMENT_REPLICAS_MIN_AVAILABLE}}
+  selector:
+    matchLabels:
+      app: ppluto-main
