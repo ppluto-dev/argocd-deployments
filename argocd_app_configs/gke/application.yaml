@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--pdr-add-feature-1
+  name: ahmet--vision-pipeline
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--pdr-add-feature-1
+    namespace: ahmet--vision-pipeline
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/pdr-add-feature-1/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ahmet/vision-pipeline/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
