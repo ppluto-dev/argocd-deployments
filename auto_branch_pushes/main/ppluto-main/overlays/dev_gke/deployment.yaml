@@ -17,6 +17,13 @@ spec:
         app: ppluto-main
         app.kubernetes.io/name: ppluto-main
     spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: "kubernetes.io/hostname"
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: ppluto-main
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
@@ -37,7 +44,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:f1612e9beef36721d2867c08d71882b295e3be10fb1225051e33bf289f6257ca
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:11afa5cc2406fbb61c53476a3bc9f5e649c28594443c35ecbf9f29c113cbc8fe
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -61,7 +68,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:98d9fb6c16edd35b461bbd5652ad8a439a303975d5ad637e0df64baaf6f47fe1
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:466bed075b94f3011bf7d213b884bca7092a146c9e9fb0169df72a4bf485ac73
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
