@@ -44,7 +44,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:3eb7f155a5937644e5e9953817a0ffa42c34663b2b96141e8bb499e0a6a9d902
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:979480fb983d10add4964328da67ce8016000d302d3d610f65764b1696bd7fee
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -68,7 +68,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:699376d05db441af6a62a9aeacad4f3e638a71e5b90fd70c10d68e60042bbca3
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e6ce39c0192edbd99f33a058b6118f38daf47ce8a791a2556afc06967e4de52c
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -113,7 +113,7 @@ kind: PodDisruptionBudget
 metadata:
   name: ppluto-main-pdb
 spec:
-  minAvailable: 5
+  minAvailable: 8
   selector:
     matchLabels:
       app: ppluto-main

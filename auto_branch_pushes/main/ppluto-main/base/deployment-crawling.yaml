@@ -1087,6 +1087,13 @@ spec:
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
     spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: "kubernetes.io/hostname"
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: ppluto-main-temporal-worker
       terminationGracePeriodSeconds: 900 # 15 min
       imagePullSecrets:
         - name: gitlab-container-registry
@@ -1123,3 +1130,14 @@ spec:
               port: 5096
             failureThreshold: 180
             periodSeconds: 10
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ppluto-main-temporal-worker-pdb
+spec:
+  minAvailable: {{.PPLUTO_MAIN_TEMPORAL_WORKER_DEPLOYMENT_REPLICAS_MIN_AVAILABLE}}
+  selector:
+    matchLabels:
+      app: ppluto-main-temporal-worker
