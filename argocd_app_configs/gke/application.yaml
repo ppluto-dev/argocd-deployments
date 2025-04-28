@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kkimdev--automatic-empty-namespace-removal
+  name: kkimdev--ip-blacklist-daiwa
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: kkimdev--automatic-empty-namespace-removal
+    namespace: kkimdev--ip-blacklist-daiwa
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/kkimdev/automatic-empty-namespace-removal/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/kkimdev/ip-blacklist-daiwa/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
