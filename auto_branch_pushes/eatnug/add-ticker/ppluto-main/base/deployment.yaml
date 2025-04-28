@@ -2,21 +2,28 @@ kind: Rollout
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: ppluto-main
+  labels:
+    app.kubernetes.io/name: ppluto-main
 spec:
   selector:
     matchLabels:
       app: ppluto-main
+      app.kubernetes.io/name: ppluto-main
   replicas: {{.PPLUTO_MAIN_DEPLOYMENT_REPLICAS}}
   revisionHistoryLimit: 2
   template:
     metadata:
       labels:
         app: ppluto-main
-      annotations:
-        prometheus.io/scrape: 'true'
-        prometheus.io/path: '/metrics'
-        prometheus.io/port: '9464'
+        app.kubernetes.io/name: ppluto-main
     spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: "kubernetes.io/hostname"
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: ppluto-main
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
@@ -70,9 +77,8 @@ spec:
             - containerPort: 82
             - containerPort: 83
             - containerPort: 84
-            - containerPort: 9464
-              name: metrics
-              protocol: TCP
+            - name: metrics
+              containerPort: 9464
           readinessProbe:
             # TODO: Implement gRPC health check instead. https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#probe-check-methods
             tcpSocket:
@@ -100,3 +106,14 @@ spec:
       activeService: ppluto-main-service-active
       previewService: ppluto-main-service-preview
       autoPromotionEnabled: true
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ppluto-main-pdb
+spec:
+  minAvailable: {{.PPLUTO_MAIN_DEPLOYMENT_REPLICAS_MIN_AVAILABLE}}
+  selector:
+    matchLabels:
+      app: ppluto-main

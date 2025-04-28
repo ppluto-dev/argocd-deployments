@@ -2,25 +2,32 @@ kind: Rollout
 apiVersion: argoproj.io/v1alpha1
 metadata:
   name: ppluto-main
+  labels:
+    app.kubernetes.io/name: ppluto-main
 spec:
   selector:
     matchLabels:
       app: ppluto-main
+      app.kubernetes.io/name: ppluto-main
   replicas: 8
   revisionHistoryLimit: 2
   template:
     metadata:
       labels:
         app: ppluto-main
-      annotations:
-        prometheus.io/scrape: 'true'
-        prometheus.io/path: '/metrics'
-        prometheus.io/port: '9464'
+        app.kubernetes.io/name: ppluto-main
     spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: "kubernetes.io/hostname"
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: ppluto-main
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:62c6544c5671cf06324122aa12e75678764b17237bce92c5033802afa8d9ed76
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:029969a452ab11905774f8bd11a2e2f2701e6480412356fbe434cf00b6a156cc
           ports:
             - containerPort: 5280
             - containerPort: 5380
@@ -37,7 +44,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:399feab16607ca87fb498f4d5ee6cbbde6109a5af0f9a50dca2892d73317add0
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:48cc8cbbc067ba0ed7c8a9c5c23931e3baaad7c707bf21c3a45902e50406b00c
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -61,7 +68,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:600bf48032e70e4a4cee2c33502ebf48d1b4be1618a41317074a213cb1ed166f
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:789073d05dea631278aba0a92d1f9d955d51d84beb8725273d24c97ef04de1a2
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -70,9 +77,8 @@ spec:
             - containerPort: 82
             - containerPort: 83
             - containerPort: 84
-            - containerPort: 9464
-              name: metrics
-              protocol: TCP
+            - name: metrics
+              containerPort: 9464
           readinessProbe:
             # TODO: Implement gRPC health check instead. https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#probe-check-methods
             tcpSocket:
@@ -100,3 +106,14 @@ spec:
       activeService: ppluto-main-service-active
       previewService: ppluto-main-service-preview
       autoPromotionEnabled: true
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ppluto-main-pdb
+spec:
+  minAvailable: 8
+  selector:
+    matchLabels:
+      app: ppluto-main
