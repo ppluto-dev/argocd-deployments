@@ -1094,6 +1094,8 @@ spec:
           labelSelector:
             matchLabels:
               app: ppluto-main-temporal-worker
+          matchLabelKeys:
+            - pod-template-hash
       terminationGracePeriodSeconds: 900 # 15 min
       imagePullSecrets:
         - name: gitlab-container-registry
