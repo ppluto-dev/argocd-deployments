@@ -24,6 +24,8 @@ spec:
           labelSelector:
             matchLabels:
               app: ppluto-main
+          matchLabelKeys:
+            - pod-template-hash
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
@@ -44,7 +46,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:6d9e55f66ec50f8887edebb25e3a1e0918e4d908be038cc55130c7fb98b48784
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:cbc3f6ce744c54ed47c18b5580a90a864d282049fd42a91d0484d151c9474f7c
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -68,7 +70,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b1eb012c6947d59dc59d72fa202c9f8df2924f68780ea0ee2f56918f2c295514
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5b92a783b5b4f3ba70165259471caa9cfc07e19c3f946ce9e60540654e1dd486
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
