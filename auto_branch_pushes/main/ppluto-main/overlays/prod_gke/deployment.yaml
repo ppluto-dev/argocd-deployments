@@ -24,6 +24,8 @@ spec:
           labelSelector:
             matchLabels:
               app: ppluto-main
+          matchLabelKeys:
+            - pod-template-hash
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-client
