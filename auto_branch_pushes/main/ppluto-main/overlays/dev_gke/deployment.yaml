@@ -27,50 +27,10 @@ spec:
           matchLabelKeys:
             - pod-template-hash
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
+
       containers:
-        - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:d4eca8f53460636a6ca52e43cd90dc41d2bb8c6a28969ce005f52c722a80b673
-          ports:
-            - containerPort: 5280
-            - containerPort: 5380
-            - containerPort: 5480
-          resources:
-            requests:
-              cpu: 40m
-            limits:
-              cpu: 200m
-              memory: 64Mi
-              ephemeral-storage: 1Gi
-          lifecycle:
-            preStop:
-              exec:
-                command: ["/bin/sh", "-c", "sleep 1800"]
-        - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:4a15cc99ef4eec04be7a6f6628ebe7c569543cad75ffb6aeac3396aa0c9ccc45
-          ports:
-            - containerPort: 5095
-          readinessProbe:
-            httpGet:
-              port: 5095
-              path: /
-          livenessProbe:
-            httpGet:
-              port: 5095
-              path: /
-          resources:
-            requests:
-              cpu: 0.5
-              memory: 256Mi
-            limits:
-              cpu: 2
-              memory: 512Mi
-              ephemeral-storage: 1Gi
-          lifecycle:
-            preStop:
-              exec:
-                command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:cb400a38281cc8228b86a143f2dc57db93ea45cd82049d8e0b0d3fa3a072211d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:6e9881af3a74f45aaeb7cb23429916d234efe3368d8ffecf3ed4cc75d71cf9c7
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -101,6 +61,48 @@ spec:
             preStop:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
+        - name: ppluto-main--prod-client-tickerbell
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:af1ec331d26b6734d64a246b66a2cf095a978fe303aa5b848d8dd477e407b73d
+          ports:
+            - containerPort: 5095
+          readinessProbe:
+            httpGet:
+              port: 5095
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 5095
+              path: /
+          resources:
+            requests:
+              cpu: 0.5
+              memory: 256Mi
+            limits:
+              cpu: 2
+              memory: 512Mi
+              ephemeral-storage: 1Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+        - name: ppluto-main--prod-client
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:4bb8b66af31fd3e8efec7de5a4a73e36530674058bf57a4cb68d77c6d6a4e2a5
+          ports:
+            - containerPort: 5280
+            - containerPort: 5380
+            - containerPort: 5480
+          resources:
+            requests:
+              cpu: 40m
+            limits:
+              cpu: 200m
+              memory: 64Mi
+              ephemeral-storage: 1Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+
       imagePullSecrets:
         - name: gitlab-container-registry
   strategy:
