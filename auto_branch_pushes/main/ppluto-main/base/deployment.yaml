@@ -37,7 +37,7 @@ spec:
               cpu: 40m
             limits:
               cpu: 200m
-              memory: 100Mi
+              memory: 64Mi
               ephemeral-storage: 1Gi
           lifecycle:
             preStop:
@@ -58,10 +58,10 @@ spec:
           resources:
             requests:
               cpu: 0.5
-              memory: 512Mi
+              memory: 256Mi
             limits:
               cpu: 2
-              memory: 3Gi
+              memory: 512Mi
               ephemeral-storage: 1Gi
           lifecycle:
             preStop:
@@ -90,10 +90,10 @@ spec:
           resources:
             requests:
               cpu: 0.5
-              memory: 8Gi
+              memory: 4Gi
             limits:
               cpu: 2
-              memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
+              memory: 8Gi
               ephemeral-storage: 8Gi
           lifecycle:
             preStop:
