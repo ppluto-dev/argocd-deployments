@@ -1114,9 +1114,10 @@ spec:
           resources:
             requests:
               cpu: 1
+              memory: 4Gi
             limits:
-              cpu: 4
-              memory: 5000Mi
+              cpu: 3
+              memory: 6Gi
               ephemeral-storage: 7Gi
           livenessProbe:
             httpGet:
