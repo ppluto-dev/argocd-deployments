@@ -1088,9 +1088,9 @@ spec:
         prometheus.io/port: '9464'
     spec:
       topologySpreadConstraints:
-        - maxSkew: 1
+        - maxSkew: 4
           topologyKey: "kubernetes.io/hostname"
-          whenUnsatisfiable: ScheduleAnyway
+          whenUnsatisfiable: DoNotSchedule
           labelSelector:
             matchLabels:
               app: ppluto-main-temporal-worker

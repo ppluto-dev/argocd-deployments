@@ -18,9 +18,9 @@ spec:
         app.kubernetes.io/name: ppluto-main
     spec:
       topologySpreadConstraints:
-        - maxSkew: 1
+        - maxSkew: 2
           topologyKey: "kubernetes.io/hostname"
-          whenUnsatisfiable: ScheduleAnyway
+          whenUnsatisfiable: DoNotSchedule
           labelSelector:
             matchLabels:
               app: ppluto-main
@@ -30,7 +30,7 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:6b12d212127795e2cf118a1963cc8cc54576fbb800b7094aa28c67f04a534c64
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:9ad2bf39d4a1337caf11cc8b7667c4dc20ff17d1a945f1e43fb99136e36b817c
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -62,7 +62,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:1f0cda2b3034b6b20a84d7eeaa9253e6208c52843d5bebbdb27a127963e8c5df
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:16ab6bb12249000d61430ece2a64ff6b9c48c522b69a2176be250547c56d03ee
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -86,7 +86,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:38360839d66e6bb9f14ed4d5a12ec003164c2f5361551a72a69e928fc8f5451a
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:d4eca8f53460636a6ca52e43cd90dc41d2bb8c6a28969ce005f52c722a80b673
           ports:
             - containerPort: 5280
             - containerPort: 5380
