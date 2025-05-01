@@ -1140,7 +1140,7 @@ kind: PodDisruptionBudget
 metadata:
   name: ppluto-main-temporal-worker-pdb
 spec:
-  minAvailable: {{.PPLUTO_MAIN_TEMPORAL_WORKER_DEPLOYMENT_REPLICAS_MIN_AVAILABLE}}
+  maxUnavailable: 5
   selector:
     matchLabels:
       app: ppluto-main-temporal-worker

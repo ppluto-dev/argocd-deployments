@@ -117,7 +117,7 @@ kind: PodDisruptionBudget
 metadata:
   name: ppluto-main-pdb
 spec:
-  minAvailable: {{.PPLUTO_MAIN_DEPLOYMENT_REPLICAS_MIN_AVAILABLE}}
+  maxUnavailable: 1
   selector:
     matchLabels:
       app: ppluto-main
