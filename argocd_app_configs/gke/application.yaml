@@ -26,6 +26,52 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: ahmet--remove-not-chunked-yet
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ahmet--remove-not-chunked-yet
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ahmet/remove-not-chunked-yet/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ken--fix-live-research
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ken--fix-live-research
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ken/fix-live-research/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: ahmet--daiwa-2
   finalizers:
     - resources-finalizer.argocd.argoproj.io
