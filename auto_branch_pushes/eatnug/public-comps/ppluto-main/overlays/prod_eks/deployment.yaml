@@ -18,57 +18,19 @@ spec:
         app.kubernetes.io/name: ppluto-main
     spec:
       topologySpreadConstraints:
-        - maxSkew: 1
+        - maxSkew: 2
           topologyKey: "kubernetes.io/hostname"
-          whenUnsatisfiable: ScheduleAnyway
+          whenUnsatisfiable: DoNotSchedule
           labelSelector:
             matchLabels:
               app: ppluto-main
+          matchLabelKeys:
+            - pod-template-hash
       terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
+
       containers:
-        - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:03c4329d39e9415ee92d7d701add60071821f28e7b1a8cbdd92f7d316e46aa70
-          ports:
-            - containerPort: 5280
-            - containerPort: 5380
-            - containerPort: 5480
-          resources:
-            requests:
-              cpu: 40m
-            limits:
-              cpu: 200m
-              memory: 100Mi
-              ephemeral-storage: 1Gi
-          lifecycle:
-            preStop:
-              exec:
-                command: ["/bin/sh", "-c", "sleep 1800"]
-        - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:286fcd98ea2364bc4664c22d670846186564711b36950a7ae1ec07d76392bc14
-          ports:
-            - containerPort: 5095
-          readinessProbe:
-            httpGet:
-              port: 5095
-              path: /
-          livenessProbe:
-            httpGet:
-              port: 5095
-              path: /
-          resources:
-            requests:
-              cpu: 0.5
-              memory: 512Mi
-            limits:
-              cpu: 2
-              memory: 3Gi
-              ephemeral-storage: 1Gi
-          lifecycle:
-            preStop:
-              exec:
-                command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:cd1c5bd75ae44f1f24e9d46941cd5d6db4e67af371e0c50bc00c474dcfc4606a
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:7ac6f357d605cf00bfbf7ed14129b730591aa9390563a839313c9850b9c9850f
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -90,15 +52,58 @@ spec:
           resources:
             requests:
               cpu: 0.5
-              memory: 8Gi
+              memory: 2Gi
             limits:
               cpu: 2
-              memory: 12Gi # Temporarily increased memory to avoid OOM crashes on GAIA batch prompt execution
+              memory: 4Gi
               ephemeral-storage: 8Gi
           lifecycle:
             preStop:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
+        - name: ppluto-main--prod-client-tickerbell
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:01ba4fbe200d0080633a5045d7831ae569ec882540ad0bd1eb71fc16a626c0b6
+          ports:
+            - containerPort: 5095
+          readinessProbe:
+            httpGet:
+              port: 5095
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 5095
+              path: /
+          resources:
+            requests:
+              cpu: 0.5
+              memory: 256Mi
+            limits:
+              cpu: 2
+              memory: 512Mi
+              ephemeral-storage: 1Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+        - name: ppluto-main--prod-client
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:c49c4c6d58d83d8980a40919ab94579350786ed02bfca9c441b7bae656872255
+          ports:
+            - containerPort: 5280
+            - containerPort: 5380
+            - containerPort: 5480
+          resources:
+            requests:
+              cpu: 40m
+              memory: 16Mi
+            limits:
+              cpu: 200m
+              memory: 32Mi
+              ephemeral-storage: 1Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+
       imagePullSecrets:
         - name: gitlab-container-registry
   strategy:
@@ -113,7 +118,7 @@ kind: PodDisruptionBudget
 metadata:
   name: ppluto-main-pdb
 spec:
-  minAvailable: 0
+  maxUnavailable: 1
   selector:
     matchLabels:
       app: ppluto-main

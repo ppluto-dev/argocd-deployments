@@ -1088,12 +1088,14 @@ spec:
         prometheus.io/port: '9464'
     spec:
       topologySpreadConstraints:
-        - maxSkew: 1
+        - maxSkew: 4
           topologyKey: "kubernetes.io/hostname"
-          whenUnsatisfiable: ScheduleAnyway
+          whenUnsatisfiable: DoNotSchedule
           labelSelector:
             matchLabels:
               app: ppluto-main-temporal-worker
+          matchLabelKeys:
+            - pod-template-hash
       terminationGracePeriodSeconds: 900 # 15 min
       imagePullSecrets:
         - name: gitlab-container-registry
@@ -1114,9 +1116,10 @@ spec:
           resources:
             requests:
               cpu: 1
+              memory: 2Gi
             limits:
-              cpu: 4
-              memory: 5000Mi
+              cpu: 3
+              memory: 4Gi
               ephemeral-storage: 7Gi
           livenessProbe:
             httpGet:
@@ -1137,7 +1140,7 @@ kind: PodDisruptionBudget
 metadata:
   name: ppluto-main-temporal-worker-pdb
 spec:
-  minAvailable: {{.PPLUTO_MAIN_TEMPORAL_WORKER_DEPLOYMENT_REPLICAS_MIN_AVAILABLE}}
+  maxUnavailable: 5
   selector:
     matchLabels:
       app: ppluto-main-temporal-worker
