@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--ocr
+  name: eatnug--fix-sync-files-scheduels
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--ocr
+    namespace: eatnug--fix-sync-files-scheduels
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/ocr/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/eatnug/fix-sync-files-scheduels/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
