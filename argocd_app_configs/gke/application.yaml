@@ -49,29 +49,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--fix-userupload-override
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ken--fix-userupload-override
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ken/fix-userupload-override/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: sachin--answer-table-ticker
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -565,6 +542,29 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/kkimdev/trading-view-api-test/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kkimdev--server-port-cleanup-2
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: kkimdev--server-port-cleanup-2
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/kkimdev/server-port-cleanup-2/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
