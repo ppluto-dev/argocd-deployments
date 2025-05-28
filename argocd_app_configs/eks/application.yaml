@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--allow-private-data-source-filter
+  name: sachin--update-readme
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--allow-private-data-source-filter
+    namespace: sachin--update-readme
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/allow-private-data-source-filter/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/update-readme/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
