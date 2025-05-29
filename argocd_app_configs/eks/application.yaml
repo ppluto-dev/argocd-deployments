@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--mobilepopup
+  name: rohit--ui
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--mobilepopup
+    namespace: rohit--ui
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/mobilepopup/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/rohit/ui/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
