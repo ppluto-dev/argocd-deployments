@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--landing-page-seo
+  name: ahmet--landing-page-size
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--landing-page-seo
+    namespace: ahmet--landing-page-size
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/landing-page-seo/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ahmet/landing-page-size/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
