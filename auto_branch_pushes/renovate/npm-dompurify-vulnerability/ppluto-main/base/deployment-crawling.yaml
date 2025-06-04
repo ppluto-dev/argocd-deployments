@@ -1087,6 +1087,15 @@ spec:
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
     spec:
+      topologySpreadConstraints:
+        - maxSkew: 4
+          topologyKey: "kubernetes.io/hostname"
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: ppluto-main-temporal-worker
+          matchLabelKeys:
+            - pod-template-hash
       terminationGracePeriodSeconds: 900 # 15 min
       imagePullSecrets:
         - name: gitlab-container-registry
@@ -1100,12 +1109,17 @@ spec:
               value: "true"
             - name: IS_TEMPORAL_WORKER
               value: "true"
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "echo 'preStop hook creating stamp file in /tmp...' >&2; touch /tmp/sigterm_received.stamp"]
           resources:
             requests:
               cpu: 1
+              memory: 2Gi
             limits:
-              cpu: 4
-              memory: 5000Mi
+              cpu: 3
+              memory: 4Gi
               ephemeral-storage: 7Gi
           livenessProbe:
             httpGet:
@@ -1119,3 +1133,14 @@ spec:
               port: 5096
             failureThreshold: 180
             periodSeconds: 10
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ppluto-main-temporal-worker-pdb
+spec:
+  maxUnavailable: 5
+  selector:
+    matchLabels:
+      app: ppluto-main-temporal-worker
