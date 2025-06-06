@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--landingenterprise
+  name: ken--openapi-v1
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--landingenterprise
+    namespace: ken--openapi-v1
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/landingenterprise/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/openapi-v1/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
