@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--etf-summary-ui
+  name: eatnug--translate-live-research
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--etf-summary-ui
+    namespace: eatnug--translate-live-research
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/etf-summary-ui/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/eatnug/translate-live-research/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eatnug--fix-etf-summary-population
+  name: eatnug--etf-summary-ui
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: eatnug--fix-etf-summary-population
+    namespace: eatnug--etf-summary-ui
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/eatnug/fix-etf-summary-population/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/eatnug/etf-summary-ui/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
