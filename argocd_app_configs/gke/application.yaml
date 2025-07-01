@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--adminsys
+  name: ken--fix-comps-builder
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--adminsys
+    namespace: ken--fix-comps-builder
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/adminsys/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/fix-comps-builder/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--add-pmsummary-vdb
+  name: daniel--adminsys
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--add-pmsummary-vdb
+    namespace: daniel--adminsys
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/add-pmsummary-vdb/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/adminsys/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
