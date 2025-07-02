@@ -26,16 +26,39 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--retire-storage-file
+  name: ken--comps-builder-add-template
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--retire-storage-file
+    namespace: ken--comps-builder-add-template
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/retire-storage-file/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/comps-builder-add-template/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sachin--agent-answer-ui
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: sachin--agent-answer-ui
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/sachin/agent-answer-ui/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
