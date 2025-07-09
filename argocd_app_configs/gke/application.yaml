@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--one-drive
+  name: daniel--rssfeedv2
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--one-drive
+    namespace: daniel--rssfeedv2
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/one-drive/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/rssfeedv2/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
