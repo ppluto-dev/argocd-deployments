@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--one-drive
+  name: ken--opendart-api-v1
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--one-drive
+    namespace: ken--opendart-api-v1
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/one-drive/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/opendart-api-v1/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
