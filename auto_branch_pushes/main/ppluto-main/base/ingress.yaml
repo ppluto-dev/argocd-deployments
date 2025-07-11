@@ -122,6 +122,8 @@ spec:
                   number: 5095
     - host: "*.{{.THETERMINALX_COM_DOMAIN}}"
       http: *terminalx-common-rules
+    - host: {{.TERMINALX_AI_DOMAIN}}
+      http: *terminalx-common-rules
 
     # terminal.supersearchx.com
     - host: {{.TERMINAL_SUPERSEARCHX_COM_DOMAIN}}
