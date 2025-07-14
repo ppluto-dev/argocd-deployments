@@ -123,7 +123,15 @@ spec:
     - host: "*.{{.THETERMINALX_COM_DOMAIN}}"
       http: *terminalx-common-rules
     - host: {{.TERMINALX_AI_DOMAIN}}
-      http: *terminalx-common-rules
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5096
 
     # terminal.supersearchx.com
     - host: {{.TERMINAL_SUPERSEARCHX_COM_DOMAIN}}

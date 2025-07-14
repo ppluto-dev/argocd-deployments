@@ -123,7 +123,15 @@ spec:
     - host: "*.daniel--pdruifix---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev"
       http: *terminalx-common-rules
     - host: daniel--pdruifix---terminalxai.auto-branch-pushes.ppluto-main.ppluto.dev
-      http: *terminalx-common-rules
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5096
 
     # terminal.supersearchx.com
     - host: daniel--pdruifix---terminal-supersearchx-com.auto-branch-pushes.ppluto-main.ppluto.dev
