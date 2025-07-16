@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--update-translation
+  name: ahmet--remove-sources
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--update-translation
+    namespace: ahmet--remove-sources
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/update-translation/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ahmet/remove-sources/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
