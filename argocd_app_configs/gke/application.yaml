@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--add-private-doc-metadata
+  name: daniel--addqueryvar
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--add-private-doc-metadata
+    namespace: daniel--addqueryvar
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/add-private-doc-metadata/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/addqueryvar/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--mbk-pdr
+  name: ken--add-private-doc-metadata
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--mbk-pdr
+    namespace: ken--add-private-doc-metadata
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/mbk-pdr/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/add-private-doc-metadata/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
