@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--mbk-embeding
+  name: ken--add-tags
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--mbk-embeding
+    namespace: ken--add-tags
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/mbk-embeding/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/add-tags/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
