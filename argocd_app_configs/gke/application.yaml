@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: daniel--prefixfirm
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: daniel--prefixfirm
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/daniel/prefixfirm/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: kkimdev--disable-u-query
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -519,29 +542,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/banggre/update-get-pdf/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: me1e--pipeline-run-migration-script
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: me1e--pipeline-run-migration-script
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/me1e/pipeline-run-migration-script/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
