@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--sec-jina
+  name: ken--optimize-memory
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--sec-jina
+    namespace: ken--optimize-memory
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/sec-jina/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/optimize-memory/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
