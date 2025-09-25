@@ -113,6 +113,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /nhqv/get-prompt
+            pathType: Exact
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /sitemap
             pathType: Prefix
             backend:
