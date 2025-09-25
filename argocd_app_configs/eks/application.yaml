@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kken--pod-optimization-v1
+  name: ken--fix-generate-ticker
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: kken--pod-optimization-v1
+    namespace: ken--fix-generate-ticker
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/kken/pod-optimization-v1/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/fix-generate-ticker/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
