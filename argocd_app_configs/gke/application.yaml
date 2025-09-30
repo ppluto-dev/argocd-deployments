@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--mobileuifix2
+  name: sachin--sa-crawl-v3
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--mobileuifix2
+    namespace: sachin--sa-crawl-v3
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/mobileuifix2/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/sachin/sa-crawl-v3/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
