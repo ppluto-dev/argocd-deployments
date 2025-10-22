@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--make-easier-to-test
+  name: daniel--retryanswer
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--make-easier-to-test
+    namespace: daniel--retryanswer
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/make-easier-to-test/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/retryanswer/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
