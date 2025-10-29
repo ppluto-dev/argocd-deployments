@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--excel-upload
+  name: sachin--fix-agent-mode
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--excel-upload
+    namespace: sachin--fix-agent-mode
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/excel-upload/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/fix-agent-mode/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: akikaziz--corp-actions-storing
+  name: sachin--excel-upload
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: akikaziz--corp-actions-storing
+    namespace: sachin--excel-upload
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/akikaziz/corp-actions-storing/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/excel-upload/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
