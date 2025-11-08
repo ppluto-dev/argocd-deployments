@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: akikaziz--fix-expand-row-ui
+  name: daniel--gsemail
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: akikaziz--fix-expand-row-ui
+    namespace: daniel--gsemail
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/akikaziz/fix-expand-row-ui/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/gsemail/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
