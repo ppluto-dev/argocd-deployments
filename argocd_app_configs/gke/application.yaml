@@ -26,16 +26,39 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: vishesh--gdrive-research-filter-recent
+  name: akikaziz--source-text-highlight
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: vishesh--gdrive-research-filter-recent
+    namespace: akikaziz--source-text-highlight
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/vishesh/gdrive-research-filter-recent/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/akikaziz/source-text-highlight/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ahmet--account-script
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ahmet--account-script
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ahmet/account-script/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -588,29 +611,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/sachin/mbk-pdr/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: sachin--greenstreet-excel-workflow
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: sachin--greenstreet-excel-workflow
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/sachin/greenstreet-excel-workflow/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
