@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--tickercomps2
+  name: daniel--portfolio4
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--tickercomps2
+    namespace: daniel--portfolio4
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/tickercomps2/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/portfolio4/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--user-upload-source
+  name: daniel--tickercomps2
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--user-upload-source
+    namespace: daniel--tickercomps2
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/user-upload-source/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/tickercomps2/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -128,29 +128,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/sachin/frontend-refactor-3/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: daniel--portfspamp3
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: daniel--portfspamp3
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/daniel/portfspamp3/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -611,6 +588,29 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/sachin/greenstreet-excel-workflow/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: eatnug--extract-image
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: eatnug--extract-image
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/eatnug/extract-image/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
