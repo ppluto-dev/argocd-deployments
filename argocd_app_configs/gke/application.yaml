@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--image-processing-front1
+  name: daniel--emptypineconesync
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--image-processing-front1
+    namespace: daniel--emptypineconesync
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/image-processing-front1/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/emptypineconesync/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--tradingv
+  name: ken--image-processing-front1
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--tradingv
+    namespace: ken--image-processing-front1
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/tradingv/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/image-processing-front1/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
