@@ -99,6 +99,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /api/mcp-test
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /wsrvProxy
             pathType: Prefix
             backend:
@@ -134,8 +141,10 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 5095
+
     - host: "*.theterminalx.com"
       http: *terminalx-common-rules
+
     - host: terminal-x.ai
       http:
         paths:
@@ -175,6 +184,13 @@ spec:
                 port:
                   number: 83
           - path: /api/news
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /api/mcp-test
             pathType: Prefix
             backend:
               service:
