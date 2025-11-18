@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: vishesh--fix-watchlist-page-date
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: vishesh--fix-watchlist-page-date
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/vishesh/fix-watchlist-page-date/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: vishesh--gemini-3-preview
   finalizers:
     - resources-finalizer.argocd.argoproj.io
