@@ -12,7 +12,7 @@ spec:
       - openembedding.com
       - ppluto.dev
       - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
-      - agent.terminal-x.ai
+      - app.terminal-x.ai
       secretName: ingress-tls-secret
   rules:
     # projectpluto.co (Company website)
@@ -146,7 +146,7 @@ spec:
     - host: "*.theterminalx.com"
       http: *terminalx-common-rules
 
-    - host: agent.terminal-x.ai
+    - host: app.terminal-x.ai
       http: *terminalx-common-rules
 
     - host: terminal-x.ai
