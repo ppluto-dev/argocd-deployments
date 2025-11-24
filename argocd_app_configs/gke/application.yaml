@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--naver-crawling
+  name: daniel--uploadattemptga
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--naver-crawling
+    namespace: daniel--uploadattemptga
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/naver-crawling/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/uploadattemptga/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
