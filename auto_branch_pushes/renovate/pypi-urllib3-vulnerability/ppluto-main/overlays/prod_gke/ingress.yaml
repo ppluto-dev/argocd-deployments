@@ -12,6 +12,7 @@ spec:
       - openembedding.com
       - ppluto.dev
       - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
+      - app.terminal-x.ai
       secretName: ingress-tls-secret
   rules:
     # projectpluto.co (Company website)
@@ -145,95 +146,9 @@ spec:
     - host: "*.theterminalx.com"
       http: *terminalx-common-rules
 
-    - host: terminal-x.ai
-      http:
-        paths:
-          - path: /api/search
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /api/auth
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /api/encrypted-blob
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /api/encrypted-blob2
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /api/top-gainers
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /api/news
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /api/mcp-test
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-          - path: /api-dk
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 84
-          - path: /rss
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /sitemap
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 5096
+    - host: app.terminal-x.ai
+      http: *terminalx-common-rules
 
-    # terminal.supersearchx.com
     - host: terminal.supersearchx.com
       http:
         paths:
