@@ -6,12 +6,7 @@ spec:
   selector:
     app: ppluto-main
   ports:
-    - name: web-terminalx-ai # Client -- terminal-x.ai
-      protocol: TCP
-      port: 5096
-      targetPort: 5096
-
-    - name: web-theterminalx-com # Client -- theterminalx.com
+    - name: web-theterminalx-com # Client -- theterminalx.com (also app.terminal-x.ai)
       protocol: TCP
       port: 5095
       targetPort: 5095
@@ -60,12 +55,7 @@ spec:
   selector:
     app: ppluto-main
   ports:
-    - name: web-terminalx-ai # Client -- terminal-x.ai
-      protocol: TCP
-      port: 5096
-      targetPort: 5096
-
-    - name: web-theterminalx-com # Client -- theterminalx.com
+    - name: web-theterminalx-com # Client -- theterminalx.com (also app.terminal-x.ai)
       protocol: TCP
       port: 5095
       targetPort: 5095
