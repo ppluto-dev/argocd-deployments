@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: vishesh--claude-opus-4-5
+  name: sachin--thinking-ui
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: vishesh--claude-opus-4-5
+    namespace: sachin--thinking-ui
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/vishesh/claude-opus-4-5/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/sachin/thinking-ui/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
