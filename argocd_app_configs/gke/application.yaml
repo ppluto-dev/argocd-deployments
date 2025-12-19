@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ahmet--remove-unused-deployments
+  name: ahmet--remove-press-release
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ahmet--remove-unused-deployments
+    namespace: ahmet--remove-press-release
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ahmet/remove-unused-deployments/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ahmet/remove-press-release/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
