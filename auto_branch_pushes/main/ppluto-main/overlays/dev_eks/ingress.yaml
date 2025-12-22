@@ -8,38 +8,12 @@ metadata:
 spec:
   tls:
     - hosts:
-      - www.projectpluto.co
       - openembedding.com
       - ppluto.dev
       - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
       - app.terminal-x.ai
       secretName: ingress-tls-secret
   rules:
-    # projectpluto.co (Company website)
-    - host: main---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 5380
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-          - path: /api-dk
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 84
     # theterminalx.com
     - host: main---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
       http: &terminalx-common-rules
@@ -155,31 +129,6 @@ spec:
 
     - host: main---app-terminalxai.auto-branch-pushes.ppluto-main.ppluto.dev
       http: *terminalx-common-rules
-
-    - host: main---terminal-supersearchx-com.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 5480
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-          - path: /api-dk
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 84
 
 ---
 
