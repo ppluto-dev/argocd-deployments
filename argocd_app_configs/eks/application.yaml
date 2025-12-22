@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: ahmet--renove-biome-full
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ahmet--renove-biome-full
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ahmet/renove-biome-full/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: vishesh--hanwha-crawling
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -82,29 +105,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/sachin/ticker-coverage/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ahmet--optimization
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ahmet--optimization
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ahmet/optimization/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
