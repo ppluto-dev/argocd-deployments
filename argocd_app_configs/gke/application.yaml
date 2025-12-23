@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: sachin--fix-pdr
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: sachin--fix-pdr
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/sachin/fix-pdr/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: ahmet--watchlist-agent
   finalizers:
     - resources-finalizer.argocd.argoproj.io
