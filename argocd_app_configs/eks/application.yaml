@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--profileddlthu
+  name: vishesh--corebeat-test-skip
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--profileddlthu
+    namespace: vishesh--corebeat-test-skip
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/profileddlthu/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/vishesh/corebeat-test-skip/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--fix-streaming
+  name: daniel--profileddlthu
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--fix-streaming
+    namespace: daniel--profileddlthu
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/fix-streaming/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/profileddlthu/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
