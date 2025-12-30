@@ -6,12 +6,7 @@ spec:
   selector:
     app: ppluto-main
   ports:
-    - name: web-terminalx-ai # Client -- terminal-x.ai
-      protocol: TCP
-      port: 5096
-      targetPort: 5096
-
-    - name: web-theterminalx-com # Client -- theterminalx.com
+    - name: web-theterminalx-com # Client -- theterminalx.com (also app.terminal-x.ai)
       protocol: TCP
       port: 5095
       targetPort: 5095
@@ -20,16 +15,6 @@ spec:
       protocol: TCP
       port: 5280
       targetPort: 5280
-
-    - name: web-projectpluto # Client -- www.projectpluto.co (Company website)
-      protocol: TCP
-      port: 5380
-      targetPort: 5380
-
-    - name: web-supersearch # Client -- terminal.supersearchx.com
-      protocol: TCP
-      port: 5480
-      targetPort: 5480
 
     - name: grpc # Node gRpc
       protocol: TCP
@@ -60,12 +45,7 @@ spec:
   selector:
     app: ppluto-main
   ports:
-    - name: web-terminalx-ai # Client -- terminal-x.ai
-      protocol: TCP
-      port: 5096
-      targetPort: 5096
-
-    - name: web-theterminalx-com # Client -- theterminalx.com
+    - name: web-theterminalx-com # Client -- theterminalx.com (also app.terminal-x.ai)
       protocol: TCP
       port: 5095
       targetPort: 5095
@@ -74,16 +54,6 @@ spec:
       protocol: TCP
       port: 5280
       targetPort: 5280
-
-    - name: web-projectpluto # Client -- www.projectpluto.co (Company website)
-      protocol: TCP
-      port: 5380
-      targetPort: 5380
-
-    - name: web-supersearch # Client -- terminal.supersearchx.com
-      protocol: TCP
-      port: 5480
-      targetPort: 5480
 
     - name: grpc # Node gRpc
       protocol: TCP
