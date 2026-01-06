@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--watchlistparam
+  name: ahmet--search-from
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--watchlistparam
+    namespace: ahmet--search-from
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/watchlistparam/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ahmet/search-from/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
