@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--dealbook-crawler-fix
+  name: daniel--pauseazeroalert
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--dealbook-crawler-fix
+    namespace: daniel--pauseazeroalert
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/dealbook-crawler-fix/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/pauseazeroalert/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,39 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--workflow-allow-conv
+  name: ahmet--stats
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--workflow-allow-conv
+    namespace: ahmet--stats
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/workflow-allow-conv/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ahmet/stats/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ajinkyatalekar--dealbook-crawler-fix
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ajinkyatalekar--dealbook-crawler-fix
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ajinkyatalekar/dealbook-crawler-fix/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -680,29 +703,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/sachin/build-optimize-icons/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ahmet--build-optimize-2
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ahmet--build-optimize-2
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ahmet/build-optimize-2/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
