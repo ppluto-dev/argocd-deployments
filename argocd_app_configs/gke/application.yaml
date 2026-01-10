@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: daniel--fix-pinned-222
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: daniel--fix-pinned-222
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/daniel/fix-pinned-222/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: daniel--fix-pinned-session-polling
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -59,29 +82,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/daniel/layoutrefactor/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ajinkyatalekar--dealbook-crawler-schedule
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ajinkyatalekar--dealbook-crawler-schedule
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ajinkyatalekar/dealbook-crawler-schedule/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
