@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--workflowlanding
+  name: sachin--sg-bubble-revert
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--workflowlanding
+    namespace: sachin--sg-bubble-revert
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/workflowlanding/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/sg-bubble-revert/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
