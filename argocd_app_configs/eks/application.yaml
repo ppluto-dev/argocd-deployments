@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--dev-release-msgs
+  name: ajinkyatalekar--dev-msgs
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--dev-release-msgs
+    namespace: ajinkyatalekar--dev-msgs
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/dev-release-msgs/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/dev-msgs/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--price-cache
+  name: ajinkyatalekar--dev-release-msgs
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--price-cache
+    namespace: ajinkyatalekar--dev-release-msgs
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/price-cache/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/dev-release-msgs/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
