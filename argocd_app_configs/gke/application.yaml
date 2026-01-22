@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--dev-msgs
+  name: ajinkyatalekar--stripe-docs
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--dev-msgs
+    namespace: ajinkyatalekar--stripe-docs
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/dev-msgs/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ajinkyatalekar/stripe-docs/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
