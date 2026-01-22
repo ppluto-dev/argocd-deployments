@@ -34,6 +34,8 @@ spec:
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
+            - name: THETERMINALX_COM_DOMAIN
+              value: {{.THETERMINALX_COM_DOMAIN}}
           ports:
             - containerPort: 81
             - containerPort: 82
