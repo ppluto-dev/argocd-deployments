@@ -30,10 +30,12 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e2a8af0e7faa38a01182a67f823f394a4faa4030a6e114f39c1dff3e1c47af75
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b62b52736963182c87d4b8550581e006fbc8b722805f78e9b51e8a8b8ed6c85c
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
+            - name: THETERMINALX_COM_DOMAIN
+              value: theterminalx.com
           ports:
             - containerPort: 81
             - containerPort: 82
@@ -62,7 +64,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:e966bc234b655399cc1a9ce61acde54c434a9251651c0ce6f466a07ec5b060e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:e41eda9ad7cbd319924423d2e2982a025f45adaba295fc98dcf07d1a8b833e5b
           ports:
             - containerPort: 5095
           readinessProbe:
