@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--mobile-profile-layout
+  name: sachin--price-ui
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--mobile-profile-layout
+    namespace: sachin--price-ui
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/mobile-profile-layout/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/price-ui/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
