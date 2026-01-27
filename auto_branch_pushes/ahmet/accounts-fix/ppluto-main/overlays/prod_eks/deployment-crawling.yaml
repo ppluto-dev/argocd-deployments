@@ -1,0 +1,764 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-thestreet
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-thestreet
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-thestreet
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-thestreet
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_THESTREET
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-bloomberg
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-bloomberg
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-bloomberg
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-bloomberg
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_BLOOMBERG
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-cnbc
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-cnbc
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-cnbc
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-cnbc
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_CNBC
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-financial-times
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-financial-times
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-financial-times
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-financial-times
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_FINANCIAL_TIMES
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-aggregate-prompt-runs
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-aggregate-prompt-runs
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-aggregate-prompt-runs
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-aggregate-prompt-runs
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_AGGREGATE_PROMPT_RUN
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_ARROWPOINT_BROKER_RESEARCH_GS_JPM
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-arrowpoint-broker-research-ms-c
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-arrowpoint-broker-research-ms-c
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-arrowpoint-broker-research-ms-c
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-crawling-arrowpoint-broker-research-ms-c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_ARROWPOINT_BROKER_RESEARCH_MS_C
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-arrowpoint-broker-research-sector-c
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-arrowpoint-broker-research-sector-c
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-arrowpoint-broker-research-sector-c
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-crawling-arrowpoint-broker-research-sector-c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_ARROWPOINT_BROKER_RESEARCH_SECTOR_C
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_ARROWPOINT_BROKER_RESEARCH_UBS_BARC
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_ARROWPOINT_BROKER_RESEARCH_ARB_CIQ
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-pluto-broker-research-email
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-pluto-broker-research-email
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-pluto-broker-research-email
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-crawling-pluto-broker-research-email
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_PLUTO_BROKER_RESEARCH_EMAIL
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 3Gi
+              ephemeral-storage: 9Gi
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-check-payment
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-check-payment
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-check-payment
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-check-payment
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_PAYMENT_SYNC
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 5000Mi
+              ephemeral-storage: 9Gi
+
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-crawling-worker
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-crawling-worker
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-crawling-worker
+    spec:
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main--prod-server-crawling-worker
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_LOCAL_CRAWLING_WORKER
+              value: "true"
+          resources:
+            requests:
+              cpu: 400m
+            limits:
+              cpu: 2000m
+              memory: 5000Mi
+              ephemeral-storage: 9Gi
+
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-temporal-worker
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-temporal-worker
+  replicas: 0
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-temporal-worker
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '9464'
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 4
+          topologyKey: "kubernetes.io/hostname"
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: ppluto-main-temporal-worker
+          matchLabelKeys:
+            - pod-template-hash
+      terminationGracePeriodSeconds: 900 # 15 min
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-temporal-worker
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_TEMPORAL_WORKER
+              value: "true"
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "echo 'preStop hook creating stamp file in /tmp...' >&2; touch /tmp/sigterm_received.stamp"]
+          resources:
+            requests:
+              cpu: 1
+              memory: 2Gi
+            limits:
+              cpu: 3
+              memory: 4Gi
+              ephemeral-storage: 7Gi
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5096
+            failureThreshold: 5
+            periodSeconds: 300
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 5096
+            failureThreshold: 180
+            periodSeconds: 10
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-temporal-worker-main-high-priority
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-temporal-worker-main-high-priority
+  replicas: 0
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-temporal-worker-main-high-priority
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '9464'
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 4
+          topologyKey: "kubernetes.io/hostname"
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: ppluto-main-temporal-worker-main-high-priority
+          matchLabelKeys:
+            - pod-template-hash
+      terminationGracePeriodSeconds: 900 # 15 min
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-temporal-worker-main-high-priority
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_TEMPORAL_WORKER
+              value: "true"
+            - name: TEMPORAL_WORKER_QUEUE
+              value: "MAIN_HIGH_PRIORITY"
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "echo 'preStop hook creating stamp file in /tmp...' >&2; touch /tmp/sigterm_received.stamp"]
+          resources:
+            requests:
+              cpu: 1
+              memory: 2Gi
+            limits:
+              cpu: 3
+              memory: 4Gi
+              ephemeral-storage: 7Gi
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5096
+            failureThreshold: 5
+            periodSeconds: 300
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 5096
+            failureThreshold: 180
+            periodSeconds: 10
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-main-temporal-worker-main-medium-priority
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main-temporal-worker-main-medium-priority
+  replicas: 0
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: ppluto-main-temporal-worker-main-medium-priority
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '9464'
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 4
+          topologyKey: "kubernetes.io/hostname"
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: ppluto-main-temporal-worker-main-medium-priority
+          matchLabelKeys:
+            - pod-template-hash
+      terminationGracePeriodSeconds: 900 # 15 min
+      imagePullSecrets:
+        - name: gitlab-container-registry
+      containers:
+        - name: ppluto-main-temporal-worker-main-medium-priority
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: IS_LOCAL_CRONJOB
+              value: "true"
+            - name: IS_TEMPORAL_WORKER
+              value: "true"
+            - name: TEMPORAL_WORKER_QUEUE
+              value: "MAIN_MEDIUM_PRIORITY"
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "echo 'preStop hook creating stamp file in /tmp...' >&2; touch /tmp/sigterm_received.stamp"]
+          resources:
+            requests:
+              cpu: 1
+              memory: 2Gi
+            limits:
+              cpu: 3
+              memory: 4Gi
+              ephemeral-storage: 7Gi
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5096
+            failureThreshold: 5
+            periodSeconds: 300
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 5096
+            failureThreshold: 180
+            periodSeconds: 10
+
+# ---
+# COMMENTED OUT: Test queue worker for manual testing/profiling
+# May be re-enabled in the future for testing workflows in production-like environment
+# See commit 79ec49a80 for original addition
+# kind: Deployment
+# apiVersion: apps/v1
+# metadata:
+#   name: ppluto-main-temporal-worker-main-test
+# spec:
+#   selector:
+#     matchLabels:
+#       app: ppluto-main-temporal-worker-main-test
+#   replicas: 0
+#   strategy:
+#     type: RollingUpdate
+#     rollingUpdate:
+#       maxSurge: 100%
+#       maxUnavailable: 0
+#   template:
+#     metadata:
+#       labels:
+#         app: ppluto-main-temporal-worker-main-test
+#       annotations:
+#         prometheus.io/scrape: 'true'
+#         prometheus.io/path: '/metrics'
+#         prometheus.io/port: '9464'
+#     spec:
+#       topologySpreadConstraints:
+#         - maxSkew: 4
+#           topologyKey: "kubernetes.io/hostname"
+#           whenUnsatisfiable: DoNotSchedule
+#           labelSelector:
+#             matchLabels:
+#               app: ppluto-main-temporal-worker-main-test
+#           matchLabelKeys:
+#             - pod-template-hash
+#       terminationGracePeriodSeconds: 900 # 15 min
+#       imagePullSecrets:
+#         - name: gitlab-container-registry
+#       containers:
+#         - name: ppluto-main-temporal-worker-main-test
+#           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:db9dc3981549360b5bc7dcb23e86f926cc74a00a0ffc9f4fab5387d7cfe64263
+#           env:
+#             - name: PPLUTO_SERVER_ARG_SERVER
+#               value: api-server
+#             - name: IS_LOCAL_CRONJOB
+#               value: "true"
+#             - name: IS_TEMPORAL_WORKER
+#               value: "true"
+#             - name: TEMPORAL_WORKER_QUEUE
+#               value: "MAIN_TEST"
+#           lifecycle:
+#             preStop:
+#               exec:
+#                 command: ["/bin/sh", "-c", "echo 'preStop hook creating stamp file in /tmp...' >&2; touch /tmp/sigterm_received.stamp"]
+#           resources:
+#             requests:
+#               cpu: 1
+#               memory: 2Gi
+#             limits:
+#               cpu: 3
+#               memory: 4Gi
+#               ephemeral-storage: 7Gi
+#           livenessProbe:
+#             httpGet:
+#               path: /health
+#               port: 5096
+#             failureThreshold: 5
+#             periodSeconds: 300
+#           startupProbe:
+#             httpGet:
+#               path: /health
+#               port: 5096
+#             failureThreshold: 180
+#             periodSeconds: 10
+
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ppluto-main-temporal-worker-pdb
+spec:
+  maxUnavailable: 5
+  selector:
+    matchLabels:
+      app: ppluto-main-temporal-worker
