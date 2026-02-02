@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--darkmode-wl
+  name: ajinkyatalekar--stripe-refactor
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--darkmode-wl
+    namespace: ajinkyatalekar--stripe-refactor
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/darkmode-wl/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ajinkyatalekar/stripe-refactor/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--banker-3-mobile
+  name: daniel--darkmode-wl
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--banker-3-mobile
+    namespace: daniel--darkmode-wl
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/banker-3-mobile/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/darkmode-wl/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
