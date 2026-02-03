@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: ajinkyatalekar--essential-frontend
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ajinkyatalekar--essential-frontend
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ajinkyatalekar/essential-frontend/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: daniel--use-the-toast
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -657,29 +680,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/ahmet/update-filtered-items-msg/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ahmet--integrate-tool-call-2
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ahmet--integrate-tool-call-2
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ahmet/integrate-tool-call-2/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
