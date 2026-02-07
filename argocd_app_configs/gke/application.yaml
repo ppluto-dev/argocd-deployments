@@ -26,6 +26,52 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: daniel--welcome-2-ttx
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: daniel--welcome-2-ttx
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/daniel/welcome-2-ttx/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ken--prompt-run-migrate
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ken--prompt-run-migrate
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ken/prompt-run-migrate/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: ajinkyatalekar--opus-4-6
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -128,29 +174,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/daniel/watchlist-jpkr-date-fix/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ken--alpaca-backend
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ken--alpaca-backend
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ken/alpaca-backend/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -657,29 +680,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/ahmet/integrate-tool-call-2/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ahmet--sec-chunk
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ahmet--sec-chunk
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ahmet/sec-chunk/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
