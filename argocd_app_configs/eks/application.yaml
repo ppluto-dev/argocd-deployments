@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--stripe-oldpro-fix
+  name: ajinkyatalekar--stripe-sync-update
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--stripe-oldpro-fix
+    namespace: ajinkyatalekar--stripe-sync-update
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/stripe-oldpro-fix/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/stripe-sync-update/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--opus-4-6
+  name: ajinkyatalekar--stripe-oldpro-fix
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--opus-4-6
+    namespace: ajinkyatalekar--stripe-oldpro-fix
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/opus-4-6/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/stripe-oldpro-fix/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
