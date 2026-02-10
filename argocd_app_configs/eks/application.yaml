@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--deep-ticker-fix
+  name: daniel--pdr-sources-fix
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--deep-ticker-fix
+    namespace: daniel--pdr-sources-fix
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/deep-ticker-fix/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/pdr-sources-fix/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--pdr-upload-ui-fix
+  name: ajinkyatalekar--deep-ticker-fix
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--pdr-upload-ui-fix
+    namespace: ajinkyatalekar--deep-ticker-fix
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/pdr-upload-ui-fix/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/deep-ticker-fix/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
