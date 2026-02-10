@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--everyone-can-think
+  name: sachin--email-attachment
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--everyone-can-think
+    namespace: sachin--email-attachment
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/everyone-can-think/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/email-attachment/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--disable-manage
+  name: daniel--everyone-can-think
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--disable-manage
+    namespace: daniel--everyone-can-think
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/disable-manage/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/everyone-can-think/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
