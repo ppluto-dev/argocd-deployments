@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--current-type
+  name: ajinkyatalekar--trading-agent-fix
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--current-type
+    namespace: ajinkyatalekar--trading-agent-fix
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/current-type/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/trading-agent-fix/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
