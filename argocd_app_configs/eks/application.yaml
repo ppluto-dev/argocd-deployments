@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: ajinkyatalekar--trader-conv-history
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ajinkyatalekar--trader-conv-history
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ajinkyatalekar/trader-conv-history/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: daniel--shuwaaan
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -657,29 +680,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/sachin/sq-search/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: kkimdev--nh-multiquery-suggest
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: kkimdev--nh-multiquery-suggest
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/kkimdev/nh-multiquery-suggest/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
