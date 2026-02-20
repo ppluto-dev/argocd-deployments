@@ -25,6 +25,11 @@ spec:
               value: "true"
             - name: IS_LOCAL_THESTREET
               value: "true"
+            - name: TEST_K8S_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-test-secret
+                  key: TEST_K8S_SECRET
           resources:
             requests:
               cpu: 400m
