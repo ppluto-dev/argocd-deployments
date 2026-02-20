@@ -123,6 +123,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /test-k8s-secret
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /
             pathType: Prefix
             backend:
