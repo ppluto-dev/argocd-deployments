@@ -19,6 +19,11 @@ spec:
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: misc
+            - name: TEST_K8S_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-test-secret
+                  key: TEST_K8S_SECRET
           resources:
             requests:
               cpu: 200m
@@ -56,6 +61,11 @@ spec:
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: wsrv
+            - name: TEST_K8S_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-test-secret
+                  key: TEST_K8S_SECRET
           ports:
             - containerPort: 5088
           readinessProbe:

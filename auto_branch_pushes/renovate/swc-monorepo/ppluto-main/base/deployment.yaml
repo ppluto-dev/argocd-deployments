@@ -36,6 +36,11 @@ spec:
               value: api-server
             - name: THETERMINALX_COM_DOMAIN
               value: {{.THETERMINALX_COM_DOMAIN}}
+            - name: TEST_K8S_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-test-secret
+                  key: TEST_K8S_SECRET
           ports:
             - containerPort: 81
             - containerPort: 82
