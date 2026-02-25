@@ -24,6 +24,18 @@ spec:
                 secretKeyRef:
                   name: ppluto-test-secret
                   key: TEST_K8S_SECRET
+            - name: MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
           resources:
             requests:
               cpu: 200m
