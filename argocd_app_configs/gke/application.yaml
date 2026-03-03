@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--que-markdown
+  name: daniel--main-fix-as-well
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--que-markdown
+    namespace: daniel--main-fix-as-well
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/que-markdown/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/main-fix-as-well/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--report-public-access
+  name: sachin--que-markdown
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--report-public-access
+    namespace: sachin--que-markdown
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/report-public-access/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/sachin/que-markdown/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
