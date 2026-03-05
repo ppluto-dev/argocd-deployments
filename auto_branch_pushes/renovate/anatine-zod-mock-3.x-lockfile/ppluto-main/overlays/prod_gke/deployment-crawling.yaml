@@ -17,7 +17,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-thestreet
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -25,6 +25,11 @@ spec:
               value: "true"
             - name: IS_LOCAL_THESTREET
               value: "true"
+            - name: TEST_K8S_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-test-secret
+                  key: TEST_K8S_SECRET
           resources:
             requests:
               cpu: 400m
@@ -52,7 +57,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-bloomberg
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -88,7 +93,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-cnbc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -124,7 +129,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-financial-times
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -160,7 +165,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-aggregate-prompt-runs
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -195,7 +200,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -230,7 +235,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ms-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -265,7 +270,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-sector-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -300,7 +305,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -335,7 +340,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -370,7 +375,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-pluto-broker-research-email
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -405,7 +410,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-check-payment
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -441,7 +446,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -496,7 +501,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -504,6 +509,18 @@ spec:
               value: "true"
             - name: IS_TEMPORAL_WORKER
               value: "true"
+            - name: MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
           lifecycle:
             preStop:
               exec:
@@ -567,7 +584,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-high-priority
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -577,6 +594,18 @@ spec:
               value: "true"
             - name: TEMPORAL_WORKER_QUEUE
               value: "MAIN_HIGH_PRIORITY"
+            - name: MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
           lifecycle:
             preStop:
               exec:
@@ -640,7 +669,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-medium-priority
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -650,6 +679,18 @@ spec:
               value: "true"
             - name: TEMPORAL_WORKER_QUEUE
               value: "MAIN_MEDIUM_PRIORITY"
+            - name: MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
           lifecycle:
             preStop:
               exec:
@@ -716,7 +757,7 @@ spec:
 #         - name: gitlab-container-registry
 #       containers:
 #         - name: ppluto-main-temporal-worker-main-test
-#           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b34607ce5e5747b19d73e391babab8517ad4422a5d70188bfeba60ee5d75a5e9
+#           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8e2dc5e61b58ac3d74f78854b95125a64bd75d73f3ceb2c4d7c1e0381e27a79b
 #           env:
 #             - name: PPLUTO_SERVER_ARG_SERVER
 #               value: api-server
