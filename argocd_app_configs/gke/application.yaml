@@ -26,16 +26,39 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--search-ui
+  name: daniel--public-report-adm
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--search-ui
+    namespace: daniel--public-report-adm
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/search-ui/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/public-report-adm/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ken--twitter-automation-v1
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ken--twitter-automation-v1
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ken/twitter-automation-v1/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -657,29 +680,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/sachin/new-deep-research-1213/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: sachin--sq-search
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: sachin--sq-search
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/sachin/sq-search/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
