@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--twitter-fix
+  name: ajinkyatalekar--personalization-char-limit
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--twitter-fix
+    namespace: ajinkyatalekar--personalization-char-limit
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/twitter-fix/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/personalization-char-limit/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
