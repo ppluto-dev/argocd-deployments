@@ -19,6 +19,23 @@ spec:
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: misc
+            - name: TEST_K8S_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-test-secret
+                  key: TEST_K8S_SECRET
+            - name: MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
           resources:
             requests:
               cpu: 200m
@@ -56,6 +73,11 @@ spec:
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: wsrv
+            - name: TEST_K8S_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-test-secret
+                  key: TEST_K8S_SECRET
           ports:
             - containerPort: 5088
           readinessProbe:
