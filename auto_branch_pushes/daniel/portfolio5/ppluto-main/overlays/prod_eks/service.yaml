@@ -16,16 +16,6 @@ spec:
       port: 5280
       targetPort: 5280
 
-    - name: web-projectpluto # Client -- www.projectpluto.co (Company website)
-      protocol: TCP
-      port: 5380
-      targetPort: 5380
-
-    - name: web-supersearch # Client -- terminal.supersearchx.com
-      protocol: TCP
-      port: 5480
-      targetPort: 5480
-
     - name: grpc # Node gRpc
       protocol: TCP
       port: 81
@@ -64,16 +54,6 @@ spec:
       protocol: TCP
       port: 5280
       targetPort: 5280
-
-    - name: web-projectpluto # Client -- www.projectpluto.co (Company website)
-      protocol: TCP
-      port: 5380
-      targetPort: 5380
-
-    - name: web-supersearch # Client -- terminal.supersearchx.com
-      protocol: TCP
-      port: 5480
-      targetPort: 5480
 
     - name: grpc # Node gRpc
       protocol: TCP
