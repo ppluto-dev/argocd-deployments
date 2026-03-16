@@ -8,38 +8,12 @@ metadata:
 spec:
   tls:
     - hosts:
-      - www.projectpluto.co
       - openembedding.com
       - ppluto.dev
       - "*.auto-branch-pushes.ppluto-main.ppluto.dev"
       - app.terminal-x.ai
       secretName: ingress-tls-secret
   rules:
-    # projectpluto.co (Company website)
-    - host: daniel--tickercomp22---projectpluto.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 5380
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-          - path: /api-dk
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 84
     # theterminalx.com
     - host: daniel--tickercomp22---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
       http: &terminalx-common-rules
@@ -52,6 +26,13 @@ spec:
                 port:
                   number: 82
           - path: /api/search
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /api/lite-search
             pathType: Prefix
             backend:
               service:
@@ -107,6 +88,20 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /api/trader
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
+          - path: /api/twitter-automation
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /wsrvProxy
             pathType: Prefix
             backend:
@@ -135,6 +130,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /test-k8s-secret
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /
             pathType: Prefix
             backend:
@@ -148,31 +150,6 @@ spec:
 
     - host: daniel--tickercomp22---app-terminalxai.auto-branch-pushes.ppluto-main.ppluto.dev
       http: *terminalx-common-rules
-
-    - host: daniel--tickercomp22---terminal-supersearchx-com.auto-branch-pushes.ppluto-main.ppluto.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 5480
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 82
-          - path: /api-dk
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 84
 
 ---
 
