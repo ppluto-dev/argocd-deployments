@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--tool-call-object
+  name: ajinkyatalekar--admin-quota
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--tool-call-object
+    namespace: ajinkyatalekar--admin-quota
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/tool-call-object/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/admin-quota/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
