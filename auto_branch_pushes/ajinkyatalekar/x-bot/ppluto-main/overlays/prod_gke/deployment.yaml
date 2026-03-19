@@ -30,12 +30,29 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:3451244cae056f6dd81f8d4ca67886d90eb0e22c76d64512f07777b2d38c57f9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4ac636860d364551d575feec672e8e78d7596b272b1320d441a5320293a1a5f9
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: THETERMINALX_COM_DOMAIN
               value: theterminalx.com
+            - name: TEST_K8S_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-test-secret
+                  key: TEST_K8S_SECRET
+            - name: MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
           ports:
             - containerPort: 81
             - containerPort: 82
@@ -64,7 +81,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:4db46d1b1f56a1ef1abb8ed0b5dcf7dfc035e7132134b923cd6ad7923c62b8a6
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:082f4f11ea032b6e5875d6b27257e475f67236a4a8e8547f74009e3029e3cfe2
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -88,7 +105,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:b2f2f7174f7bfd31b7e1b5daf5c2ad9e773b16f3dcbbd575c561e97f032b3d9b
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:760a4bda10389c361f3afc433049e58e99b9d0d62e2c1724c24e83ffe92f7320
           ports:
             - containerPort: 5280
           resources:
