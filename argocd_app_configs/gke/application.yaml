@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: daniel--load-shedding
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: daniel--load-shedding
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/daniel/load-shedding/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: ajinkyatalekar--x-bot
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -427,29 +450,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/sachin/greenstreet-excel-workflow/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: eatnug--extract-image
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: eatnug--extract-image
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/eatnug/extract-image/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
