@@ -1,0 +1,31 @@
+# Cert manager install instruction: https://cert-manager.io/docs/installation/helm/
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: cert-manager
+  # Note: It must needs `finalize` metadata in argo app of apps.
+  # https://argo-cd.readthedocs.io/en/stable/user-guide/app_deletion/#about-the-deletion-finalizer
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    path: ""
+    repoURL: "https://charts.jetstack.io/"
+    targetRevision: v1.11.0
+    chart: cert-manager
+    helm:
+      values: ""
+      parameters:
+        - name: installCRDs
+          value: "true"
+  destination:
+    name: ""
+    namespace: cert-manager
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
