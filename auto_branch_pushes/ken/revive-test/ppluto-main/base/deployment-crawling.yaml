@@ -767,6 +767,18 @@ spec:
               value: "true"
             - name: TEMPORAL_WORKER_QUEUE
               value: "MAIN_TEST"
+            - name: MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
           lifecycle:
             preStop:
               exec:
