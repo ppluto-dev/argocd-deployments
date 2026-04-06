@@ -769,6 +769,10 @@ spec:
               value: "MAIN_TEST"
             - name: ENABLE_IN_PROCESS_TOOL_CALLS
               value: "true"
+            - name: TEST_TOOL_CALL_CONCURRENCY                                                                                                                                                                             
+              value: "10"                                                                                                                                                                                                   
+            - name: TEST_ACTIVITY_MAX_SLOTS                                                                                                                                                                                
+              value: "2"
             - name: MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
