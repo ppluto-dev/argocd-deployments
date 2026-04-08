@@ -773,6 +773,10 @@ spec:
               value: "10"                                                                                                                                                                                                   
             - name: TEST_ACTIVITY_MAX_SLOTS                                                                                                                                                                                
               value: "2"
+            - name: MALLOC_ARENA_MAX
+              value: "4" 
+#           - name: NODE_OPTIONS                                                                                                                                                         
+#             value: --inspect=0.0.0.0:9229 
             - name: MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
