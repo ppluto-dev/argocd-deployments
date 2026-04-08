@@ -594,6 +594,8 @@ spec:
               value: "true"
             - name: TEMPORAL_WORKER_QUEUE
               value: "MAIN_HIGH_PRIORITY"
+            - name: MALLOC_ARENA_MAX
+              value: "4" 
             - name: MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
@@ -679,6 +681,8 @@ spec:
               value: "true"
             - name: TEMPORAL_WORKER_QUEUE
               value: "MAIN_MEDIUM_PRIORITY"
+            - name: MALLOC_ARENA_MAX
+              value: "4" 
             - name: MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
