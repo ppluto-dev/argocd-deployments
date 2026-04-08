@@ -721,9 +721,8 @@ spec:
             periodSeconds: 10
 
 ---
-# COMMENTED OUT: Test queue worker for manual testing/profiling
-# May be re-enabled in the future for testing workflows in production-like environment
-# See commit 79ec49a80 for original addition
+# A/B experiment: in-process tool calls on high-priority queue
+# Polls same MAIN_HIGH_PRIORITY queue as control pods
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -742,6 +741,7 @@ spec:
     metadata:
       labels:
         app: ppluto-main-temporal-worker-main-test
+        variant: "experiment"
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
@@ -770,17 +770,13 @@ spec:
             - name: IS_TEMPORAL_WORKER
               value: "true"
             - name: TEMPORAL_WORKER_QUEUE
-              value: "MAIN_TEST"
+              value: "MAIN_HIGH_PRIORITY"
             - name: ENABLE_IN_PROCESS_TOOL_CALLS
               value: "true"
-            - name: TEST_TOOL_CALL_CONCURRENCY                                                                                                                                                                             
-              value: "10"                                                                                                                                                                                                   
-            - name: TEST_ACTIVITY_MAX_SLOTS                                                                                                                                                                                
-              value: "2"
+            - name: TEST_TOOL_CALL_CONCURRENCY
+              value: "15"
             - name: MALLOC_ARENA_MAX
-              value: "4" 
-#           - name: NODE_OPTIONS                                                                                                                                                         
-#             value: --inspect=0.0.0.0:9229 
+              value: "4"
             - name: MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
