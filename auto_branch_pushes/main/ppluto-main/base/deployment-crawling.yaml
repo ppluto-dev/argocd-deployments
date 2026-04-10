@@ -827,7 +827,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-temporal-worker-main-medium-priority-test
-  replicas: 1
+  replicas: {{ .PPLUTO_MAIN_TEMPORAL_WORKER_MAIN_MEDIUM_PRIORITY_TEST_DEPLOYMENT_REPLICAS }}
   strategy:
     type: RollingUpdate
     rollingUpdate:
