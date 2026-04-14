@@ -26,6 +26,52 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: daniel--monitor-mig-3
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: daniel--monitor-mig-3
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/daniel/monitor-mig-3/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ajinkyatalekar--ocr-prod-test
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ajinkyatalekar--ocr-prod-test
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ajinkyatalekar/ocr-prod-test/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: ajinkyatalekar--build-prod-logs
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -72,29 +118,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--ocr-prod-tester
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ajinkyatalekar--ocr-prod-tester
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ajinkyatalekar/ocr-prod-tester/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: ajinkyatalekar--gemini-structured-outputs
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -128,29 +151,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/daniel/pdr-order/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ajinkyatalekar--ocr2
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ajinkyatalekar--ocr2
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ajinkyatalekar/ocr2/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
