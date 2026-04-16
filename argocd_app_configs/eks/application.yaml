@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--is-tool-call-run-flag
+  name: ajinkyatalekar--stripe-payg
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--is-tool-call-run-flag
+    namespace: ajinkyatalekar--stripe-payg
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/is-tool-call-run-flag/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/stripe-payg/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
