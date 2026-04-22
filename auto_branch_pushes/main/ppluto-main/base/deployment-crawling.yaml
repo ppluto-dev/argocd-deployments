@@ -650,6 +650,8 @@ spec:
               value: "MAIN_MEDIUM_PRIORITY"
             - name: MALLOC_ARENA_MAX
               value: "4" 
+            - name: LOWER_MAX_CACHED_WORKFLOWS
+              value: "true"
             - name: MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
@@ -764,7 +766,7 @@ spec:
                 command: ["/bin/sh", "-c", "echo 'preStop hook creating stamp file in /tmp...' >&2; touch /tmp/sigterm_received.stamp"]
           resources:
             requests:
-              cpu: 1
+              cpu: 0.5
               memory: 2Gi
             limits:
               cpu: 3
@@ -856,7 +858,7 @@ spec:
                 command: ["/bin/sh", "-c", "echo 'preStop hook creating stamp file in /tmp...' >&2; touch /tmp/sigterm_received.stamp"]
           resources:
             requests:
-              cpu: 1
+              cpu: 0.5
               memory: 2Gi
             limits:
               cpu: 3
