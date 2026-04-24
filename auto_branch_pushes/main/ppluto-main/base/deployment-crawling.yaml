@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-thestreet
-  replicas: {{ .PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS }}
+  replicas: 0
   template:
     metadata:
       labels:
@@ -89,7 +89,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-aggregate-prompt-runs
-  replicas: {{ .PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS }}
+  replicas: 0
   template:
     metadata:
       labels:
@@ -194,7 +194,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-sector-c
-  replicas: {{ .PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS }}
+  replicas: 0
   template:
     metadata:
       labels:
@@ -264,7 +264,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
-  replicas: {{ .PPLUTO_MAIN_CRAWLING_DEPLOYMENT_REPLICAS }}
+  replicas: 0
   template:
     metadata:
       labels:
