@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ff203b943b678a640817de6be4d2160094490bce9638e9a675222a787f8f3341
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4ba19bd56864ae2ae73ac2e3fed6a0058c7fc0ed68df00b95ab3fce65a3b6b68
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: misc
@@ -69,7 +69,7 @@ spec:
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:ff203b943b678a640817de6be4d2160094490bce9638e9a675222a787f8f3341
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4ba19bd56864ae2ae73ac2e3fed6a0058c7fc0ed68df00b95ab3fce65a3b6b68
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: wsrv
@@ -80,10 +80,10 @@ spec:
                   key: TEST_K8S_SECRET
           ports:
             - containerPort: 5088
-          readinessProbe:
-            httpGet:
-              path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
-              port: 5088
+          # readinessProbe:
+          #   httpGet:
+          #     path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
+          #     port: 5088
             # TODO: The pod is frequently reported as not responding for an unknown reason.
             #       Maybe it's a false warning so disable livenessProbe to test that.
             # livenessProbe:
