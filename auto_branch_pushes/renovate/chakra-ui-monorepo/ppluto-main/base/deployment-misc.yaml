@@ -80,10 +80,10 @@ spec:
                   key: TEST_K8S_SECRET
           ports:
             - containerPort: 5088
-          readinessProbe:
-            httpGet:
-              path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
-              port: 5088
+          # readinessProbe:
+          #   httpGet:
+          #     path: /wsrvProxy/?url=https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg
+          #     port: 5088
             # TODO: The pod is frequently reported as not responding for an unknown reason.
             #       Maybe it's a false warning so disable livenessProbe to test that.
             # livenessProbe:
