@@ -54,7 +54,7 @@ data:
                   regex: "true"
                 # Scrape every container port whose name starts with "metrics-".
                 # This produces one target per matching port, so a pod with
-                # ports `metrics-app` (9464) and `metrics-temporal` (9465)
+                # ports `metrics-app` (9464) and `metrics-tprl` (9465)
                 # yields two scrape targets.
                 - source_labels: [__meta_kubernetes_pod_container_port_name]
                   action: keep
@@ -72,7 +72,7 @@ data:
                   action: keep
                   regex: ${env:NODE_NAME}
                 # Identify which named port produced this target so dashboards
-                # can distinguish e.g. `metrics-app` vs `metrics-temporal`.
+                # can distinguish e.g. `metrics-app` vs `metrics-tprl`.
                 - source_labels: [__meta_kubernetes_pod_container_port_name]
                   target_label: metrics_port
                 - source_labels: [__meta_kubernetes_namespace]
