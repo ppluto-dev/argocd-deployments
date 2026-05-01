@@ -60,6 +60,13 @@ data:
                   action: replace
                   target_label: __metrics_path__
                   regex: (.+)
+                # Only scrape pods running on the same node as this collector
+                # instance. Without this, every collector in the DaemonSet would
+                # scrape every pod cluster-wide, producing N-fold duplicates.
+                # NODE_NAME is injected via the Downward API on the pod spec.
+                - source_labels: [__meta_kubernetes_pod_node_name]
+                  action: keep
+                  regex: ${env:NODE_NAME}
                 # Identify which named port produced this target so dashboards
                 # can distinguish e.g. `metrics-app` vs `metrics-temporal`.
                 - source_labels: [__meta_kubernetes_pod_container_port_name]
@@ -119,6 +126,10 @@ spec:
           image: otel/opentelemetry-collector-contrib:0.110.0
           args: ["--config=/conf/config.yaml"]
           env:
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
             - name: GOOGLE_APPLICATION_CREDENTIALS
               value: /var/secrets/google/key.json
           resources:
