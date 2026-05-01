@@ -13,6 +13,10 @@ rules:
   - apiGroups: [""]
     resources: ["pods", "namespaces", "endpoints", "services"]
     verbs: ["get", "list", "watch"]
+  # Talk to the local kubelet's cAdvisor endpoint for container CPU/memory/etc.
+  - apiGroups: [""]
+    resources: ["nodes/metrics", "nodes/proxy"]
+    verbs: ["get"]
   - nonResourceURLs: ["/metrics"]
     verbs: ["get"]
 ---
@@ -77,6 +81,28 @@ data:
                   target_label: pod
                 - source_labels: [__meta_kubernetes_pod_label_app]
                   target_label: app
+                - source_labels: [__meta_kubernetes_pod_node_name]
+                  target_label: node
+
+            # Pod-level resource metrics (CPU, memory, network, filesystem) from
+            # the local kubelet's cAdvisor endpoint. The collector hits its own
+            # node's kubelet directly via HOST_IP, so each instance only emits
+            # its node's data — no duplication. Auth via the SA bearer token
+            # mounted automatically by k8s.
+            - job_name: kubelet-cadvisor
+              scheme: https
+              tls_config:
+                insecure_skip_verify: true
+              bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+              metrics_path: /metrics/cadvisor
+              static_configs:
+                - targets:
+                    - "${env:HOST_IP}:10250"
+              # cAdvisor metrics don't carry a node label by default; stamp the
+              # collector's own node so dashboards can filter by host.
+              relabel_configs:
+                - target_label: node
+                  replacement: ${env:NODE_NAME}
 
     processors:
       batch:
@@ -130,6 +156,10 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
+            - name: HOST_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
             - name: GOOGLE_APPLICATION_CREDENTIALS
               value: /var/secrets/google/key.json
           resources:

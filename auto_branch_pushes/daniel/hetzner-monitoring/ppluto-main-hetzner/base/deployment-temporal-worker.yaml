@@ -20,7 +20,6 @@ spec:
         app: ppluto-main-temporal-worker-hetzner
       annotations:
         prometheus.io/scrape: 'true'
-        prometheus.io/path: '/metrics'
     spec:
       terminationGracePeriodSeconds: 600
       imagePullSecrets:
