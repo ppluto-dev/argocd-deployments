@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--twitter-quick-fix
+  name: daniel--hetzner-monitoring
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--twitter-quick-fix
+    namespace: daniel--hetzner-monitoring
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/twitter-quick-fix/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/hetzner-monitoring/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
