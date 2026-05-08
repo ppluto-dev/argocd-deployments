@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyataleakr--drawer-update
+  name: sachin--update-api
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyataleakr--drawer-update
+    namespace: sachin--update-api
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyataleakr/drawer-update/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/update-api/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--fix-ci
+  name: ajinkyataleakr--drawer-update
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--fix-ci
+    namespace: ajinkyataleakr--drawer-update
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/fix-ci/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyataleakr/drawer-update/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
