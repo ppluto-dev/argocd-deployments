@@ -285,6 +285,18 @@ spec:
               value: "true"
             - name: IS_PLUTO_BROKER_RESEARCH_EMAIL
               value: "true"
+            - name: MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
           resources:
             requests:
               cpu: 400m
@@ -356,6 +368,18 @@ spec:
               value: "true"
             - name: IS_LOCAL_CRAWLING_WORKER
               value: "true"
+            - name: MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
           resources:
             requests:
               cpu: 400m
