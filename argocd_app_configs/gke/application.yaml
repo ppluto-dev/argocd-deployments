@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--cleanup-misc-tables
+  name: ajinkyatalekar--op-db-calls
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--cleanup-misc-tables
+    namespace: ajinkyatalekar--op-db-calls
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/cleanup-misc-tables/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ajinkyatalekar/op-db-calls/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
