@@ -109,6 +109,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /api/temporal-codec
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /wsrvProxy
             pathType: Prefix
             backend:
