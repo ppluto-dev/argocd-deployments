@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--pipeline-deployment-run
+  name: sachin--store-toolcall-context
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--pipeline-deployment-run
+    namespace: sachin--store-toolcall-context
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/pipeline-deployment-run/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/store-toolcall-context/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--user-tx-dispatch
+  name: ken--pipeline-deployment-run
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--user-tx-dispatch
+    namespace: ken--pipeline-deployment-run
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/user-tx-dispatch/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/pipeline-deployment-run/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
