@@ -26,16 +26,39 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--byoc-vdb
+  name: daniel--wtfaws
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--byoc-vdb
+    namespace: daniel--wtfaws
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/byoc-vdb/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/wtfaws/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ken--fix-pdr-sync
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ken--fix-pdr-sync
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ken/fix-pdr-sync/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -151,75 +174,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/ajinkyatalekar/ui/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ajinkyatalekar--build-test
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ajinkyatalekar--build-test
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ajinkyatalekar/build-test/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ajinkyatalekar--ocr-prod-test
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ajinkyatalekar--ocr-prod-test
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ajinkyatalekar/ocr-prod-test/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ajinkyatalekar--build-prod-logs
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ajinkyatalekar--build-prod-logs
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ajinkyatalekar/build-prod-logs/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
