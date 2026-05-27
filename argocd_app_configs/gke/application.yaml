@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--s3json-byoc
+  name: ken--dummy-endpoint
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--s3json-byoc
+    namespace: ken--dummy-endpoint
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/s3json-byoc/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/dummy-endpoint/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
