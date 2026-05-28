@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--gaia-legacy-fix
+  name: ken--add-llm-api-log
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--gaia-legacy-fix
+    namespace: ken--add-llm-api-log
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/gaia-legacy-fix/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/add-llm-api-log/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
