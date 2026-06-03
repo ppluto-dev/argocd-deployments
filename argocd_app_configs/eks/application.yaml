@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--crawl-citadel
+  name: daniel--byochigh
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--crawl-citadel
+    namespace: daniel--byochigh
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/crawl-citadel/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/byochigh/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
