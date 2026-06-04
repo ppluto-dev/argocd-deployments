@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-temporal-worker-hetzner
-  replicas: 1
+  replicas: 10
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -33,7 +33,7 @@ spec:
         node.pluto.co/purpose: temporal
       containers:
         - name: ppluto-main-temporal-worker-hetzner
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8ab962f92d8f715c01b9e600a8b3c146d08972b796af89f7d993f42baf286df9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:aa416ce2fa2f9d366b475453a73e976dc575a14924be7bef3dbcde8ab3547edd
           ports:
             - name: metrics-app
               containerPort: 9464
