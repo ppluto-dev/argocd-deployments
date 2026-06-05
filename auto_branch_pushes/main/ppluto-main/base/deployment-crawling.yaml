@@ -285,13 +285,13 @@ spec:
               value: "true"
             - name: IS_PLUTO_BROKER_RESEARCH_EMAIL
               value: "true"
-            - name: MYSQL_READ_WRITE_URL
+            - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_WRITE_URL
                   optional: true
-            - name: MYSQL_READ_ONLY_URL
+            - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
@@ -368,13 +368,13 @@ spec:
               value: "true"
             - name: IS_LOCAL_CRAWLING_WORKER
               value: "true"
-            - name: MYSQL_READ_WRITE_URL
+            - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_WRITE_URL
                   optional: true
-            - name: MYSQL_READ_ONLY_URL
+            - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
@@ -435,13 +435,13 @@ spec:
               value: "true"
             - name: IS_TEMPORAL_WORKER
               value: "true"
-            - name: MYSQL_READ_WRITE_URL
+            - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_WRITE_URL
                   optional: true
-            - name: MYSQL_READ_ONLY_URL
+            - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
@@ -522,13 +522,13 @@ spec:
               value: "MAIN_HIGH_PRIORITY"
             - name: MALLOC_ARENA_MAX
               value: "4" 
-            - name: MYSQL_READ_WRITE_URL
+            - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_WRITE_URL
                   optional: true
-            - name: MYSQL_READ_ONLY_URL
+            - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
@@ -611,13 +611,13 @@ spec:
               value: "4" 
             - name: LOWER_MAX_CACHED_WORKFLOWS
               value: "true"
-            - name: MYSQL_READ_WRITE_URL
+            - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_WRITE_URL
                   optional: true
-            - name: MYSQL_READ_ONLY_URL
+            - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
@@ -707,13 +707,13 @@ spec:
               value: "true"
             - name: MALLOC_ARENA_MAX
               value: "4"
-            - name: MYSQL_READ_WRITE_URL
+            - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_WRITE_URL
                   optional: true
-            - name: MYSQL_READ_ONLY_URL
+            - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
@@ -799,13 +799,13 @@ spec:
               value: "true"
             - name: MALLOC_ARENA_MAX
               value: "4"
-            - name: MYSQL_READ_WRITE_URL
+            - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_WRITE_URL
                   optional: true
-            - name: MYSQL_READ_ONLY_URL
+            - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
