@@ -33,7 +33,7 @@ spec:
         node.pluto.co/purpose: temporal
       containers:
         - name: ppluto-main-temporal-worker-hetzner
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:49323e4ae9cd859c2445015f8c50ce54525a4b729a516fd644715cc021d0b613
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:d131756d2ff95f3172ae63614045ef3fa0f7894a878971971a9a0cafce400434
           ports:
             - name: metrics-app
               containerPort: 9464
@@ -64,7 +64,7 @@ spec:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_ONLY_URL
-            - name: TEMPORAL_API_KEY
+            - name: PLUTO_TEMPORAL_API_KEY
               valueFrom:
                 secretKeyRef:
                   name: ppluto-temporal-secret
