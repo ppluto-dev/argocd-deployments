@@ -54,17 +54,17 @@ spec:
               value: "4"
             - name: NODE_ENV
               value: "production"
-            - name: MYSQL_READ_WRITE_URL
+            - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_WRITE_URL
-            - name: MYSQL_READ_ONLY_URL
+            - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_ONLY_URL
-            - name: TEMPORAL_API_KEY
+            - name: PLUTO_TEMPORAL_API_KEY
               valueFrom:
                 secretKeyRef:
                   name: ppluto-temporal-secret
