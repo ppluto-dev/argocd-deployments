@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--clean-server-packages
+  name: ken--remove-tool-location
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--clean-server-packages
+    namespace: ken--remove-tool-location
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/clean-server-packages/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/remove-tool-location/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--s3s3
+  name: sachin--clean-server-packages
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--s3s3
+    namespace: sachin--clean-server-packages
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/s3s3/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/clean-server-packages/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
