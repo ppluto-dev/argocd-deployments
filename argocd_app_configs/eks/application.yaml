@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--data-processing
+  name: ajinkyatalekar--os-fix
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--data-processing
+    namespace: ajinkyatalekar--os-fix
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/data-processing/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/os-fix/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
