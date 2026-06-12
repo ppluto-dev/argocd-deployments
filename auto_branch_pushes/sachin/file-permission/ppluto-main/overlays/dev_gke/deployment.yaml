@@ -1,0 +1,149 @@
+kind: Rollout
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: ppluto-main
+  labels:
+    app.kubernetes.io/name: ppluto-main
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-main
+      app.kubernetes.io/name: ppluto-main
+  replicas: 1
+  revisionHistoryLimit: 2
+  template:
+    metadata:
+      labels:
+        app: ppluto-main
+        app.kubernetes.io/name: ppluto-main
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 2
+          topologyKey: "kubernetes.io/hostname"
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: ppluto-main
+          matchLabelKeys:
+            - pod-template-hash
+      terminationGracePeriodSeconds: 900 # 15min https://jenakim47.tistory.com/80
+
+      containers:
+        - name: ppluto-main--prod-server
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:52ef09630c8eb632ef13ffba01af930893b8ec0591156c210273a6d43d38495e
+          env:
+            - name: PPLUTO_SERVER_ARG_SERVER
+              value: api-server
+            - name: THETERMINALX_COM_DOMAIN
+              value: sachin--file-permission---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
+            - name: TEST_K8S_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-test-secret
+                  key: TEST_K8S_SECRET
+            - name: PLUTO_MYSQL_READ_WRITE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_WRITE_URL
+                  optional: true
+            - name: PLUTO_MYSQL_READ_ONLY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: MYSQL_READ_ONLY_URL
+                  optional: true
+          ports:
+            - containerPort: 81
+            - containerPort: 82
+            - containerPort: 83
+            - containerPort: 84
+            - name: metrics
+              containerPort: 9464
+          readinessProbe:
+            # TODO: Implement gRPC health check instead. https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#probe-check-methods
+            tcpSocket:
+              port: 82
+          # TODO: Enable `livenessProbe`.  Temporarily disabled to debug container crash issue.
+          # livenessProbe:
+          #   tcpSocket:
+          #     port: 82
+          resources:
+            requests:
+              cpu: 0.5
+              memory: 2Gi
+            limits:
+              cpu: 2
+              memory: 4Gi
+              ephemeral-storage: 8Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+        - name: ppluto-main--prod-client-tickerbell
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:6b3018756ab3cd0a78ae0aa33af82a77e45980f4e4435b5f23cff967077aeac3
+          ports:
+            - containerPort: 5095
+          readinessProbe:
+            httpGet:
+              port: 5095
+              path: /healthz
+            # The k8s default `timeoutSeconds: 1` caused flapping readiness on
+            # slower nodes; keep an explicit margin even on the cheap endpoint.
+            timeoutSeconds: 5
+          livenessProbe:
+            httpGet:
+              port: 5095
+              path: /healthz
+            timeoutSeconds: 5
+            # Liveness failure restarts the container, so be far more
+            # forgiving than readiness (which only pauses traffic).
+            failureThreshold: 6
+            initialDelaySeconds: 15
+          resources:
+            requests:
+              cpu: 0.5
+              memory: 256Mi
+            limits:
+              cpu: 2
+              memory: 512Mi
+              ephemeral-storage: 1Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+        - name: ppluto-main--prod-client
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:6716c956aa668f159ae5229d0e0fa85f6a3daa964111315b4be5a368469a4003
+          ports:
+            - containerPort: 5280
+          resources:
+            requests:
+              cpu: 40m
+              memory: 16Mi
+            limits:
+              cpu: 200m
+              memory: 32Mi
+              ephemeral-storage: 1Gi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
+
+      imagePullSecrets:
+        - name: gitlab-container-registry
+  strategy:
+    blueGreen:
+      activeService: ppluto-main-service-active
+      previewService: ppluto-main-service-preview
+      autoPromotionEnabled: true
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ppluto-main-pdb
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: ppluto-main
