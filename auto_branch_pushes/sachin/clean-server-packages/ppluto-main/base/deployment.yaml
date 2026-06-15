@@ -87,11 +87,19 @@ spec:
           readinessProbe:
             httpGet:
               port: 5095
-              path: /
+              path: /healthz
+            # The k8s default `timeoutSeconds: 1` caused flapping readiness on
+            # slower nodes; keep an explicit margin even on the cheap endpoint.
+            timeoutSeconds: 5
           livenessProbe:
             httpGet:
               port: 5095
-              path: /
+              path: /healthz
+            timeoutSeconds: 5
+            # Liveness failure restarts the container, so be far more
+            # forgiving than readiness (which only pauses traffic).
+            failureThreshold: 6
+            initialDelaySeconds: 15
           resources:
             requests:
               cpu: 0.5
