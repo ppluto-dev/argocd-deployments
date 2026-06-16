@@ -41,13 +41,13 @@ spec:
                 secretKeyRef:
                   name: ppluto-test-secret
                   key: TEST_K8S_SECRET
-            - name: MYSQL_READ_WRITE_URL
+            - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_WRITE_URL
                   optional: true
-            - name: MYSQL_READ_ONLY_URL
+            - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
                   name: ppluto-db-secret
@@ -87,11 +87,19 @@ spec:
           readinessProbe:
             httpGet:
               port: 5095
-              path: /
+              path: /healthz
+            # The k8s default `timeoutSeconds: 1` caused flapping readiness on
+            # slower nodes; keep an explicit margin even on the cheap endpoint.
+            timeoutSeconds: 5
           livenessProbe:
             httpGet:
               port: 5095
-              path: /
+              path: /healthz
+            timeoutSeconds: 5
+            # Liveness failure restarts the container, so be far more
+            # forgiving than readiness (which only pauses traffic).
+            failureThreshold: 6
+            initialDelaySeconds: 15
           resources:
             requests:
               cpu: 0.5
