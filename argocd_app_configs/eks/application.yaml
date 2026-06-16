@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--gaia-s3-bracket
+  name: ken--remove-comps-builder
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--gaia-s3-bracket
+    namespace: ken--remove-comps-builder
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/gaia-s3-bracket/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/remove-comps-builder/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
