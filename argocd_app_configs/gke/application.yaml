@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--graf-byoc
+  name: ken--gaia-skill
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--graf-byoc
+    namespace: ken--gaia-skill
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/graf-byoc/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/gaia-skill/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--ocr-fix
+  name: daniel--graf-byoc
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--ocr-fix
+    namespace: daniel--graf-byoc
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/ocr-fix/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/graf-byoc/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
