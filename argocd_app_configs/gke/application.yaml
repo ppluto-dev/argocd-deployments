@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--skill-permission
+  name: ajinkyatalekar--prisma-mig
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--skill-permission
+    namespace: ajinkyatalekar--prisma-mig
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/skill-permission/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ajinkyatalekar/prisma-mig/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--graphafixfix
+  name: ken--skill-permission
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--graphafixfix
+    namespace: ken--skill-permission
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/graphafixfix/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ken/skill-permission/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
