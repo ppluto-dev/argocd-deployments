@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--expand
+  name: daniel--temporal-safe
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--expand
+    namespace: daniel--temporal-safe
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/expand/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/temporal-safe/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--admin-edit
+  name: daniel--expand
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--admin-edit
+    namespace: daniel--expand
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/admin-edit/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/expand/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
