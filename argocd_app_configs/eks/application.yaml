@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--md-chart
+  name: sachin--permission-system
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--md-chart
+    namespace: sachin--permission-system
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/md-chart/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/permission-system/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--skill-firms
+  name: daniel--md-chart
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--skill-firms
+    namespace: daniel--md-chart
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/skill-firms/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/md-chart/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
