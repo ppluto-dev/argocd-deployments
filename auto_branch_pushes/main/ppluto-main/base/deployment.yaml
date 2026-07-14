@@ -53,6 +53,10 @@ spec:
                   name: ppluto-db-secret
                   key: MYSQL_READ_ONLY_URL
                   optional: true
+            # Overrides the localhost value baked in via .env (k8s env wins
+            # over dotenv). Store id needs no override — same everywhere.
+            - name: PLUTO_OPENFGA_API_URL
+              value: http://ppluto-openfga-service:8080
           ports:
             - containerPort: 81
             - containerPort: 82
