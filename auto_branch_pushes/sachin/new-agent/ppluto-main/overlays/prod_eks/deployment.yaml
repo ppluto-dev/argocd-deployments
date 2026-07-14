@@ -30,11 +30,11 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b11cba1d27ad302d740cae0f9da6310ed19635012984b0ff9cf02afc0ea6c948
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:b5a3f3531612ca9112f8568d7bd30ea92e92bce7e9e52a11631a2d823346110c
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
-            - name: THETERMINALX_COM_DOMAIN
+            - name: PLUTO_THETERMINALX_COM_DOMAIN
               value: theterminalx.com
             - name: TEST_K8S_SECRET
               valueFrom:
@@ -53,6 +53,10 @@ spec:
                   name: ppluto-db-secret
                   key: MYSQL_READ_ONLY_URL
                   optional: true
+            # Overrides the localhost value baked in via .env (k8s env wins
+            # over dotenv). Store id needs no override — same everywhere.
+            - name: PLUTO_OPENFGA_API_URL
+              value: http://ppluto-openfga-service:8080
           ports:
             - containerPort: 81
             - containerPort: 82
@@ -81,7 +85,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:1a529f722fac034c057d0a8a1af91d745136874405958a11ca156bbc0873b275
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:e12425fc2d1b3cd619e055b484e499e52f561fa7cef5449f4ac60e88c4873f94
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -113,7 +117,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:c5f64b0c1f4077dcdb67af68ad7cb1525ccd824e015c7db42493c3dde011732c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:352e7191c4b34af5b2d6fcee2cd4ecea16126e438abfc0df162bdcee8ebf7aae
           ports:
             - containerPort: 5280
           resources:
