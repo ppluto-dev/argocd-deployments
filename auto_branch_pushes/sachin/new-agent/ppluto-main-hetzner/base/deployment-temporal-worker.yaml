@@ -64,11 +64,6 @@ spec:
                 secretKeyRef:
                   name: ppluto-db-secret
                   key: MYSQL_READ_ONLY_URL
-            - name: PLUTO_TEMPORAL_API_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-temporal-secret
-                  key: TEMPORAL_API_KEY
           lifecycle:
             preStop:
               exec:
