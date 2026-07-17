@@ -60,6 +60,12 @@ spec:
               value: json
             - name: OPENFGA_METRICS_ENABLED
               value: "true"
+            # No ListObjects/StreamedListObjects deadline: the default (3s)
+            # returns whatever was found so far as SUCCESS when exceeded, so
+            # oversized listings would be silently incomplete. Unbounded,
+            # they fail loudly at the app client's timeout instead.
+            - name: OPENFGA_LIST_OBJECTS_DEADLINE
+              value: "0s"
           ports:
             - name: http
               containerPort: 8080
