@@ -30,7 +30,7 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:c5372beff73792ba8d37e2ffa09b183ea6db51d3f5c955812f5242c0f5566797
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:7f1aa54638e32ec36d5a902ca1cec5dfd3cc83a73ecad23fb1e2675790e32492
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -53,10 +53,6 @@ spec:
                   name: ppluto-db-secret
                   key: MYSQL_READ_ONLY_URL
                   optional: true
-            # Overrides the localhost value baked in via .env (k8s env wins
-            # over dotenv). Store id needs no override — same everywhere.
-            - name: PLUTO_OPENFGA_API_URL
-              value: http://ppluto-openfga-service:8080
           ports:
             - containerPort: 81
             - containerPort: 82
@@ -85,7 +81,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:801e5aacfb2109a985d75424e493abf340135580fa97ef9fa6ed3f59df380f9e
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:d7e71b5d5d2878b0cb15fa17422f080d636adfa6181aa7afedd1ce0d5cb83612
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -117,7 +113,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:a35086b4a761d131f267115fe8e9120a5a9075e189872ce0e3465dd53430deca
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:12073516b61b0c6998f9d5277947404e95fd7219f01e17ac25f3410669ab757f
           ports:
             - containerPort: 5280
           resources:
