@@ -1,0 +1,105 @@
+# The datastore URI comes from ppluto-db-secret (key OPENFGA_DATASTORE_URI),
+# managed by production/_scripts/k8s_default_db_secret_generator.mts (source
+# secret default/ppluto-db-secret; reflector copies it to all namespaces).
+# After changing the secret: kubectl rollout restart deployment/ppluto-openfga
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-openfga
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-openfga
+  replicas: 1
+  revisionHistoryLimit: 2
+  template:
+    metadata:
+      labels:
+        app: ppluto-openfga
+    spec:
+      # TODO: Move `migrate` to a standalone k8s Job. As an initContainer,
+      # concurrent pod startups can race on migrations (MySQL DDL is not
+      # transactional), and a failed initContainer is indistinguishable from a
+      # genuinely broken deploy in monitoring.
+      initContainers:
+        - name: openfga-migrate
+          image: openfga/openfga:v1.18.1
+          args: ["migrate"]
+          env:
+            - name: OPENFGA_DATASTORE_ENGINE
+              value: mysql
+            # Go MySQL DSN, not a mysql:// URL:
+            # user:pass@tcp(host:3306)/openfga?parseTime=true
+            - name: OPENFGA_DATASTORE_URI
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: OPENFGA_DATASTORE_URI
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+      containers:
+        - name: openfga
+          image: openfga/openfga:v1.18.1
+          args: ["run"]
+          env:
+            - name: OPENFGA_DATASTORE_ENGINE
+              value: mysql
+            - name: OPENFGA_DATASTORE_URI
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-db-secret
+                  key: OPENFGA_DATASTORE_URI
+            - name: OPENFGA_PLAYGROUND_ENABLED
+              value: "false"
+            - name: OPENFGA_LOG_FORMAT
+              value: json
+            - name: OPENFGA_METRICS_ENABLED
+              value: "true"
+            # No ListObjects/StreamedListObjects deadline: the default (3s)
+            # returns whatever was found so far as SUCCESS when exceeded, so
+            # oversized listings would be silently incomplete. Unbounded,
+            # they fail loudly at the app client's timeout instead.
+            - name: OPENFGA_LIST_OBJECTS_DEADLINE
+              value: "0s"
+          ports:
+            - name: http
+              containerPort: 8080
+            - name: grpc
+              containerPort: 8081
+            - name: metrics
+              containerPort: 2112
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /healthz
+            timeoutSeconds: 5
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /healthz
+            timeoutSeconds: 5
+            failureThreshold: 6
+            initialDelaySeconds: 15
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 1
+              memory: 1Gi
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ppluto-openfga-pdb
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: ppluto-openfga
