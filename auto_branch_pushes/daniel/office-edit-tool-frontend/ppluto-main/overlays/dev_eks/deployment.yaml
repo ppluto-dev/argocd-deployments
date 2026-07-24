@@ -30,11 +30,11 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0537d919a5816492f3fc3b71b3c6e141a701d1933b5dc2b1787e6d780f2d70ce
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5ea12b0ea2c71184f68c4dd6ef4aab93f3df93fb02e0c6870e7c2421e0b66c0e
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
-            - name: THETERMINALX_COM_DOMAIN
+            - name: PLUTO_THETERMINALX_COM_DOMAIN
               value: daniel--office-edit-tool-frontend---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
             - name: TEST_K8S_SECRET
               valueFrom:
@@ -53,10 +53,6 @@ spec:
                   name: ppluto-db-secret
                   key: MYSQL_READ_ONLY_URL
                   optional: true
-            # Overrides the localhost value baked in via .env (k8s env wins
-            # over dotenv). Store id needs no override — same everywhere.
-            - name: PLUTO_OPENFGA_API_URL
-              value: http://ppluto-openfga-service:8080
           ports:
             - containerPort: 81
             - containerPort: 82
@@ -85,7 +81,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:657cf8b118404fc0092ca14b43876d1838091ef739e3d005d1a498e953d38307
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:b62f03a227895c281cf87cbfaab82b9395e940abd78517f04822e4e97b24500a
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -117,7 +113,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:352e7191c4b34af5b2d6fcee2cd4ecea16126e438abfc0df162bdcee8ebf7aae
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:71773a084c24befffa7dc2cfa373a5b3d099ae80fb97705ec254a828f6b4a7df
           ports:
             - containerPort: 5280
           resources:
