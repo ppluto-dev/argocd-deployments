@@ -88,3 +88,22 @@ spec:
       protocol: TCP
       port: 5088
       targetPort: 5088
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ppluto-openfga-service
+spec:
+  selector:
+    app: ppluto-openfga
+  ports:
+    - name: http # OpenFGA REST API
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+
+    - name: grpc # OpenFGA gRPC API
+      protocol: TCP
+      port: 8081
+      targetPort: 8081
