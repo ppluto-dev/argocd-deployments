@@ -30,12 +30,12 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:50f3c235da7e13c65041387e0163d29e4dc613494fd3438475211c1df175afab
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e6b5e15e5e05941fee984da5c8698d2ecff9d11129923a1dabf7125bd04798ae
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
             - name: PLUTO_THETERMINALX_COM_DOMAIN
-              value: main---theterminalx.auto-branch-pushes.ppluto-main.ppluto.dev
+              value: main---app-terminalxai.auto-branch-pushes.ppluto-main.ppluto.dev
             - name: TEST_K8S_SECRET
               valueFrom:
                 secretKeyRef:
@@ -81,7 +81,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:2e7e3fcd538888e2e81d83324d1f8d2659df3218142818e8e03c8b9600bf7ddf
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:a743d8a136933e6d120e4a8399c7ac7312fb96cec3c48ba5b75789c708937623
           ports:
             - containerPort: 5095
           readinessProbe:
