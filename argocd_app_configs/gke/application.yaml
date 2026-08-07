@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--soft-delete-col-firm-reg
+  name: ajinkyatalekar--gemini-3
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--soft-delete-col-firm-reg
+    namespace: ajinkyatalekar--gemini-3
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/soft-delete-col-firm-reg/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ajinkyatalekar/gemini-3/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
