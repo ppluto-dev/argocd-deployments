@@ -33,7 +33,7 @@ spec:
         node.pluto.co/purpose: temporal
       containers:
         - name: ppluto-main-temporal-worker-hetzner
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:704dbc45f6a8f9b7e04ddbbbe5cb558015c658863b1c1621e90ca4b7978f0fcd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:7ad0a1f2ae6855fc5a640252b03d9756ee251e75d56ec85b172bff1c059b7644
           ports:
             - name: metrics-app
               containerPort: 9464
@@ -50,6 +50,8 @@ spec:
               value: "true"
             - name: TEMPORAL_WORKER_QUEUE
               value: "MAIN_HETZNER_TEST"
+            - name: TEST_ACTIVITY_MAX_SLOTS
+              value: "3"
             - name: MALLOC_ARENA_MAX
               value: "4"
             - name: NODE_ENV
