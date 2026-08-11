@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--add-ft
+  name: daniel--eval-cost
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--add-ft
+    namespace: daniel--eval-cost
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/add-ft/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/eval-cost/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--llm-overrides
+  name: sachin--add-ft
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--llm-overrides
+    namespace: sachin--add-ft
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/llm-overrides/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/sachin/add-ft/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
