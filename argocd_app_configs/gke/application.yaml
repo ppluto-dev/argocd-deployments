@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--s3-cache
+  name: daniel--no-url-cache
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--s3-cache
+    namespace: daniel--no-url-cache
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/s3-cache/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/no-url-cache/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
