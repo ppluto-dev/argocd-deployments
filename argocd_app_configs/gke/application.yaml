@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--drop-storage-file
+  name: daniel--more-cachemove
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--drop-storage-file
+    namespace: daniel--more-cachemove
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/drop-storage-file/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/more-cachemove/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--tool-write
+  name: daniel--drop-storage-file
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--tool-write
+    namespace: daniel--drop-storage-file
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/tool-write/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/drop-storage-file/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
