@@ -9,7 +9,7 @@ spec:
     matchLabels:
       app: ppluto-main
       app.kubernetes.io/name: ppluto-main
-  replicas: 18
+  replicas: 20
   revisionHistoryLimit: 2
   template:
     metadata:
@@ -30,7 +30,7 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:d5232855c229a769fc7a3d74994e201d1024c0378d697a256515a8a8c9ac28c9
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0f8d38e015dbfe08ca0c766a2333fb66964cb9dd325de0cfefd2057f91c7a034
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -81,7 +81,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:356c90be7459e312273ecb45ba77aabdd462e9038464b8e28a816612e5e27989
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:403c18d8a736c80f766dcf4bb24ffa2de913ccb7944f6126e2f1b901aa50cc89
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -102,7 +102,7 @@ spec:
             initialDelaySeconds: 15
           resources:
             requests:
-              cpu: 0.5
+              cpu: 100m
               memory: 256Mi
             limits:
               cpu: 2
