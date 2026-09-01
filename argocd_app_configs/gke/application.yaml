@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--less-rep
+  name: ajinkyatalekar--byoc-s3
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--less-rep
+    namespace: ajinkyatalekar--byoc-s3
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/less-rep/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ajinkyatalekar/byoc-s3/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
