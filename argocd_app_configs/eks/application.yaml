@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--loading
+  name: sachin--add-ticker-region
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--loading
+    namespace: sachin--add-ticker-region
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/loading/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/add-ticker-region/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
