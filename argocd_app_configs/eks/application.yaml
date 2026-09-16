@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--a-feature
+  name: ajinkyatalekar--ajinkyatalekar-dep-7
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--a-feature
+    namespace: ajinkyatalekar--ajinkyatalekar-dep-7
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/a-feature/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/ajinkyatalekar-dep-7/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--sep-14-market-close
+  name: daniel--a-feature
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--sep-14-market-close
+    namespace: daniel--a-feature
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/sep-14-market-close/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/a-feature/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
