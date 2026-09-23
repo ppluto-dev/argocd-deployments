@@ -21,7 +21,7 @@ spec:
       annotations:
         prometheus.io/scrape: 'true'
     spec:
-      terminationGracePeriodSeconds: 600
+      terminationGracePeriodSeconds: 1800
       imagePullSecrets:
         - name: gitlab-container-registry
       tolerations:

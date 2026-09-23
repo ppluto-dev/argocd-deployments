@@ -21,7 +21,7 @@ spec:
       annotations:
         prometheus.io/scrape: 'true'
     spec:
-      terminationGracePeriodSeconds: 600
+      terminationGracePeriodSeconds: 1800
       imagePullSecrets:
         - name: gitlab-container-registry
       tolerations:
@@ -33,7 +33,7 @@ spec:
         node.pluto.co/purpose: temporal
       containers:
         - name: ppluto-main-temporal-worker-hetzner
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:92954ef4cbb9a94b64294cdcc016871f34075bad4570eb5c79b52b5b287903e2
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:fc83562427dabc9f31ef01def2027927e291607dd128246d3f98c1701dd4b7ff
           ports:
             - name: metrics-app
               containerPort: 9464
