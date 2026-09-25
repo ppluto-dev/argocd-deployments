@@ -13,6 +13,8 @@ spec:
   revisionHistoryLimit: 2
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"1\"}"
       labels:
         app: ppluto-main
         app.kubernetes.io/name: ppluto-main
@@ -30,7 +32,7 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:d2102c540df2d37c6e0e913c39f4e5b18dda39d29c6f5e999d91afa17505bb9d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:725d610d165822552128910e27fe63dea94e27bf5c68550d659a68d8b28da3fa
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -41,6 +43,12 @@ spec:
                 secretKeyRef:
                   name: ppluto-test-secret
                   key: TEST_K8S_SECRET
+            - name: TEST_SM_SECRET_VERSION
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-sm-secrets
+                  key: TEST_SM_SECRET_VERSION
+                  optional: true
             - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
@@ -81,7 +89,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:1657b6abab70c002f957179cba7f0637e692b7318643dd08dd89035cd6854bf6
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:9c1b9ee5305129fcd67dc5352f8b1776e47958f7b24245d1c977b685a6bd5678
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -113,7 +121,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:fa80dcb89f1cad5a5ce1f0985f6ba8867e1d03a211387c286a9afc4667b9778b
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:29be01db2d02b1fc037175ad8ea1bf434880281ad398b3a28bb2c6e83c6448d5
           ports:
             - containerPort: 5280
           resources:

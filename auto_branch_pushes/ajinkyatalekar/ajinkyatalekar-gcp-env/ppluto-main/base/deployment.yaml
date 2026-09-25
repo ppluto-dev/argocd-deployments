@@ -13,6 +13,8 @@ spec:
   revisionHistoryLimit: 2
   template:
     metadata:
+      annotations:
+        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main
         app.kubernetes.io/name: ppluto-main
@@ -41,6 +43,12 @@ spec:
                 secretKeyRef:
                   name: ppluto-test-secret
                   key: TEST_K8S_SECRET
+            - name: TEST_SM_SECRET_VERSION
+              valueFrom:
+                secretKeyRef:
+                  name: ppluto-sm-secrets
+                  key: TEST_SM_SECRET_VERSION
+                  optional: true
             - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
