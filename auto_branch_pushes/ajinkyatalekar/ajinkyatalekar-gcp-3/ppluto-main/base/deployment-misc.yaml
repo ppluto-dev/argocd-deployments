@@ -1,4 +1,3 @@
-{{- $smSecret := print "ppluto-sm-secrets-" (print (data.ToJSON .SECRET_VERSIONS) .SERVER_IMAGE_TAG | crypto.SHA1 | strings.Trunc 10) }}
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -10,6 +9,8 @@ spec:
   replicas: {{.PPLUTO_MAIN_MISC_DEPLOYMENT_REPLICAS}}
   template:
     metadata:
+      annotations:
+        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-misc
     spec:
@@ -19,7 +20,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: {{ $smSecret }}
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -68,6 +69,8 @@ spec:
   replicas: {{.PPLUTO_MAIN_WSRV_DEPLOYMENT_REPLICAS}}
   template:
     metadata:
+      annotations:
+        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-wsrv
     spec:
@@ -77,7 +80,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: {{ $smSecret }}
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER

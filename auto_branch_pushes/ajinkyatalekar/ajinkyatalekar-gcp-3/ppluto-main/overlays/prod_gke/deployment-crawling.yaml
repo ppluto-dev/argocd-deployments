@@ -1,4 +1,3 @@
-
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -11,6 +10,8 @@ spec:
   replicas: 0
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-crawling-thestreet
     spec:
@@ -18,10 +19,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-thestreet
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -65,6 +66,8 @@ spec:
   replicas: 0
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-crawling-aggregate-prompt-runs
     spec:
@@ -72,10 +75,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-aggregate-prompt-runs
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -104,6 +107,8 @@ spec:
   replicas: 0
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
     spec:
@@ -111,10 +116,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -143,6 +148,8 @@ spec:
   replicas: 0
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-ms-c
     spec:
@@ -150,10 +157,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ms-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -182,6 +189,8 @@ spec:
   replicas: 0
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-sector-c
     spec:
@@ -189,10 +198,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-sector-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -221,6 +230,8 @@ spec:
   replicas: 0
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
     spec:
@@ -228,10 +239,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -260,6 +271,8 @@ spec:
   replicas: 0
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
     spec:
@@ -267,10 +280,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -299,6 +312,8 @@ spec:
   replicas: 0
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-crawling-pluto-broker-research-email
     spec:
@@ -306,10 +321,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-pluto-broker-research-email
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -350,6 +365,8 @@ spec:
   replicas: 0
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-check-payment
     spec:
@@ -357,10 +374,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-check-payment
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -390,6 +407,8 @@ spec:
   replicas: 3
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main-crawling-worker
     spec:
@@ -397,10 +416,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -450,6 +469,7 @@ spec:
       labels:
         app: ppluto-main-temporal-worker
       annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -468,10 +488,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -537,6 +557,7 @@ spec:
       labels:
         app: ppluto-main-temporal-worker-main-high-priority
       annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -555,10 +576,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-high-priority
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -628,6 +649,7 @@ spec:
       labels:
         app: ppluto-main-temporal-worker-main-medium-priority
       annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -646,10 +668,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-medium-priority
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -723,6 +745,7 @@ spec:
         app: ppluto-main-temporal-worker-main-test
         variant: "experiment"
       annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -741,10 +764,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-test
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -820,6 +843,7 @@ spec:
         app: ppluto-main-temporal-worker-main-medium-priority-test
         variant: "experiment"
       annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -838,10 +862,10 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-medium-priority-test
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER

@@ -1,4 +1,3 @@
-{{- $smSecret := print "ppluto-sm-secrets-" (print (data.ToJSON .SECRET_VERSIONS) .SERVER_IMAGE_TAG | crypto.SHA1 | strings.Trunc 10) }}
 kind: Rollout
 apiVersion: argoproj.io/v1alpha1
 metadata:
@@ -14,6 +13,8 @@ spec:
   revisionHistoryLimit: 2
   template:
     metadata:
+      annotations:
+        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main
         app.kubernetes.io/name: ppluto-main
@@ -34,7 +35,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: {{ $smSecret }}
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER

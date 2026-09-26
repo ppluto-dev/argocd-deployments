@@ -1,4 +1,3 @@
-
 kind: Rollout
 apiVersion: argoproj.io/v1alpha1
 metadata:
@@ -14,6 +13,8 @@ spec:
   revisionHistoryLimit: 2
   template:
     metadata:
+      annotations:
+        secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"2\"}"
       labels:
         app: ppluto-main
         app.kubernetes.io/name: ppluto-main
@@ -31,10 +32,10 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:0fd03f8a7aec69fe59b5786db2641b3770e105a6d1364acfde4fc2d495f960fd
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:bba91b67a02a77477aaed10c5c7f7dfdca2189f1b65bc76721357f2377ae4d36
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets-c42f6da9c1
+                name: ppluto-sm-secrets
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -86,7 +87,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:770ee13d7a8f7c5b703c6dc3ea5bc5c381a029442085997f36e548a46d289752
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:3743e54bdaedb00d373eef5dce1b5d714bdda123653af983de57a1a8060305b3
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -118,7 +119,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:950065573f6e1005c81b4af0d2f73dc240104198eac7b074dcd38609fd43a39d
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:607ac79402319e63d95698f86607784137d99e35decb774eb7e82656cc9cd745
           ports:
             - containerPort: 5280
           resources:
