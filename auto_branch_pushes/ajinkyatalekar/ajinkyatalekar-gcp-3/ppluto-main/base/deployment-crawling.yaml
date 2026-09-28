@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-crawling-thestreet
     spec:
@@ -22,7 +22,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -67,7 +67,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-crawling-aggregate-prompt-runs
     spec:
@@ -78,7 +78,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -108,7 +108,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
     spec:
@@ -119,7 +119,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -149,7 +149,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-ms-c
     spec:
@@ -160,7 +160,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -190,7 +190,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-sector-c
     spec:
@@ -201,7 +201,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -231,7 +231,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
     spec:
@@ -242,7 +242,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -272,7 +272,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
     spec:
@@ -283,7 +283,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -313,7 +313,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-crawling-pluto-broker-research-email
     spec:
@@ -324,7 +324,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -366,7 +366,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-check-payment
     spec:
@@ -377,7 +377,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -408,7 +408,7 @@ spec:
   template:
     metadata:
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-crawling-worker
     spec:
@@ -419,7 +419,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -469,7 +469,7 @@ spec:
       labels:
         app: ppluto-main-temporal-worker
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -491,7 +491,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -557,7 +557,7 @@ spec:
       labels:
         app: ppluto-main-temporal-worker-main-high-priority
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -579,7 +579,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -649,7 +649,7 @@ spec:
       labels:
         app: ppluto-main-temporal-worker-main-medium-priority
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -671,7 +671,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -745,7 +745,7 @@ spec:
         app: ppluto-main-temporal-worker-main-test
         variant: "experiment"
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -767,7 +767,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -843,7 +843,7 @@ spec:
         app: ppluto-main-temporal-worker-main-medium-priority-test
         variant: "experiment"
       annotations:
-        secret-versions: {{ .SECRET_VERSIONS | data.ToJSON | quote }}
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '9464'
@@ -865,7 +865,7 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-sm-secrets
+                name: ppluto-server-secret
                 optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
