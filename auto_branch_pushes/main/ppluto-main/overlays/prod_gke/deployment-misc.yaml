@@ -9,13 +9,19 @@ spec:
   replicas: 1
   template:
     metadata:
+      annotations:
+        ppluto-server-secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"1\"}"
       labels:
         app: ppluto-main-misc
     spec:
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:d3bb04681a1dce5b19c1b1a77f90f559cb1ba0573c20096547ae723ef00e4eb5
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:2a46b7be592b53b523b33cafedb5b047f8b6187e3bca459d6fdaa8f04b4518d8
+          envFrom:
+            - secretRef:
+                name: ppluto-server-secret
+                optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: misc
@@ -63,13 +69,19 @@ spec:
   replicas: 2
   template:
     metadata:
+      annotations:
+        ppluto-server-secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"1\"}"
       labels:
         app: ppluto-main-wsrv
     spec:
       terminationGracePeriodSeconds: 60 # https://jenakim47.tistory.com/80
       containers:
         - name: ppluto-main--prod-misc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:d3bb04681a1dce5b19c1b1a77f90f559cb1ba0573c20096547ae723ef00e4eb5
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:2a46b7be592b53b523b33cafedb5b047f8b6187e3bca459d6fdaa8f04b4518d8
+          envFrom:
+            - secretRef:
+                name: ppluto-server-secret
+                optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: wsrv
