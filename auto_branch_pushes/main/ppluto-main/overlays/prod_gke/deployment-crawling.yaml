@@ -17,7 +17,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-thestreet
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -71,7 +71,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-aggregate-prompt-runs
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -110,7 +110,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-gs-jpm
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -149,7 +149,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ms-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -188,7 +188,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-sector-c
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -227,7 +227,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-ubs-barc
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -266,7 +266,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-arrowpoint-broker-research-arb-ciq
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -305,7 +305,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-crawling-pluto-broker-research-email
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -356,7 +356,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-check-payment
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -386,7 +386,7 @@ spec:
   selector:
     matchLabels:
       app: ppluto-main-crawling-worker
-  replicas: 3
+  replicas: 0
   template:
     metadata:
       labels:
@@ -396,7 +396,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main--prod-server-crawling-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -467,7 +467,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -554,7 +554,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-high-priority
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -645,7 +645,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-medium-priority
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -740,7 +740,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-test
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
@@ -837,7 +837,7 @@ spec:
         - name: gitlab-container-registry
       containers:
         - name: ppluto-main-temporal-worker-main-medium-priority-test
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:5146e580374508ae0d89207d9dfeb3b60a451daf54a5068f90098ebd4354fe37
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4504b2e159a9232ac207eb525e20c8be328b856efbe43208690b322f2b6e1d2a
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-ac8400638d
