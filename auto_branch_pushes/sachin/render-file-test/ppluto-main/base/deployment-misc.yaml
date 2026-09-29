@@ -9,6 +9,8 @@ spec:
   replicas: {{.PPLUTO_MAIN_MISC_DEPLOYMENT_REPLICAS}}
   template:
     metadata:
+      annotations:
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-misc
     spec:
@@ -16,6 +18,10 @@ spec:
       containers:
         - name: ppluto-main--prod-misc
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
+          envFrom:
+            - secretRef:
+                name: ppluto-server-secret
+                optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: misc
@@ -63,6 +69,8 @@ spec:
   replicas: {{.PPLUTO_MAIN_WSRV_DEPLOYMENT_REPLICAS}}
   template:
     metadata:
+      annotations:
+        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main-wsrv
     spec:
@@ -70,6 +78,10 @@ spec:
       containers:
         - name: ppluto-main--prod-misc
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
+          envFrom:
+            - secretRef:
+                name: ppluto-server-secret
+                optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: wsrv
