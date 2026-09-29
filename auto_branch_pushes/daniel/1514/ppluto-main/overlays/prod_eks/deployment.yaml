@@ -13,6 +13,8 @@ spec:
   revisionHistoryLimit: 2
   template:
     metadata:
+      annotations:
+        ppluto-server-secret-versions: "{\"TEST_SM_SECRET_VERSION\":\"1\"}"
       labels:
         app: ppluto-main
         app.kubernetes.io/name: ppluto-main
@@ -30,7 +32,11 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:4688eb33858791f6f044f03edae1ea3e64d446232fc293a53e462088775bf6fe
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:1b23b55f75b0abf054b84d34ecf7b3e8bc163513f7aa49f803915d11e27583ce
+          envFrom:
+            - secretRef:
+                name: ppluto-server-secret
+                optional: true
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
@@ -81,7 +87,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:4d00a7b94ee15221c5ce01ff2f39133e440a32a601465c56877b38f9b3e6cbdc
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:b4669d8e8c4725f3d88266f2faf3734ecfa8f2827ec6593e12c47a4bdf9f9920
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -113,7 +119,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:16cda281505d0792ede56361ed3b3066dd77e0c75c11633742c41735482152a2
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:497afad48d1638bc58bca13c170658846fb6def555b00fe5e21ebf4b442680f6
           ports:
             - containerPort: 5280
           resources:
