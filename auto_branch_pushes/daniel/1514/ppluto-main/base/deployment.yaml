@@ -13,8 +13,6 @@ spec:
   revisionHistoryLimit: 2
   template:
     metadata:
-      annotations:
-        ppluto-server-secret-versions: {{ .SERVER_SECRET_VERSIONS | data.ToJSON | quote }}
       labels:
         app: ppluto-main
         app.kubernetes.io/name: ppluto-main
@@ -35,8 +33,8 @@ spec:
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:{{.SERVER_IMAGE_TAG}}
           envFrom:
             - secretRef:
-                name: ppluto-server-secret
-                optional: true
+                name: {{ template "server_secret_name" . }}
+                optional: false
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
               value: api-server
