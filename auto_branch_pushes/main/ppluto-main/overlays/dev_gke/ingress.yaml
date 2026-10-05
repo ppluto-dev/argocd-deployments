@@ -39,13 +39,6 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
-          - path: /api-dk
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 84
           - path: /api/auth
             pathType: Prefix
             backend:
@@ -223,13 +216,6 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 82
-          - path: /api-dk
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 84
 
 # TODO: Delete if no longer needed?
 
