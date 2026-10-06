@@ -62,7 +62,6 @@ spec:
               value: "production"
             - name: PLUTO_OPENFGA_IN_CLUSTER
               value: "true"
-            # No VPC route from Hetzner; overrides the in-VPC URLs from envFrom.
             - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:

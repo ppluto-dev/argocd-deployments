@@ -33,10 +33,10 @@ spec:
         node.pluto.co/purpose: temporal
       containers:
         - name: ppluto-main-temporal-worker-hetzner
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:903d8fe2c0e20f46e03bcbdc8c97a7a1aaaf876a56e1d6648cc24869eae49f9e
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:761e44438e46337bfd52e5764313c454810d406e4d70249f30e1b54ae32b9a00
           envFrom:
             - secretRef:
-                name: ppluto-server-secret-1ad2a22b4c
+                name: ppluto-server-secret-e66846e07d
                 optional: false
           ports:
             - name: metrics-app
@@ -62,16 +62,15 @@ spec:
               value: "production"
             - name: PLUTO_OPENFGA_IN_CLUSTER
               value: "true"
-            # No VPC route from Hetzner; overrides the in-VPC URLs from envFrom.
             - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
-                  name: ppluto-server-secret-1ad2a22b4c
+                  name: ppluto-server-secret-e66846e07d
                   key: PLUTO_MYSQL_PUBLIC_URL
             - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
-                  name: ppluto-server-secret-1ad2a22b4c
+                  name: ppluto-server-secret-e66846e07d
                   key: PLUTO_MYSQL_PUBLIC_URL
           lifecycle:
             preStop:
