@@ -317,18 +317,6 @@ spec:
               value: "true"
             - name: IS_PLUTO_BROKER_RESEARCH_EMAIL
               value: "true"
-            - name: PLUTO_MYSQL_READ_WRITE_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_WRITE_URL
-                  optional: true
-            - name: PLUTO_MYSQL_READ_ONLY_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_ONLY_URL
-                  optional: true
           resources:
             requests:
               cpu: 400m
@@ -408,18 +396,6 @@ spec:
               value: "true"
             - name: IS_LOCAL_CRAWLING_WORKER
               value: "true"
-            - name: PLUTO_MYSQL_READ_WRITE_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_WRITE_URL
-                  optional: true
-            - name: PLUTO_MYSQL_READ_ONLY_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_ONLY_URL
-                  optional: true
           resources:
             requests:
               cpu: 400m
@@ -479,18 +455,6 @@ spec:
               value: "true"
             - name: IS_TEMPORAL_WORKER
               value: "true"
-            - name: PLUTO_MYSQL_READ_WRITE_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_WRITE_URL
-                  optional: true
-            - name: PLUTO_MYSQL_READ_ONLY_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_ONLY_URL
-                  optional: true
           lifecycle:
             preStop:
               exec:
@@ -570,18 +534,6 @@ spec:
               value: "MAIN_HIGH_PRIORITY"
             - name: MALLOC_ARENA_MAX
               value: "4"
-            - name: PLUTO_MYSQL_READ_WRITE_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_WRITE_URL
-                  optional: true
-            - name: PLUTO_MYSQL_READ_ONLY_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_ONLY_URL
-                  optional: true
           lifecycle:
             preStop:
               exec:
@@ -663,18 +615,6 @@ spec:
               value: "4" 
             - name: LOWER_MAX_CACHED_WORKFLOWS
               value: "true"
-            - name: PLUTO_MYSQL_READ_WRITE_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_WRITE_URL
-                  optional: true
-            - name: PLUTO_MYSQL_READ_ONLY_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_ONLY_URL
-                  optional: true
           lifecycle:
             preStop:
               exec:
@@ -758,18 +698,6 @@ spec:
               value: "50"
             - name: MALLOC_ARENA_MAX
               value: "4"
-            - name: PLUTO_MYSQL_READ_WRITE_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_WRITE_URL
-                  optional: true
-            - name: PLUTO_MYSQL_READ_ONLY_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_ONLY_URL
-                  optional: true
           lifecycle:
             preStop:
               exec:
@@ -855,18 +783,6 @@ spec:
               value: "true"
             - name: MALLOC_ARENA_MAX
               value: "4"
-            - name: PLUTO_MYSQL_READ_WRITE_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_WRITE_URL
-                  optional: true
-            - name: PLUTO_MYSQL_READ_ONLY_URL
-              valueFrom:
-                secretKeyRef:
-                  name: ppluto-db-secret
-                  key: MYSQL_READ_ONLY_URL
-                  optional: true
           lifecycle:
             preStop:
               exec:

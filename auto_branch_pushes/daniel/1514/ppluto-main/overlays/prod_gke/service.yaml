@@ -31,11 +31,6 @@ spec:
       port: 83
       targetPort: 83
 
-    - name: deepkit-rpc
-      protocol: TCP
-      port: 84
-      targetPort: 84
-
 ---
 kind: Service
 apiVersion: v1
@@ -69,11 +64,6 @@ spec:
       protocol: TCP
       port: 83
       targetPort: 83
-
-    - name: deepkit-rpc
-      protocol: TCP
-      port: 84
-      targetPort: 84
 
 ---
 kind: Service
