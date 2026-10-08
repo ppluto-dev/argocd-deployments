@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--aws-secrets
+  name: sachin--update-news-source
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--aws-secrets
+    namespace: sachin--update-news-source
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/aws-secrets/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/sachin/update-news-source/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -59,52 +59,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/daniel/daniel-eng0/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ajinkyatalekar--op-api
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ajinkyatalekar--op-api
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ajinkyatalekar/op-api/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ken--bedrock-2
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ken--bedrock-2
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ken/bedrock-2/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
