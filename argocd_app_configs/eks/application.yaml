@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--fly-fix-final-this-time-4-sure
+  name: daniel--size-fix
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--fly-fix-final-this-time-4-sure
+    namespace: daniel--size-fix
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/fly-fix-final-this-time-4-sure/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/size-fix/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--api-jev-q
+  name: daniel--fly-fix-final-this-time-4-sure
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--api-jev-q
+    namespace: daniel--fly-fix-final-this-time-4-sure
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/api-jev-q/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/fly-fix-final-this-time-4-sure/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
