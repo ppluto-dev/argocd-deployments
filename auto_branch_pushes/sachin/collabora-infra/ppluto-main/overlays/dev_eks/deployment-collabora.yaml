@@ -20,9 +20,8 @@ spec:
             # Only http_api (in-cluster) may serve WOPI files to Collabora.
             - name: aliasgroup1
               value: http://ppluto-main-service-active:83
-            # TLS ends at the ingress. post_allow and lok_allow are narrowed from
-            # their private-range defaults so convert-to and in-document external
-            # data (e.g. =WEBSERVICE()) can't reach the cluster through the ingress.
+            # Each post_allow/lok_allow index replaces one private-range default in the image's
+            # coolwsd.xml; all must be overridden or convert-to stays reachable via the ingress.
             - name: extra_params
               value: >-
                 --o:ssl.enable=false
