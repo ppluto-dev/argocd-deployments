@@ -165,6 +165,13 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          - path: /collabora
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-collabora-service
+                port:
+                  number: 9980
           - path: /
             pathType: Prefix
             backend:
