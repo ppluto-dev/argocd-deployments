@@ -1,0 +1,75 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: ppluto-collabora
+spec:
+  selector:
+    matchLabels:
+      app: ppluto-collabora
+  replicas: 1
+  revisionHistoryLimit: 2
+  template:
+    metadata:
+      labels:
+        app: ppluto-collabora
+    spec:
+      containers:
+        - name: collabora
+          image: collabora/code:26.04.4.2.1
+          env:
+            # Only http_api (in-cluster) may serve WOPI files to Collabora.
+            - name: aliasgroup1
+              value: http://ppluto-main-service-active:83
+            # TLS ends at the ingress. post_allow and lok_allow are narrowed from
+            # their private-range defaults so convert-to and in-document external
+            # data (e.g. =WEBSERVICE()) can't reach the cluster through the ingress.
+            - name: extra_params
+              value: >-
+                --o:ssl.enable=false
+                --o:ssl.termination=true
+                --o:net.service_root=/collabora
+                --o:admin_console.enable=false
+                --o:net.post_allow.host[0]=127.0.0.1/32
+                --o:net.post_allow.host[1]=127.0.0.1/32
+                --o:net.post_allow.host[2]=127.0.0.1/32
+                --o:net.post_allow.host[3]=127.0.0.1/32
+                --o:net.post_allow.host[4]=127.0.0.1/32
+                --o:net.lok_allow.host[0]=127.0.0.1/32
+                --o:net.lok_allow.host[1]=127.0.0.1/32
+                --o:net.lok_allow.host[2]=127.0.0.1/32
+                --o:net.lok_allow.host[3]=127.0.0.1/32
+                --o:net.lok_allow.host[4]=127.0.0.1/32
+                --o:net.lok_allow.host[5]=127.0.0.1/32
+          ports:
+            - name: http
+              containerPort: 9980
+          readinessProbe:
+            httpGet:
+              port: 9980
+              path: /collabora/hosting/discovery
+            timeoutSeconds: 5
+          livenessProbe:
+            httpGet:
+              port: 9980
+              path: /collabora/hosting/discovery
+            timeoutSeconds: 5
+            failureThreshold: 6
+            initialDelaySeconds: 30
+          resources:
+            requests:
+              cpu: 250m
+              memory: 1Gi
+            limits:
+              cpu: "4"
+              memory: 8Gi
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: ppluto-collabora-pdb
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: ppluto-collabora
