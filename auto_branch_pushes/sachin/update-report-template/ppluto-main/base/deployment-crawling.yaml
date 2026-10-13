@@ -438,7 +438,7 @@ spec:
               app: ppluto-main-temporal-worker
           matchLabelKeys:
             - pod-template-hash
-      terminationGracePeriodSeconds: 900 # 15 min
+      terminationGracePeriodSeconds: 600
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -513,7 +513,7 @@ spec:
               app: ppluto-main-temporal-worker-main-high-priority
           matchLabelKeys:
             - pod-template-hash
-      terminationGracePeriodSeconds: 900 # 15 min
+      terminationGracePeriodSeconds: 600
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -592,7 +592,7 @@ spec:
               app: ppluto-main-temporal-worker-main-medium-priority
           matchLabelKeys:
             - pod-template-hash
-      terminationGracePeriodSeconds: 900 # 15 min
+      terminationGracePeriodSeconds: 600
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -675,7 +675,7 @@ spec:
               app: ppluto-main-temporal-worker-main-test
           matchLabelKeys:
             - pod-template-hash
-      terminationGracePeriodSeconds: 900 # 15 min
+      terminationGracePeriodSeconds: 600
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
@@ -760,7 +760,7 @@ spec:
               app: ppluto-main-temporal-worker-main-medium-priority-test
           matchLabelKeys:
             - pod-template-hash
-      terminationGracePeriodSeconds: 900 # 15 min
+      terminationGracePeriodSeconds: 600
       imagePullSecrets:
         - name: gitlab-container-registry
       containers:
