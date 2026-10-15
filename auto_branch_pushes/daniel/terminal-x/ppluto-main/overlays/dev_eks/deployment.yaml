@@ -30,7 +30,7 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:1e506aa5958e5f21c43a0fece142124e27a8f33d9c872ec11e746f5abd70408a
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:239591ced579a754e5b3bfbcf35c2b37412704a6af9d54ea948ce80a66cc0a52
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-1223d15810
@@ -72,7 +72,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:3995123876d93268d136981f317893b2ba97afaacfe60ac3745622f46a4559a5
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:6a8ab67ecfbef1faa3c6fd0137a2346e2d870e74287ee13c797dfdfdaf368244
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -104,7 +104,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-terminal-x
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-terminal-x:0451c79e8dcc205e79b929a38eb5e9a4c667216d97ead8376fa3c5a5cea70823
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-terminal-x:9e2134bc77b8a300470f79434fb1a1b47b2fed69cb22a92e6b4928fd224fae58
           ports:
             - containerPort: 5097
           env:
@@ -130,13 +130,13 @@ spec:
             limits:
               cpu: 1
               memory: 512Mi
-              ephemeral-storage: 1Gi
+              ephemeral-storage: 512Mi
           lifecycle:
             preStop:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:897fe3a53b8c349ea4ea0c44a3adb9815a256fcdca1702da47ce683ef1ffd730
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:fd3f5c4c37e92dfcb0a3a4dbb949203b69b4f57cca16f6956c57b05697a8cfd0
           ports:
             - containerPort: 5280
           resources:
@@ -146,7 +146,7 @@ spec:
             limits:
               cpu: 200m
               memory: 32Mi
-              ephemeral-storage: 1Gi
+              ephemeral-storage: 512Mi
           lifecycle:
             preStop:
               exec:
