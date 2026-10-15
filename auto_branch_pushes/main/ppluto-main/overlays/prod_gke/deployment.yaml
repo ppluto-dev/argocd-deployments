@@ -30,7 +30,7 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e3010052d53687eea4c5ec2265415152efef9dec1c35d6661369f2671f87d157
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8261f7f21914869857783bf5a0567a3f4fdc0640ee9b1446f6eff4253bff3498
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-1223d15810
@@ -72,7 +72,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:cf979725d5ce3cd04f83841bc7cdb18ba95fd50557d276a8d749c90aed05349f
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:1c45af4a99343a8010ef4f871312b38cecba7a83ed0a5221e99c7fc9f8e2fb50
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -103,6 +103,38 @@ spec:
             preStop:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
+        - name: ppluto-main--prod-client-terminal-x
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-terminal-x:c82779ad7e4bb79841d4e376a49a9ad64d856c05c969837d184e7464ec75aa91
+          ports:
+            - containerPort: 5097
+          env:
+            # k8s sets HOSTNAME to the pod name; Next standalone binds to it.
+            - name: HOSTNAME
+              value: "0.0.0.0"
+          readinessProbe:
+            httpGet:
+              port: 5097
+              path: /healthz
+            timeoutSeconds: 5
+          livenessProbe:
+            httpGet:
+              port: 5097
+              path: /healthz
+            timeoutSeconds: 5
+            failureThreshold: 6
+            initialDelaySeconds: 15
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 1
+              memory: 512Mi
+              ephemeral-storage: 512Mi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
           image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:fd3f5c4c37e92dfcb0a3a4dbb949203b69b4f57cca16f6956c57b05697a8cfd0
           ports:
@@ -114,7 +146,7 @@ spec:
             limits:
               cpu: 200m
               memory: 32Mi
-              ephemeral-storage: 1Gi
+              ephemeral-storage: 512Mi
           lifecycle:
             preStop:
               exec:

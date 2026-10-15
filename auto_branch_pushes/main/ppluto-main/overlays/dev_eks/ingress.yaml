@@ -208,6 +208,21 @@ spec:
     - host: main---app-terminalxai.auto-branch-pushes.ppluto-main.ppluto.dev
       http: *terminalx-common-rules
 
+    # terminal-x Phase 0 test firms
+    - host: main---test1-terminalxai.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: &terminalx-new-ui-rules
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5097
+
+    - host: main---test2-terminalxai.auto-branch-pushes.ppluto-main.ppluto.dev
+      http: *terminalx-new-ui-rules
+
 ---
 
 apiVersion: networking.k8s.io/v1

@@ -208,6 +208,21 @@ spec:
     - host: {{.APP_TERMINAL_X_AI_SUBDOMAIN}}
       http: *terminalx-common-rules
 
+    # terminal-x Phase 0 test firms
+    - host: {{.TEST1_TERMINAL_X_AI_SUBDOMAIN}}
+      http: &terminalx-new-ui-rules
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5097
+
+    - host: {{.TEST2_TERMINAL_X_AI_SUBDOMAIN}}
+      http: *terminalx-new-ui-rules
+
 ---
 
 apiVersion: networking.k8s.io/v1
