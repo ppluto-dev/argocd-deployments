@@ -212,6 +212,20 @@ spec:
     - host: {{.TEST1_TERMINAL_X_AI_SUBDOMAIN}}
       http: &terminalx-new-ui-rules
         paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /
             pathType: Prefix
             backend:

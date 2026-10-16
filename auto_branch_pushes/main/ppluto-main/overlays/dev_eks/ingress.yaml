@@ -212,6 +212,20 @@ spec:
     - host: main---test1-terminalxai.auto-branch-pushes.ppluto-main.ppluto.dev
       http: &terminalx-new-ui-rules
         paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 82
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 83
           - path: /
             pathType: Prefix
             backend:
