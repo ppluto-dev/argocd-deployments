@@ -11,6 +11,11 @@ spec:
       port: 5095
       targetPort: 5095
 
+    - name: web-terminal-x # Client -- terminal-x (new UI)
+      protocol: TCP
+      port: 5097
+      targetPort: 5097
+
     - name: web-gaia # Client -- openembedding.com (Project Gaia)
       protocol: TCP
       port: 5280
@@ -44,6 +49,11 @@ spec:
       protocol: TCP
       port: 5095
       targetPort: 5095
+
+    - name: web-terminal-x # Client -- terminal-x (new UI)
+      protocol: TCP
+      port: 5097
+      targetPort: 5097
 
     - name: web-gaia # Client -- openembedding.com (Project Gaia)
       protocol: TCP
