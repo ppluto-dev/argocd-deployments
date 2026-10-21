@@ -33,10 +33,10 @@ spec:
         node.pluto.co/purpose: temporal
       containers:
         - name: ppluto-main-temporal-worker-hetzner
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:8ab619d7744b3ec1c10132c74ee6ba864124dcbb74ebcaed98fba6fd2b85257c
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:2b6251c91e784c0a23c06c453ff3e3af5f09167c240d7a03b0eb6e3cda1a638f
           envFrom:
             - secretRef:
-                name: ppluto-server-secret-74d2b2c100
+                name: ppluto-server-secret-1223d15810
                 optional: false
           ports:
             - name: metrics-app
@@ -65,12 +65,12 @@ spec:
             - name: PLUTO_MYSQL_READ_WRITE_URL
               valueFrom:
                 secretKeyRef:
-                  name: ppluto-server-secret-74d2b2c100
+                  name: ppluto-server-secret-1223d15810
                   key: PLUTO_MYSQL_PUBLIC_URL
             - name: PLUTO_MYSQL_READ_ONLY_URL
               valueFrom:
                 secretKeyRef:
-                  name: ppluto-server-secret-74d2b2c100
+                  name: ppluto-server-secret-1223d15810
                   key: PLUTO_MYSQL_PUBLIC_URL
           lifecycle:
             preStop:
