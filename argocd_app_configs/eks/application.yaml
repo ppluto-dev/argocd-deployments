@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--gaia-live-3
+  name: ken--gaia-folders
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--gaia-live-3
+    namespace: ken--gaia-folders
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/gaia-live-3/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/gaia-folders/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--sv444
+  name: ajinkyatalekar--gaia-live-3
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--sv444
+    namespace: ajinkyatalekar--gaia-live-3
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/sv444/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/gaia-live-3/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
