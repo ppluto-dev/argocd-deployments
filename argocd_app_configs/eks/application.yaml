@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--v3-source-table-update
+  name: ken--gaia-compact
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--v3-source-table-update
+    namespace: ken--gaia-compact
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/v3-source-table-update/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/gaia-compact/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--source-viewer-3
+  name: sachin--v3-source-table-update
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--source-viewer-3
+    namespace: sachin--v3-source-table-update
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/source-viewer-3/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/v3-source-table-update/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
