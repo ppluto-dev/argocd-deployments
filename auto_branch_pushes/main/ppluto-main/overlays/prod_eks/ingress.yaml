@@ -226,6 +226,35 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
+          # Collabora admin and metrics stay in-cluster: send these to the app (404).
+          - path: /collabora/browser/dist/admin
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5095
+          - path: /collabora/cool/adminws
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5095
+          - path: /collabora/cool/getMetrics
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-main-service-active
+                port:
+                  number: 5095
+          - path: /collabora
+            pathType: Prefix
+            backend:
+              service:
+                name: ppluto-collabora-service
+                port:
+                  number: 9980
           - path: /
             pathType: Prefix
             backend:
