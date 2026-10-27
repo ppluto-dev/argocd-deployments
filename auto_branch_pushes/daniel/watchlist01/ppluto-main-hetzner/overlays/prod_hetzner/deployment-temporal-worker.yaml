@@ -33,7 +33,7 @@ spec:
         node.pluto.co/purpose: temporal
       containers:
         - name: ppluto-main-temporal-worker-hetzner
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:751b2f6ba58e6a4f5650f97ee29154e01d32f2c7856ea3cccdbc9201a3729e29
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e5f5612720552f300ccbb9bc57d590748d08f93d0c4fd5da7fed1c4ed00881ab
           envFrom:
             - secretRef:
                 name: ppluto-server-secret-1223d15810
