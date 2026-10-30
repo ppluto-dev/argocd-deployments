@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--home06
+  name: sachin--v3-question-show-more
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--home06
+    namespace: sachin--v3-question-show-more
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/home06/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/v3-question-show-more/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
