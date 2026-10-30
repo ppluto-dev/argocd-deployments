@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--v3-search-bar
+  name: ajinkyatalekar--thinking-3
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--v3-search-bar
+    namespace: ajinkyatalekar--thinking-3
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/v3-search-bar/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/ajinkyatalekar/thinking-3/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--home03
+  name: sachin--v3-search-bar
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--home03
+    namespace: sachin--v3-search-bar
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/home03/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/sachin/v3-search-bar/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
