@@ -53,13 +53,6 @@ spec:
                 name: ppluto-main-service-active
                 port:
                   number: 83
-          - path: /api/encrypted-blob
-            pathType: Prefix
-            backend:
-              service:
-                name: ppluto-main-service-active
-                port:
-                  number: 83
           - path: /api/encrypted-blob2
             pathType: Prefix
             backend:
@@ -257,6 +250,9 @@ spec:
                   number: 5097
 
     - host: test2.terminal-x.ai
+      http: *terminalx-new-ui-rules
+
+    - host: agent.terminal-x.ai
       http: *terminalx-new-ui-rules
 
 ---

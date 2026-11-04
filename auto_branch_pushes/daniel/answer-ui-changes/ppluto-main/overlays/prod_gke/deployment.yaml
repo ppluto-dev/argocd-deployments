@@ -30,10 +30,10 @@ spec:
 
       containers:
         - name: ppluto-main--prod-server
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e9799d87657a45b520d42852738c8f8211e2b0aa0336784487991b18954c20ba
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-server:e135e93c01e188e674c2191e1eea163be8f410d7c2775802def77bce719eafc3
           envFrom:
             - secretRef:
-                name: ppluto-server-secret-225c9336ae
+                name: ppluto-server-secret-f5dd5e6284
                 optional: false
           env:
             - name: PPLUTO_SERVER_ARG_SERVER
@@ -72,7 +72,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-tickerbell
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:4866a05077302ddd4933de4db782371c73c04211c52ef16397793ad4cfe56ba5
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-tickerbell:6b603d6cb88d787d12e9d3e3a9374aab88aecb7afa93574b1d237bd59a3c061b
           ports:
             - containerPort: 5095
           readinessProbe:
@@ -104,7 +104,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client-terminal-x
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-terminal-x:52214f376b2f3c9106bc7599d394d604b3c1887468d71b23f74fbd4aec5781f4
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client-terminal-x:cb72c9fc8e656eb5b8a6be8ba8fffdf6c9dc3d910769a004767aa863aa0eab73
           ports:
             - containerPort: 5097
           env:
@@ -136,7 +136,7 @@ spec:
               exec:
                 command: ["/bin/sh", "-c", "sleep 1800"]
         - name: ppluto-main--prod-client
-          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:aae13f0237bef4c38d83c4e5f2be93038993835e0c03aeff35347429b345ba56
+          image: registry.gitlab.com/ppluto-dev/ppluto-main/prod-client:884551bcef6f2b181a3a267d7d254a29e5f8bca31ae6b07f8ecad275ed6bde0b
           ports:
             - containerPort: 5280
           resources:
