@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--thinking-agent
+  name: ajinkyatalekar--transition
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ajinkyatalekar--thinking-agent
+    namespace: ajinkyatalekar--transition
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ajinkyatalekar/thinking-agent/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ajinkyatalekar/transition/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
