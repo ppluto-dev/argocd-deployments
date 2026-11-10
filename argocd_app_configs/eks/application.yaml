@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--deep-workflow-icon
+  name: daniel--pdr-v32
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--deep-workflow-icon
+    namespace: daniel--pdr-v32
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/deep-workflow-icon/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/pdr-v32/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,39 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sachin--v3-supporting-files
+  name: daniel--pdr-browse-by
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sachin--v3-supporting-files
+    namespace: daniel--pdr-browse-by
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/sachin/v3-supporting-files/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/pdr-browse-by/ppluto-main/overlays/dev_eks
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sachin--deep-workflow-icon
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: sachin--deep-workflow-icon
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/sachin/deep-workflow-icon/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
