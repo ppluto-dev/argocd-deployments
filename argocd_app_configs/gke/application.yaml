@@ -26,6 +26,29 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: ajinkyatalekar--ctrl
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ajinkyatalekar--ctrl
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: auto_branch_pushes/ajinkyatalekar/ctrl/ppluto-main/overlays/dev_gke
+    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
   name: ken--gaia-write-3
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -36,52 +59,6 @@ spec:
   project: default
   source:
     path: auto_branch_pushes/ken/gaia-write-3/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: daniel--pdr-v32
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: daniel--pdr-v32
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/daniel/pdr-v32/ppluto-main/overlays/dev_gke
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: daniel--pdr-browse-by
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: daniel--pdr-browse-by
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/daniel/pdr-browse-by/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
