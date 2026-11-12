@@ -455,6 +455,8 @@ spec:
               value: "true"
             - name: IS_TEMPORAL_WORKER
               value: "true"
+            - name: UV_THREADPOOL_SIZE
+              value: "16"
           lifecycle:
             preStop:
               exec:
@@ -534,6 +536,8 @@ spec:
               value: "MAIN_HIGH_PRIORITY"
             - name: MALLOC_ARENA_MAX
               value: "4"
+            - name: UV_THREADPOOL_SIZE
+              value: "16"
           lifecycle:
             preStop:
               exec:
@@ -615,6 +619,8 @@ spec:
               value: "4" 
             - name: LOWER_MAX_CACHED_WORKFLOWS
               value: "true"
+            - name: UV_THREADPOOL_SIZE
+              value: "16"
           lifecycle:
             preStop:
               exec:
@@ -698,6 +704,8 @@ spec:
               value: "50"
             - name: MALLOC_ARENA_MAX
               value: "4"
+            - name: UV_THREADPOOL_SIZE
+              value: "16"
           lifecycle:
             preStop:
               exec:
@@ -783,6 +791,8 @@ spec:
               value: "true"
             - name: MALLOC_ARENA_MAX
               value: "4"
+            - name: UV_THREADPOOL_SIZE
+              value: "16"
           lifecycle:
             preStop:
               exec:
