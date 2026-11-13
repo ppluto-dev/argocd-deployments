@@ -258,6 +258,18 @@ spec:
     - host: {{.KIC_TERMINAL_X_AI_SUBDOMAIN}}
       http: *terminalx-new-ui-rules
 
+    - host: {{.DAIWA_TERMINAL_X_AI_SUBDOMAIN}}
+      http: *terminalx-new-ui-rules
+
+    - host: {{.HANA_TERMINAL_X_AI_SUBDOMAIN}}
+      http: *terminalx-new-ui-rules
+
+    - host: {{.ALLIANZ_TERMINAL_X_AI_SUBDOMAIN}}
+      http: *terminalx-new-ui-rules
+
+    - host: {{.NPS_TERMINAL_X_AI_SUBDOMAIN}}
+      http: *terminalx-new-ui-rules
+
 ---
 
 apiVersion: networking.k8s.io/v1
