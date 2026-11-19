@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--onprem-dataroom-search
+  name: daniel--v3-crash-screen
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--onprem-dataroom-search
+    namespace: daniel--v3-crash-screen
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/onprem-dataroom-search/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/v3-crash-screen/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--onprem-processing
+  name: daniel--onprem-dataroom-search
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--onprem-processing
+    namespace: daniel--onprem-dataroom-search
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/onprem-processing/ppluto-main/overlays/dev_gke
+    path: auto_branch_pushes/daniel/onprem-dataroom-search/ppluto-main/overlays/dev_gke
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
