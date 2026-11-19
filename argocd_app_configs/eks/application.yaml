@@ -26,39 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--v3-dataroom-open-first-folder
+  name: ken--memory-3
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--v3-dataroom-open-first-folder
+    namespace: ken--memory-3
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/v3-dataroom-open-first-folder/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: daniel--v3-spotlight-max-width
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: daniel--v3-spotlight-max-width
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/daniel/v3-spotlight-max-width/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/ken/memory-3/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
