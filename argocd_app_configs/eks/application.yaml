@@ -26,16 +26,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: daniel--newlogin
+  name: sachin--onprem-bundle-gaia-rows
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: daniel--newlogin
+    namespace: sachin--onprem-bundle-gaia-rows
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/daniel/newlogin/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/sachin/onprem-bundle-gaia-rows/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
@@ -49,16 +49,16 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ken--watchlist-freq
+  name: daniel--newlogin
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ken--watchlist-freq
+    namespace: daniel--newlogin
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: auto_branch_pushes/ken/watchlist-freq/ppluto-main/overlays/dev_eks
+    path: auto_branch_pushes/daniel/newlogin/ppluto-main/overlays/dev_eks
     repoURL: https://github.com/ppluto-dev/argocd-deployments.git
     targetRevision: HEAD
   syncPolicy:
