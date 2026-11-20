@@ -65,6 +65,11 @@ spec:
             # they fail loudly at the app client's timeout instead.
             - name: OPENFGA_LIST_OBJECTS_DEADLINE
               value: "0s"
+            # Same for ListUsers, which also caps results (default 1000); 0 = no cap.
+            - name: OPENFGA_LIST_USERS_DEADLINE
+              value: "0s"
+            - name: OPENFGA_LIST_USERS_MAX_RESULTS
+              value: "0"
           ports:
             - name: http
               containerPort: 8080
