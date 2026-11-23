@@ -273,6 +273,9 @@ spec:
     - host: {{.NPS_TERMINAL_X_AI_SUBDOMAIN}}
       http: *terminalx-new-ui-rules
 
+    - host: {{.PINE_TERMINAL_X_AI_SUBDOMAIN}}
+      http: *terminalx-new-ui-rules
+
 ---
 
 apiVersion: networking.k8s.io/v1
