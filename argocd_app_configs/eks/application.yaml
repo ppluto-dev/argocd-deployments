@@ -72,29 +72,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ajinkyatalekar--openfga-pod-monitoring
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: ajinkyatalekar--openfga-pod-monitoring
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: auto_branch_pushes/ajinkyatalekar/openfga-pod-monitoring/ppluto-main/overlays/dev_eks
-    repoURL: https://github.com/ppluto-dev/argocd-deployments.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-    syncOptions:
-      - CreateNamespace=true
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: ken--gabe-var
   finalizers:
     - resources-finalizer.argocd.argoproj.io
