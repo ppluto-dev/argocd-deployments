@@ -111,6 +111,8 @@ spec:
             # k8s sets HOSTNAME to the pod name; Next standalone binds to it.
             - name: HOSTNAME
               value: "0.0.0.0"
+            - name: TX_GA_ID
+              value: "{{.TX_GA_ID}}"
           readinessProbe:
             httpGet:
               port: 5097
